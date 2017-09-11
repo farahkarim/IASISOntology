@@ -31,3 +31,5 @@ iasis:label rdf:type owl:ObjectProperty.
 iasis:source rdf:type owl:ObjectProperty.
 iasis:precTool rdf:type owl:ObjectProperty.
 iasis:has_Mesh rdf:type owl:ObjectProperty.
+iasis:mentiioned_in rdf:type owl:ObjectProperty.
+iasis:maps rdf:type owl:ObjectProperty.
