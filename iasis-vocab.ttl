@@ -22,8 +22,6 @@ iasis:ADTreatment	rdf:type	owl:Class.
 iasis:PubRepository	rdf:type	owl:Class.
 iasis:VocabTerms	rdf:type	owl:Class.
 iasis:Gender	rdf:type	owl:Class.
-iasis:Female	rdf:type	owl:Class.
-iasis:Male	rdf:type	owl:Class.
 iasis:CUITerms	rdf:type	owl:Class.
 iasis:LCAnnotation	rdf:type	owl:Class.
 iasis:ADAnnotation	rdf:type	owl:Class.
@@ -130,5 +128,3 @@ iasis:LCPatient	rdfs:subClassOf	iasis:Patient.
 iasis:ADPatient	rdfs:subClassOf	iasis:Patient.
 iasis:LCTreatment	rdfs:subClassOf	iasis:Treatment.
 iasis:ADTreatment	rdfs:subClassOf	iasis:Treatment.
-iasis:Female	rdfs:subClassOf	iasis:Gender.
-iasis:Male	rdfs:subClassOf	iasis:Gender.
