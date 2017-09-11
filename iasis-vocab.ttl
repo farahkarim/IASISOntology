@@ -21,7 +21,7 @@ iasis:ADPatient	rdf:type	owl:Class.
 iasis:LCTreatment	rdf:type	owl:Class.
 iasis:ADTreatment	rdf:type	owl:Class.
 iasis:PubMed	rdf:type	owl:Class.
-iasis:ULMS_CUI	rdf:type	owl:Class.
+iasis:UMLS_CUI	rdf:type	owl:Class.
 iasis:Gender	rdf:type	owl:Class.
 iasis:Female	rdf:tye	owl:Class.
 iasis:Male	rdf:type	owl:Class.
@@ -67,7 +67,7 @@ iasis:id	rdfs:domain iasis:Annotation;
 iasis:label rdfs:domain	iasis:Annotation;
 			rdfs:range	xsd:string.
 iasis:source	rdfs:domain iasis:Annotation;
-				rdfs:range	iasis:ULMS_CUI.
+				rdfs:range	iasis:UMLS_CUI.
 iasis:precTool	rdfs:domain iasis:Annotation;
 				rdfs:range	iasis:ODPT.
 iasis:has_Mesh	rdfs:domain	iasis:Publication;
