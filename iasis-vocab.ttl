@@ -47,7 +47,9 @@ iasis:concentration	rdf:type	owl:ObjectProperty.
 iasis:doses	rdf:type	owl:ObjectProperty.
 iasis:date	rdf:type	owl:DatatypeProperty.
 iasis:has_Treatment	rdf:type	owl:ObjectProperty.
-
+iasis:diagnostic	rdf:type	owl:ObjectProperty.
+iasis:has_BioMarker	rdf:type	owl:ObjectProperty.
+iasis:has_Biopsy	rdf:type	owl:ObjectProperty.
 
 ###########Domains And Ranges
 
@@ -79,7 +81,7 @@ iasis:gender	rdfs:domain iasis:Patient;
 				rdfs:range	iasis:Female.
 iasis:researchID	rdfs:domain iasis:Patient;
 					rdfs:range	xsd:string.
-iasis:has_UMLS	rdfs:domain iasis:Patient;
+iasis:has_UMLS	rdfs:domain iasis:Patient, iasis:BioMarker;
 				rdfs:range	iasis:Annotation.
 iasis:observation	rdfs:domain iasis:Treatment;
 					rdfs:range	xsd:string.
@@ -87,11 +89,16 @@ iasis:concentration rdfs:domain iasis:Treatment;
 					rdfs:range	iasis:cUITerms.
 iasis:doses rdfs:domain iasis:Treatment;
 					rdfs:range	iasis:cUITerms.
-iasis:date	rdfs:doman	iasis:Treatment;
+iasis:date	rdfs:doman	iasis:Treatment, iasis:Biopsy;
 			rdfs:range	xsd:date.
 iasis:has_Treatment rdfs:domain iasis:Patient;
 					rdfs:range	iasis:Treatment.
-
+iasis:diagnostic	rdfs:domain	iasis:Biopsy;
+					rdfs:range	iasis:CondAnnotation.
+iasis:has_BioMarker	rdfs:domain	iasis:Biopsy;
+					rdfs:range	iasis:BioMarker.
+iasis:has_Biopsy	rdfs:domain	iasis:Patient;
+					rdfs:range	iasis:Biopsy.
 ###############Subclasses
 
 iasis:LCPublication	rdfs:subClassOf	iasis:Publication.
