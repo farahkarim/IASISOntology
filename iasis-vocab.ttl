@@ -78,7 +78,7 @@ iasis:precTool	rdfs:domain iasis:Annotation;
 				rdfs:range	iasis:ODPT.
 iasis:has_Mesh	rdfs:domain	iasis:Publication;
 				rdfs:range	iasis:Annotation.
-iasis:mentiioned_in rdfs:domain iasis:Publication;
+iasis:mentioned_in rdfs:domain iasis:Publication;
 				rdfs:range	iasis:Annotation.
 iasis:maps	rdfs:domain	iasis:Annotation;
 			rdfs:range	iasis:Annotation.
