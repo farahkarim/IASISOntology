@@ -49,8 +49,8 @@ iasis:researchID	rdf:type	owl:DatatypeProperty.
 iasis:genDiagnostic	rdf:type	owl:ObjectProperty.
 iasis:observation	rdf:type	owl:ObjectProperty.
 iasis:concentration	rdf:type	owl:ObjectProperty.
-iasis:doses	rdf:type	owl:ObjectProperty.
-iasis:ddate	rdf:type	owl:DatatypeProperty.
+iasis:dose	rdf:type	owl:ObjectProperty.
+iasis:tDate	rdf:type	owl:DatatypeProperty.
 iasis:has_Treatment	rdf:type	owl:ObjectProperty.
 iasis:diagnostic	rdf:type	owl:ObjectProperty.
 iasis:has_BioMarker	rdf:type	owl:ObjectProperty.
@@ -94,7 +94,7 @@ iasis:observation	rdfs:domain iasis:Treatment;
 					rdfs:range	rdfs:Literal.
 iasis:concentration rdfs:domain iasis:Treatment;
 					rdfs:range	iasis:UMLS_CUI.
-iasis:doses rdfs:domain iasis:Treatment;
+iasis:dose rdfs:domain iasis:Treatment;
 					rdfs:range	iasis:UMLS_CUI.
 iasis:tDate	rdfs:domain	iasis:Treatment, iasis:Biopsy;
 			rdfs:range	rdfs:Literal.
