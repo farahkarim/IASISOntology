@@ -22,6 +22,8 @@ iasis:LCTreatment rdf:type owl:Class.
 iasis:ADPatient rdf:type owl:Class.
 iasis:PubMed rdf:type owl:Class.
 iasis:ULMS_CUI rdf:type owl:Class.
+iasis:Female	rdf:tye	owl:Class.
+iasis:Male	rdf:type	owl:Class.
 
 #########Properties
 
@@ -79,10 +81,17 @@ iasis:has_Mesh	rdfs:domain	iasis:Publication;
 iasis:mentiioned_in rdfs:domain iasis:Publication;
 				rdfs:range	iasis:Annotation.
 
-iasis:maps	rdfs:domain	owl:ObjectProperty.
-iasis:birthday rdf:type owl:ObjectProperty.
-iasis:gender rdf:type owl:ObjectProperty.
-iasis:researchID rdf:type owl:DatatypeProperty.
+iasis:maps	rdfs:domain	iasis:Annotation;
+			rdfs:range	iasis:Annotation.
+
+iasis:birthday	rdfs:domain iasis:Patient;
+				rdfs:range	xsd:date.
+
+iasis:gender	rdfs:domain iasis:Patient;
+				rdfs:range	iasis:Female.
+
+iasis:researchID	rdfs:domain iasis:Patient;
+					rdfs:range	xsd:string.
 iasis:has_UMLS rdf:type owl:ObjectProperty.
 iasis:observation rdf:type owl:ObjectProperty.
 iasis:concentration rdf:type owl:ObjectProperty.
