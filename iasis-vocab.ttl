@@ -92,8 +92,13 @@ iasis:gender	rdfs:domain iasis:Patient;
 
 iasis:researchID	rdfs:domain iasis:Patient;
 					rdfs:range	xsd:string.
-iasis:has_UMLS rdf:type owl:ObjectProperty.
-iasis:observation rdf:type owl:ObjectProperty.
+
+iasis:has_UMLS	rdfs:domain iasis:Patient;
+				rdfs:range	iasis:Annotation.
+
+iasis:observation	rdfs:domain iasis:Treatment;
+					rdfs:range	xsd:string.
+
 iasis:concentration rdf:type owl:ObjectProperty.
 iasis:doses rdf:type owl:ObjectProperty.
 iasis:date rdf:type owl:DatatypeProperty.
