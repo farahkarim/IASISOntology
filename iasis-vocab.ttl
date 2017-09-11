@@ -57,7 +57,7 @@ iasis:has_BioMarker	rdf:type	owl:ObjectProperty.
 iasis:has_Biopsy	rdf:type	owl:ObjectProperty.
 iasis:bmDescription	rdf:type	owl:ObjectProperty.
 iasis:hasLevel	rdf:type	owl:ObjectProperty.
-
+iasis:prescriptedDrug	rdf:type	owl:ObjectProperty.
 ###########Domains And Ranges
 
 #dc:title	rdfs:domain	iasis:Publication;
@@ -110,7 +110,8 @@ iasis:bmDescription	rdfs:domain	iasis:BioMarker;
 			rdfs:range	iasis:Annotation.
 iasis:hasLevel	rdfs:domain	iasis:BioMarker;
 			rdfs:range	iasis:BioMarkerLevel.
-
+iasis:prescriptedDrug	rdfs:domain	iasis:Treatment;
+			rdfs:range	iasis:Annotation.
 ###############Subclasses
 
 iasis:LCPublication	rdfs:subClassOf	iasis:Publication.
