@@ -20,7 +20,7 @@ iasis:ADPatient	rdf:type	owl:Class.
 iasis:LCTreatment	rdf:type	owl:Class.
 iasis:ADTreatment	rdf:type	owl:Class.
 iasis:PubRepository	rdf:type	owl:Class.
-iasis:UMLS_CUI	rdf:type	owl:Class.
+iasis:VocabTerms	rdf:type	owl:Class.
 iasis:Gender	rdf:type	owl:Class.
 iasis:Female	rdf:type	owl:Class.
 iasis:Male	rdf:type	owl:Class.
@@ -74,7 +74,7 @@ iasis:id	rdfs:domain iasis:Annotation;
 iasis:annLabel rdfs:domain	iasis:Annotation;
 			rdfs:range	rdfs:Literal.
 iasis:source	rdfs:domain iasis:Annotation;
-				rdfs:range	iasis:UMLS_CUI.
+				rdfs:range	iasis:VocabTerms.
 iasis:precTool	rdfs:domain iasis:Annotation;
 				rdfs:range	iasis:AnalysisTool.
 iasis:has_Mesh	rdfs:domain	iasis:Publication;
@@ -94,9 +94,9 @@ iasis:genDiagnostic	rdfs:domain iasis:Patient;
 iasis:observation	rdfs:domain iasis:Treatment;
 					rdfs:range	rdfs:Literal.
 iasis:concentration rdfs:domain iasis:Treatment;
-					rdfs:range	iasis:UMLS_CUI.
+					rdfs:range	iasis:VocabTerms.
 iasis:dose rdfs:domain iasis:Treatment;
-					rdfs:range	iasis:UMLS_CUI.
+					rdfs:range	iasis:VocabTerms.
 iasis:tDate	rdfs:domain	iasis:Treatment;
 			rdfs:range	rdfs:Literal.
 iasis:bDate	rdfs:domain	iasis:Biopsy;
