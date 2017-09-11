@@ -59,7 +59,7 @@ iasis:url	rdfs:domain	iasis:Publication;
 			rdfs:range	xsd:string.
 
 iasis:confident rdfs:domain iasis:Publication;
-				rdfs.range	xsd:float.
+				rdfs:range	xsd:float.
 
 iasis:id	rdfs:domain iasis:Annotation;
 			rdfs:range	iasis:CUITerms
