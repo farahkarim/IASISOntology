@@ -28,6 +28,8 @@ iasis:CUITerms	rdf:type	owl:Class.
 iasis:LCAnnotation	rdf:type	owl:Class.
 iasis:ADAnnotation	rdf:type	owl:Class.
 iasis:ODPT	rdf:type	owl:Class.
+iasis:BioMarkerLevel	rdf:type	owl:Class.
+
 #########Properties
 
 #iasis:title	rdf:type	owl:DatatypeProperty.
@@ -53,6 +55,8 @@ iasis:has_Treatment	rdf:type	owl:ObjectProperty.
 iasis:diagnostic	rdf:type	owl:ObjectProperty.
 iasis:has_BioMarker	rdf:type	owl:ObjectProperty.
 iasis:has_Biopsy	rdf:type	owl:ObjectProperty.
+iasis:bmDescription	rdf:type	owl:ObjectProperty.
+iasis:hasLevel	rdf:type	owl:ObjectProperty.
 
 ###########Domains And Ranges
 
@@ -84,7 +88,7 @@ iasis:gender	rdfs:domain iasis:Patient;
 				rdfs:range	iasis:Female.
 iasis:researchID	rdfs:domain iasis:Patient;
 					rdfs:range	rdfs:Literal.
-iasis:has_UMLS	rdfs:domain iasis:Patient, iasis:BioMarker;
+iasis:has_UMLS	rdfs:domain iasis:Patient;
 				rdfs:range	iasis:Annotation.
 iasis:observation	rdfs:domain iasis:Treatment;
 					rdfs:range	rdfs:Literal.
@@ -102,6 +106,11 @@ iasis:has_BioMarker	rdfs:domain	iasis:Biopsy;
 					rdfs:range	iasis:BioMarker.
 iasis:has_Biopsy	rdfs:domain	iasis:Patient;
 					rdfs:range	iasis:Biopsy.
+iasis:bmDescription	rdfs:domain	iasis:BioMarker;
+			rdfs:range	iasis:Annotation.
+iasis:hasLevel	rdfs:domain	iasis:BioMarker;
+			rdfs:range	iasis:BioMarkerLevel.
+
 ###############Subclasses
 
 iasis:LCPublication	rdfs:subClassOf	iasis:Publication.
