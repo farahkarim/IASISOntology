@@ -67,7 +67,7 @@ iasis:id	rdfs:domain iasis:Annotation;
 iasis:label rdfs:domain	iasis:Annotation;
 			rdfs:range	xsd:string.
 iasis:source	rdfs:domain iasis:Annotation;
-				rdfs:range	iasis:UMLS_CUI.
+				rdfs:range	iasis:ULMS_CUI.
 iasis:precTool	rdfs:domain iasis:Annotation;
 				rdfs:range	iasis:ODPT.
 iasis:has_Mesh	rdfs:domain	iasis:Publication;
