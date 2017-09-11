@@ -19,7 +19,7 @@ iasis:InterAnnotation	rdf:type	owl:Class.
 iasis:LCPatient	rdf:type	owl:Class.
 iasis:ADPatient	rdf:type	owl:Class.
 iasis:LCTreatment	rdf:type	owl:Class.
-iasis:ADPatient	rdf:type	owl:Class.
+iasis:ADTreatment	rdf:type	owl:Class.
 iasis:PubMed	rdf:type	owl:Class.
 iasis:ULMS_CUI	rdf:type	owl:Class.
 iasis:Female	rdf:tye	owl:Class.
@@ -94,5 +94,10 @@ iasis:has_Treatment rdfs:domain iasis:Patient;
 
 ###############Subclasses
 
+iasis:LCPublication	rdfs:subClassOf	iasis:Publication.
+iasis:ADPublication	rdfs:subClassOf	iasis:Publication.
+iasis:CondAnnotation	rdfs:subClassOf	iasis:Annotation.
 iasis:LCPatient	rdfs:subClassOf	iasis:Patient.
 iasis:ADPatient	rdfs:subClassOf	iasis:Patient.
+iasis:LCTreatment	rdfs:subClassOf	iasis:Treatment.
+iasis:ADTreatment	rdfs:subClassOf	iasis:Treatment.
