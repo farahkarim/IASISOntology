@@ -54,12 +54,12 @@ iasis:has_Biopsy	rdf:type	owl:ObjectProperty.
 
 ###########Domains And Ranges
 
-#iasis:title	rdfs:domain	iasis:Publication;
-#			rdfs:range	rdfs:Literal.
-#iasis:provenance	rdfs:domain	iasis:Publication;
-#					rdfs:range	iasis:PubMed.
-#iasis:url	rdfs:domain	iasis:Publication;
-#			rdfs:range	rdfs:Literal.
+iasis:title	rdfs:domain	iasis:Publication;
+			rdfs:range	rdfs:Literal.
+iasis:provenance	rdfs:domain	iasis:Publication;
+					rdfs:range	iasis:PubMed.
+iasis:url	rdfs:domain	iasis:Publication;
+			rdfs:range	rdfs:Literal.
 iasis:confident rdfs:domain iasis:Publication;
 				rdfs:range	rdfs:Literal.
 iasis:id	rdfs:domain iasis:Annotation;
