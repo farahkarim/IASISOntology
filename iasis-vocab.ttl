@@ -93,7 +93,7 @@ iasis:gender	rdfs:domain iasis:Patient;
 iasis:researchID	rdfs:domain iasis:Patient;
 					rdfs:range	rdfs:Literal.
 iasis:genDiagnostic	rdfs:domain iasis:Patient;
-				rdfs:range	iasis:Annotation.
+				rdfs:range	iasis:CondAnnotation.
 iasis:observation	rdfs:domain iasis:Treatment;
 					rdfs:range	rdfs:Literal.
 iasis:concentration rdfs:domain iasis:Treatment;
