@@ -46,7 +46,7 @@ iasis:maps	rdf:type	owl:ObjectProperty.
 iasis:birthday	rdf:type	owl:ObjectProperty.
 iasis:gender	rdf:type	owl:ObjectProperty.
 iasis:researchID	rdf:type	owl:DatatypeProperty.
-iasis:has_UMLS	rdf:type	owl:ObjectProperty.
+iasis:genDiagnostic	rdf:type	owl:ObjectProperty.
 iasis:observation	rdf:type	owl:ObjectProperty.
 iasis:concentration	rdf:type	owl:ObjectProperty.
 iasis:doses	rdf:type	owl:ObjectProperty.
@@ -88,7 +88,7 @@ iasis:gender	rdfs:domain iasis:Patient;
 				rdfs:range	iasis:Female.
 iasis:researchID	rdfs:domain iasis:Patient;
 					rdfs:range	rdfs:Literal.
-iasis:has_UMLS	rdfs:domain iasis:Patient;
+iasis:genDiagnostic	rdfs:domain iasis:Patient;
 				rdfs:range	iasis:Annotation.
 iasis:observation	rdfs:domain iasis:Treatment;
 					rdfs:range	rdfs:Literal.
