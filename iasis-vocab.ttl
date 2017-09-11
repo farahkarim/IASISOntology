@@ -29,6 +29,9 @@ iasis:LCAnnotation	rdf:type	owl:Class.
 iasis:ADAnnotation	rdf:type	owl:Class.
 iasis:AnalysisTool	rdf:type	owl:Class.
 iasis:BioMarkerLevel	rdf:type	owl:Class.
+iasis:TConcentration	rdf:type	owl:Class.
+iasis:TDose	rdf:type	owl:Class.
+
 
 #########Properties
 
@@ -94,9 +97,9 @@ iasis:genDiagnostic	rdfs:domain iasis:Patient;
 iasis:observation	rdfs:domain iasis:Treatment;
 					rdfs:range	rdfs:Literal.
 iasis:concentration rdfs:domain iasis:Treatment;
-					rdfs:range	iasis:VocabTerms.
+					rdfs:range	iasis:TConcentration.
 iasis:dose rdfs:domain iasis:Treatment;
-					rdfs:range	iasis:VocabTerms.
+					rdfs:range	iasis:TDose.
 iasis:tDate	rdfs:domain	iasis:Treatment;
 			rdfs:range	rdfs:Literal.
 iasis:bDate	rdfs:domain	iasis:Biopsy;
