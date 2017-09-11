@@ -99,7 +99,14 @@ iasis:has_UMLS	rdfs:domain iasis:Patient;
 iasis:observation	rdfs:domain iasis:Treatment;
 					rdfs:range	xsd:string.
 
-iasis:concentration rdf:type owl:ObjectProperty.
-iasis:doses rdf:type owl:ObjectProperty.
-iasis:date rdf:type owl:DatatypeProperty.
-iasis:has_Treatment rdf:type owl:ObjectProperty.
+iasis:concentration rdfs:domain iasis:Treatment;
+					rdfs:range	iasis:cUITerms.
+
+iasis:doses rdfs:domain iasis:Treatment;
+					rdfs:range	iasis:cUITerms.
+
+iasis:date	rdfs:doman	iasis:Treatment;
+			rdfs:range	xsd:date.
+
+iasis:has_Treatment rdfs:domain iasis:Patient;
+					rdfs:range	iasis:Treatment.
