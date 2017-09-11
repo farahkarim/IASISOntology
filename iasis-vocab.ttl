@@ -53,60 +53,41 @@ iasis:has_Treatment	rdf:type	owl:ObjectProperty.
 
 iasis:title	rdfs:domain	iasis:Publication;
 			rdfs:range	xsd:string.
-
 iasis:provenance	rdfs:domain	iasis:Publication;
 					rdfs:range	iasis:PubMed.
-
 iasis:url	rdfs:domain	iasis:Publication;
 			rdfs:range	xsd:string.
-
 iasis:confident rdfs:domain iasis:Publication;
 				rdfs:range	xsd:float.
-
 iasis:id	rdfs:domain iasis:Annotation;
 			rdfs:range	iasis:CUITerms.
-
 iasis:label rdfs:domain	iasis:Annotation;
 			rdfs:range	xsd:string.
-
 iasis:source	rdfs:domain iasis:Annotation;
 				rdfs:range	iasis:UMLS_CUI.
-
 iasis:precTool	rdfs:domain iasis:Annotation;
 				rdfs:range	iasis:ODPT.
-
 iasis:has_Mesh	rdfs:domain	iasis:Publication;
 				rdfs:range	iasis:Annotation.
-
 iasis:mentiioned_in rdfs:domain iasis:Publication;
 				rdfs:range	iasis:Annotation.
-
 iasis:maps	rdfs:domain	iasis:Annotation;
 			rdfs:range	iasis:Annotation.
-
 iasis:birthday	rdfs:domain iasis:Patient;
 				rdfs:range	xsd:date.
-
 iasis:gender	rdfs:domain iasis:Patient;
 				rdfs:range	iasis:Female.
-
 iasis:researchID	rdfs:domain iasis:Patient;
 					rdfs:range	xsd:string.
-
 iasis:has_UMLS	rdfs:domain iasis:Patient;
 				rdfs:range	iasis:Annotation.
-
 iasis:observation	rdfs:domain iasis:Treatment;
 					rdfs:range	xsd:string.
-
 iasis:concentration rdfs:domain iasis:Treatment;
 					rdfs:range	iasis:cUITerms.
-
 iasis:doses rdfs:domain iasis:Treatment;
 					rdfs:range	iasis:cUITerms.
-
 iasis:date	rdfs:doman	iasis:Treatment;
 			rdfs:range	xsd:date.
-
 iasis:has_Treatment rdfs:domain iasis:Patient;
 					rdfs:range	iasis:Treatment.
