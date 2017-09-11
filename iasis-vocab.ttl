@@ -50,7 +50,7 @@ iasis:has_Treatment rdf:type owl:ObjectProperty.
 iasis:title	rdfs:domain	iasis:Publication;
 			rdfs:range	xsd:string.
 
-iasis:provenance	rdfs:domain	iasis:Publication.
+iasis:provenance	rdfs:domain	iasis:Publication;
 					rdfs:range	iasis:PubMed.
 
 
