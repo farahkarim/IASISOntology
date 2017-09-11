@@ -87,9 +87,9 @@ iasis:has_UMLS	rdfs:domain iasis:Patient, iasis:BioMarker;
 iasis:observation	rdfs:domain iasis:Treatment;
 					rdfs:range	xsd:string.
 iasis:concentration rdfs:domain iasis:Treatment;
-					rdfs:range	iasis:cUITerms.
+					rdfs:range	iasis:UMLS_CUI.
 iasis:doses rdfs:domain iasis:Treatment;
-					rdfs:range	iasis:cUITerms.
+					rdfs:range	iasis:UMLS_CUI.
 iasis:date	rdfs:doman	iasis:Treatment, iasis:Biopsy;
 			rdfs:range	xsd:date.
 iasis:has_Treatment rdfs:domain iasis:Patient;
