@@ -55,13 +55,13 @@ iasis:has_Biopsy	rdf:type	owl:ObjectProperty.
 ###########Domains And Ranges
 
 #iasis:title	rdfs:domain	iasis:Publication;
-#			rdfs:range	xsd:string.
+#			rdfs:range	rdfs:Literal.
 #iasis:provenance	rdfs:domain	iasis:Publication;
 #					rdfs:range	iasis:PubMed.
 #iasis:url	rdfs:domain	iasis:Publication;
-#			rdfs:range	xsd:string.
+#			rdfs:range	rdfs:Literal.
 iasis:confident rdfs:domain iasis:Publication;
-				rdfs:range	xsd:float.
+				rdfs:range	rdfs:Literal.
 iasis:id	rdfs:domain iasis:Annotation;
 			rdfs:range	iasis:UMLS_CUI.
 iasis:label rdfs:domain	iasis:Annotation;
@@ -77,23 +77,20 @@ iasis:mentiioned_in rdfs:domain iasis:Publication;
 iasis:maps	rdfs:domain	iasis:Annotation;
 			rdfs:range	iasis:Annotation.
 iasis:birthday	rdfs:domain iasis:Patient;
-#				rdfs:range	xsd:date.
 				rdfs:range	rdfs:Literal.
 iasis:gender	rdfs:domain iasis:Patient;
 				rdfs:range	iasis:Female.
 iasis:researchID	rdfs:domain iasis:Patient;
-#					rdfs:range	xsd:string.
 					rdfs:range	rdfs:Literal.
 iasis:has_UMLS	rdfs:domain iasis:Patient, iasis:BioMarker;
 				rdfs:range	iasis:Annotation.
 iasis:observation	rdfs:domain iasis:Treatment;
-					rdfs:range	xsd:string.
+					rdfs:range	rdfs:Literal.
 iasis:concentration rdfs:domain iasis:Treatment;
 					rdfs:range	iasis:UMLS_CUI.
 iasis:doses rdfs:domain iasis:Treatment;
 					rdfs:range	iasis:UMLS_CUI.
 iasis:ddate	rdfs:domain	iasis:Treatment, iasis:Biopsy;
-#			rdfs:range	xsd:date.
 			rdfs:range	rdfs:Literal.
 iasis:has_Treatment rdfs:domain iasis:Patient;
 					rdfs:range	iasis:Treatment.
