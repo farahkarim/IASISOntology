@@ -27,7 +27,7 @@ iasis:Male	rdf:type	owl:Class.
 iasis:CUITerms	rdf:type	owl:Class.
 iasis:LCAnnotation	rdf:type	owl:Class.
 iasis:ADAnnotation	rdf:type	owl:Class.
-
+iasis:ODPT	rdf:type	owl:Class.
 #########Properties
 
 #iasis:title	rdf:type	owl:DatatypeProperty.
