@@ -33,3 +33,12 @@ iasis:precTool rdf:type owl:ObjectProperty.
 iasis:has_Mesh rdf:type owl:ObjectProperty.
 iasis:mentiioned_in rdf:type owl:ObjectProperty.
 iasis:maps rdf:type owl:ObjectProperty.
+iasis:birthday rdf:type owl:ObjectProperty.
+iasis:gender rdf:type owl:ObjectProperty.
+iasis:researchID rdf:type owl:DatatypeProperty.
+iasis:has_UMLS rdf:type owl:ObjectProperty.
+iasis:observation rdf:type owl:ObjectProperty.
+iasis:concentration rdf:type owl:ObjectProperty.
+iasis:doses rdf:type owl:ObjectProperty.
+iasis:date rdf:type owl:DatatypeProperty.
+iasis:has_Treatment rdf:type owl:ObjectProperty.
