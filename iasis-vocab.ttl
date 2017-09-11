@@ -27,7 +27,7 @@ iasis:Male	rdf:type	owl:Class.
 iasis:CUITerms	rdf:type	owl:Class.
 iasis:LCAnnotation	rdf:type	owl:Class.
 iasis:ADAnnotation	rdf:type	owl:Class.
-iasis:ODPT	rdf:type	owl:Class.
+iasis:AnalysisTool	rdf:type	owl:Class.
 iasis:BioMarkerLevel	rdf:type	owl:Class.
 
 #########Properties
@@ -76,7 +76,7 @@ iasis:annLabel rdfs:domain	iasis:Annotation;
 iasis:source	rdfs:domain iasis:Annotation;
 				rdfs:range	iasis:UMLS_CUI.
 iasis:precTool	rdfs:domain iasis:Annotation;
-				rdfs:range	iasis:ODPT.
+				rdfs:range	iasis:AnalysisTool.
 iasis:has_Mesh	rdfs:domain	iasis:Publication;
 				rdfs:range	iasis:Annotation.
 iasis:mentioned_in rdfs:domain iasis:Publication;
