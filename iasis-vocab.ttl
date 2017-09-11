@@ -22,17 +22,20 @@ iasis:ADTreatment	rdf:type	owl:Class.
 iasis:PubMed	rdf:type	owl:Class.
 iasis:UMLS_CUI	rdf:type	owl:Class.
 iasis:Gender	rdf:type	owl:Class.
-iasis:Female	rdf:tye	owl:Class.
+iasis:Female	rdf:type	owl:Class.
 iasis:Male	rdf:type	owl:Class.
+iasis:CUITerms	rdf:type	owl:Class.
+iasis:LCAnnotation	rdf:type	owl:Class.
+iasis:ADAnnotation	rdf:type	owl:Class.
 
 #########Properties
 
 #iasis:title	rdf:type	owl:DatatypeProperty.
-#iasis:provenance	rdf:type	owl:ObjectProperty.
+iasis:provenance	rdf:type	owl:ObjectProperty.
 #iasis:url	rdf:type	owl:ObjectProperty.
-iasis:confident	rdf:type	owl:DatatypeProperty.
+iasis:confidence	rdf:type	owl:DatatypeProperty.
 iasis:id	rdf:type	owl:ObjectProperty.
-iasis:label	rdf:type	owl:ObjectProperty.
+iasis:annLabel	rdf:type	owl:DatatypeProperty.
 iasis:source	rdf:type	owl:ObjectProperty.
 iasis:precTool	rdf:type	owl:ObjectProperty.
 iasis:has_Mesh	rdf:type	owl:ObjectProperty.
@@ -53,18 +56,18 @@ iasis:has_Biopsy	rdf:type	owl:ObjectProperty.
 
 ###########Domains And Ranges
 
-iasis:title	rdfs:domain	iasis:Publication;
-			rdfs:range	rdfs:Literal.
+#dc:title	rdfs:domain	iasis:Publication;
+#			rdfs:range	rdfs:Literal.
 iasis:provenance	rdfs:domain	iasis:Publication;
 					rdfs:range	iasis:PubMed.
-iasis:url	rdfs:domain	iasis:Publication;
-			rdfs:range	rdfs:Literal.
-iasis:confident rdfs:domain iasis:Publication;
+#iasis:url	rdfs:domain	iasis:Publication;
+#			rdfs:range	rdfs:Literal.
+iasis:confidence rdfs:domain iasis:Annotation;
 				rdfs:range	rdfs:Literal.
 iasis:id	rdfs:domain iasis:Annotation;
-			rdfs:range	iasis:UMLS_CUI.
-iasis:label rdfs:domain	iasis:Annotation;
-			rdfs:range	xsd:string.
+			rdfs:range	iasis:CUITerms.
+iasis:annLabel rdfs:domain	iasis:Annotation;
+			rdfs:range	rdfs:Literal.
 iasis:source	rdfs:domain iasis:Annotation;
 				rdfs:range	iasis:UMLS_CUI.
 iasis:precTool	rdfs:domain iasis:Annotation;
@@ -103,6 +106,8 @@ iasis:has_Biopsy	rdfs:domain	iasis:Patient;
 
 iasis:LCPublication	rdfs:subClassOf	iasis:Publication.
 iasis:ADPublication	rdfs:subClassOf	iasis:Publication.
+iasis:LCAnnotation	rdfs:subClassOf	iasis:Annotation.
+iasis:ADAnnotation	rdfs:subClassOf	iasis:Annotation.
 iasis:CondAnnotation	rdfs:subClassOf	iasis:Annotation.
 iasis:InterAnnotation	rdfs:subClassOf	iasis:Annotation.
 iasis:LCPatient	rdfs:subClassOf	iasis:Patient.
