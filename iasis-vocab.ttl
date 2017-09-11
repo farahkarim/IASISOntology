@@ -110,7 +110,7 @@ iasis:diagnostic	rdfs:domain	iasis:Biopsy;
 					rdfs:range	iasis:CondAnnotation.
 iasis:has_BioMarker	rdfs:domain	iasis:Biopsy;
 					rdfs:range	iasis:BioMarker.
-iasis:has_Biopsy	rdfs:domain	iasis:Patient;
+iasis:has_Biopsy	rdfs:domain	iasis:LCPatient;
 					rdfs:range	iasis:Biopsy.
 iasis:bmDescription	rdfs:domain	iasis:BioMarker;
 			rdfs:range	iasis:Annotation.
