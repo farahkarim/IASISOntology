@@ -91,3 +91,8 @@ iasis:date	rdfs:doman	iasis:Treatment;
 			rdfs:range	xsd:date.
 iasis:has_Treatment rdfs:domain iasis:Patient;
 					rdfs:range	iasis:Treatment.
+
+###############Subclasses
+
+iasis:LCPatient	rdfs:subClassOf	iasis:Patient.
+iasis:ADPatient	rdfs:subClassOf	iasis:Patient.
