@@ -117,7 +117,7 @@ iasis:bmDescription	rdfs:domain	iasis:BioMarker;
 iasis:hasLevel	rdfs:domain	iasis:BioMarker;
 			rdfs:range	iasis:BioMarkerLevel.
 iasis:prescriptedDrug	rdfs:domain	iasis:Treatment;
-			rdfs:range	iasis:Annotation.
+			rdfs:range	iasis:InterAnnotation.
 ###############Subclasses
 
 iasis:LCPublication	rdfs:subClassOf	iasis:Publication.
