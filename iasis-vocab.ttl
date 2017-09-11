@@ -13,3 +13,9 @@ iasis:Biopsy rdf:type owl:Class.
 iasis:BioMarker rdf:type owl:Class.
 iasis:LCPublication rdf:type owl:Class.
 iasis:ADPublication rdf:type owl:Class.
+iasis:CondAnnotation rdf:type owl:Class.
+iasis:InterAnnotation rdf:type owl:Class.
+iasis:LCPatient rdf:type owl:Class.
+iasis:ADPatient rdf:type owl:Class.
+iasis:LCTreatment rdf:type owl:Class.
+iasis:ADPatient rdf:type owl:Class.
