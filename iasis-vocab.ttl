@@ -86,7 +86,7 @@ iasis:maps	rdfs:domain	iasis:Annotation;
 iasis:birthday	rdfs:domain iasis:Patient;
 				rdfs:range	rdfs:Literal.
 iasis:gender	rdfs:domain iasis:Patient;
-				rdfs:range	iasis:Female.
+				rdfs:range	iasis:Gender.
 iasis:researchID	rdfs:domain iasis:Patient;
 					rdfs:range	rdfs:Literal.
 iasis:genDiagnostic	rdfs:domain iasis:Patient;
