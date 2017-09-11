@@ -19,7 +19,7 @@ iasis:LCPatient	rdf:type	owl:Class.
 iasis:ADPatient	rdf:type	owl:Class.
 iasis:LCTreatment	rdf:type	owl:Class.
 iasis:ADTreatment	rdf:type	owl:Class.
-iasis:PubMed	rdf:type	owl:Class.
+iasis:PubRepository	rdf:type	owl:Class.
 iasis:UMLS_CUI	rdf:type	owl:Class.
 iasis:Gender	rdf:type	owl:Class.
 iasis:Female	rdf:type	owl:Class.
@@ -64,7 +64,7 @@ iasis:prescriptedDrug	rdf:type	owl:ObjectProperty.
 #dc:title	rdfs:domain	iasis:Publication;
 #			rdfs:range	rdfs:Literal.
 iasis:provenance	rdfs:domain	iasis:Publication;
-					rdfs:range	iasis:PubMed.
+					rdfs:range	iasis:PubRepository.
 #iasis:url	rdfs:domain	iasis:Publication;
 #			rdfs:range	rdfs:Literal.
 iasis:confidence rdfs:domain iasis:Annotation;
