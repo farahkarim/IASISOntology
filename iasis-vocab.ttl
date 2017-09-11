@@ -2,6 +2,7 @@
 @prefix owl:     <http://www.w3.org/2002/07/owl#> .
 @prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 #########Classes
 
@@ -19,11 +20,40 @@ iasis:LCPatient rdf:type owl:Class.
 iasis:ADPatient rdf:type owl:Class.
 iasis:LCTreatment rdf:type owl:Class.
 iasis:ADPatient rdf:type owl:Class.
+iasis:PubMed rdf:type owl:Class.
 
 #########Properties
 
-iasis:title rdf:type owl:ObjectProperty.
+iasis:title rdf:type owl:DatatypeProperty.
 iasis:provenance rdf:type owl:ObjectProperty.
+iasis:url rdf:type owl:ObjectProperty.
+iasis:confident rdf:type owl:DatatypeProperty.
+iasis:id rdf:type owl:ObjectProperty.
+iasis:label rdf:type owl:ObjectProperty.
+iasis:source rdf:type owl:ObjectProperty.
+iasis:precTool rdf:type owl:ObjectProperty.
+iasis:has_Mesh rdf:type owl:ObjectProperty.
+iasis:mentiioned_in rdf:type owl:ObjectProperty.
+iasis:maps rdf:type owl:ObjectProperty.
+iasis:birthday rdf:type owl:ObjectProperty.
+iasis:gender rdf:type owl:ObjectProperty.
+iasis:researchID rdf:type owl:DatatypeProperty.
+iasis:has_UMLS rdf:type owl:ObjectProperty.
+iasis:observation rdf:type owl:ObjectProperty.
+iasis:concentration rdf:type owl:ObjectProperty.
+iasis:doses rdf:type owl:ObjectProperty.
+iasis:date rdf:type owl:DatatypeProperty.
+iasis:has_Treatment rdf:type owl:ObjectProperty.
+
+###########Domains And Ranges
+
+iasis:title	rdfs:domain	iasis:Publication;
+			rdfs:range	xsd:string.
+
+iasis:provenance	rdfs:domain	iasis:Publication.
+					rdfs:range	iasis:PubMed.
+
+
 iasis:url rdf:type owl:ObjectProperty.
 iasis:confident rdf:type owl:DatatypeProperty.
 iasis:id rdf:type owl:ObjectProperty.
