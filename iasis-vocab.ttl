@@ -92,7 +92,7 @@ iasis:concentration rdfs:domain iasis:Treatment;
 					rdfs:range	iasis:UMLS_CUI.
 iasis:doses rdfs:domain iasis:Treatment;
 					rdfs:range	iasis:UMLS_CUI.
-iasis:ddate	rdfs:domain	iasis:Treatment, iasis:Biopsy;
+iasis:tDate	rdfs:domain	iasis:Treatment, iasis:Biopsy;
 			rdfs:range	rdfs:Literal.
 iasis:has_Treatment rdfs:domain iasis:Patient;
 					rdfs:range	iasis:Treatment.
