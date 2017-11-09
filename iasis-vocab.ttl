@@ -3,6 +3,7 @@
 @prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ssn: <http://www.w3.org/ns/ssn/> .
 #########Classes
 
 iasis:Publication	rdf:type	owl:Class.
@@ -30,7 +31,9 @@ iasis:BioMarkerLevel	rdf:type	owl:Class.
 iasis:TConcentration	rdf:type	owl:Class.
 iasis:TDose	rdf:type	owl:Class.
 iasis:Death	rdf:type	owl:Class.
-
+ssn:Observation rdf:type	owl:Class.
+ssn:Measurement	rdf:type	owl:Class.
+ssn:Unit	rdf:type	owl:Class.
 #########Properties
 
 #iasis:title	rdf:type	owl:DatatypeProperty.
@@ -67,6 +70,14 @@ iasis:obsStartTime	rdf:type	owl:DatatypeProperty.
 iasis:obsEndTime	rdf:type	owl:DatatypeProperty.
 iasis:trtStartTime	rdf:type	owl:DatatypeProperty.
 iasis:trtEndTime rdf:type owl:DatatypeProperty.
+ssn:generates	rdf:type	owl:ObjectProperty.
+ssn:generatedBy	rdf:type	owl:ObjectProperty.
+ssn:obsTime	rdf:type	owl:DatatypeProperty.
+ssn:featureOfInterest	rdf:type	owl:ObjectProperty.
+ssn:observedProperty	rdf:type	owl:ObjectProperty.
+ssn:result	rdf:type	owl:ObjectProperty.
+ssn:uom	rdf:type	owl:ObjectProperty.
+ssn:value	rdf:type	owl:DatatypeProperty.
 
 ###########Domains And Ranges
 
@@ -129,7 +140,7 @@ iasis:isDied	rdfs:domain iasis:Patient;
 iasis:dDate	rdfs:domain	iasis:Death;
 			rdfs:range	rdfs:Literal.
 iasis:deathCause	rdfs:domain	iasis:Death;
-					rdfs:range	iasis:CondAnnotation.
+			rdfs:range	iasis:CondAnnotation.
 iasis:obsStartTime	rdfs:domain iasis:Patient;
 		rdfs:range	rdfs:Literal.
 iasis:obsEndTime	rdfs:domain iasis:Patient;
@@ -138,7 +149,22 @@ iasis:trtStartTime	rdfs:domain iasis:Treatment;
 		rdfs:range	rdfs:Literal.
 iasis:trtEndTime	rdfs:domain iasis:Treatment;
 		rdfs:range	rdfs:Literal.
-
+ssn:generates	rdfs:domain iasis:Treatment;
+		rdfs:range	ssn:Observation.
+ssn:generatedBy	rdfs:domain ssn:Observation;
+		rdfs:range	iasis:Treatment.
+ssn:obsTime	rdfs:domain ssn:Observation;
+		rdfs:range	rdfs:Literal.
+ssn:featureOfInterest	rdfs:domain ssn:Observation;
+		rdfs:range	iasis:Patient.
+ssn:observedProperty	rdfs:domain ssn:Observation;
+		rdfs:range	iasis:CondAnnotation.
+ssn:result	rdfs:domain ssn:Observation;
+		rdfs:range	ssn:Measurement.
+ssn:uom	rdfs:domain	ssn:Measurement;
+		rdfs:range	ssn:Unit.	
+ssn:value	rdfs:domain	ssn:Measurement;
+		rdfs:range	rdfs:Literal.
 
 ###############Subclasses
 
