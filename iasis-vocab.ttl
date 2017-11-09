@@ -65,7 +65,8 @@ iasis:deathCause	rdf:type	owl:ObjectProperty.
 iasis:isDied	rdf:type	owl:ObjectProperty.
 iasis:obsStartTime	rdf:type	owl:DatatypeProperty.
 iasis:obsEndTime	rdf:type	owl:DatatypeProperty.
-
+iasis:trtStartTime	rdf:type	owl:DatatypeProperty.
+iasis:trtEndTime rdf:type owl:DatatypeProperty.
 
 ###########Domains And Ranges
 
@@ -133,7 +134,10 @@ iasis:obsStartTime	rdfs:domain iasis:Patient;
 		rdfs:range	rdfs:Literal.
 iasis:obsEndTime	rdfs:domain iasis:Patient;
 		rdfs:range	rdfs:Literal.
-
+iasis:trtStartTime	rdfs:domain iasis:Treatment;
+		rdfs:range	rdfs:Literal.
+iasis:trtEndTime	rdfs:domain iasis:Treatment;
+		rdfs:range	rdfs:Literal.
 
 
 ###############Subclasses
