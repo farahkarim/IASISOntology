@@ -51,7 +51,7 @@ iasis:birthday	rdf:type	owl:DatatypeProperty.
 iasis:gender	rdf:type	owl:ObjectProperty.
 iasis:researchID	rdf:type	owl:DatatypeProperty.
 iasis:genDiagnostic	rdf:type	owl:ObjectProperty.
-iasis:observation	rdf:type	owl:DatatypeProperty.
+#iasis:observation	rdf:type	owl:DatatypeProperty.
 iasis:concentration	rdf:type	owl:ObjectProperty.
 iasis:dose	rdf:type	owl:ObjectProperty.
 iasis:tDate	rdf:type	owl:DatatypeProperty.
@@ -111,8 +111,8 @@ iasis:researchID	rdfs:domain iasis:Patient;
 					rdfs:range	rdfs:Literal.
 iasis:genDiagnostic	rdfs:domain iasis:Patient;
 				rdfs:range	iasis:CondAnnotation.
-iasis:observation	rdfs:domain iasis:Treatment;
-					rdfs:range	rdfs:Literal.
+#iasis:observation	rdfs:domain iasis:Treatment;
+#					rdfs:range	rdfs:Literal.
 iasis:concentration rdfs:domain iasis:Treatment;
 					rdfs:range	iasis:TConcentration.
 iasis:dose rdfs:domain iasis:Treatment;
