@@ -29,7 +29,7 @@ iasis:AnalysisTool	rdf:type	owl:Class.
 iasis:BioMarkerLevel	rdf:type	owl:Class.
 iasis:TConcentration	rdf:type	owl:Class.
 iasis:TDose	rdf:type	owl:Class.
-
+iasis:Death	rdf:type	owl:Class.
 
 #########Properties
 
@@ -60,6 +60,10 @@ iasis:has_Biopsy	rdf:type	owl:ObjectProperty.
 iasis:bmDescription	rdf:type	owl:ObjectProperty.
 iasis:hasLevel	rdf:type	owl:ObjectProperty.
 iasis:prescriptedDrug	rdf:type	owl:ObjectProperty.
+iasis:dDate	rdf:type	owl:DatatypeProperty.
+iasis:deathCause	rdf:type	owl:ObjectProperty.
+iasis:isDied	rdf:type	owl:ObjectProperty.
+
 ###########Domains And Ranges
 
 #dc:title	rdfs:domain	iasis:Publication;
@@ -116,6 +120,13 @@ iasis:hasLevel	rdfs:domain	iasis:BioMarker;
 			rdfs:range	iasis:BioMarkerLevel.
 iasis:prescriptedDrug	rdfs:domain	iasis:Treatment;
 			rdfs:range	iasis:InterAnnotation.
+iasis:isDied	rdfs:domain iasis:Patient;
+		rdfs:range	iasis:Death.
+iasis:dDate	rdfs:domain	iasis:Death;
+			rdfs:range	rdfs:Literal.
+iasis:deathCause	rdfs:domain	iasis:Death;
+					rdfs:range	iasis:CondAnnotation.
+
 ###############Subclasses
 
 iasis:LCPublication	rdfs:subClassOf	iasis:Publication.
