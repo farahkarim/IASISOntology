@@ -63,6 +63,9 @@ iasis:prescriptedDrug	rdf:type	owl:ObjectProperty.
 iasis:dDate	rdf:type	owl:DatatypeProperty.
 iasis:deathCause	rdf:type	owl:ObjectProperty.
 iasis:isDied	rdf:type	owl:ObjectProperty.
+iasis:obsStartTime	rdf:type	owl:DatatypeProperty.
+iasis:obsEndTime	rdf:type	owl:DatatypeProperty.
+
 
 ###########Domains And Ranges
 
@@ -126,6 +129,12 @@ iasis:dDate	rdfs:domain	iasis:Death;
 			rdfs:range	rdfs:Literal.
 iasis:deathCause	rdfs:domain	iasis:Death;
 					rdfs:range	iasis:CondAnnotation.
+iasis:obsStartTime	rdfs:domain iasis:Patient;
+		rdfs:range	rdfs:Literal.
+iasis:obsEndTime	rdfs:domain iasis:Patient;
+		rdfs:range	rdfs:Literal.
+
+
 
 ###############Subclasses
 
