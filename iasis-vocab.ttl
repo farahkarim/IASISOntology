@@ -99,8 +99,8 @@ iasis:precTool	rdfs:domain iasis:Annotation;
 				rdfs:range	iasis:AnalysisTool.
 iasis:has_Mesh	rdfs:domain	iasis:Publication;
 				rdfs:range	iasis:Annotation.
-iasis:mentioned_in rdfs:domain iasis:Publication;
-				rdfs:range	iasis:Annotation.
+iasis:mentioned_in rdfs:domain iasis:Annotation;
+				rdfs:range	iasis:Publication.
 iasis:maps	rdfs:domain	iasis:Annotation;
 			rdfs:range	iasis:Annotation.
 iasis:birthday	rdfs:domain iasis:Patient;
