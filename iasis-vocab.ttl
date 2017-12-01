@@ -98,8 +98,7 @@ iasis:slope_fpkm_se rdf:type	owl:DatatypeProperty.
 iasis:pval_nominal_threshold rdf:type	owl:DatatypeProperty.
 iasis:min_pval_nominal	 rdf:type	owl:DatatypeProperty.
 iasis:pval_beta rdf:type	owl:DatatypeProperty.
-iasis:belongs_to rdf:type	owl:ObjectProperty.
-iasis:enst rdf:type	owl:DatatypeProperty.
+#iasis:belongs_to rdf:type	owl:ObjectProperty.
 iasis:catalysis rdf:type	owl:ObjectProperty.
 iasis:is_related_to rdf:type	owl:ObjectProperty.
 iasis:max	rdf:type	owl:DatatypeProperty.
