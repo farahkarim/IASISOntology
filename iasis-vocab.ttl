@@ -212,7 +212,7 @@ iasis:pval_nominal_threshold rdfs:domain iasis:GeneticVariant;
 		rdfs:range rdfs:Literal.
 iasis:min_pval_nominal	rdfs:domain iasis:GeneticVariant;
 		rdfs:range rdfs:Literal.
-iasis:pval_beta rdf:type	rdfs:domain iasis:GeneticVariant;
+iasis:pval_beta	rdfs:domain iasis:GeneticVariant;
 		rdfs:range rdfs:Literal.
 ###############Subclasses
 
