@@ -108,15 +108,15 @@ iasis:stdev	rdf:type	owl:DatatypeProperty.
 iasis:global_score	rdf:type	owl:DatatypeProperty.
 iasis:omixcore rdf:type	owl:DatatypeProperty.
 
-iasis:enst rdf:type	owl:DatatypeProperty.
-iasis:ensp rdf:type	owl:DatatypeProperty.
-iasis:ensg rdf:type	owl:DatatypeProperty.
-iasis:uniprot rdf:type	owl:DatatypeProperty.
-iasis:chromosome_scaffold_name rdf:type	owl:DatatypeProperty.
-iasis:transcript_start_bp rdf:type	owl:DatatypeProperty.
-iasis:transcript_end_bp rdf:type	owl:DatatypeProperty.
-iasis:transcript_length  rdf:type	owl:DatatypeProperty.
-iasis:refseq  rdf:type	owl:DatatypeProperty.
+iasis:enst rdf:type	owl:ObjectProperty.
+iasis:ensp rdf:type	owl:ObjectProperty.
+iasis:ensg rdf:type	owl:ObjectProperty.
+iasis:uniprot rdf:type	owl:ObjectProperty.
+iasis:chromosome_scaffold_name rdf:type	owl:ObjectProperty.
+iasis:transcript_start_bp rdf:type	owl:ObjectProperty.
+iasis:transcript_end_bp rdf:type	owl:ObjectProperty.
+iasis:transcript_length  rdf:type	owl:ObjectProperty.
+iasis:refseq  rdf:type	owl:ObjectProperty.
 iasis:has_rbp_participant rdf:type	owl:ObjectProperty.
 iasis:has_RNA_participant rdf:type	owl:ObjectProperty.
 
@@ -242,23 +242,23 @@ iasis:pval_beta	rdfs:domain iasis:GeneticVariant;
 #iasis:belongs_to rdfs:domain iasis:Annotation;
 #		rdfs:range iasis:GeneticAssembly.
 iasis:enst rdfs:domain iasis:Annotation;
-		rdfs:range rdfs:Literal.
+		rdfs:range iasis:CUITerms.
 iasis:ensp rdfs:domain iasis:Annotation;
-		rdfs:range rdfs:Literal.
+		rdfs:range iasis:CUITerms.
 iasis:ensg rdfs:domain iasis:Annotation;
-		rdfs:range rdfs:Literal.
+		rdfs:range iasis:CUITerms.
 iasis:uniprot rdfs:domain iasis:Annotation;
-		rdfs:range rdfs:Literal.
+		rdfs:range iasis:CUITerms.
 iasis:chromosome_scaffold_name rdfs:domain iasis:Annotation;
-		rdfs:range rdfs:Literal.
+		rdfs:range iasis:CUITerms.
 iasis:transcript_start_bp rdfs:domain iasis:Annotation;
-		rdfs:range rdfs:Literal.
+		rdfs:range iasis:CUITerms.
 iasis:transcript_end_bp rdfs:domain iasis:Annotation;
-		rdfs:range rdfs:Literal.
+		rdfs:range iasis:CUITerms.
 iasis:transcript_length  rdfs:domain iasis:Annotation;
-		rdfs:range rdfs:Literal.
+		rdfs:range iasis:CUITerms.
 iasis:refseq  rdfs:domain iasis:Annotation;
-		rdfs:range rdfs:Literal.
+		rdfs:range iasis:CUITerms.
 
 iasis:has_rbp_participant rdfs:domain iasis:Interaction;
 			rdfs:range iasis:Annotation.
