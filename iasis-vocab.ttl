@@ -34,6 +34,7 @@ iasis:Death	rdf:type	owl:Class.
 ssn:Observation rdf:type	owl:Class.
 ssn:Measurement	rdf:type	owl:Class.
 ssn:Unit	rdf:type	owl:Class.
+iasis:Interaction rdf:type	owl:Class.
 #########Properties
 
 #iasis:title	rdf:type	owl:DatatypeProperty.
@@ -78,6 +79,10 @@ ssn:observedProperty	rdf:type	owl:ObjectProperty.
 ssn:result	rdf:type	owl:ObjectProperty.
 ssn:uom	rdf:type	owl:ObjectProperty.
 ssn:value	rdf:type	owl:DatatypeProperty.
+iasis:participates_in rdf:type	owl:ObjectProperty.
+iasis:interaction_prediction_score rdf:type	owl:DatatypeProperty.
+iasis:physical_interaction rdf:type	owl:DatatypeProperty.
+iasis:trans_eQTL_regulation rdf:type	owl:DatatypeProperty.
 
 ###########Domains And Ranges
 
@@ -165,6 +170,15 @@ ssn:uom	rdfs:domain	ssn:Measurement;
 		rdfs:range	ssn:Unit.	
 ssn:value	rdfs:domain	ssn:Measurement;
 		rdfs:range	rdfs:Literal.
+iasis:participates_in rdfs:domain iasis:Annotation;
+		rdfs:range iasis:Interaction.
+iasis:interaction_prediction_score rdfs:domain iasis:Interaction;
+		rdfs:range rdfs:Literal.
+iasis:physical_interaction rdfs:domain iasis:Interaction;
+		rdfs:range rdfs:Literal.
+iasis:trans_eQTL_regulation rdfs:domain iasis:Interaction;
+		rdfs:range rdfs:Literal.
+
 
 ###############Subclasses
 
