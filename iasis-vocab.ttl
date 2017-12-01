@@ -36,7 +36,9 @@ ssn:Measurement	rdf:type	owl:Class.
 ssn:Unit	rdf:type	owl:Class.
 iasis:Interaction rdf:type	owl:Class.
 iasis:GeneticVariant rdf:type	owl:Class.
-
+iasis:GeneticAssembly rdf:type	owl:Class.
+iasis:AcetylCoACarboxylase rdf:type	owl:Class.
+iasis:Synthesis rdf:type	owl:Class.
 #########Properties
 
 #iasis:title	rdf:type	owl:DatatypeProperty.
@@ -85,7 +87,6 @@ iasis:participates_in rdf:type	owl:ObjectProperty.
 iasis:interaction_prediction_score rdf:type	owl:DatatypeProperty.
 iasis:physical_interaction rdf:type	owl:DatatypeProperty.
 iasis:trans_eQTL_regulation rdf:type	owl:DatatypeProperty.
-
 iasis:has_variant rdf:type	owl:ObjectProperty.
 iasis:variant_id rdf:type	owl:DatatypeProperty.
 iasis:tss_distance rdf:type	owl:DatatypeProperty.
@@ -97,6 +98,18 @@ iasis:slope_fpkm_se rdf:type	owl:DatatypeProperty.
 iasis:pval_nominal_threshold rdf:type	owl:DatatypeProperty.
 iasis:min_pval_nominal	 rdf:type	owl:DatatypeProperty.
 iasis:pval_beta rdf:type	owl:DatatypeProperty.
+iasis:belongs_to rdf:type	owl:ObjectProperty.
+iasis:enst rdf:type	owl:DatatypeProperty.
+iasis:catalysis rdf:type	owl:ObjectProperty.
+iasis:is_related_to rdf:type	owl:ObjectProperty.
+iasis:max	rdf:type	owl:DatatypeProperty.
+iasis:mean	rdf:type	owl:DatatypeProperty.
+iasis:stdev	rdf:type	owl:DatatypeProperty.
+iasis:global_score	rdf:type	owl:DatatypeProperty.
+iasis:omixcore rdf:type	owl:DatatypeProperty.
+
+
+
 ###########Domains And Ranges
 
 #dc:title	rdfs:domain	iasis:Publication;
@@ -213,6 +226,26 @@ iasis:pval_nominal_threshold rdfs:domain iasis:GeneticVariant;
 iasis:min_pval_nominal	rdfs:domain iasis:GeneticVariant;
 		rdfs:range rdfs:Literal.
 iasis:pval_beta	rdfs:domain iasis:GeneticVariant;
+		rdfs:range rdfs:Literal.
+iasis:belongs_to rdfs:domain iasis:Annotation;
+		rdfs:range iasis:GeneticAssembly.
+iasis:enst rdfs:domain iasis:GeneticAssembly;
+		rdfs:range rdfs:Literal.
+iasis:catalysis rdfs:domain iasis:AcetylCoACarboxylase;
+		rdfs:range iasis:Synthesis.
+iasis:is_related_to rdfs:domain iasis:GeneticAssembly;
+		rdfs:range iasis:Synthesis.
+
+iasis:max	rdfs:domain iasis:Synthesis;
+		rdfs:range rdfs:Literal.
+
+iasis:mean	rdfs:domain iasis:Synthesis;
+		rdfs:range rdfs:Literal.
+iasis:stdev	rdfs:domain iasis:Synthesis;
+		rdfs:range rdfs:Literal.
+iasis:global_score	rdfs:domain iasis:Synthesis;
+		rdfs:range rdfs:Literal.
+iasis:omixcore rdfs:domain iasis:Synthesis;
 		rdfs:range rdfs:Literal.
 ###############Subclasses
 
