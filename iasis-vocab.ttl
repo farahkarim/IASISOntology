@@ -35,6 +35,8 @@ ssn:Observation rdf:type	owl:Class.
 ssn:Measurement	rdf:type	owl:Class.
 ssn:Unit	rdf:type	owl:Class.
 iasis:Interaction rdf:type	owl:Class.
+iasis:GeneticVariant rdf:type	owl:Class.
+
 #########Properties
 
 #iasis:title	rdf:type	owl:DatatypeProperty.
@@ -84,6 +86,17 @@ iasis:interaction_prediction_score rdf:type	owl:DatatypeProperty.
 iasis:physical_interaction rdf:type	owl:DatatypeProperty.
 iasis:trans_eQTL_regulation rdf:type	owl:DatatypeProperty.
 
+iasis:has_variant rdf:type	owl:ObjectProperty.
+iasis:variant_id rdf:type	owl:DatatypeProperty.
+iasis:tss_distance rdf:type	owl:DatatypeProperty.
+iasis:pval_nominal	rdf:type	owl:DatatypeProperty.
+iasis:slope	rdf:type	owl:DatatypeProperty.
+iasis:slope_se rdf:type	owl:DatatypeProperty.
+iasis:slope_fpkm	rdf:type	owl:DatatypeProperty.
+iasis:slope_fpkm_se rdf:type	owl:DatatypeProperty.
+iasis:pval_nominal_threshold rdf:type	owl:DatatypeProperty.
+iasis:min_pval_nominal	 rdf:type	owl:DatatypeProperty.
+iasis:pval_beta rdf:type	owl:DatatypeProperty.
 ###########Domains And Ranges
 
 #dc:title	rdfs:domain	iasis:Publication;
@@ -179,7 +192,28 @@ iasis:physical_interaction rdfs:domain iasis:Interaction;
 iasis:trans_eQTL_regulation rdfs:domain iasis:Interaction;
 		rdfs:range rdfs:Literal.
 
-
+iasis:has_variant rdfs:domain iasis:Annotation;
+			rdfs:range iasis:GeneticVariant.
+iasis:variant_id rdfs:domain iasis:GeneticVariant;
+		rdfs:range rdfs:Literal.
+iasis:tss_distance rdfs:domain iasis:GeneticVariant;
+		rdfs:range rdfs:Literal.
+iasis:pval_nominal	rdfs:domain iasis:GeneticVariant;
+		rdfs:range rdfs:Literal.
+iasis:slope	rdfs:domain iasis:GeneticVariant;
+		rdfs:range rdfs:Literal.
+iasis:slope_se rdfs:domain iasis:GeneticVariant;
+		rdfs:range rdfs:Literal.
+iasis:slope_fpkm	rdfs:domain iasis:GeneticVariant;
+		rdfs:range rdfs:Literal.
+iasis:slope_fpkm_se rdfs:domain iasis:GeneticVariant;
+		rdfs:range rdfs:Literal.
+iasis:pval_nominal_threshold rdfs:domain iasis:GeneticVariant;
+		rdfs:range rdfs:Literal.
+iasis:min_pval_nominal	rdfs:domain iasis:GeneticVariant;
+		rdfs:range rdfs:Literal.
+iasis:pval_beta rdf:type	rdfs:domain iasis:GeneticVariant;
+		rdfs:range rdfs:Literal.
 ###############Subclasses
 
 iasis:LCPublication	rdfs:subClassOf	iasis:Publication.
