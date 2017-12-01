@@ -36,7 +36,7 @@ ssn:Measurement	rdf:type	owl:Class.
 ssn:Unit	rdf:type	owl:Class.
 iasis:Interaction rdf:type	owl:Class.
 iasis:GeneticVariant rdf:type	owl:Class.
-iasis:GeneticAssembly rdf:type	owl:Class.
+#iasis:GeneticAssembly rdf:type	owl:Class.
 iasis:AcetylCoACarboxylase rdf:type	owl:Class.
 iasis:Synthesis rdf:type	owl:Class.
 #########Properties
@@ -107,6 +107,18 @@ iasis:mean	rdf:type	owl:DatatypeProperty.
 iasis:stdev	rdf:type	owl:DatatypeProperty.
 iasis:global_score	rdf:type	owl:DatatypeProperty.
 iasis:omixcore rdf:type	owl:DatatypeProperty.
+
+iasis:enst rdf:type	owl:DatatypeProperty.
+iasis:ensp rdf:type	owl:DatatypeProperty.
+iasis:ensg rdf:type	owl:DatatypeProperty.
+iasis:uniprot rdf:type	owl:DatatypeProperty.
+iasis:chromosome_scaffold_name rdf:type	owl:DatatypeProperty.
+iasis:transcript_start_bp rdf:type	owl:DatatypeProperty.
+iasis:transcript_end_bp rdf:type	owl:DatatypeProperty.
+iasis:transcript_length  rdf:type	owl:DatatypeProperty.
+iasis:refseq  rdf:type	owl:DatatypeProperty.
+iasis:has_rbp_participant rdf:type	owl:ObjectProperty.
+iasis:has_RNA_participant rdf:type	owl:ObjectProperty.
 
 
 
@@ -227,26 +239,66 @@ iasis:min_pval_nominal	rdfs:domain iasis:GeneticVariant;
 		rdfs:range rdfs:Literal.
 iasis:pval_beta	rdfs:domain iasis:GeneticVariant;
 		rdfs:range rdfs:Literal.
-iasis:belongs_to rdfs:domain iasis:Annotation;
-		rdfs:range iasis:GeneticAssembly.
-iasis:enst rdfs:domain iasis:GeneticAssembly;
+#iasis:belongs_to rdfs:domain iasis:Annotation;
+#		rdfs:range iasis:GeneticAssembly.
+iasis:enst rdfs:domain iasis:Annotation;
 		rdfs:range rdfs:Literal.
+iasis:ensp rdfs:domain iasis:Annotation;
+		rdfs:range rdfs:Literal.
+iasis:ensg rdfs:domain iasis:Annotation;
+		rdfs:range rdfs:Literal.
+iasis:uniprot rdfs:domain iasis:Annotation;
+		rdfs:range rdfs:Literal.
+iasis:chromosome_scaffold_name rdfs:domain iasis:Annotation;
+		rdfs:range rdfs:Literal.
+iasis:transcript_start_bp rdfs:domain iasis:Annotation;
+		rdfs:range rdfs:Literal.
+iasis:transcript_end_bp rdfs:domain iasis:Annotation;
+		rdfs:range rdfs:Literal.
+iasis:transcript_length  rdfs:domain iasis:Annotation;
+		rdfs:range rdfs:Literal.
+iasis:refseq  rdfs:domain iasis:Annotation;
+		rdfs:range rdfs:Literal.
+
+iasis:has_rbp_participant rdfs:domain iasis:Interaction;
+			rdfs:range iasis:Annotation.
+iasis:has_RNA_participant rdfs:domain iasis:Interaction;
+			rdfs:range iasis:Annotation.
+
+
 iasis:catalysis rdfs:domain iasis:AcetylCoACarboxylase;
 		rdfs:range iasis:Synthesis.
-iasis:is_related_to rdfs:domain iasis:GeneticAssembly;
+iasis:is_related_to rdfs:domain iasis:Annotation;
 		rdfs:range iasis:Synthesis.
 
-iasis:max	rdfs:domain iasis:Synthesis;
+iasis:max	rdfs:domain iasis:Interaction;
 		rdfs:range rdfs:Literal.
 
-iasis:mean	rdfs:domain iasis:Synthesis;
+iasis:mean	rdfs:domain iasis:Interaction;
 		rdfs:range rdfs:Literal.
-iasis:stdev	rdfs:domain iasis:Synthesis;
+iasis:stdev	rdfs:domain iasis:Interaction;
 		rdfs:range rdfs:Literal.
-iasis:global_score	rdfs:domain iasis:Synthesis;
+iasis:global_score	rdfs:domain iasis:Interaction;
 		rdfs:range rdfs:Literal.
-iasis:omixcore rdfs:domain iasis:Synthesis;
+iasis:omixcore rdfs:domain iasis:Interaction;
 		rdfs:range rdfs:Literal.
+
+
+iasis:expression_avrpkms	rdfs:domain iasis:Interaction;
+		rdfs:range rdfs:Literal.
+
+iasis:idrs	rdfs:domain iasis:Interaction;
+		rdfs:range rdfs:Literal.
+
+iasis:eclip_reads_rep1	rdfs:domain iasis:Interaction;
+		rdfs:range rdfs:Literal.
+
+iasis:eclip_reads_rep2	rdfs:domain iasis:Interaction;
+		rdfs:range rdfs:Literal.
+
+iasis:omixcore_1_1 rdfs:domain iasis:Interaction;
+		rdfs:range rdfs:Literal.
+
 ###############Subclasses
 
 iasis:LCPublication	rdfs:subClassOf	iasis:Publication.
