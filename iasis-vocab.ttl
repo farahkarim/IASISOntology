@@ -119,7 +119,7 @@ iasis:participates_in rdf:type	owl:ObjectProperty.
 #iasis:refseq  rdf:type	owl:ObjectProperty.
 iasis:has_rbp_participant rdf:type	owl:ObjectProperty.
 iasis:has_RNA_participant rdf:type	owl:ObjectProperty.
-
+iasis:has_annotation rdf:type	owl:ObjectProperty.
 
 
 ###########Domains And Ranges
@@ -298,7 +298,8 @@ iasis:has_RNA_participant rdfs:domain iasis:Interaction;
 
 #iasis:omixcore_1_1 rdfs:domain iasis:Interaction;
 #		rdfs:range rdfs:Literal.
-
+iasis:has_annotation rdfs:domain iasis:Protein;
+		rdfs:range iasis:Annotation.
 ###############Subclasses
 
 iasis:LCPublication	rdfs:subClassOf	iasis:Publication.
