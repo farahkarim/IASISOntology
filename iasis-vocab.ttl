@@ -35,10 +35,10 @@ ssn:Observation rdf:type	owl:Class.
 ssn:Measurement	rdf:type	owl:Class.
 ssn:Unit	rdf:type	owl:Class.
 iasis:Interaction rdf:type	owl:Class.
-iasis:GeneticVariant rdf:type	owl:Class.
+#iasis:GeneticVariant rdf:type	owl:Class.
 #iasis:GeneticAssembly rdf:type	owl:Class.
-iasis:AcetylCoACarboxylase rdf:type	owl:Class.
-iasis:Synthesis rdf:type	owl:Class.
+#iasis:AcetylCoACarboxylase rdf:type	owl:Class.
+#iasis:Synthesis rdf:type	owl:Class.
 iasis:Protein rdf:type	owl:Class.
 #########Properties
 
@@ -47,40 +47,40 @@ iasis:provenance	rdf:type	owl:ObjectProperty.
 #iasis:url	rdf:type	owl:ObjectProperty.
 iasis:confidence	rdf:type	owl:DatatypeProperty.
 iasis:id	rdf:type	owl:ObjectProperty.
-iasis:annLabel	rdf:type	owl:DatatypeProperty.
+iasis:ann_label	rdf:type	owl:DatatypeProperty.
 iasis:source	rdf:type	owl:ObjectProperty.
-iasis:precTool	rdf:type	owl:ObjectProperty.
-iasis:has_Mesh	rdf:type	owl:ObjectProperty.
+iasis:proc_tool	rdf:type	owl:ObjectProperty.
+iasis:has_mentioned	rdf:type	owl:ObjectProperty.
 iasis:mentioned_in	rdf:type	owl:ObjectProperty.
 iasis:maps	rdf:type	owl:ObjectProperty.
 iasis:birthday	rdf:type	owl:DatatypeProperty.
 iasis:gender	rdf:type	owl:ObjectProperty.
-iasis:researchID	rdf:type	owl:DatatypeProperty.
-iasis:genDiagnostic	rdf:type	owl:ObjectProperty.
+iasis:research_id	rdf:type	owl:DatatypeProperty.
+iasis:gen_diagnostic	rdf:type	owl:ObjectProperty.
 #iasis:observation	rdf:type	owl:DatatypeProperty.
 iasis:concentration	rdf:type	owl:ObjectProperty.
 iasis:dose	rdf:type	owl:ObjectProperty.
-iasis:tDate	rdf:type	owl:DatatypeProperty.
-iasis:bDate	rdf:type	owl:DatatypeProperty.
-iasis:has_Treatment	rdf:type	owl:ObjectProperty.
+iasis:t_date	rdf:type	owl:DatatypeProperty.
+iasis:b_date	rdf:type	owl:DatatypeProperty.
+iasis:has_treatment	rdf:type	owl:ObjectProperty.
 iasis:diagnostic	rdf:type	owl:ObjectProperty.
-iasis:has_BioMarker	rdf:type	owl:ObjectProperty.
-iasis:has_Biopsy	rdf:type	owl:ObjectProperty.
-iasis:bmDescription	rdf:type	owl:ObjectProperty.
-iasis:hasLevel	rdf:type	owl:ObjectProperty.
-iasis:prescriptedDrug	rdf:type	owl:ObjectProperty.
-iasis:dDate	rdf:type	owl:DatatypeProperty.
-iasis:deathCause	rdf:type	owl:ObjectProperty.
-iasis:isDied	rdf:type	owl:ObjectProperty.
-iasis:obsStartTime	rdf:type	owl:DatatypeProperty.
-iasis:obsEndTime	rdf:type	owl:DatatypeProperty.
-iasis:trtStartTime	rdf:type	owl:DatatypeProperty.
-iasis:trtEndTime rdf:type owl:DatatypeProperty.
+iasis:has_bioMarker	rdf:type	owl:ObjectProperty.
+iasis:has_biopsy	rdf:type	owl:ObjectProperty.
+iasis:bm_description	rdf:type	owl:ObjectProperty.
+iasis:has_level	rdf:type	owl:ObjectProperty.
+iasis:prescripted_drug	rdf:type	owl:ObjectProperty.
+iasis:d_date	rdf:type	owl:DatatypeProperty.
+iasis:death_cause	rdf:type	owl:ObjectProperty.
+iasis:is_died	rdf:type	owl:ObjectProperty.
+iasis:obs_start_time	rdf:type	owl:DatatypeProperty.
+iasis:obs_end_time	rdf:type	owl:DatatypeProperty.
+iasis:trt_start_time	rdf:type	owl:DatatypeProperty.
+iasis:trt_end_time rdf:type owl:DatatypeProperty.
 ssn:generates	rdf:type	owl:ObjectProperty.
-ssn:generatedBy	rdf:type	owl:ObjectProperty.
-ssn:obsTime	rdf:type	owl:DatatypeProperty.
-ssn:featureOfInterest	rdf:type	owl:ObjectProperty.
-ssn:observedProperty	rdf:type	owl:ObjectProperty.
+ssn:generated_by	rdf:type	owl:ObjectProperty.
+ssn:obs_time	rdf:type	owl:DatatypeProperty.
+ssn:feature_of_interest	rdf:type	owl:ObjectProperty.
+ssn:observed_property	rdf:type	owl:ObjectProperty.
 ssn:result	rdf:type	owl:ObjectProperty.
 ssn:uom	rdf:type	owl:ObjectProperty.
 ssn:value	rdf:type	owl:DatatypeProperty.
@@ -134,13 +134,13 @@ iasis:confidence rdfs:domain iasis:Annotation;
 				rdfs:range	rdfs:Literal.
 iasis:id	rdfs:domain iasis:Annotation;
 			rdfs:range	iasis:CUITerms.
-iasis:annLabel rdfs:domain	iasis:Annotation;
+iasis:ann_label rdfs:domain	iasis:Annotation;
 			rdfs:range	rdfs:Literal.
 iasis:source	rdfs:domain iasis:Annotation;
 				rdfs:range	iasis:VocabTerms.
-iasis:precTool	rdfs:domain iasis:Annotation;
+iasis:proc_tool	rdfs:domain iasis:Annotation;
 				rdfs:range	iasis:AnalysisTool.
-iasis:has_Mesh	rdfs:domain	iasis:Publication;
+iasis:has_mentioned	rdfs:domain	iasis:Publication;
 				rdfs:range	iasis:Annotation.
 iasis:mentioned_in rdfs:domain iasis:Annotation;
 				rdfs:range	iasis:Publication.
@@ -150,9 +150,9 @@ iasis:birthday	rdfs:domain iasis:Patient;
 				rdfs:range	rdfs:Literal.
 iasis:gender	rdfs:domain iasis:Patient;
 				rdfs:range	iasis:Gender.
-iasis:researchID	rdfs:domain iasis:Patient;
+iasis:research_id	rdfs:domain iasis:Patient;
 					rdfs:range	rdfs:Literal.
-iasis:genDiagnostic	rdfs:domain iasis:Patient;
+iasis:gen_diagnostic	rdfs:domain iasis:Patient;
 				rdfs:range	iasis:CondAnnotation.
 #iasis:observation	rdfs:domain iasis:Treatment;
 #					rdfs:range	rdfs:Literal.
@@ -160,47 +160,47 @@ iasis:concentration rdfs:domain iasis:Treatment;
 					rdfs:range	iasis:TConcentration.
 iasis:dose rdfs:domain iasis:Treatment;
 					rdfs:range	iasis:TDose.
-iasis:tDate	rdfs:domain	iasis:Treatment;
+iasis:t_date	rdfs:domain	iasis:Treatment;
 			rdfs:range	rdfs:Literal.
-iasis:bDate	rdfs:domain	iasis:Biopsy;
+iasis:b_date	rdfs:domain	iasis:Biopsy;
 			rdfs:range	rdfs:Literal.
-iasis:has_Treatment rdfs:domain iasis:Patient;
+iasis:has_treatment rdfs:domain iasis:Patient;
 					rdfs:range	iasis:Treatment.
 iasis:diagnostic	rdfs:domain	iasis:Biopsy;
 					rdfs:range	iasis:CondAnnotation.
-iasis:has_BioMarker	rdfs:domain	iasis:Biopsy;
+iasis:has_bioMarker	rdfs:domain	iasis:Biopsy;
 					rdfs:range	iasis:BioMarker.
-iasis:has_Biopsy	rdfs:domain	iasis:LCPatient;
+iasis:has_biopsy	rdfs:domain	iasis:LCPatient;
 					rdfs:range	iasis:Biopsy.
-iasis:bmDescription	rdfs:domain	iasis:BioMarker;
+iasis:bm_description	rdfs:domain	iasis:BioMarker;
 			rdfs:range	iasis:Annotation.
-iasis:hasLevel	rdfs:domain	iasis:BioMarker;
+iasis:has_level	rdfs:domain	iasis:BioMarker;
 			rdfs:range	iasis:BioMarkerLevel.
-iasis:prescriptedDrug	rdfs:domain	iasis:Treatment;
+iasis:prescripted_drug	rdfs:domain	iasis:Treatment;
 			rdfs:range	iasis:InterAnnotation.
-iasis:isDied	rdfs:domain iasis:Patient;
+iasis:is_died	rdfs:domain iasis:Patient;
 		rdfs:range	iasis:Death.
-iasis:dDate	rdfs:domain	iasis:Death;
+iasis:d_date	rdfs:domain	iasis:Death;
 			rdfs:range	rdfs:Literal.
-iasis:deathCause	rdfs:domain	iasis:Death;
+iasis:death_cause	rdfs:domain	iasis:Death;
 			rdfs:range	iasis:CondAnnotation.
-iasis:obsStartTime	rdfs:domain iasis:Patient;
+iasis:obs_start_time	rdfs:domain iasis:Patient;
 		rdfs:range	rdfs:Literal.
-iasis:obsEndTime	rdfs:domain iasis:Patient;
+iasis:obs_end_time	rdfs:domain iasis:Patient;
 		rdfs:range	rdfs:Literal.
-iasis:trtStartTime	rdfs:domain iasis:Treatment;
+iasis:trt_start_time	rdfs:domain iasis:Treatment;
 		rdfs:range	rdfs:Literal.
-iasis:trtEndTime	rdfs:domain iasis:Treatment;
+iasis:trt_end_time	rdfs:domain iasis:Treatment;
 		rdfs:range	rdfs:Literal.
 ssn:generates	rdfs:domain iasis:Treatment;
 		rdfs:range	ssn:Observation.
-ssn:generatedBy	rdfs:domain ssn:Observation;
+ssn:generated_by	rdfs:domain ssn:Observation;
 		rdfs:range	iasis:Treatment.
-ssn:obsTime	rdfs:domain ssn:Observation;
+ssn:obs_time	rdfs:domain ssn:Observation;
 		rdfs:range	rdfs:Literal.
-ssn:featureOfInterest	rdfs:domain ssn:Observation;
+ssn:feature_of_interest	rdfs:domain ssn:Observation;
 		rdfs:range	iasis:Patient.
-ssn:observedProperty	rdfs:domain ssn:Observation;
+ssn:observed_property	rdfs:domain ssn:Observation;
 		rdfs:range	iasis:CondAnnotation.
 ssn:result	rdfs:domain ssn:Observation;
 		rdfs:range	ssn:Measurement.
