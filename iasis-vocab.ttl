@@ -208,7 +208,7 @@ ssn:uom	rdfs:domain	ssn:Measurement;
 		rdfs:range	ssn:Unit.	
 ssn:value	rdfs:domain	ssn:Measurement;
 		rdfs:range	rdfs:Literal.
-iasis:participates_in rdfs:domain iasis:Annotation;
+iasis:participates_in rdfs:domain iasis:Protein;
 		rdfs:range iasis:Interaction.
 #iasis:interaction_prediction_score rdfs:domain iasis:Interaction;
 #		rdfs:range rdfs:Literal.
@@ -266,10 +266,10 @@ iasis:has_RNA_participant rdfs:domain iasis:Interaction;
 			rdfs:range iasis:Protein.
 
 
-iasis:catalysis rdfs:domain iasis:AcetylCoACarboxylase;
-		rdfs:range iasis:Synthesis.
-iasis:is_related_to rdfs:domain iasis:Annotation;
-		rdfs:range iasis:Synthesis.
+#iasis:catalysis rdfs:domain iasis:AcetylCoACarboxylase;
+#		rdfs:range iasis:Synthesis.
+#iasis:is_related_to rdfs:domain iasis:Annotation;
+#		rdfs:range iasis:Synthesis.
 
 #iasis:max	rdfs:domain iasis:Interaction;
 #		rdfs:range rdfs:Literal.
