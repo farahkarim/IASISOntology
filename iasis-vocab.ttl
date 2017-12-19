@@ -39,6 +39,7 @@ iasis:GeneticVariant rdf:type	owl:Class.
 #iasis:GeneticAssembly rdf:type	owl:Class.
 iasis:AcetylCoACarboxylase rdf:type	owl:Class.
 iasis:Synthesis rdf:type	owl:Class.
+iasis:Protein rdf:type	owl:Class.
 #########Properties
 
 #iasis:title	rdf:type	owl:DatatypeProperty.
@@ -84,38 +85,38 @@ ssn:result	rdf:type	owl:ObjectProperty.
 ssn:uom	rdf:type	owl:ObjectProperty.
 ssn:value	rdf:type	owl:DatatypeProperty.
 iasis:participates_in rdf:type	owl:ObjectProperty.
-iasis:interaction_prediction_score rdf:type	owl:DatatypeProperty.
-iasis:physical_interaction rdf:type	owl:DatatypeProperty.
-iasis:trans_eQTL_regulation rdf:type	owl:DatatypeProperty.
-iasis:has_variant rdf:type	owl:ObjectProperty.
-iasis:variant_id rdf:type	owl:DatatypeProperty.
-iasis:tss_distance rdf:type	owl:DatatypeProperty.
-iasis:pval_nominal	rdf:type	owl:DatatypeProperty.
-iasis:slope	rdf:type	owl:DatatypeProperty.
-iasis:slope_se rdf:type	owl:DatatypeProperty.
-iasis:slope_fpkm	rdf:type	owl:DatatypeProperty.
-iasis:slope_fpkm_se rdf:type	owl:DatatypeProperty.
-iasis:pval_nominal_threshold rdf:type	owl:DatatypeProperty.
-iasis:min_pval_nominal	 rdf:type	owl:DatatypeProperty.
-iasis:pval_beta rdf:type	owl:DatatypeProperty.
+#iasis:interaction_prediction_score rdf:type	owl:DatatypeProperty.
+#iasis:physical_interaction rdf:type	owl:DatatypeProperty.
+#iasis:trans_eQTL_regulation rdf:type	owl:DatatypeProperty.
+#iasis:has_variant rdf:type	owl:ObjectProperty.
+#iasis:variant_id rdf:type	owl:DatatypeProperty.
+#iasis:tss_distance rdf:type	owl:DatatypeProperty.
+#iasis:pval_nominal	rdf:type	owl:DatatypeProperty.
+#iasis:slope	rdf:type	owl:DatatypeProperty.
+#iasis:slope_se rdf:type	owl:DatatypeProperty.
+#iasis:slope_fpkm	rdf:type	owl:DatatypeProperty.
+#iasis:slope_fpkm_se rdf:type	owl:DatatypeProperty.
+#iasis:pval_nominal_threshold rdf:type	owl:DatatypeProperty.
+#iasis:min_pval_nominal	 rdf:type	owl:DatatypeProperty.
+#iasis:pval_beta rdf:type	owl:DatatypeProperty.
 #iasis:belongs_to rdf:type	owl:ObjectProperty.
-iasis:catalysis rdf:type	owl:ObjectProperty.
-iasis:is_related_to rdf:type	owl:ObjectProperty.
-iasis:max	rdf:type	owl:DatatypeProperty.
-iasis:mean	rdf:type	owl:DatatypeProperty.
-iasis:stdev	rdf:type	owl:DatatypeProperty.
-iasis:global_score	rdf:type	owl:DatatypeProperty.
-iasis:omixcore rdf:type	owl:DatatypeProperty.
+#iasis:catalysis rdf:type	owl:ObjectProperty.
+#iasis:is_related_to rdf:type	owl:ObjectProperty.
+#iasis:max	rdf:type	owl:DatatypeProperty.
+#iasis:mean	rdf:type	owl:DatatypeProperty.
+#iasis:stdev	rdf:type	owl:DatatypeProperty.
+#iasis:global_score	rdf:type	owl:DatatypeProperty.
+#iasis:omixcore rdf:type	owl:DatatypeProperty.
 
-iasis:enst rdf:type	owl:ObjectProperty.
-iasis:ensp rdf:type	owl:ObjectProperty.
-iasis:ensg rdf:type	owl:ObjectProperty.
-iasis:uniprot rdf:type	owl:ObjectProperty.
-iasis:chromosome_scaffold_name rdf:type	owl:ObjectProperty.
-iasis:transcript_start_bp rdf:type	owl:ObjectProperty.
-iasis:transcript_end_bp rdf:type	owl:ObjectProperty.
-iasis:transcript_length  rdf:type	owl:ObjectProperty.
-iasis:refseq  rdf:type	owl:ObjectProperty.
+#iasis:enst rdf:type	owl:ObjectProperty.
+#iasis:ensp rdf:type	owl:ObjectProperty.
+#iasis:ensg rdf:type	owl:ObjectProperty.
+#iasis:uniprot rdf:type	owl:ObjectProperty.
+#iasis:chromosome_scaffold_name rdf:type	owl:ObjectProperty.
+#iasis:transcript_start_bp rdf:type	owl:ObjectProperty.
+#iasis:transcript_end_bp rdf:type	owl:ObjectProperty.
+#iasis:transcript_length  rdf:type	owl:ObjectProperty.
+#iasis:refseq  rdf:type	owl:ObjectProperty.
 iasis:has_rbp_participant rdf:type	owl:ObjectProperty.
 iasis:has_RNA_participant rdf:type	owl:ObjectProperty.
 
@@ -209,60 +210,60 @@ ssn:value	rdfs:domain	ssn:Measurement;
 		rdfs:range	rdfs:Literal.
 iasis:participates_in rdfs:domain iasis:Annotation;
 		rdfs:range iasis:Interaction.
-iasis:interaction_prediction_score rdfs:domain iasis:Interaction;
-		rdfs:range rdfs:Literal.
-iasis:physical_interaction rdfs:domain iasis:Interaction;
-		rdfs:range rdfs:Literal.
-iasis:trans_eQTL_regulation rdfs:domain iasis:Interaction;
-		rdfs:range rdfs:Literal.
+#iasis:interaction_prediction_score rdfs:domain iasis:Interaction;
+#		rdfs:range rdfs:Literal.
+#iasis:physical_interaction rdfs:domain iasis:Interaction;
+#		rdfs:range rdfs:Literal.
+#iasis:trans_eQTL_regulation rdfs:domain iasis:Interaction;
+#		rdfs:range rdfs:Literal.
 
-iasis:has_variant rdfs:domain iasis:Annotation;
-			rdfs:range iasis:GeneticVariant.
-iasis:variant_id rdfs:domain iasis:GeneticVariant;
-		rdfs:range rdfs:Literal.
-iasis:tss_distance rdfs:domain iasis:GeneticVariant;
-		rdfs:range rdfs:Literal.
-iasis:pval_nominal	rdfs:domain iasis:GeneticVariant;
-		rdfs:range rdfs:Literal.
-iasis:slope	rdfs:domain iasis:GeneticVariant;
-		rdfs:range rdfs:Literal.
-iasis:slope_se rdfs:domain iasis:GeneticVariant;
-		rdfs:range rdfs:Literal.
-iasis:slope_fpkm	rdfs:domain iasis:GeneticVariant;
-		rdfs:range rdfs:Literal.
-iasis:slope_fpkm_se rdfs:domain iasis:GeneticVariant;
-		rdfs:range rdfs:Literal.
-iasis:pval_nominal_threshold rdfs:domain iasis:GeneticVariant;
-		rdfs:range rdfs:Literal.
-iasis:min_pval_nominal	rdfs:domain iasis:GeneticVariant;
-		rdfs:range rdfs:Literal.
-iasis:pval_beta	rdfs:domain iasis:GeneticVariant;
-		rdfs:range rdfs:Literal.
+#iasis:has_variant rdfs:domain iasis:Annotation;
+#			rdfs:range iasis:GeneticVariant.
+#iasis:variant_id rdfs:domain iasis:GeneticVariant;
+#		rdfs:range rdfs:Literal.
+#iasis:tss_distance rdfs:domain iasis:GeneticVariant;
+#		rdfs:range rdfs:Literal.
+#iasis:pval_nominal	rdfs:domain iasis:GeneticVariant;
+#		rdfs:range rdfs:Literal.
+#iasis:slope	rdfs:domain iasis:GeneticVariant;
+#		rdfs:range rdfs:Literal.
+#iasis:slope_se rdfs:domain iasis:GeneticVariant;
+#		rdfs:range rdfs:Literal.
+#iasis:slope_fpkm	rdfs:domain iasis:GeneticVariant;
+#		rdfs:range rdfs:Literal.
+#iasis:slope_fpkm_se rdfs:domain iasis:GeneticVariant;
+#		rdfs:range rdfs:Literal.
+#iasis:pval_nominal_threshold rdfs:domain iasis:GeneticVariant;
+#		rdfs:range rdfs:Literal.
+#iasis:min_pval_nominal	rdfs:domain iasis:GeneticVariant;
+#		rdfs:range rdfs:Literal.
+#iasis:pval_beta	rdfs:domain iasis:GeneticVariant;
+#		rdfs:range rdfs:Literal.
 #iasis:belongs_to rdfs:domain iasis:Annotation;
 #		rdfs:range iasis:GeneticAssembly.
-iasis:enst rdfs:domain iasis:Annotation;
-		rdfs:range iasis:CUITerms.
-iasis:ensp rdfs:domain iasis:Annotation;
-		rdfs:range iasis:CUITerms.
-iasis:ensg rdfs:domain iasis:Annotation;
-		rdfs:range iasis:CUITerms.
-iasis:uniprot rdfs:domain iasis:Annotation;
-		rdfs:range iasis:CUITerms.
-iasis:chromosome_scaffold_name rdfs:domain iasis:Annotation;
-		rdfs:range iasis:CUITerms.
-iasis:transcript_start_bp rdfs:domain iasis:Annotation;
-		rdfs:range iasis:CUITerms.
-iasis:transcript_end_bp rdfs:domain iasis:Annotation;
-		rdfs:range iasis:CUITerms.
-iasis:transcript_length  rdfs:domain iasis:Annotation;
-		rdfs:range iasis:CUITerms.
-iasis:refseq  rdfs:domain iasis:Annotation;
-		rdfs:range iasis:CUITerms.
+#iasis:enst rdfs:domain iasis:Annotation;
+#		rdfs:range iasis:CUITerms.
+#iasis:ensp rdfs:domain iasis:Annotation;
+#		rdfs:range iasis:CUITerms.
+#iasis:ensg rdfs:domain iasis:Annotation;
+#		rdfs:range iasis:CUITerms.
+#iasis:uniprot rdfs:domain iasis:Annotation;
+#		rdfs:range iasis:CUITerms.
+#iasis:chromosome_scaffold_name rdfs:domain iasis:Annotation;
+#		rdfs:range iasis:CUITerms.
+#iasis:transcript_start_bp rdfs:domain iasis:Annotation;
+#		rdfs:range iasis:CUITerms.
+#iasis:transcript_end_bp rdfs:domain iasis:Annotation;
+#		rdfs:range iasis:CUITerms.
+#iasis:transcript_length  rdfs:domain iasis:Annotation;
+#		rdfs:range iasis:CUITerms.
+#iasis:refseq  rdfs:domain iasis:Annotation;
+#		rdfs:range iasis:CUITerms.
 
 iasis:has_rbp_participant rdfs:domain iasis:Interaction;
-			rdfs:range iasis:Annotation.
+			rdfs:range iasis:Protein.
 iasis:has_RNA_participant rdfs:domain iasis:Interaction;
-			rdfs:range iasis:Annotation.
+			rdfs:range iasis:Protein.
 
 
 iasis:catalysis rdfs:domain iasis:AcetylCoACarboxylase;
@@ -270,33 +271,33 @@ iasis:catalysis rdfs:domain iasis:AcetylCoACarboxylase;
 iasis:is_related_to rdfs:domain iasis:Annotation;
 		rdfs:range iasis:Synthesis.
 
-iasis:max	rdfs:domain iasis:Interaction;
-		rdfs:range rdfs:Literal.
+#iasis:max	rdfs:domain iasis:Interaction;
+#		rdfs:range rdfs:Literal.
 
-iasis:mean	rdfs:domain iasis:Interaction;
-		rdfs:range rdfs:Literal.
-iasis:stdev	rdfs:domain iasis:Interaction;
-		rdfs:range rdfs:Literal.
-iasis:global_score	rdfs:domain iasis:Interaction;
-		rdfs:range rdfs:Literal.
-iasis:omixcore rdfs:domain iasis:Interaction;
-		rdfs:range rdfs:Literal.
+#iasis:mean	rdfs:domain iasis:Interaction;
+#		rdfs:range rdfs:Literal.
+#iasis:stdev	rdfs:domain iasis:Interaction;
+#		rdfs:range rdfs:Literal.
+#iasis:global_score	rdfs:domain iasis:Interaction;
+#		rdfs:range rdfs:Literal.
+#iasis:omixcore rdfs:domain iasis:Interaction;
+#		rdfs:range rdfs:Literal.
 
 
-iasis:expression_avrpkms	rdfs:domain iasis:Interaction;
-		rdfs:range rdfs:Literal.
+#iasis:expression_avrpkms	rdfs:domain iasis:Interaction;
+#		rdfs:range rdfs:Literal.
 
-iasis:idrs	rdfs:domain iasis:Interaction;
-		rdfs:range rdfs:Literal.
+#iasis:idrs	rdfs:domain iasis:Interaction;
+#		rdfs:range rdfs:Literal.
 
-iasis:eclip_reads_rep1	rdfs:domain iasis:Interaction;
-		rdfs:range rdfs:Literal.
+#iasis:eclip_reads_rep1	rdfs:domain iasis:Interaction;
+#		rdfs:range rdfs:Literal.
 
-iasis:eclip_reads_rep2	rdfs:domain iasis:Interaction;
-		rdfs:range rdfs:Literal.
+#iasis:eclip_reads_rep2	rdfs:domain iasis:Interaction;
+#		rdfs:range rdfs:Literal.
 
-iasis:omixcore_1_1 rdfs:domain iasis:Interaction;
-		rdfs:range rdfs:Literal.
+#iasis:omixcore_1_1 rdfs:domain iasis:Interaction;
+#		rdfs:range rdfs:Literal.
 
 ###############Subclasses
 
