@@ -34,7 +34,7 @@ iasis:Death	rdf:type	owl:Class.
 ssn:Observation rdf:type	owl:Class.
 ssn:Measurement	rdf:type	owl:Class.
 ssn:Unit	rdf:type	owl:Class.
-iasis:Interaction rdf:type	owl:Class.
+#iasis:Interaction rdf:type	owl:Class.
 #iasis:GeneticVariant rdf:type	owl:Class.
 #iasis:GeneticAssembly rdf:type	owl:Class.
 #iasis:AcetylCoACarboxylase rdf:type	owl:Class.
@@ -117,10 +117,10 @@ ssn:value	rdf:type	owl:DatatypeProperty.
 #iasis:transcript_end_bp rdf:type	owl:ObjectProperty.
 #iasis:transcript_length  rdf:type	owl:ObjectProperty.
 #iasis:refseq  rdf:type	owl:ObjectProperty.
-iasis:has_rbp_participant rdf:type	owl:ObjectProperty.
-iasis:has_RNA_participant rdf:type	owl:ObjectProperty.
+#iasis:has_rbp_participant rdf:type	owl:ObjectProperty.
+#iasis:has_RNA_participant rdf:type	owl:ObjectProperty.
 iasis:has_annotation rdf:type	owl:ObjectProperty.
-
+iasis:interacts_with rdf:type	owl:ObjectProperty.
 
 ###########Domains And Ranges
 
@@ -260,10 +260,10 @@ ssn:value	rdfs:domain	ssn:Measurement;
 #iasis:refseq  rdfs:domain iasis:Annotation;
 #		rdfs:range iasis:CUITerms.
 
-iasis:has_rbp_participant rdfs:domain iasis:Interaction;
-			rdfs:range iasis:Protein.
-iasis:has_RNA_participant rdfs:domain iasis:Interaction;
-			rdfs:range iasis:Protein.
+#iasis:has_rbp_participant rdfs:domain iasis:Interaction;
+#			rdfs:range iasis:Protein.
+#iasis:has_RNA_participant rdfs:domain iasis:Interaction;
+#			rdfs:range iasis:Protein.
 
 
 #iasis:catalysis rdfs:domain iasis:AcetylCoACarboxylase;
@@ -300,6 +300,9 @@ iasis:has_RNA_participant rdfs:domain iasis:Interaction;
 #		rdfs:range rdfs:Literal.
 iasis:has_annotation rdfs:domain iasis:Protein;
 		rdfs:range iasis:Annotation.
+iasis:interacts_with rdfs:domain iasis:Protein;
+			rdfs:range iasis:Protein.
+
 ###############Subclasses
 
 iasis:LCPublication	rdfs:subClassOf	iasis:Publication.
