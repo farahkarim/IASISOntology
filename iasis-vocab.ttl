@@ -34,17 +34,46 @@ iasis:Death	rdf:type	owl:Class.
 ssn:Observation rdf:type	owl:Class.
 ssn:Measurement	rdf:type	owl:Class.
 ssn:Unit	rdf:type	owl:Class.
-#iasis:Interaction rdf:type	owl:Class.
-#iasis:GeneticVariant rdf:type	owl:Class.
-#iasis:GeneticAssembly rdf:type	owl:Class.
-#iasis:AcetylCoACarboxylase rdf:type	owl:Class.
-#iasis:Synthesis rdf:type	owl:Class.
 iasis:Protein rdf:type	owl:Class.
+iasis:UMLS_Relations rdf:type	owl:Class.
+iasis:Effects rdf:type	owl:Class.
+iasis:AFFECTS__SPEC__ rdf:type	owl:Class.
+iasis:ASSOCIATED_WITH rdf:type	owl:Class.
+iasis:AUGMENTS rdf:type	owl:Class.
+iasis:CAUSES rdf:type	owl:Class.
+iasis:COEXISTS_WITH rdf:type	owl:Class.
+iasis:DIAGNOSES rdf:type	owl:Class.
+iasis:DISRUPTS rdf:type	owl:Class.
+iasis:ISA rdf:type	owl:Class.
+iasis:ADMINISTERED_TO rdf:type	owl:Class.
+iasis:CAUSES__SPEC__ rdf:type	owl:Class.
+iasis:Compared_With rdf:type	owl:Class.
+iasis:COMPLICATES rdf:type	owl:Class.
+iasis:INHIBITS rdf:type	owl:Class.
+iasis:INTERACTS_WITH rdf:type	owl:Class.
+iasis:LOCATION_OF rdf:type	owl:Class.
+iasis:Lower_Than rdf:type	owl:Class.
+iasis:MANIFESTATION_OF rdf:type	owl:Class.
+iasis:METHOD_OF rdf:type	owl:Class.
+iasis:OCCURS_IN rdf:type	owl:Class.
+iasis:OCCURS_IN__SPEC__ rdf:type	owl:Class.
+iasis:PART_OF rdf:type	owl:Class.
+iasis:PART_OF__SPEC__ rdf:type	owl:Class.
+iasis:PRECEDES rdf:type	owl:Class.
+iasis:PREDISPOSES rdf:type	owl:Class.
+iasis:PROCESS_OF rdf:type	owl:Class.
+iasis:PROCESS_OF__SPEC__ rdf:type	owl:Class.
+iasis:PRODUCES rdf:type	owl:Class.
+iasis:STIMULATES rdf:type	owl:Class.
+iasis:TREATS rdf:type	owl:Class.
+iasis:USES rdf:type	owl:Class.
+iasis:Analysis_Tools rdf:type	owl:Class.
+
+
+
 #########Properties
 
-#iasis:title	rdf:type	owl:DatatypeProperty.
 iasis:provenance	rdf:type	owl:ObjectProperty.
-#iasis:url	rdf:type	owl:ObjectProperty.
 iasis:confidence	rdf:type	owl:DatatypeProperty.
 iasis:id	rdf:type	owl:ObjectProperty.
 iasis:ann_label	rdf:type	owl:DatatypeProperty.
@@ -57,7 +86,6 @@ iasis:birthday	rdf:type	owl:DatatypeProperty.
 iasis:gender	rdf:type	owl:ObjectProperty.
 iasis:research_id	rdf:type	owl:DatatypeProperty.
 iasis:gen_diagnostic	rdf:type	owl:ObjectProperty.
-#iasis:observation	rdf:type	owl:DatatypeProperty.
 iasis:concentration	rdf:type	owl:ObjectProperty.
 iasis:dose	rdf:type	owl:ObjectProperty.
 iasis:t_date	rdf:type	owl:DatatypeProperty.
@@ -84,52 +112,16 @@ ssn:observed_property	rdf:type	owl:ObjectProperty.
 ssn:result	rdf:type	owl:ObjectProperty.
 ssn:uom	rdf:type	owl:ObjectProperty.
 ssn:value	rdf:type	owl:DatatypeProperty.
-#iasis:participates_in rdf:type	owl:ObjectProperty.
-#iasis:interaction_prediction_score rdf:type	owl:DatatypeProperty.
-#iasis:physical_interaction rdf:type	owl:DatatypeProperty.
-#iasis:trans_eQTL_regulation rdf:type	owl:DatatypeProperty.
-#iasis:has_variant rdf:type	owl:ObjectProperty.
-#iasis:variant_id rdf:type	owl:DatatypeProperty.
-#iasis:tss_distance rdf:type	owl:DatatypeProperty.
-#iasis:pval_nominal	rdf:type	owl:DatatypeProperty.
-#iasis:slope	rdf:type	owl:DatatypeProperty.
-#iasis:slope_se rdf:type	owl:DatatypeProperty.
-#iasis:slope_fpkm	rdf:type	owl:DatatypeProperty.
-#iasis:slope_fpkm_se rdf:type	owl:DatatypeProperty.
-#iasis:pval_nominal_threshold rdf:type	owl:DatatypeProperty.
-#iasis:min_pval_nominal	 rdf:type	owl:DatatypeProperty.
-#iasis:pval_beta rdf:type	owl:DatatypeProperty.
-#iasis:belongs_to rdf:type	owl:ObjectProperty.
-#iasis:catalysis rdf:type	owl:ObjectProperty.
-#iasis:is_related_to rdf:type	owl:ObjectProperty.
-#iasis:max	rdf:type	owl:DatatypeProperty.
-#iasis:mean	rdf:type	owl:DatatypeProperty.
-#iasis:stdev	rdf:type	owl:DatatypeProperty.
-#iasis:global_score	rdf:type	owl:DatatypeProperty.
-#iasis:omixcore rdf:type	owl:DatatypeProperty.
-
-#iasis:enst rdf:type	owl:ObjectProperty.
-#iasis:ensp rdf:type	owl:ObjectProperty.
-#iasis:ensg rdf:type	owl:ObjectProperty.
-#iasis:uniprot rdf:type	owl:ObjectProperty.
-#iasis:chromosome_scaffold_name rdf:type	owl:ObjectProperty.
-#iasis:transcript_start_bp rdf:type	owl:ObjectProperty.
-#iasis:transcript_end_bp rdf:type	owl:ObjectProperty.
-#iasis:transcript_length  rdf:type	owl:ObjectProperty.
-#iasis:refseq  rdf:type	owl:ObjectProperty.
-#iasis:has_rbp_participant rdf:type	owl:ObjectProperty.
-#iasis:has_RNA_participant rdf:type	owl:ObjectProperty.
 iasis:has_annotation rdf:type	owl:ObjectProperty.
 iasis:interacts_with rdf:type	owl:ObjectProperty.
+iasis:confidence rdf:type	owl:DatatypeProperty.
+iasis:prediction_tool rdf:type	owl:ObjectProperty.
+
 
 ###########Domains And Ranges
 
-#dc:title	rdfs:domain	iasis:Publication;
-#			rdfs:range	rdfs:Literal.
 iasis:provenance	rdfs:domain	iasis:Publication;
 					rdfs:range	iasis:PubRepository.
-#iasis:url	rdfs:domain	iasis:Publication;
-#			rdfs:range	rdfs:Literal.
 iasis:confidence rdfs:domain iasis:Annotation;
 				rdfs:range	rdfs:Literal.
 iasis:id	rdfs:domain iasis:Annotation;
@@ -154,8 +146,6 @@ iasis:research_id	rdfs:domain iasis:Patient;
 					rdfs:range	rdfs:Literal.
 iasis:gen_diagnostic	rdfs:domain iasis:Patient;
 				rdfs:range	iasis:CondAnnotation.
-#iasis:observation	rdfs:domain iasis:Treatment;
-#					rdfs:range	rdfs:Literal.
 iasis:concentration rdfs:domain iasis:Treatment;
 					rdfs:range	iasis:TConcentration.
 iasis:dose rdfs:domain iasis:Treatment;
@@ -208,101 +198,14 @@ ssn:uom	rdfs:domain	ssn:Measurement;
 		rdfs:range	ssn:Unit.	
 ssn:value	rdfs:domain	ssn:Measurement;
 		rdfs:range	rdfs:Literal.
-#iasis:participates_in rdfs:domain iasis:Protein;
-#		rdfs:range iasis:Interaction.
-#iasis:interaction_prediction_score rdfs:domain iasis:Interaction;
-#		rdfs:range rdfs:Literal.
-#iasis:physical_interaction rdfs:domain iasis:Interaction;
-#		rdfs:range rdfs:Literal.
-#iasis:trans_eQTL_regulation rdfs:domain iasis:Interaction;
-#		rdfs:range rdfs:Literal.
-
-#iasis:has_variant rdfs:domain iasis:Annotation;
-#			rdfs:range iasis:GeneticVariant.
-#iasis:variant_id rdfs:domain iasis:GeneticVariant;
-#		rdfs:range rdfs:Literal.
-#iasis:tss_distance rdfs:domain iasis:GeneticVariant;
-#		rdfs:range rdfs:Literal.
-#iasis:pval_nominal	rdfs:domain iasis:GeneticVariant;
-#		rdfs:range rdfs:Literal.
-#iasis:slope	rdfs:domain iasis:GeneticVariant;
-#		rdfs:range rdfs:Literal.
-#iasis:slope_se rdfs:domain iasis:GeneticVariant;
-#		rdfs:range rdfs:Literal.
-#iasis:slope_fpkm	rdfs:domain iasis:GeneticVariant;
-#		rdfs:range rdfs:Literal.
-#iasis:slope_fpkm_se rdfs:domain iasis:GeneticVariant;
-#		rdfs:range rdfs:Literal.
-#iasis:pval_nominal_threshold rdfs:domain iasis:GeneticVariant;
-#		rdfs:range rdfs:Literal.
-#iasis:min_pval_nominal	rdfs:domain iasis:GeneticVariant;
-#		rdfs:range rdfs:Literal.
-#iasis:pval_beta	rdfs:domain iasis:GeneticVariant;
-#		rdfs:range rdfs:Literal.
-#iasis:belongs_to rdfs:domain iasis:Annotation;
-#		rdfs:range iasis:GeneticAssembly.
-#iasis:enst rdfs:domain iasis:Annotation;
-#		rdfs:range iasis:CUITerms.
-#iasis:ensp rdfs:domain iasis:Annotation;
-#		rdfs:range iasis:CUITerms.
-#iasis:ensg rdfs:domain iasis:Annotation;
-#		rdfs:range iasis:CUITerms.
-#iasis:uniprot rdfs:domain iasis:Annotation;
-#		rdfs:range iasis:CUITerms.
-#iasis:chromosome_scaffold_name rdfs:domain iasis:Annotation;
-#		rdfs:range iasis:CUITerms.
-#iasis:transcript_start_bp rdfs:domain iasis:Annotation;
-#		rdfs:range iasis:CUITerms.
-#iasis:transcript_end_bp rdfs:domain iasis:Annotation;
-#		rdfs:range iasis:CUITerms.
-#iasis:transcript_length  rdfs:domain iasis:Annotation;
-#		rdfs:range iasis:CUITerms.
-#iasis:refseq  rdfs:domain iasis:Annotation;
-#		rdfs:range iasis:CUITerms.
-
-#iasis:has_rbp_participant rdfs:domain iasis:Interaction;
-#			rdfs:range iasis:Protein.
-#iasis:has_RNA_participant rdfs:domain iasis:Interaction;
-#			rdfs:range iasis:Protein.
-
-
-#iasis:catalysis rdfs:domain iasis:AcetylCoACarboxylase;
-#		rdfs:range iasis:Synthesis.
-#iasis:is_related_to rdfs:domain iasis:Annotation;
-#		rdfs:range iasis:Synthesis.
-
-#iasis:max	rdfs:domain iasis:Interaction;
-#		rdfs:range rdfs:Literal.
-
-#iasis:mean	rdfs:domain iasis:Interaction;
-#		rdfs:range rdfs:Literal.
-#iasis:stdev	rdfs:domain iasis:Interaction;
-#		rdfs:range rdfs:Literal.
-#iasis:global_score	rdfs:domain iasis:Interaction;
-#		rdfs:range rdfs:Literal.
-#iasis:omixcore rdfs:domain iasis:Interaction;
-#		rdfs:range rdfs:Literal.
-
-
-#iasis:expression_avrpkms	rdfs:domain iasis:Interaction;
-#		rdfs:range rdfs:Literal.
-
-#iasis:idrs	rdfs:domain iasis:Interaction;
-#		rdfs:range rdfs:Literal.
-
-#iasis:eclip_reads_rep1	rdfs:domain iasis:Interaction;
-#		rdfs:range rdfs:Literal.
-
-#iasis:eclip_reads_rep2	rdfs:domain iasis:Interaction;
-#		rdfs:range rdfs:Literal.
-
-#iasis:omixcore_1_1 rdfs:domain iasis:Interaction;
-#		rdfs:range rdfs:Literal.
 iasis:has_annotation rdfs:domain iasis:Protein;
 		rdfs:range iasis:Annotation.
 iasis:interacts_with rdfs:domain iasis:Protein;
 			rdfs:range iasis:Protein.
-
+iasis:confidence rdfs:domain iasis:UMLS_Relations;
+			rdfs:range	rdfs:Literal.
+iasis:prediction_tool rdfs:domain iasis:UMLS_Relations;
+			rdfs:range iasis:Analysis_Tools.
 ###############Subclasses
 
 iasis:LCPublication	rdfs:subClassOf	iasis:Publication.
