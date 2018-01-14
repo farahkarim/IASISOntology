@@ -67,6 +67,11 @@ iasis:PRODUCES rdf:type	owl:Class.
 iasis:STIMULATES rdf:type	owl:Class.
 iasis:TREATS rdf:type	owl:Class.
 iasis:USES rdf:type	owl:Class.
+iasis:Physical_Interaction rdf:type	owl:Class.
+iasis:Protein_RNA_Interaction rdf:type	owl:Class.
+iasis:Protein_RNA_Interaction_Probability rdf:type	owl:Class.
+iasis:Trans_eQTL_regulation rdf:type	owl:Class.
+iasis:Regulatory_Interactions rdf:type	owl:Class.
 
 
 
@@ -250,3 +255,8 @@ iasis:PRODUCES rdfs:subClassOf iasis:UMLS_Relations.
 iasis:STIMULATES rdfs:subClassOf iasis:UMLS_Relations.
 iasis:TREATS rdfs:subClassOf iasis:UMLS_Relations.
 iasis:USES rdfs:subClassOf iasis:UMLS_Relations.
+iasis:Physical_Interaction rdfs:subClassOf iasis:UMLS_Relations.
+iasis:Protein_RNA_Interaction rdfs:subClassOf iasis:UMLS_Relations.
+iasis:Protein_RNA_Interaction_Probability rdfs:subClassOf iasis:UMLS_Relations.
+iasis:Trans_eQTL_regulation rdfs:subClassOf iasis:UMLS_Relations.
+iasis:Regulatory_Interactions rdfs:subClassOf iasis:UMLS_Relations.
