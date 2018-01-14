@@ -126,6 +126,11 @@ iasis:expression_avrpkms rdf:type	owl:DatatypeProperty.
 iasis:eclips_read_rep1 rdf:type	owl:DatatypeProperty.
 iasis:eclips_read_rep2 rdf:type	owl:DatatypeProperty.
 iasis:omixcore_1_1 rdf:type	owl:DatatypeProperty.
+iasis:max  rdf:type	owl:DatatypeProperty.
+iasis:mean rdf:type	owl:DatatypeProperty.
+iasis:stdev rdf:type	owl:DatatypeProperty.
+iasis:global_score rdf:type	owl:DatatypeProperty.
+iasis:omixcore rdf:type	owl:DatatypeProperty.
 
 
 
@@ -228,6 +233,17 @@ iasis:eclips_read_rep1 rdfs:domain iasis:Protein_RNA_Interaction;
 iasis:eclips_read_rep2 rdfs:domain iasis:Protein_RNA_Interaction;
 			rdfs:range	rdfs:Literal.
 iasis:omixcore_1_1 rdfs:domain iasis:Protein_RNA_Interaction;
+			rdfs:range	rdfs:Literal.
+
+iasis:max  rdfs:domain iasis:Protein_RNA_Interaction_Probability;
+			rdfs:range	rdfs:Literal.
+iasis:mean rdfs:domain iasis:Protein_RNA_Interaction_Probability;
+			rdfs:range	rdfs:Literal.
+iasis:stdev rdfs:domain iasis:Protein_RNA_Interaction_Probability;
+			rdfs:range	rdfs:Literal.
+iasis:global_score rdfs:domain iasis:Protein_RNA_Interaction_Probability;
+			rdfs:range	rdfs:Literal.
+iasis:omixcore rdfs:domain iasis:Protein_RNA_Interaction_Probability;
 			rdfs:range	rdfs:Literal.
 
 ###############Subclasses
