@@ -121,7 +121,13 @@ iasis:interacts_with rdf:type	owl:ObjectProperty.
 iasis:confidence rdf:type	owl:DatatypeProperty.
 #iasis:prediction_tool rdf:type	owl:ObjectProperty.
 iasis:is_related_to rdf:type	owl:ObjectProperty.
-iasis:Interaction_prediction_score rdf:type	owl:DatatypeProperty.
+iasis:interaction_prediction_score rdf:type	owl:DatatypeProperty.
+iasis:expression_avrpkms rdf:type	owl:DatatypeProperty.
+iasis:eclips_read_rep1 rdf:type	owl:DatatypeProperty.
+iasis:eclips_read_rep2 rdf:type	owl:DatatypeProperty.
+iasis:omixcore_1_1 rdf:type	owl:DatatypeProperty.
+
+
 
 ###########Domains And Ranges
 
@@ -213,9 +219,16 @@ iasis:proc_tool rdfs:domain iasis:UMLS_Relations;
 			rdfs:range iasis:Analysis_Tool.
 iasis:is_related_to rdfs:domain iasis:Annotation;
 			rdfs:range iasis:UMLS_Relations.
-iasis:Interaction_prediction_score rdfs:domain iasis:Physical_Interaction;
+iasis:interaction_prediction_score rdfs:domain iasis:Physical_Interaction;
 			rdfs:range	rdfs:Literal.
-
+iasis:expression_avrpkms rdfs:domain iasis:Protein_RNA_Interaction;
+			rdfs:range	rdfs:Literal.
+iasis:eclips_read_rep1 rdfs:domain iasis:Protein_RNA_Interaction;
+			rdfs:range	rdfs:Literal.
+iasis:eclips_read_rep2 rdfs:domain iasis:Protein_RNA_Interaction;
+			rdfs:range	rdfs:Literal.
+iasis:omixcore_1_1 rdfs:domain iasis:Protein_RNA_Interaction;
+			rdfs:range	rdfs:Literal.
 
 ###############Subclasses
 
