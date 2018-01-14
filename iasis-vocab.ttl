@@ -67,7 +67,6 @@ iasis:PRODUCES rdf:type	owl:Class.
 iasis:STIMULATES rdf:type	owl:Class.
 iasis:TREATS rdf:type	owl:Class.
 iasis:USES rdf:type	owl:Class.
-iasis:Analysis_Tools rdf:type	owl:Class.
 
 
 
@@ -205,7 +204,7 @@ iasis:interacts_with rdfs:domain iasis:Protein;
 iasis:confidence rdfs:domain iasis:UMLS_Relations;
 			rdfs:range	rdfs:Literal.
 iasis:prediction_tool rdfs:domain iasis:UMLS_Relations;
-			rdfs:range iasis:Analysis_Tools.
+			rdfs:range iasis:Analysis_Tool.
 ###############Subclasses
 
 iasis:LCPublication	rdfs:subClassOf	iasis:Publication.
