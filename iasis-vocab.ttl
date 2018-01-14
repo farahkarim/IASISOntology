@@ -50,7 +50,7 @@ iasis:id	rdf:type	owl:ObjectProperty.
 iasis:ann_label	rdf:type	owl:DatatypeProperty.
 iasis:source	rdf:type	owl:ObjectProperty.
 iasis:proc_tool	rdf:type	owl:ObjectProperty.
-iasis:has_mentioned	rdf:type	owl:ObjectProperty.
+iasis:has_mesh	rdf:type	owl:ObjectProperty.
 iasis:mentioned_in	rdf:type	owl:ObjectProperty.
 iasis:maps	rdf:type	owl:ObjectProperty.
 iasis:birthday	rdf:type	owl:DatatypeProperty.
@@ -140,7 +140,7 @@ iasis:source	rdfs:domain iasis:Annotation;
 				rdfs:range	iasis:VocabTerms.
 iasis:proc_tool	rdfs:domain iasis:Annotation;
 				rdfs:range	iasis:AnalysisTool.
-iasis:has_mentioned	rdfs:domain	iasis:Publication;
+iasis:has_mesh	rdfs:domain	iasis:Publication;
 				rdfs:range	iasis:Annotation.
 iasis:mentioned_in rdfs:domain iasis:Annotation;
 				rdfs:range	iasis:Publication.
