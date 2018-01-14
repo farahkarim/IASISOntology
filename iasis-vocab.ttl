@@ -119,23 +119,23 @@ ssn:value	rdf:type	owl:DatatypeProperty.
 iasis:has_annotation rdf:type	owl:ObjectProperty.
 iasis:interacts_with rdf:type	owl:ObjectProperty.
 iasis:confidence rdf:type	owl:DatatypeProperty.
-iasis:prediction_tool rdf:type	owl:ObjectProperty.
+#iasis:prediction_tool rdf:type	owl:ObjectProperty.
 iasis:is_related_to rdf:type	owl:ObjectProperty.
 
 ###########Domains And Ranges
 
 iasis:provenance	rdfs:domain	iasis:Publication;
 					rdfs:range	iasis:PubRepository.
-iasis:confidence rdfs:domain iasis:Annotation;
-				rdfs:range	rdfs:Literal.
+#iasis:confidence rdfs:domain iasis:Annotation;
+#				rdfs:range	rdfs:Literal.
 iasis:id	rdfs:domain iasis:Annotation;
 			rdfs:range	iasis:CUITerms.
 iasis:ann_label rdfs:domain	iasis:Annotation;
 			rdfs:range	rdfs:Literal.
 iasis:source	rdfs:domain iasis:Annotation;
 				rdfs:range	iasis:VocabTerms.
-iasis:proc_tool	rdfs:domain iasis:Annotation;
-				rdfs:range	iasis:AnalysisTool.
+#iasis:proc_tool	rdfs:domain iasis:Annotation;
+#				rdfs:range	iasis:AnalysisTool.
 iasis:has_mesh	rdfs:domain	iasis:Publication;
 				rdfs:range	iasis:Annotation.
 iasis:mentioned_in rdfs:domain iasis:Annotation;
@@ -208,7 +208,7 @@ iasis:interacts_with rdfs:domain iasis:Protein;
 			rdfs:range iasis:Protein.
 iasis:confidence rdfs:domain iasis:UMLS_Relations;
 			rdfs:range	rdfs:Literal.
-iasis:prediction_tool rdfs:domain iasis:UMLS_Relations;
+iasis:proc_tool rdfs:domain iasis:UMLS_Relations;
 			rdfs:range iasis:Analysis_Tool.
 iasis:is_related_to rdfs:domain iasis:Annotation;
 			rdfs:range iasis:UMLS_Relations.
