@@ -79,7 +79,7 @@ iasis:Analytics rdf:type	owl:Class.
 iasis:Sample rdf:type	owl:Class.
 iasis:Clinical_Notes_And_Medical_Reports rdf:type	owl:Class.
 iasis:Liquid_Biopsy_Sequencing_Data rdf:type	owl:Class.
-iasis:images rdf:type	owl:Class.
+iasis:Images rdf:type	owl:Class.
 iasis:Sequencing_Data rdf:type	owl:Class.
 iasis:Genotype_Tissue_Expressions rdf:type	owl:Class.
 iasis:Drug rdf:type	owl:Class.
