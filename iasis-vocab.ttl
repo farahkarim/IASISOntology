@@ -282,7 +282,8 @@ iasis:pval_nominal_threshold  rdfs:domain iasis:Regulatory_Interactions;
 			rdfs:range	rdfs:Literal.
 iasis:min_pval_nominal  rdfs:domain iasis:Regulatory_Interactions;
 			rdfs:range	rdfs:Literal.
-
+iasis:is_related_to rdfs:domain iasis:Patient;
+			rdfs:range iasis:Has_Risk_Of.
 
 
 ###############Subclasses
