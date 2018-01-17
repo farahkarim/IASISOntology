@@ -72,6 +72,9 @@ iasis:Protein_RNA_Interaction rdf:type	owl:Class.
 iasis:Protein_RNA_Interaction_Probability rdf:type	owl:Class.
 iasis:Trans_eQTL_regulation rdf:type	owl:Class.
 iasis:Regulatory_Interactions rdf:type	owl:Class.
+iasis:Relations rdf:type	owl:Class.
+iasis:Has_Risk_Of rdf:type	owl:Class.
+iasis:Diagnostic_Test_Requested rdf:type	owl:Class.
 
 
 #########Properties
@@ -226,12 +229,12 @@ iasis:has_annotation rdfs:domain iasis:Protein;
 		rdfs:range iasis:Annotation.
 iasis:interacts_with rdfs:domain iasis:Protein;
 			rdfs:range iasis:Protein.
-iasis:confidence rdfs:domain iasis:UMLS_Relations;
+iasis:confidence rdfs:domain iasis:Relations;
 			rdfs:range	rdfs:Literal.
-iasis:proc_tool rdfs:domain iasis:UMLS_Relations;
+iasis:proc_tool rdfs:domain iasis:Relations;
 			rdfs:range iasis:Analysis_Tool.
 iasis:is_related_to rdfs:domain iasis:Annotation;
-			rdfs:range iasis:UMLS_Relations.
+			rdfs:range iasis:Relations.
 #iasis:interaction_prediction_score rdfs:domain iasis:Physical_Interaction;
 #			rdfs:range	rdfs:Literal.
 iasis:expression_avrpkms rdfs:domain iasis:Protein_RNA_Interaction;
@@ -320,3 +323,5 @@ iasis:Protein_RNA_Interaction rdfs:subClassOf iasis:UMLS_Relations.
 iasis:Protein_RNA_Interaction_Probability rdfs:subClassOf iasis:UMLS_Relations.
 iasis:Trans_eQTL_regulation rdfs:subClassOf iasis:UMLS_Relations.
 iasis:Regulatory_Interactions rdfs:subClassOf iasis:UMLS_Relations.
+iasis:UMLS_Relations rdfs:subClassOf iasis:Relations.
+iasis:Has_Risk_Of rdfs:subClassOf iasis:Relations.
