@@ -247,8 +247,8 @@ iasis:confidence rdfs:domain iasis:Relations;
 			rdfs:range	rdfs:Literal.
 iasis:proc_tool rdfs:domain iasis:Relations;
 			rdfs:range iasis:Analysis_Tool.
-iasis:is_related_to rdfs:domain iasis:Annotation;
-			rdfs:range iasis:Relations.
+#iasis:is_related_to rdfs:domain iasis:Annotation;
+#			rdfs:range iasis:Relations.
 #iasis:interaction_prediction_score rdfs:domain iasis:Physical_Interaction;
 #			rdfs:range	rdfs:Literal.
 iasis:expression_avrpkms rdfs:domain iasis:Protein_RNA_Interaction;
@@ -286,8 +286,8 @@ iasis:pval_nominal_threshold  rdfs:domain iasis:Regulatory_Interactions;
 			rdfs:range	rdfs:Literal.
 iasis:min_pval_nominal  rdfs:domain iasis:Regulatory_Interactions;
 			rdfs:range	rdfs:Literal.
-iasis:is_related_to rdfs:domain iasis:Patient;
-			rdfs:range iasis:Has_Risk_Of.
+iasis:is_related_to rdfs:domain iasis:Concept;
+			rdfs:range iasis:Relations.
 
 
 ###############Subclasses
