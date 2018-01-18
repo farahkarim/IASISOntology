@@ -12,14 +12,6 @@ iasis:Patient	rdf:type	owl:Class.
 iasis:Treatment	rdf:type	owl:Class.
 iasis:Biopsy	rdf:type	owl:Class.
 iasis:BioMarker	rdf:type	owl:Class.
-iasis:LCPublication	rdf:type	owl:Class.
-iasis:ADPublication	rdf:type	owl:Class.
-iasis:CondAnnotation	rdf:type	owl:Class.
-iasis:InterAnnotation	rdf:type	owl:Class.
-iasis:LCPatient	rdf:type	owl:Class.
-iasis:ADPatient	rdf:type	owl:Class.
-iasis:LCTreatment	rdf:type	owl:Class.
-iasis:ADTreatment	rdf:type	owl:Class.
 iasis:PubRepository	rdf:type	owl:Class.
 iasis:VocabTerms	rdf:type	owl:Class.
 iasis:Gender	rdf:type	owl:Class.
@@ -35,6 +27,28 @@ ssn:Observation rdf:type	owl:Class.
 ssn:Measurement	rdf:type	owl:Class.
 ssn:Unit	rdf:type	owl:Class.
 iasis:Protein rdf:type	owl:Class.
+iasis:Diagnostic_Test_Requested rdf:type	owl:Class.
+iasis:Analytics rdf:type	owl:Class.
+iasis:Sample rdf:type	owl:Class.
+iasis:Clinical_Notes_And_Medical_Reports rdf:type	owl:Class.
+iasis:Liquid_Biopsy_Sequencing_Data rdf:type	owl:Class.
+iasis:Images rdf:type	owl:Class.
+iasis:Sequencing_Data rdf:type	owl:Class.
+iasis:Genotype_Tissue_Expressions rdf:type	owl:Class.
+iasis:Drug rdf:type	owl:Class.
+iasis:Genes rdf:type	owl:Class.
+
+
+
+
+iasis:LCPublication	rdf:type	owl:Class.
+iasis:ADPublication	rdf:type	owl:Class.
+iasis:CondAnnotation	rdf:type	owl:Class.
+iasis:InterAnnotation	rdf:type	owl:Class.
+iasis:LCPatient	rdf:type	owl:Class.
+iasis:ADPatient	rdf:type	owl:Class.
+iasis:LCTreatment	rdf:type	owl:Class.
+iasis:ADTreatment	rdf:type	owl:Class.
 iasis:UMLS_Relations rdf:type	owl:Class.
 iasis:Effects rdf:type	owl:Class.
 iasis:AFFECTS__SPEC__ rdf:type	owl:Class.
@@ -74,16 +88,6 @@ iasis:Trans_eQTL_regulation rdf:type	owl:Class.
 iasis:Regulatory_Interactions rdf:type	owl:Class.
 iasis:Relations rdf:type	owl:Class.
 iasis:Has_Risk_Of rdf:type	owl:Class.
-iasis:Diagnostic_Test_Requested rdf:type	owl:Class.
-iasis:Analytics rdf:type	owl:Class.
-iasis:Sample rdf:type	owl:Class.
-iasis:Clinical_Notes_And_Medical_Reports rdf:type	owl:Class.
-iasis:Liquid_Biopsy_Sequencing_Data rdf:type	owl:Class.
-iasis:Images rdf:type	owl:Class.
-iasis:Sequencing_Data rdf:type	owl:Class.
-iasis:Genotype_Tissue_Expressions rdf:type	owl:Class.
-iasis:Drug rdf:type	owl:Class.
-iasis:Genes rdf:type	owl:Class.
 
 
 
@@ -336,3 +340,36 @@ iasis:Trans_eQTL_regulation rdfs:subClassOf iasis:UMLS_Relations.
 iasis:Regulatory_Interactions rdfs:subClassOf iasis:UMLS_Relations.
 iasis:UMLS_Relations rdfs:subClassOf iasis:Relations.
 iasis:Has_Risk_Of rdfs:subClassOf iasis:Relations.
+
+
+iasis:Publication	rdfs:subClassOf	iasis:Concept.
+iasis:Annotation	rdfs:subClassOf	iasis:Concept.
+iasis:Patient	rdfs:subClassOf	iasis:Concept.
+iasis:Treatment	rdfs:subClassOf	iasis:Concept.
+iasis:Biopsy	rdfs:subClassOf	iasis:Concept.
+iasis:BioMarker	rdfs:subClassOf	iasis:Concept.
+iasis:PubRepository	rdfs:subClassOf	iasis:Concept.
+iasis:VocabTerms	rdfs:subClassOf	iasis:Concept.
+iasis:Gender	rdfs:subClassOf	iasis:Concept.
+iasis:CUITerms	rdfs:subClassOf	iasis:Concept.
+iasis:LCAnnotation	rdfs:subClassOf	iasis:Concept.
+iasis:ADAnnotation	rdfs:subClassOf	iasis:Concept.
+iasis:AnalysisTool	rdfs:subClassOf	iasis:Concept.
+iasis:BioMarkerLevel	rdfs:subClassOf	iasis:Concept.
+iasis:TConcentration	rdfs:subClassOf	iasis:Concept.
+iasis:TDose	rdfs:subClassOf	iasis:Concept.
+iasis:Death	rdfs:subClassOf	iasis:Concept.
+ssn:Observation rdfs:subClassOf	iasis:Concept.
+ssn:Measurement	rdfs:subClassOf	iasis:Concept.
+ssn:Unit	rdfs:subClassOf	iasis:Concept.
+iasis:Protein rdfs:subClassOf	iasis:Concept.
+iasis:Diagnostic_Test_Requested rdfs:subClassOf	iasis:Concept.
+iasis:Analytics rdfs:subClassOf	iasis:Concept.
+iasis:Sample rdfs:subClassOf	iasis:Concept.
+iasis:Clinical_Notes_And_Medical_Reports rdfs:subClassOf	iasis:Concept.
+iasis:Liquid_Biopsy_Sequencing_Data rdfs:subClassOf	iasis:Concept.
+iasis:Images rdfs:subClassOf	iasis:Concept.
+iasis:Sequencing_Data rdfs:subClassOf	iasis:Concept.
+iasis:Genotype_Tissue_Expressions rdfs:subClassOf	iasis:Concept.
+iasis:Drug rdfs:subClassOf	iasis:Concept.
+iasis:Genes rdfs:subClassOf	iasis:Concept.
