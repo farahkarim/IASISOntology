@@ -88,8 +88,8 @@ iasis:Trans_eQTL_regulation rdf:type	owl:Class.
 iasis:Regulatory_Interactions rdf:type	owl:Class.
 iasis:Relations rdf:type	owl:Class.
 iasis:Has_Risk_Of rdf:type	owl:Class.
-
-
+iasis:Has_Mesh	rdf:type	owl:Class.
+iasis:Mentioned_In rdf:type	owl:Class.
 
 #########Properties
 
@@ -173,10 +173,10 @@ iasis:source	rdfs:domain iasis:Annotation;
 				rdfs:range	iasis:VocabTerms.
 #iasis:proc_tool	rdfs:domain iasis:Annotation;
 #				rdfs:range	iasis:AnalysisTool.
-iasis:has_mesh	rdfs:domain	iasis:Publication;
-				rdfs:range	iasis:Annotation.
-iasis:mentioned_in rdfs:domain iasis:Annotation;
-				rdfs:range	iasis:Publication.
+#iasis:has_mesh	rdfs:domain	iasis:Publication;
+#				rdfs:range	iasis:Annotation.
+#iasis:mentioned_in rdfs:domain iasis:Annotation;
+#				rdfs:range	iasis:Publication.
 iasis:maps	rdfs:domain	iasis:Annotation;
 			rdfs:range	iasis:Annotation.
 iasis:birthday	rdfs:domain iasis:Patient;
@@ -340,6 +340,11 @@ iasis:Trans_eQTL_regulation rdfs:subClassOf iasis:UMLS_Relations.
 iasis:Regulatory_Interactions rdfs:subClassOf iasis:UMLS_Relations.
 iasis:UMLS_Relations rdfs:subClassOf iasis:Relations.
 iasis:Has_Risk_Of rdfs:subClassOf iasis:Relations.
+iasis:Has_Mesh	rdfs:subClassOf iasis:Relations.
+iasis:Mentioned_In rdfs:subClassOf iasis:Relations.
+
+
+
 
 
 iasis:Publication	rdfs:subClassOf	iasis:Concept.
