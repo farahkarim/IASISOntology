@@ -89,7 +89,7 @@ iasis:Trans_eQTL_regulation rdf:type	owl:Class.
 iasis:Regulatory_Interactions rdf:type	owl:Class.
 iasis:Relations rdf:type	owl:Class.
 iasis:Has_Risk_Of rdf:type	owl:Class.
-iasis:Has_Mesh	rdf:type	owl:Class.
+iasis:Has_MESH	rdf:type	owl:Class.
 iasis:Mentioned_In rdf:type	owl:Class.
 
 #########Properties
@@ -100,7 +100,6 @@ iasis:id	rdf:type	owl:ObjectProperty.
 iasis:ann_label	rdf:type	owl:DatatypeProperty.
 iasis:source	rdf:type	owl:ObjectProperty.
 iasis:proc_tool	rdf:type	owl:ObjectProperty.
-iasis:has_mesh	rdf:type	owl:ObjectProperty.
 iasis:mentioned_in	rdf:type	owl:ObjectProperty.
 iasis:maps	rdf:type	owl:ObjectProperty.
 iasis:birthday	rdf:type	owl:DatatypeProperty.
@@ -164,20 +163,14 @@ iasis:min_pval_nominal rdf:type	owl:DatatypeProperty.
 
 iasis:provenance	rdfs:domain	iasis:Publication;
 					rdfs:range	iasis:PubRepository.
-#iasis:confidence rdfs:domain iasis:Annotation;
-#				rdfs:range	rdfs:Literal.
+iasis:confidence rdfs:domain iasis:Relations;
+				rdfs:range	rdfs:Literal.
 iasis:id	rdfs:domain iasis:Annotation;
 			rdfs:range	iasis:VocTerms.
 iasis:ann_label rdfs:domain	iasis:Annotation;
 			rdfs:range	rdfs:Literal.
 iasis:source	rdfs:domain iasis:Annotation;
-				rdfs:range	iasis:VocabTerms.
-#iasis:proc_tool	rdfs:domain iasis:Annotation;
-#				rdfs:range	iasis:AnalysisTool.
-#iasis:has_mesh	rdfs:domain	iasis:Publication;
-#				rdfs:range	iasis:Annotation.
-#iasis:mentioned_in rdfs:domain iasis:Annotation;
-#				rdfs:range	iasis:Publication.
+				rdfs:range	iasis:Vocabulary.
 iasis:maps	rdfs:domain	iasis:Annotation;
 			rdfs:range	iasis:Annotation.
 iasis:birthday	rdfs:domain iasis:Patient;
