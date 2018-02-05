@@ -171,7 +171,7 @@ iasis:id	rdfs:domain iasis:Annotation;
 iasis:ann_label rdfs:domain	iasis:Annotation;
 			rdfs:range	rdfs:Literal.
 iasis:source	rdfs:domain iasis:Annotation;
-				rdfs:range	iasis:VocabTerms.
+				rdfs:range	iasis:VocTerms.
 #iasis:proc_tool	rdfs:domain iasis:Annotation;
 #				rdfs:range	iasis:AnalysisTool.
 #iasis:has_mesh	rdfs:domain	iasis:Publication;
