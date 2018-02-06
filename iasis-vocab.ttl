@@ -5,6 +5,8 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix ssn: <http://www.w3.org/ns/ssn/> .
 #########Classes
+iasis:Tests rdf:type	owl:Class.
+iasis:BloodTest rdf:type	owl:Class.
 iasis:VocTerms rdf:type	owl:Class.
 iasis:Concept rdf:type	owl:Class.
 iasis:Publication	rdf:type	owl:Class.
@@ -93,7 +95,7 @@ iasis:Has_MESH	rdf:type	owl:Class.
 iasis:Mentioned_In rdf:type	owl:Class.
 
 #########Properties
-
+iasis:requestedTest rdf:type	owl:ObjectProperty.
 iasis:provenance	rdf:type	owl:ObjectProperty.
 iasis:confidence	rdf:type	owl:DatatypeProperty.
 iasis:id	rdf:type	owl:ObjectProperty.
@@ -160,7 +162,8 @@ iasis:min_pval_nominal rdf:type	owl:DatatypeProperty.
 
 
 ###########Domains And Ranges
-
+iasis:requestedTest rdfs:domain	iasis:Observation;
+					rdfs:range	iasis:Tests.
 iasis:provenance	rdfs:domain	iasis:Publication;
 					rdfs:range	iasis:PubRepository.
 iasis:confidence rdfs:domain iasis:Relations;
@@ -285,7 +288,7 @@ iasis:is_related_to rdfs:domain iasis:Concept;
 
 
 ###############Subclasses
-
+iasis:BloodTest rdfs:subClassOf iasis:Test.
 iasis:LCPublication	rdfs:subClassOf	iasis:Publication.
 iasis:ADPublication	rdfs:subClassOf	iasis:Publication.
 iasis:LCAnnotation	rdfs:subClassOf	iasis:Annotation.
@@ -347,26 +350,21 @@ iasis:Patient	rdfs:subClassOf	iasis:Concept.
 iasis:Treatment	rdfs:subClassOf	iasis:Concept.
 iasis:Biopsy	rdfs:subClassOf	iasis:Concept.
 iasis:BioMarker	rdfs:subClassOf	iasis:Concept.
-iasis:PubRepository	rdfs:subClassOf	iasis:Concept.
-iasis:VocabTerms	rdfs:subClassOf	iasis:Concept.
-iasis:Gender	rdfs:subClassOf	iasis:Concept.
-iasis:CUITerms	rdfs:subClassOf	iasis:Concept.
-iasis:LCAnnotation	rdfs:subClassOf	iasis:Concept.
-iasis:ADAnnotation	rdfs:subClassOf	iasis:Concept.
-iasis:AnalysisTool	rdfs:subClassOf	iasis:Concept.
-iasis:BioMarkerLevel	rdfs:subClassOf	iasis:Concept.
-iasis:TConcentration	rdfs:subClassOf	iasis:Concept.
-iasis:TDose	rdfs:subClassOf	iasis:Concept.
-iasis:Death	rdfs:subClassOf	iasis:Concept.
-ssn:Observation rdfs:subClassOf	iasis:Concept.
-ssn:Measurement	rdfs:subClassOf	iasis:Concept.
-ssn:Unit	rdfs:subClassOf	iasis:Concept.
+
+iasis:LCAnnotation	rdfs:subClassOf	iasis:Annotation.
+iasis:ADAnnotation	rdfs:subClassOf	iasis:Annotation.
+
+
 iasis:Protein rdfs:subClassOf	iasis:Concept.
-iasis:Diagnostic_Test_Requested rdfs:subClassOf	iasis:Concept.
-iasis:Analytics rdfs:subClassOf	iasis:Concept.
+
 iasis:Sample rdfs:subClassOf	iasis:Concept.
-iasis:Clinical_Notes_And_Medical_Reports rdfs:subClassOf	iasis:Concept.
-iasis:Liquid_Biopsy_Sequencing_Data rdfs:subClassOf	iasis:Concept.
+iasis:Clinical_Record rdfs:subClassOf iasis:Concept.
+iasis:Clinical_Note rdfs:subClassOf iasis:Clinical_Record.
+
+iasis:Test rdfs:subClassOf	iasis:Concept.
+iasis:BloodTest rdfs:subClassOf	iasis:Test.
+iasis:Liquid_Biopsy rdfs:subClassOf	iasis:BloodTest.
+
 iasis:Images rdfs:subClassOf	iasis:Concept.
 iasis:Sequencing_Data rdfs:subClassOf	iasis:Concept.
 iasis:Genotype_Tissue_Expressions rdfs:subClassOf	iasis:Concept.
