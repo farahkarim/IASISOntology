@@ -96,6 +96,7 @@ iasis:Mentioned_In rdf:type	owl:Class.
 
 #########Properties
 iasis:requestedTest rdf:type	owl:ObjectProperty.
+iasis:partOf rdf:type	owl:ObjectProperty.
 iasis:provenance	rdf:type	owl:ObjectProperty.
 iasis:confidence	rdf:type	owl:DatatypeProperty.
 iasis:id	rdf:type	owl:ObjectProperty.
@@ -162,6 +163,8 @@ iasis:min_pval_nominal rdf:type	owl:DatatypeProperty.
 
 
 ###########Domains And Ranges
+iasis:partOf rdfs:domain	iasis:Concept;
+					rdfs:range	iasis:Concept.
 iasis:requestedTest rdfs:domain	iasis:Observation;
 					rdfs:range	iasis:Tests.
 iasis:provenance	rdfs:domain	iasis:Publication;
@@ -365,8 +368,13 @@ iasis:Test rdfs:subClassOf	iasis:Concept.
 iasis:BloodTest rdfs:subClassOf	iasis:Test.
 iasis:Liquid_Biopsy rdfs:subClassOf	iasis:BloodTest.
 
-iasis:Images rdfs:subClassOf	iasis:Concept.
-iasis:Sequencing_Data rdfs:subClassOf	iasis:Concept.
-iasis:Genotype_Tissue_Expressions rdfs:subClassOf	iasis:Concept.
+iasis:Image rdfs:subClassOf	iasis:Concept.
+
+iasis:Genotype_Tissue_Expression rdfs:subClassOf iasis:Concept.
 iasis:Drug rdfs:subClassOf	iasis:Concept.
-iasis:Genes rdfs:subClassOf	iasis:Concept.
+iasis:Gene rdfs:subClassOf	iasis:Concept.
+
+###############PartOf
+iasis:Clinical_Note iasis:partOf iasis:Clinical_Record.
+iasis:Image iasis:partOf iasis:Clinical_Record.
+iasis:Test iasis:partOf iasis:Clinical_Record.
