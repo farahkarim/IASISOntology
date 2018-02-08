@@ -53,7 +53,7 @@ iasis:UMLS_Relation rdf:type	owl:Class.
 iasis:Effect rdf:type	owl:Class.
 iasis:AFFECT__SPEC__ rdf:type	owl:Class.
 iasis:ASSOCIATED_WITH rdf:type	owl:Class.
-iasis:AUGMENT rdf:type	owl:Class.
+iasis:AUGMENTS rdf:type	owl:Class.
 iasis:CAUSE rdf:type	owl:Class.
 iasis:COEXISTS_WITH rdf:type	owl:Class.
 iasis:DIAGNOSES rdf:type	owl:Class.
@@ -85,8 +85,8 @@ iasis:Physical_Interaction rdf:type	owl:Class.
 iasis:Protein_RNA_Interaction rdf:type	owl:Class.
 iasis:Protein_RNA_Interaction_Probability rdf:type	owl:Class.
 iasis:Trans_eQTL_regulation rdf:type	owl:Class.
-iasis:Regulatory_Interactions rdf:type	owl:Class.
-iasis:Relations rdf:type	owl:Class.
+iasis:Regulatory_Interaction rdf:type	owl:Class.
+iasis:Relation rdf:type	owl:Class.
 iasis:Has_Risk_Of rdf:type	owl:Class.
 iasis:Has_MESH	rdf:type	owl:Class.
 iasis:Mentioned_In rdf:type	owl:Class.
@@ -188,7 +188,7 @@ iasis:requestedTest rdfs:domain	iasis:Observation;
 					rdfs:range	iasis:Tests.
 iasis:provenance	rdfs:domain	iasis:Publication;
 					rdfs:range	iasis:PubRepository.
-iasis:confidence rdfs:domain iasis:Relations;
+iasis:confidence rdfs:domain iasis:Relation;
 				rdfs:range	rdfs:Literal.
 iasis:id	rdfs:domain iasis:Annotation;
 			rdfs:range	iasis:VocTerms.
@@ -262,9 +262,9 @@ iasis:has_annotation rdfs:domain iasis:Protein;
 		rdfs:range iasis:Annotation.
 iasis:interacts_with rdfs:domain iasis:Protein;
 			rdfs:range iasis:Protein.
-iasis:confidence rdfs:domain iasis:Relations;
+iasis:confidence rdfs:domain iasis:Relation;
 			rdfs:range	rdfs:Literal.
-iasis:proc_tool rdfs:domain iasis:Relations;
+iasis:proc_tool rdfs:domain iasis:Relation;
 			rdfs:range iasis:Analysis_Tool.
 #iasis:is_related_to rdfs:domain iasis:Annotation;
 #			rdfs:range iasis:Relations.
@@ -289,21 +289,21 @@ iasis:global_score rdfs:domain iasis:Protein_RNA_Interaction_Probability;
 iasis:omixcore rdfs:domain iasis:Protein_RNA_Interaction_Probability;
 			rdfs:range	rdfs:Literal.
 
-iasis:tss_distance  rdfs:domain iasis:Regulatory_Interactions;
+iasis:tss_distance  rdfs:domain iasis:Regulatory_Interaction;
 			rdfs:range	rdfs:Literal.
-iasis:pval_nominal  rdfs:domain iasis:Regulatory_Interactions;
+iasis:pval_nominal  rdfs:domain iasis:Regulatory_Interaction;
 			rdfs:range	rdfs:Literal.
-iasis:slope  rdfs:domain iasis:Regulatory_Interactions;
+iasis:slope  rdfs:domain iasis:Regulatory_Interaction;
 			rdfs:range	rdfs:Literal.
-iasis:slope_se  rdfs:domain iasis:Regulatory_Interactions;
+iasis:slope_se  rdfs:domain iasis:Regulatory_Interaction;
 			rdfs:range	rdfs:Literal.
-iasis:slope_fpkm  rdfs:domain iasis:Regulatory_Interactions;
+iasis:slope_fpkm  rdfs:domain iasis:Regulatory_Interaction;
 			rdfs:range	rdfs:Literal.
-iasis:slope_fpkm_se  rdfs:domain iasis:Regulatory_Interactions;
+iasis:slope_fpkm_se  rdfs:domain iasis:Regulatory_Interaction;
 			rdfs:range	rdfs:Literal.
-iasis:pval_nominal_threshold  rdfs:domain iasis:Regulatory_Interactions;
+iasis:pval_nominal_threshold  rdfs:domain iasis:Regulatory_Interaction;
 			rdfs:range	rdfs:Literal.
-iasis:min_pval_nominal  rdfs:domain iasis:Regulatory_Interactions;
+iasis:min_pval_nominal  rdfs:domain iasis:Regulatory_Interaction;
 			rdfs:range	rdfs:Literal.
 iasis:is_related_to rdfs:domain iasis:Concept;
 			rdfs:range iasis:Relations.
@@ -336,8 +336,8 @@ iasis:LCPatient	rdfs:subClassOf	iasis:Patient.
 iasis:ADPatient	rdfs:subClassOf	iasis:Patient.
 iasis:LCTreatment	rdfs:subClassOf	iasis:Treatment.
 iasis:ADTreatment	rdfs:subClassOf	iasis:Treatment.
-iasis:Effects rdfs:subClassOf iasis:UMLS_Relations.
-iasis:AFFECTS__SPEC__ rdfs:subClassOf iasis:UMLS_Relation.
+iasis:Effect rdfs:subClassOf iasis:UMLS_Relation.
+iasis:AFFECT__SPEC__ rdfs:subClassOf iasis:UMLS_Relation.
 iasis:ASSOCIATED_WITH rdfs:subClassOf iasis:UMLS_Relation.
 iasis:AUGMENTS rdfs:subClassOf iasis:UMLS_Relation.
 iasis:CAUSES rdfs:subClassOf iasis:UMLS_Relation.
@@ -346,36 +346,36 @@ iasis:DIAGNOSES rdfs:subClassOf iasis:UMLS_Relation.
 iasis:DISRUPTS rdfs:subClassOf iasis:UMLS_Relation.
 iasis:ISA rdfs:subClassOf iasis:UMLS_Relation.
 iasis:ADMINISTERED_TO rdfs:subClassOf iasis:UMLS_Relation.
-iasis:CAUSES__SPEC__ rdfs:subClassOf iasis:UMLS_Relations.
-iasis:Compared_With rdfs:subClassOf iasis:UMLS_Relations.
-iasis:COMPLICATES rdfs:subClassOf iasis:UMLS_Relations.
-iasis:INHIBITS rdfs:subClassOf iasis:UMLS_Relations.
-iasis:INTERACTS_WITH rdfs:subClassOf iasis:UMLS_Relations.
-iasis:LOCATION_OF rdfs:subClassOf iasis:UMLS_Relations.
-iasis:Lower_Than rdfs:subClassOf iasis:UMLS_Relations.
-iasis:MANIFESTATION_OF rdfs:subClassOf iasis:UMLS_Relations.
-iasis:METHOD_OF rdfs:subClassOf iasis:UMLS_Relations.
-iasis:OCCURS_IN rdfs:subClassOf iasis:UMLS_Relations.
-iasis:OCCURS_IN__SPEC__ rdfs:subClassOf iasis:UMLS_Relations.
-iasis:PART_OF rdfs:subClassOf iasis:UMLS_Relations.
-iasis:PART_OF__SPEC__ rdfs:subClassOf iasis:UMLS_Relations.
-iasis:PRECEDES rdfs:subClassOf iasis:UMLS_Relations.
-iasis:PREDISPOSES rdfs:subClassOf iasis:UMLS_Relations.
-iasis:PROCESS_OF rdfs:subClassOf iasis:UMLS_Relations.
-iasis:PROCESS_OF__SPEC__ rdfs:subClassOf iasis:UMLS_Relations.
-iasis:PRODUCES rdfs:subClassOf iasis:UMLS_Relations.
-iasis:STIMULATES rdfs:subClassOf iasis:UMLS_Relations.
-iasis:TREATS rdfs:subClassOf iasis:UMLS_Relations.
-iasis:USES rdfs:subClassOf iasis:UMLS_Relations.
-iasis:Physical_Interaction rdfs:subClassOf iasis:UMLS_Relations.
-iasis:Protein_RNA_Interaction rdfs:subClassOf iasis:UMLS_Relations.
-iasis:Protein_RNA_Interaction_Probability rdfs:subClassOf iasis:UMLS_Relations.
-iasis:Trans_eQTL_regulation rdfs:subClassOf iasis:UMLS_Relations.
-iasis:Regulatory_Interactions rdfs:subClassOf iasis:UMLS_Relations.
-iasis:UMLS_Relations rdfs:subClassOf iasis:Relations.
-iasis:Has_Risk_Of rdfs:subClassOf iasis:Relations.
-iasis:Has_Mesh	rdfs:subClassOf iasis:Relations.
-iasis:Mentioned_In rdfs:subClassOf iasis:Relations.
+iasis:CAUSES__SPEC__ rdfs:subClassOf iasis:UMLS_Relation.
+iasis:Compared_With rdfs:subClassOf iasis:UMLS_Relation.
+iasis:COMPLICATES rdfs:subClassOf iasis:UMLS_Relation.
+iasis:INHIBITS rdfs:subClassOf iasis:UMLS_Relation.
+iasis:INTERACTS_WITH rdfs:subClassOf iasis:UMLS_Relation.
+iasis:LOCATION_OF rdfs:subClassOf iasis:UMLS_Relation.
+iasis:Lower_Than rdfs:subClassOf iasis:UMLS_Relation.
+iasis:MANIFESTATION_OF rdfs:subClassOf iasis:UMLS_Relation.
+iasis:METHOD_OF rdfs:subClassOf iasis:UMLS_Relation.
+iasis:OCCURS_IN rdfs:subClassOf iasis:UMLS_Relation.
+iasis:OCCURS_IN__SPEC__ rdfs:subClassOf iasis:UMLS_Relation.
+iasis:PART_OF rdfs:subClassOf iasis:UMLS_Relation.
+iasis:PART_OF__SPEC__ rdfs:subClassOf iasis:UMLS_Relation.
+iasis:PRECEDES rdfs:subClassOf iasis:UMLS_Relation.
+iasis:PREDISPOSES rdfs:subClassOf iasis:UMLS_Relation.
+iasis:PROCESS_OF rdfs:subClassOf iasis:UMLS_Relation.
+iasis:PROCESS_OF__SPEC__ rdfs:subClassOf iasis:UMLS_Relation.
+iasis:PRODUCES rdfs:subClassOf iasis:UMLS_Relation.
+iasis:STIMULATES rdfs:subClassOf iasis:UMLS_Relation.
+iasis:TREATS rdfs:subClassOf iasis:UMLS_Relation.
+iasis:USES rdfs:subClassOf iasis:UMLS_Relation.
+iasis:Physical_Interaction rdfs:subClassOf iasis:UMLS_Relation.
+iasis:Protein_RNA_Interaction rdfs:subClassOf iasis:UMLS_Relation.
+iasis:Protein_RNA_Interaction_Probability rdfs:subClassOf iasis:UMLS_Relation.
+iasis:Trans_eQTL_regulation rdfs:subClassOf iasis:UMLS_Relation.
+iasis:Regulatory_Interaction rdfs:subClassOf iasis:UMLS_Relation.
+iasis:UMLS_Relation rdfs:subClassOf iasis:Relation.
+iasis:Has_Risk_Of rdfs:subClassOf iasis:Relation.
+iasis:Has_Mesh	rdfs:subClassOf iasis:Relation.
+iasis:Mentioned_In rdfs:subClassOf iasis:Relation.
 
 
 
