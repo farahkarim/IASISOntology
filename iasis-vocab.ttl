@@ -261,7 +261,7 @@ ssn:value	rdfs:domain	ssn:Measurement;
 iasis:has_annotation rdfs:domain iasis:Relation;
 		rdfs:range iasis:Annotation.
 iasis:annotates rdfs:domain iasis:Relation;
-		rdfs:range iasis:Publication.
+		rdfs:range iasis:Concept.
 #iasis:has_annotation rdfs:domain iasis:Relation;
 #		rdfs:range iasis:Concept.
 iasis:interacts_with rdfs:domain iasis:Protein;
