@@ -393,7 +393,11 @@ iasis:BioMarker	rdfs:subClassOf	iasis:Concept.
 
 iasis:LCAnnotation	rdfs:subClassOf	iasis:Annotation.
 iasis:ADAnnotation	rdfs:subClassOf	iasis:Annotation.
+iasis:CNVAnnotation  rdfs:subClassOf	iasis:Annotation.   
+iasis:CGIAnnotation   rdfs:subClassOf	iasis:Annotation.
+iasis:GEAnnotation    rdfs:subClassOf	iasis:Annotation.
 
+iasis:CNV rdfs:subClassOf	iasis:Concept.
 
 iasis:Protein rdfs:subClassOf	iasis:Concept.
 
@@ -406,6 +410,8 @@ iasis:BloodTest rdfs:subClassOf	iasis:Test.
 iasis:Liquid_Biopsy rdfs:subClassOf	iasis:BloodTest.
 
 iasis:Image rdfs:subClassOf	iasis:Concept.
+iasis:CGI rdfs:subClassOf	iasis:Concept.
+iasis:GE rdfs:subClassOf	iasis:Concept.
 
 iasis:Genotype_Tissue_Expression rdfs:subClassOf iasis:Concept.
 iasis:Drug rdfs:subClassOf	iasis:Concept.
