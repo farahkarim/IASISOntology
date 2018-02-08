@@ -342,13 +342,13 @@ iasis:Effect rdfs:subClassOf iasis:UMLS_Relation.
 iasis:AFFECT__SPEC__ rdfs:subClassOf iasis:UMLS_Relation.
 iasis:ASSOCIATED_WITH rdfs:subClassOf iasis:UMLS_Relation.
 iasis:AUGMENTS rdfs:subClassOf iasis:UMLS_Relation.
-iasis:CAUSES rdfs:subClassOf iasis:UMLS_Relation.
+#####iasis:CAUSES rdfs:subClassOf iasis:UMLS_Relation.
 iasis:COEXISTS_WITH rdfs:subClassOf iasis:UMLS_Relation.
 iasis:DIAGNOSES rdfs:subClassOf iasis:UMLS_Relation.
 iasis:DISRUPTS rdfs:subClassOf iasis:UMLS_Relation.
 iasis:ISA rdfs:subClassOf iasis:UMLS_Relation.
 iasis:ADMINISTERED_TO rdfs:subClassOf iasis:UMLS_Relation.
-iasis:CAUSES__SPEC__ rdfs:subClassOf iasis:UMLS_Relation.
+#####iasis:CAUSES__SPEC__ rdfs:subClassOf iasis:UMLS_Relation.
 iasis:Compared_With rdfs:subClassOf iasis:UMLS_Relation.
 iasis:COMPLICATES rdfs:subClassOf iasis:UMLS_Relation.
 iasis:INHIBITS rdfs:subClassOf iasis:UMLS_Relation.
@@ -376,7 +376,7 @@ iasis:Trans_eQTL_regulation rdfs:subClassOf iasis:UMLS_Relation.
 iasis:Regulatory_Interaction rdfs:subClassOf iasis:UMLS_Relation.
 iasis:UMLS_Relation rdfs:subClassOf iasis:Relation.
 iasis:Has_Risk_Of rdfs:subClassOf iasis:Relation.
-iasis:Has_Mesh	rdfs:subClassOf iasis:Relation.
+#####iasis:Has_Mesh	rdfs:subClassOf iasis:Relation.
 iasis:Mentioned_In rdfs:subClassOf iasis:Relation.
 
 
