@@ -17,7 +17,7 @@ iasis:Concept rdf:type	owl:Class.
 #iasis:BioMarker	rdf:type	owl:Class.
 #iasis:PubRepository	rdf:type	owl:Class.
 #####iasis:VocabTerm	rdf:type	owl:Class.
-iasis:CUITerm	rdf:type	owl:Thing.
+#iasis:CUITerm	rdf:type	owl:Thing.
 #iasis:LCAnnotation	rdf:type	owl:Class.
 #iasis:ADAnnotation	rdf:type	owl:Class.
 #####iasis:AnalysisTool	rdf:type	owl:Class.
@@ -176,7 +176,7 @@ iasis:cnv_identification     rdf:type     owl:ObjectProperty.
 iasis:cgi_identification     rdf:type     owl:ObjectProperty.
 iasis:gexp_identification     rdf:type     owl:ObjectProperty.
 iasis:annotates rdf:type owl:ObjectProperty.
-
+iasis:cUITerm	rdf:type owl:DatatypeProperty.
 
 ###########Domains And Ranges
 iasis:partOf rdfs:domain	iasis:Concept;
@@ -198,7 +198,7 @@ iasis:maps	rdfs:domain	iasis:Annotation;
 iasis:birthday	rdfs:domain iasis:Patient;
 				rdfs:range	rdfs:Literal.
 iasis:gender	rdfs:domain iasis:Patient;
-				rdfs:range	iasis:Gender.
+				rdfs:range	rdfs:Literal.
 iasis:research_id	rdfs:domain iasis:Patient;
 					rdfs:range	rdfs:Literal.
 iasis:gen_diagnostic	rdfs:domain iasis:Patient;
@@ -325,6 +325,10 @@ iasis:cgi_identification rdfs:domain iasis:CGI;
 			rdfs:range iasis:CGIAnnotation.
 iasis:gexp_identification rdfs:domain iasis:GE;
 			rdfs:range iasis:GEAnnotation.
+iasis:cUITerm rdfs:domain iasis:Annotation;
+				rdfs:range	rdfs:Literal.
+
+
 
 ###############Subclasses
 iasis:LCAnnotation	rdfs:subClassOf	iasis:Annotation.
