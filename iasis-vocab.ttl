@@ -182,7 +182,7 @@ iasis:annotates rdf:type owl:ObjectProperty.
 iasis:partOf rdfs:domain	iasis:Concept;
 					rdfs:range	iasis:Concept.
 iasis:requestedTest rdfs:domain	iasis:Observation;
-					rdfs:range	iasis:Tests.
+					rdfs:range	iasis:Test.
 iasis:provenance	rdfs:domain	iasis:Publication;
 					rdfs:range	iasis:PubRepository.
 iasis:confidence rdfs:domain iasis:Relation;
