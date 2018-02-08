@@ -353,7 +353,7 @@ iasis:Publication	rdfs:subClassOf	iasis:Concept.
 iasis:Annotation	rdfs:subClassOf	iasis:Concept.
 iasis:Patient	rdfs:subClassOf	iasis:Concept.
 iasis:Treatment	rdfs:subClassOf	iasis:Concept.
-iasis:Biopsy	rdfs:subClassOf	iasis:Concept.
+#iasis:Biopsy	rdfs:subClassOf	iasis:Concept.
 iasis:BioMarker	rdfs:subClassOf	iasis:Concept.
 iasis:Tumor rdfs:subClassOf	iasis:Concept.
 iasis:Mutation rdfs:subClassOf	iasis:Concept.
