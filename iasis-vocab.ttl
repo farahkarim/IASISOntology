@@ -325,7 +325,6 @@ iasis:cgi_identification rdfs:domain iasis:CGI;
 iasis:gexp_identification rdfs:domain iasis:GE;
 			rdfs:range iasis:GEAnnotation.
 
-
 ###############Subclasses
 iasis:BloodTest rdfs:subClassOf iasis:Test.
 iasis:LCPublication	rdfs:subClassOf	iasis:Publication.
