@@ -50,8 +50,8 @@ iasis:UMLS_Relation rdf:type	owl:Class.
 iasis:Effect rdf:type	owl:Class.
 iasis:AFFECT__SPEC__ rdf:type	owl:Class.
 iasis:ASSOCIATED_WITH rdf:type	owl:Class.
-#####iasis:AUGMENTS rdf:type	owl:Class.
-iasis:CAUSE rdf:type	owl:Class.
+iasis:AUGMENTS rdf:type	owl:Class.
+#####iasis:CAUSE rdf:type	owl:Class.
 iasis:COEXISTS_WITH rdf:type	owl:Class.
 iasis:DIAGNOSES rdf:type	owl:Class.
 iasis:DISRUPTS rdf:type	owl:Class.
