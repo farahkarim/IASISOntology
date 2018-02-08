@@ -393,11 +393,19 @@ iasis:BioMarker	rdfs:subClassOf	iasis:Concept.
 
 iasis:LCAnnotation	rdfs:subClassOf	iasis:Annotation.
 iasis:ADAnnotation	rdfs:subClassOf	iasis:Annotation.
-iasis:CNVAnnotation  rdfs:subClassOf	iasis:Annotation.   
-iasis:CGIAnnotation   rdfs:subClassOf	iasis:Annotation.
-iasis:GEAnnotation    rdfs:subClassOf	iasis:Annotation.
+iasis:GeneAnnotation rdfs:subClassOf	iasis:Annotation.
+iasis:SampleAnnotation rdfs:subClassOf	iasis:Annotation.
+iasis:TumorAnnotation rdfs:subClassOf	iasis:Annotation.
+iasis:MutationAnnotation rdfs:subClassOf	iasis:Annotation.
+iasis:CNVAnnotation rdfs:subClassOf	iasis:Annotation.
+iasis:CGIAnnotation rdfs:subClassOf	iasis:Annotation.
+iasis:GEAnnotation rdfs:subClassOf	iasis:Annotation.
 
+iasis:Tumor rdfs:subClassOf	iasis:Concept.
+iasis:Mutation rdfs:subClassOf	iasis:Concept.
 iasis:CNV rdfs:subClassOf	iasis:Concept.
+iasis:CGI rdfs:subClassOf	iasis:Concept.
+iasis:GE rdfs:subClassOf	iasis:Concept.
 
 iasis:Protein rdfs:subClassOf	iasis:Concept.
 
