@@ -91,6 +91,14 @@ iasis:Has_Risk_Of rdf:type	owl:Class.
 iasis:Has_MESH	rdf:type	owl:Class.
 iasis:Mentioned_In rdf:type	owl:Class.
 
+
+iasis:Tumor rdf:type owl:Class.
+iasis:Mutation rdf:type owl:Class.
+iasis:CNV rdf:type owl:Class.
+iasis:CGI rdf:type owl:Class.
+iasis:GE rdf:type owl:Class.
+
+
 #########Properties
 iasis:requestedTest rdf:type	owl:ObjectProperty.
 iasis:partOf rdf:type	owl:ObjectProperty.
