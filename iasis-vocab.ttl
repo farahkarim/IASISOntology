@@ -39,8 +39,6 @@ iasis:Drug rdf:type	owl:Class.
 iasis:Gene rdf:type	owl:Class.
 
 
-
-
 iasis:LCPublication	rdf:type	owl:Class.
 iasis:ADPublication	rdf:type	owl:Class.
 iasis:CondAnnotation	rdf:type	owl:Class.
