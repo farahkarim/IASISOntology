@@ -256,8 +256,8 @@ ssn:uom	rdfs:domain	ssn:Measurement;
 		rdfs:range	ssn:Unit.	
 ssn:value	rdfs:domain	ssn:Measurement;
 		rdfs:range	rdfs:Literal.
-iasis:has_annotation rdfs:domain iasis:Protein;
-		rdfs:range iasis:Annotation.
+#iasis:has_annotation rdfs:domain iasis:Protein;
+#		rdfs:range iasis:Annotation.
 iasis:has_annotation rdfs:domain iasis:Relation;
 		rdfs:range iasis:Annotation.
 #iasis:has_annotation rdfs:domain iasis:Relation;
