@@ -97,6 +97,13 @@ iasis:Mutation rdf:type owl:Class.
 iasis:CNV rdf:type owl:Class.
 iasis:CGI rdf:type owl:Class.
 iasis:GE rdf:type owl:Class.
+iasis:GeneAnnotation     rdf:type     owl:Class.
+iasis:SampleAnnotation     rdf:type     owl:Class.
+iasis:TumorAnnotation     rdf:type     owl:Class.
+iasis:MutationAnnotation     rdf:type     owl:Class.
+iasis:CNVAnnotation     rdf:type     owl:Class.
+iasis:CGIAnnotation     rdf:type     owl:Class.
+iasis:GEAnnotation     rdf:type     owl:Class.
 
 
 #########Properties
