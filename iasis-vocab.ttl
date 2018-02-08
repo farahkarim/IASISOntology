@@ -56,7 +56,7 @@ iasis:ASSOCIATED_WITH rdf:type	owl:Class.
 iasis:AUGMENT rdf:type	owl:Class.
 iasis:CAUSE rdf:type	owl:Class.
 iasis:COEXISTS_WITH rdf:type	owl:Class.
-iasis:DIAGNOSE rdf:type	owl:Class.
+iasis:DIAGNOSES rdf:type	owl:Class.
 iasis:DISRUPTS rdf:type	owl:Class.
 iasis:ISA rdf:type	owl:Class.
 iasis:ADMINISTERED_TO rdf:type	owl:Class.
