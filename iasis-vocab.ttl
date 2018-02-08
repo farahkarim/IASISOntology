@@ -91,7 +91,6 @@ iasis:Has_Risk_Of rdf:type	owl:Class.
 iasis:Has_MESH	rdf:type	owl:Class.
 iasis:Mentioned_In rdf:type	owl:Class.
 
-
 iasis:Tumor rdf:type owl:Class.
 iasis:Mutation rdf:type owl:Class.
 iasis:CNV rdf:type owl:Class.
@@ -309,6 +308,14 @@ iasis:min_pval_nominal  rdfs:domain iasis:Regulatory_Interactions;
 iasis:is_related_to rdfs:domain iasis:Concept;
 			rdfs:range iasis:Relations.
 
+iasis:sample_identification rdfs:domain iasis:Sample;
+			rdfs:range iasis:SampleAnnotation.
+iasis:gene_identification rdfs:domain iasis:Gene;
+			rdfs:range iasis:GeneAnnotation.
+iasis:tumor_identification rdfs:domain iasis:Tumor;
+			rdfs:range iasis:TumorAnnotation.
+iasis:mutation_identification rdfs:domain iasis:Mutation;
+			rdfs:range iasis:MutationAnnotation.
 
 ###############Subclasses
 iasis:BloodTest rdfs:subClassOf iasis:Test.
