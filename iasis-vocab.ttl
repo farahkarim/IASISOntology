@@ -172,6 +172,14 @@ iasis:slope_fpkm_se rdf:type	owl:DatatypeProperty.
 iasis:pval_nominal_threshold rdf:type	owl:DatatypeProperty.
 iasis:min_pval_nominal rdf:type	owl:DatatypeProperty.
 
+iasis:sample_identification     rdf:type     owl:ObjectProperty.
+iasis:gene_identification     rdf:type     owl:ObjectProperty.
+iasis:tumor_identification     rdf:type     owl:ObjectProperty.
+iasis:mutation_identification     rdf:type     owl:ObjectProperty.
+iasis:cnv_identification     rdf:type     owl:ObjectProperty.
+iasis:cgi_identification     rdf:type     owl:ObjectProperty.
+iasis:gexp_identification     rdf:type     owl:ObjectProperty.
+
 
 
 ###########Domains And Ranges
