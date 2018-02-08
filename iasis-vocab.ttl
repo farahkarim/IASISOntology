@@ -114,7 +114,7 @@ iasis:prec_tool	rdf:type	owl:ObjectProperty.
 #####iasis:mentioned_in	rdf:type	owl:ObjectProperty.
 iasis:maps	rdf:type	owl:ObjectProperty.
 iasis:birthday	rdf:type	owl:DatatypeProperty.
-iasis:gender	rdf:type	owl:ObjectProperty.
+iasis:gender	rdf:type	owl:DatatypeProperty.
 iasis:research_id	rdf:type	owl:DatatypeProperty.
 iasis:gen_diagnostic	rdf:type	owl:ObjectProperty.
 iasis:concentration	rdf:type	owl:ObjectProperty.
