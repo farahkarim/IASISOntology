@@ -267,7 +267,7 @@ iasis:interacts_with rdfs:domain iasis:Protein;
 			rdfs:range iasis:Protein.
 iasis:confidence rdfs:domain iasis:Relation;
 			rdfs:range	rdfs:Literal.
-iasis:proc_tool rdfs:domain iasis:Relation;
+iasis:prec_tool rdfs:domain iasis:Relation;
 			rdfs:range iasis:Analysis_Tool.
 #iasis:is_related_to rdfs:domain iasis:Annotation;
 #			rdfs:range iasis:Relations.
