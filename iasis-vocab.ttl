@@ -15,7 +15,7 @@ iasis:Concept rdf:type	owl:Class.
 #iasis:Treatment	rdf:type	owl:Class.
 #iasis:Biopsy	rdf:type	owl:Class.
 #iasis:BioMarker	rdf:type	owl:Class.
-iasis:PubRepository	rdf:type	owl:Class.
+#iasis:PubRepository	rdf:type	owl:Class.
 #####iasis:VocabTerm	rdf:type	owl:Class.
 iasis:CUITerm	rdf:type	owl:Thing.
 #iasis:LCAnnotation	rdf:type	owl:Class.
