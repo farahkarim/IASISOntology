@@ -310,7 +310,7 @@ iasis:pval_nominal_threshold  rdfs:domain iasis:Regulatory_Interaction;
 iasis:min_pval_nominal  rdfs:domain iasis:Regulatory_Interaction;
 			rdfs:range	rdfs:Literal.
 iasis:is_related_to rdfs:domain iasis:Concept;
-			rdfs:range iasis:Relations.
+			rdfs:range iasis:Relation.
 
 iasis:sample_identification rdfs:domain iasis:Sample;
 			rdfs:range iasis:SampleAnnotation.
