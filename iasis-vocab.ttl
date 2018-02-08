@@ -5,9 +5,9 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix ssn: <http://www.w3.org/ns/ssn/> .
 #########Classes
-iasis:Test rdf:type	owl:Class.
+#####iasis:Test rdf:type	owl:Class.
 iasis:BloodTest rdf:type	owl:Class.
-iasis:VocTerm rdf:type	owl:Class.
+#####iasis:VocTerm rdf:type	owl:Class.
 iasis:Concept rdf:type	owl:Class.
 iasis:Publication	rdf:type	owl:Class.
 iasis:Annotation	rdf:type	owl:Class.
@@ -16,11 +16,11 @@ iasis:Treatment	rdf:type	owl:Class.
 iasis:Biopsy	rdf:type	owl:Class.
 iasis:BioMarker	rdf:type	owl:Class.
 iasis:PubRepository	rdf:type	owl:Class.
-iasis:VocabTerm	rdf:type	owl:Class.
+#####iasis:VocabTerm	rdf:type	owl:Class.
 iasis:CUITerm	rdf:type	owl:Thing.
 iasis:LCAnnotation	rdf:type	owl:Class.
 iasis:ADAnnotation	rdf:type	owl:Class.
-iasis:AnalysisTool	rdf:type	owl:Class.
+#####iasis:AnalysisTool	rdf:type	owl:Class.
 iasis:BioMarkerLevel	rdf:type	owl:Class.
 iasis:TConcentration	rdf:type	owl:Class.
 iasis:TDose	rdf:type	owl:Class.
@@ -28,7 +28,7 @@ ssn:Observation rdf:type	owl:Class.
 ssn:Measurement	rdf:type	owl:Class.
 ssn:Unit	rdf:type	owl:Class.
 iasis:Protein rdf:type	owl:Class.
-iasis:Requested_Test rdf:type	owl:Class.
+#####iasis:Requested_Test rdf:type	owl:Class.
 iasis:Analytic rdf:type	owl:Class.
 iasis:Sample rdf:type	owl:Class.
 iasis:Clinical_Note rdf:type	owl:Class.
@@ -85,7 +85,7 @@ iasis:Trans_eQTL_regulation rdf:type	owl:Class.
 iasis:Regulatory_Interaction rdf:type	owl:Class.
 iasis:Relation rdf:type	owl:Class.
 iasis:Has_Risk_Of rdf:type	owl:Class.
-iasis:Has_MESH	rdf:type	owl:Class.
+#####iasis:Has_MESH	rdf:type	owl:Class.
 iasis:Mentioned_In rdf:type	owl:Class.
 
 iasis:Tumor rdf:type owl:Class.
