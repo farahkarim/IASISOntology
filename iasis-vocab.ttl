@@ -384,7 +384,6 @@ iasis:Has_Risk_Of rdfs:subClassOf iasis:Relation.
 iasis:Mentioned_In rdfs:subClassOf iasis:Relation.
 
 
-iasis:BloodTest rdfs:subClassOf iasis:Test.
 iasis:BloodTest rdfs:subClassOf	iasis:Test.
 
 iasis:LCTreatment	rdfs:subClassOf	iasis:Treatment.
