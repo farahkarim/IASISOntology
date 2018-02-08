@@ -34,7 +34,6 @@ iasis:Sample rdf:type	owl:Class.
 iasis:Clinical_Note rdf:type	owl:Class.
 iasis:Liquid_Biopsy rdf:type	owl:Class.
 iasis:Image rdf:type	owl:Class.
-iasis:Expression rdf:type	owl:Class.
 iasis:Drug rdf:type	owl:Class.
 iasis:Gene rdf:type	owl:Class.
 
@@ -424,6 +423,10 @@ iasis:GE rdfs:subClassOf	iasis:Concept.
 iasis:Genotype_Tissue_Expression rdfs:subClassOf iasis:Concept.
 iasis:Drug rdfs:subClassOf	iasis:Concept.
 iasis:Gene rdfs:subClassOf	iasis:Concept.
+
+iasis:CUITerm rdfs:subClassOf iasis:Thing.
+
+
 
 ###############PartOf
 iasis:Clinical_Note iasis:partOf iasis:Clinical_Record.
