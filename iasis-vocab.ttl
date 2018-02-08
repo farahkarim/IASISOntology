@@ -327,17 +327,65 @@ iasis:gexp_identification rdfs:domain iasis:GE;
 			rdfs:range iasis:GEAnnotation.
 
 ###############Subclasses
-iasis:BloodTest rdfs:subClassOf iasis:Test.
-iasis:LCPublication	rdfs:subClassOf	iasis:Publication.
-iasis:ADPublication	rdfs:subClassOf	iasis:Publication.
 iasis:LCAnnotation	rdfs:subClassOf	iasis:Annotation.
 iasis:ADAnnotation	rdfs:subClassOf	iasis:Annotation.
 iasis:CondAnnotation	rdfs:subClassOf	iasis:Annotation.
 iasis:InterAnnotation	rdfs:subClassOf	iasis:Annotation.
+iasis:LCAnnotation	rdfs:subClassOf	iasis:Annotation.
+iasis:ADAnnotation	rdfs:subClassOf	iasis:Annotation.
+iasis:GeneAnnotation rdfs:subClassOf	iasis:Annotation.
+iasis:SampleAnnotation rdfs:subClassOf	iasis:Annotation.
+iasis:TumorAnnotation rdfs:subClassOf	iasis:Annotation.
+iasis:MutationAnnotation rdfs:subClassOf	iasis:Annotation.
+iasis:CNVAnnotation rdfs:subClassOf	iasis:Annotation.
+iasis:CGIAnnotation rdfs:subClassOf	iasis:Annotation.
+iasis:GEAnnotation rdfs:subClassOf	iasis:Annotation.
+
+iasis:Liquid_Biopsy rdfs:subClassOf	iasis:BloodTest.
+
+iasis:Clinical_Note rdfs:subClassOf iasis:Clinical_Record.
+
+iasis:Publication	rdfs:subClassOf	iasis:Concept.
+iasis:Annotation	rdfs:subClassOf	iasis:Concept.
+iasis:Patient	rdfs:subClassOf	iasis:Concept.
+iasis:Treatment	rdfs:subClassOf	iasis:Concept.
+iasis:Biopsy	rdfs:subClassOf	iasis:Concept.
+iasis:BioMarker	rdfs:subClassOf	iasis:Concept.
+iasis:Tumor rdfs:subClassOf	iasis:Concept.
+iasis:Mutation rdfs:subClassOf	iasis:Concept.
+iasis:CNV rdfs:subClassOf	iasis:Concept.
+iasis:CGI rdfs:subClassOf	iasis:Concept.
+iasis:GE rdfs:subClassOf	iasis:Concept.
+iasis:Protein rdfs:subClassOf	iasis:Concept.
+iasis:Sample rdfs:subClassOf	iasis:Concept.
+iasis:Clinical_Record rdfs:subClassOf iasis:Concept.
+iasis:Test rdfs:subClassOf	iasis:Concept.
+iasis:Image rdfs:subClassOf	iasis:Concept.
+iasis:CGI rdfs:subClassOf	iasis:Concept.
+iasis:GE rdfs:subClassOf	iasis:Concept.
+iasis:Genotype_Tissue_Expression rdfs:subClassOf iasis:Concept.
+iasis:Drug rdfs:subClassOf	iasis:Concept.
+iasis:Gene rdfs:subClassOf	iasis:Concept.
+
 iasis:LCPatient	rdfs:subClassOf	iasis:Patient.
 iasis:ADPatient	rdfs:subClassOf	iasis:Patient.
+
+
+iasis:LCPublication	rdfs:subClassOf	iasis:Publication.
+iasis:ADPublication	rdfs:subClassOf	iasis:Publication.
+
+iasis:UMLS_Relation rdfs:subClassOf iasis:Relation.
+iasis:Has_Risk_Of rdfs:subClassOf iasis:Relation.
+#####iasis:Has_Mesh	rdfs:subClassOf iasis:Relation.
+iasis:Mentioned_In rdfs:subClassOf iasis:Relation.
+
+
+iasis:BloodTest rdfs:subClassOf iasis:Test.
+iasis:BloodTest rdfs:subClassOf	iasis:Test.
+
 iasis:LCTreatment	rdfs:subClassOf	iasis:Treatment.
 iasis:ADTreatment	rdfs:subClassOf	iasis:Treatment.
+
 iasis:Effect rdfs:subClassOf iasis:UMLS_Relation.
 iasis:AFFECT__SPEC__ rdfs:subClassOf iasis:UMLS_Relation.
 iasis:ASSOCIATED_WITH rdfs:subClassOf iasis:UMLS_Relation.
@@ -374,57 +422,6 @@ iasis:Protein_RNA_Interaction rdfs:subClassOf iasis:UMLS_Relation.
 iasis:Protein_RNA_Interaction_Probability rdfs:subClassOf iasis:UMLS_Relation.
 iasis:Trans_eQTL_regulation rdfs:subClassOf iasis:UMLS_Relation.
 iasis:Regulatory_Interaction rdfs:subClassOf iasis:UMLS_Relation.
-iasis:UMLS_Relation rdfs:subClassOf iasis:Relation.
-iasis:Has_Risk_Of rdfs:subClassOf iasis:Relation.
-#####iasis:Has_Mesh	rdfs:subClassOf iasis:Relation.
-iasis:Mentioned_In rdfs:subClassOf iasis:Relation.
-
-
-
-
-
-iasis:Publication	rdfs:subClassOf	iasis:Concept.
-iasis:Annotation	rdfs:subClassOf	iasis:Concept.
-iasis:Patient	rdfs:subClassOf	iasis:Concept.
-iasis:Treatment	rdfs:subClassOf	iasis:Concept.
-iasis:Biopsy	rdfs:subClassOf	iasis:Concept.
-iasis:BioMarker	rdfs:subClassOf	iasis:Concept.
-iasis:Tumor rdfs:subClassOf	iasis:Concept.
-iasis:Mutation rdfs:subClassOf	iasis:Concept.
-iasis:CNV rdfs:subClassOf	iasis:Concept.
-iasis:CGI rdfs:subClassOf	iasis:Concept.
-iasis:GE rdfs:subClassOf	iasis:Concept.
-iasis:Protein rdfs:subClassOf	iasis:Concept.
-iasis:Sample rdfs:subClassOf	iasis:Concept.
-iasis:Clinical_Record rdfs:subClassOf iasis:Concept.
-iasis:Test rdfs:subClassOf	iasis:Concept.
-iasis:Image rdfs:subClassOf	iasis:Concept.
-iasis:CGI rdfs:subClassOf	iasis:Concept.
-iasis:GE rdfs:subClassOf	iasis:Concept.
-iasis:Genotype_Tissue_Expression rdfs:subClassOf iasis:Concept.
-iasis:Drug rdfs:subClassOf	iasis:Concept.
-iasis:Gene rdfs:subClassOf	iasis:Concept.
-
-
-
-
-iasis:LCAnnotation	rdfs:subClassOf	iasis:Annotation.
-iasis:ADAnnotation	rdfs:subClassOf	iasis:Annotation.
-iasis:GeneAnnotation rdfs:subClassOf	iasis:Annotation.
-iasis:SampleAnnotation rdfs:subClassOf	iasis:Annotation.
-iasis:TumorAnnotation rdfs:subClassOf	iasis:Annotation.
-iasis:MutationAnnotation rdfs:subClassOf	iasis:Annotation.
-iasis:CNVAnnotation rdfs:subClassOf	iasis:Annotation.
-iasis:CGIAnnotation rdfs:subClassOf	iasis:Annotation.
-iasis:GEAnnotation rdfs:subClassOf	iasis:Annotation.
-
-iasis:Clinical_Note rdfs:subClassOf iasis:Clinical_Record.
-
-iasis:BloodTest rdfs:subClassOf	iasis:Test.
-
-iasis:Liquid_Biopsy rdfs:subClassOf	iasis:BloodTest.
-
-
 
 
 
