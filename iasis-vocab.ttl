@@ -78,15 +78,15 @@ iasis:UMLS_Relation rdf:type	owl:Class.
 #iasis:STIMULATES rdf:type	owl:Class.
 #iasis:TREATS rdf:type	owl:Class.
 #iasis:USES rdf:type	owl:Class.
-iasis:Physical_Interaction rdf:type	owl:Class.
-iasis:Protein_RNA_Interaction rdf:type	owl:Class.
-iasis:Protein_RNA_Interaction_Probability rdf:type	owl:Class.
-iasis:Trans_eQTL_regulation rdf:type	owl:Class.
-iasis:Regulatory_Interaction rdf:type	owl:Class.
-iasis:Relation rdf:type	owl:Class.
-iasis:Has_Risk_Of rdf:type	owl:Class.
+#iasis:Physical_Interaction rdf:type	owl:Class.
+#iasis:Protein_RNA_Interaction rdf:type	owl:Class.
+#iasis:Protein_RNA_Interaction_Probability rdf:type	owl:Class.
+#iasis:Trans_eQTL_regulation rdf:type	owl:Class.
+#iasis:Regulatory_Interaction rdf:type	owl:Class.
+#iasis:Relation rdf:type	owl:Class.
+#iasis:Has_Risk_Of rdf:type	owl:Class.
 #####iasis:Has_MESH	rdf:type	owl:Class.
-iasis:Mentioned_In rdf:type	owl:Class.
+#iasis:Mentioned_In rdf:type	owl:Class.
 
 iasis:Tumor rdf:type owl:Class.
 iasis:Mutation rdf:type owl:Class.
