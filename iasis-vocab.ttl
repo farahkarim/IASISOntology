@@ -17,7 +17,7 @@ iasis:Biopsy	rdf:type	owl:Class.
 iasis:BioMarker	rdf:type	owl:Class.
 iasis:PubRepository	rdf:type	owl:Class.
 iasis:VocabTerm	rdf:type	owl:Class.
-iasis:CUITerm	rdf:type	owl:Class.
+iasis:CUITerm	rdf:type	owl:Thing.
 iasis:LCAnnotation	rdf:type	owl:Class.
 iasis:ADAnnotation	rdf:type	owl:Class.
 iasis:AnalysisTool	rdf:type	owl:Class.
@@ -424,7 +424,6 @@ iasis:Genotype_Tissue_Expression rdfs:subClassOf iasis:Concept.
 iasis:Drug rdfs:subClassOf	iasis:Concept.
 iasis:Gene rdfs:subClassOf	iasis:Concept.
 
-iasis:CUITerm rdfs:subClassOf iasis:Thing.
 
 
 
