@@ -209,16 +209,16 @@ iasis:dose rdfs:domain iasis:Treatment;
 					rdfs:range	iasis:TDose.
 iasis:t_date	rdfs:domain	iasis:Treatment;
 			rdfs:range	rdfs:Literal.
-iasis:b_date	rdfs:domain	iasis:Biopsy;
+iasis:b_date	rdfs:domain	iasis:Liquid_Biopsy;
 			rdfs:range	rdfs:Literal.
 iasis:has_treatment rdfs:domain iasis:Patient;
 					rdfs:range	iasis:Treatment.
-iasis:diagnostic	rdfs:domain	iasis:Biopsy;
+iasis:diagnostic	rdfs:domain	iasis:Liquid_Biopsy;
 					rdfs:range	iasis:CondAnnotation.
-iasis:has_bioMarker	rdfs:domain	iasis:Biopsy;
+iasis:has_bioMarker	rdfs:domain	iasis:Liquid_Biopsy;
 					rdfs:range	iasis:BioMarker.
 iasis:has_biopsy	rdfs:domain	iasis:LCPatient;
-					rdfs:range	iasis:Biopsy.
+					rdfs:range	iasis:Liquid_Biopsy.
 iasis:bm_description	rdfs:domain	iasis:BioMarker;
 			rdfs:range	iasis:Annotation.
 iasis:has_level	rdfs:domain	iasis:BioMarker;
