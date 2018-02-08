@@ -5,7 +5,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix ssn: <http://www.w3.org/ns/ssn/> .
 #########Classes
-iasis:Tests rdf:type	owl:Class.
+iasis:Test rdf:type	owl:Class.
 iasis:BloodTest rdf:type	owl:Class.
 iasis:VocTerm rdf:type	owl:Class.
 iasis:Concept rdf:type	owl:Class.
