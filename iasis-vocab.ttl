@@ -316,6 +316,13 @@ iasis:tumor_identification rdfs:domain iasis:Tumor;
 			rdfs:range iasis:TumorAnnotation.
 iasis:mutation_identification rdfs:domain iasis:Mutation;
 			rdfs:range iasis:MutationAnnotation.
+iasis:cnv_identification rdfs:domain iasis:CNV;
+			rdfs:range iasis:CNVAnnotation.
+iasis:cgi_identification rdfs:domain iasis:CGI;
+			rdfs:range iasis:CGIAnnotation.
+iasis:gexp_identification rdfs:domain iasis:GE;
+			rdfs:range iasis:GEAnnotation.
+
 
 ###############Subclasses
 iasis:BloodTest rdfs:subClassOf iasis:Test.
