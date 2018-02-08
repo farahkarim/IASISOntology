@@ -6,7 +6,7 @@
 @prefix ssn: <http://www.w3.org/ns/ssn/> .
 #########Classes
 #####iasis:Test rdf:type	owl:Class.
-iasis:BloodTest rdf:type	owl:Class.
+#iasis:BloodTest rdf:type	owl:Class.
 #####iasis:VocTerm rdf:type	owl:Class.
 iasis:Concept rdf:type	owl:Class.
 #iasis:Publication	rdf:type	owl:Class.
