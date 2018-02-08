@@ -29,7 +29,7 @@ ssn:Measurement	rdf:type	owl:Class.
 ssn:Unit	rdf:type	owl:Class.
 iasis:Protein rdf:type	owl:Class.
 #####iasis:Requested_Test rdf:type	owl:Class.
-iasis:Analytic rdf:type	owl:Class.
+#####iasis:Analytic rdf:type	owl:Class.
 iasis:Sample rdf:type	owl:Class.
 iasis:Clinical_Note rdf:type	owl:Class.
 iasis:Liquid_Biopsy rdf:type	owl:Class.
@@ -50,14 +50,14 @@ iasis:UMLS_Relation rdf:type	owl:Class.
 iasis:Effect rdf:type	owl:Class.
 iasis:AFFECT__SPEC__ rdf:type	owl:Class.
 iasis:ASSOCIATED_WITH rdf:type	owl:Class.
-iasis:AUGMENTS rdf:type	owl:Class.
+#####iasis:AUGMENTS rdf:type	owl:Class.
 iasis:CAUSE rdf:type	owl:Class.
 iasis:COEXISTS_WITH rdf:type	owl:Class.
 iasis:DIAGNOSES rdf:type	owl:Class.
 iasis:DISRUPTS rdf:type	owl:Class.
 iasis:ISA rdf:type	owl:Class.
 iasis:ADMINISTERED_TO rdf:type	owl:Class.
-iasis:CAUSE__SPEC__ rdf:type	owl:Class.
+#####iasis:CAUSE__SPEC__ rdf:type	owl:Class.
 iasis:Compared_With rdf:type	owl:Class.
 iasis:COMPLICATES rdf:type	owl:Class.
 iasis:INHIBITS rdf:type	owl:Class.
@@ -376,7 +376,7 @@ iasis:Trans_eQTL_regulation rdfs:subClassOf iasis:UMLS_Relation.
 iasis:Regulatory_Interaction rdfs:subClassOf iasis:UMLS_Relation.
 iasis:UMLS_Relation rdfs:subClassOf iasis:Relation.
 iasis:Has_Risk_Of rdfs:subClassOf iasis:Relation.
-#####iasis:Has_Mesh	rdfs:subClassOf iasis:Relation.
+iasis:Has_Mesh	rdfs:subClassOf iasis:Relation.
 iasis:Mentioned_In rdfs:subClassOf iasis:Relation.
 
 
