@@ -16,7 +16,8 @@ iasis:Concept rdf:type	owl:Class.
 #iasis:Biopsy	rdf:type	owl:Class.
 #iasis:BioMarker	rdf:type	owl:Class.
 #iasis:PubRepository	rdf:type	owl:Class.
-#####iasis:VocabTerm	rdf:type	owl:Class.
+iasis:Vocabulary	rdf:type	owl:Class.
+iasis:VocTerm rdf:type	owl:Class.
 #iasis:CUITerm	rdf:type	owl:Thing.
 #iasis:LCAnnotation	rdf:type	owl:Class.
 #iasis:ADAnnotation	rdf:type	owl:Class.
@@ -199,7 +200,7 @@ iasis:provenance	rdfs:domain	iasis:Publication;
 iasis:confidence rdfs:domain iasis:Relation;
 				rdfs:range	rdfs:Literal.
 iasis:id	rdfs:domain iasis:Annotation;
-			rdfs:range	iasis:VocTerms.
+			rdfs:range	iasis:VocTerm.
 iasis:ann_label rdfs:domain	iasis:Annotation;
 			rdfs:range	rdfs:Literal.
 iasis:source	rdfs:domain iasis:Annotation;
