@@ -88,11 +88,14 @@ iasis:UMLS_Relation rdf:type	owl:Class.
 #####iasis:Has_MESH	rdf:type	owl:Class.
 #iasis:Mentioned_In rdf:type	owl:Class.
 
+
+####Required by COSMIC:
+
 iasis:Tumor rdf:type owl:Class.
 iasis:Mutation rdf:type owl:Class.
 iasis:CNV rdf:type owl:Class.
 iasis:CGI rdf:type owl:Class.
-iasis:GE rdf:type owl:Class.
+iasis:GExp rdf:type owl:Class.
 #iasis:GeneAnnotation     rdf:type     owl:Class.
 #iasis:SampleAnnotation     rdf:type     owl:Class.
 #iasis:TumorAnnotation     rdf:type     owl:Class.
@@ -177,6 +180,14 @@ iasis:cgi_identification     rdf:type     owl:ObjectProperty.
 iasis:gexp_identification     rdf:type     owl:ObjectProperty.
 iasis:annotates rdf:type owl:ObjectProperty.
 iasis:cUITerm	rdf:type owl:DatatypeProperty.
+
+####Required by COSMIC:
+
+
+
+
+
+
 
 ###########Domains And Ranges
 iasis:partOf rdfs:domain	iasis:Concept;
