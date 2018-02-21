@@ -226,15 +226,10 @@ iasis:genomic_position rdf:type owl:DatatypeProperty.
 iasis:study_id rdf:type owl:DatatypeProperty.
 iasis:mutation_cds rdf:type owl:DatatypeProperty.
 iasis:mutation_aa rdf:type owl:DatatypeProperty.
-iasis:mutation_zygosity rdf:type owl:DatatypeProperty.
-iasis:loh rdf:type owl:DatatypeProperty.
-iasis:being_snp rdf:type owl:DatatypeProperty.
 iasis:fathmm_prediction rdf:type owl:DatatypeProperty.
 iasis:fathmm_score rdf:type owl:DatatypeProperty.
 iasis:mutation_somatic_status rdf:type owl:DatatypeProperty.
-iasis:regulation rdf:type owl:DatatypeProperty.
 iasis:z_score rdf:type owl:DatatypeProperty.
-iasis:methylation rdf:type owl:DatatypeProperty.
 iasis:beta_value rdf:type owl:DatatypeProperty.
 iasis:avg_beta_value rdf:type owl:DatatypeProperty.
 iasis:two_sided_p-value rdf:type owl:DatatypeProperty.
@@ -466,24 +461,14 @@ iasis:mutation_cds rdfs:domain iasis:Mutation;
 					rdfs:range iasis:Literal.
 iasis:mutation_aa rdfs:domain iasis:Mutation;
 					rdfs:range rdfs:Literal.
-iasis:mutation_zygosity rdfs:domain iasis:Mutation;
-						rdfs:range rdfs:Literal.
-iasis:loh rdfs:domain iasis:Mutation;
-			rdfs:range iasis:Vocabulary.
-iasis:being_snp rdfs:domain iasis:Mutation;
-				rdfs:range iasis:Vocabulary.
 iasis:fathmm_prediction rdfs:domain iasis:Mutation;
 						rdfs:range rdfs:Literal.
 iasis:fathmm_score rdfs:domain iasis:Mutation;
 					rdfs:range iasis:Literal.
 iasis:mutation_somatic_status rdfs:domain iasis:Mutation;
 								rdfs:range rdfs:Literal.
-iasis:regulation rdfs:domain iasis:GExp;
-					rdfs:range iasis:Vocabulary.
 iasis:z_score rdfs:domain iasis:GExp;
 				rdfs:range rdfs:Literal.
-iasis:methylation rdfs:domain iasis:CGI;
-					rdfs:range iasis:Vocabulary.
 iasis:beta_value rdfs:domain iasis:CGI;
 					rdfs:range rdfs:Literal.
 iasis:avg_beta_value rdfs:domain iasis:CGI;
