@@ -176,20 +176,33 @@ iasis:slope_fpkm rdf:type	owl:DatatypeProperty.
 iasis:slope_fpkm_se rdf:type	owl:DatatypeProperty.
 iasis:pval_nominal_threshold rdf:type	owl:DatatypeProperty.
 iasis:min_pval_nominal rdf:type	owl:DatatypeProperty.
-
-iasis:sample_identification rdf:type owl:ObjectProperty.
-iasis:gene_identification     rdf:type     owl:ObjectProperty.
-iasis:tumor_identification     rdf:type     owl:ObjectProperty.
-iasis:mutation_identification     rdf:type     owl:ObjectProperty.
-iasis:cnv_identification     rdf:type     owl:ObjectProperty.
-iasis:cgi_identification     rdf:type     owl:ObjectProperty.
-iasis:gexp_identification     rdf:type     owl:ObjectProperty.
 iasis:annotates rdf:type owl:ObjectProperty.
 iasis:cUITerm	rdf:type owl:DatatypeProperty.
 
-####Required by COSMIC:
+#### COSMIC requirements:
 
-
+iasis:sample_identification rdf:type owl:ObjectProperty.
+iasis:gene_identification rdf:type owl:ObjectProperty.
+iasis:tumor_identification rdf:type owl:ObjectProperty.
+iasis:mutation_identification rdf:type owl:ObjectProperty.
+iasis:cnv_identification rdf:type owl:ObjectProperty.
+iasis:cgi_identification rdf:type owl:ObjectProperty.
+iasis:gexp_identification rdf:type owl:ObjectProperty.
+iasis:transcript_identification rdf:type owl:ObjectProperty.
+iasis:mutation_type_identification rdf:type owl:ObjectProperty.
+iasis:cds_length rdf:type owl:DatatypeProperty.
+iasis:age rdf:type owl:DatatypeProperty.
+iasis:primary_site rdf:type owl:DatatypeProperty.
+iasis:site_subtype rdf:type owl:DatatypeProperty.
+iasis:primary_histology rdf:type owl:DatatypeProperty.
+iasis:histology_subtype rdf:type owl:DatatypeProperty.
+iasis:mentioned_in rdf:type owl:ObjectProperty.
+iasis:chromosome rdf:type owl:DatatypeProperty.
+iasis:strand rdf:type owl:DatatypeProperty.
+iasis:start rdf:type owl:DatatypeProperty.
+iasis:end rdf:type owl:DatatypeProperty.
+iasis:genomic_position rdf:type owl:DatatypeProperty.
+iasis:study_id rdf:type owl:DatatypeProperty.
 
 
 
