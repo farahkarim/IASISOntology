@@ -113,10 +113,22 @@ iasis:MutationType rdf:type owl:Class.
 iasis:GeneralMutationType rdf:type owl:Class. #### extracted from CNV dataset 
 iasis:AdHocMutationType rdf:type owl:Class. #### extracted from mutation dataset
 iasis:MutationZygosity rdf:type owl:Class. #### extracted from mutation dataset
+iasis:Homozygous rdf:type owl:Class.
+iasis:Heterozygous rdf:type owl:Class.
 iasis:LOH rdf:type owl:Class. #### extracted from mutation dataset
+iasis:HaveLOH rdf:type owl:Class.
+iasis:NoLOH rdf:type owl:Class.
 iasis:SNP rdf:type owl:Class. #### extracted from mutation dataset
+iasis:IsSNP rdf:type owl:Class.
+iasis:IsNotSNP rdf:type owl:Class.
 iasis:Methylation rdf:type owl:Class. #### extracted from methylation dataset
+iasis:LowMethylated rdf:type owl:Class.
+iasis:HighMethylated rdf:type owl:Class.
 iasis:Regulation rdf:type owl:Class. #### extracted from methylation dataset
+iasis:NormalExpressed rdf:type owl:Class.
+iasis:OverExpressed rdf:type owl:Class.
+iasis:UnderExpressed rdf:type owl:Class.
+
 
 #########Properties
 iasis:requestedTest rdf:type	owl:ObjectProperty.
@@ -198,6 +210,7 @@ iasis:cgi_identification rdf:type owl:ObjectProperty.
 iasis:gexp_identification rdf:type owl:ObjectProperty.
 iasis:transcript_identification rdf:type owl:ObjectProperty.
 iasis:mutation_type_identification rdf:type owl:ObjectProperty.
+
 iasis:cds_length rdf:type owl:DatatypeProperty.
 iasis:age rdf:type owl:DatatypeProperty.
 iasis:primary_site rdf:type owl:DatatypeProperty.
@@ -227,6 +240,7 @@ iasis:avg_beta_value rdf:type owl:DatatypeProperty.
 iasis:two_sided_p-value rdf:type owl:DatatypeProperty.
 iasis:total_cn rdf:type owl:DatatypeProperty.
 iasis:minor_allele rdf:type owl:DatatypeProperty.
+
 iasis:is_located rdf:type owl:ObjectProperty.
 iasis:expressed_as rdf:type owl:ObjectProperty.
 iasis:occurred_in rdf:type owl:ObjectProperty.
@@ -615,10 +629,21 @@ iasis:MutationTypeAnnotation rdfs:subClassOf iasis:Annotation.
 iasis:GeneralMutationType rdfs:subClassOf iasis:MutationType. 
 iasis:AdHocMutationType rdfs:subClassOf iasis:MutationType.
 iasis:MutationZygosity rdfs:subClassOf iasis:Mutation.
+iasis:Homozygous rdfs:subClassOf iasis:MutationZygosity.
+iasis:Heterozygous rdfs:subClassOf iasis:MutationZygosity.
 iasis:LOH rdfs:subClassOf iasis:Mutation.
+iasis:HaveLOH rdfs:subClassOf iasis:LOH.
+iasis:NoLOH rdfs:subClassOf iasis:LOH.
 iasis:SNP rdfs:subClassOf iasis:Mutation.
+iasis:IsSNP rdfs:subClassOf iasis:SNP.
+iasis:IsNotSNP rdfs:subClassOf iasis:SNP.
 iasis:Methylation rdfs:subClassOf iasis:CGI.
+iasis:LowMethylated rdfs:subClassOf iasis:Methylation.
+iasis:HighMethylated rdfs:subClassOf iasis:Methylation.
 iasis:Regulation rdfs:subClassOf iasis:GExp.
+iasis:NormalExpressed rdfs:subClassOf iasis:Regulation.
+iasis:OverExpressed rdfs:subClassOf iasis:Regulation.
+iasis:UnderExpressed rdfs:subClassOf iasis:Regulation.
 
 ###############PartOf
 iasis:Clinical_Note iasis:partOf iasis:Clinical_Record.
