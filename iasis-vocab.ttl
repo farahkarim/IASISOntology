@@ -181,7 +181,7 @@ iasis:cUITerm	rdf:type owl:DatatypeProperty.
 
 #### COSMIC requirements:
 
-iasis:description rdf:type owl:DatatypeProperty.     ### as a property of annotation class
+iasis:description rdf:type owl:DatatypeProperty.     ### as a property of Annotation class
 iasis:sample_identification rdf:type owl:ObjectProperty.
 iasis:gene_identification rdf:type owl:ObjectProperty.
 iasis:tumor_identification rdf:type owl:ObjectProperty.
@@ -387,12 +387,6 @@ iasis:InterAnnotation	rdfs:subClassOf	iasis:Annotation.
 iasis:LCAnnotation	rdfs:subClassOf	iasis:Annotation.
 iasis:ADAnnotation	rdfs:subClassOf	iasis:Annotation.
 iasis:GeneAnnotation rdfs:subClassOf	iasis:Annotation.
-iasis:SampleAnnotation rdfs:subClassOf	iasis:Annotation.
-iasis:TumorAnnotation rdfs:subClassOf	iasis:Annotation.
-iasis:MutationAnnotation rdfs:subClassOf	iasis:Annotation.
-iasis:CNVAnnotation rdfs:subClassOf	iasis:Annotation.
-iasis:CGIAnnotation rdfs:subClassOf	iasis:Annotation.
-iasis:GEAnnotation rdfs:subClassOf	iasis:Annotation.
 
 iasis:Liquid_Biopsy rdfs:subClassOf	iasis:BloodTest.
 
@@ -404,18 +398,10 @@ iasis:Patient	rdfs:subClassOf	iasis:Concept.
 iasis:Treatment	rdfs:subClassOf	iasis:Concept.
 #iasis:Biopsy	rdfs:subClassOf	iasis:Concept.
 iasis:BioMarker	rdfs:subClassOf	iasis:Concept.
-iasis:Tumor rdfs:subClassOf	iasis:Concept.
-iasis:Mutation rdfs:subClassOf	iasis:Concept.
-iasis:CNV rdfs:subClassOf	iasis:Concept.
-iasis:CGI rdfs:subClassOf	iasis:Concept.
-iasis:GE rdfs:subClassOf	iasis:Concept.
 iasis:Protein rdfs:subClassOf	iasis:Concept.
-iasis:Sample rdfs:subClassOf	iasis:Concept.
 iasis:Clinical_Record rdfs:subClassOf iasis:Concept.
 iasis:Test rdfs:subClassOf	iasis:Concept.
 iasis:Image rdfs:subClassOf	iasis:Concept.
-iasis:CGI rdfs:subClassOf	iasis:Concept.
-iasis:GE rdfs:subClassOf	iasis:Concept.
 iasis:Genotype_Tissue_Expression rdfs:subClassOf iasis:Concept.
 iasis:Drug rdfs:subClassOf	iasis:Concept.
 iasis:Gene rdfs:subClassOf	iasis:Concept.
@@ -476,6 +462,25 @@ iasis:Trans_eQTL_regulation rdfs:subClassOf iasis:UMLS_Relation.
 iasis:Regulatory_Interaction rdfs:subClassOf iasis:UMLS_Relation.
 
 
+#### COSMIC requirements:
+
+iasis:Tumor rdfs:subClassOf iasis:Concept.
+iasis:Mutation rdfs:subClassOf iasis:Concept.
+iasis:CNV rdfs:subClassOf iasis:Concept.
+iasis:CGI rdfs:subClassOf iasis:Concept.
+iasis:GExp rdfs:subClassOf iasis:Concept.
+iasis:Transcript rdfs:subClassOf iasis:Concept.
+iasis:MutationType rdfs:subClassOf iasis:Concept.
+
+iasis:GeneAnnotation rdfs:subClassOf iasis:Annotation.
+iasis:SampleAnnotation rdfs:subClassOf iasis:Annotation.
+iasis:TumorAnnotation rdfs:subClassOf iasis:Annotation.
+iasis:MutationAnnotation rdfs:subClassOf iasis:Annotation.
+iasis:CNVAnnotation rdfs:subClassOf iasis:Annotation.
+iasis:CGIAnnotation rdfs:subClassOf iasis:Annotation.
+iasis:GExpAnnotation rdfs:subClassOf iasis:Annotation.
+iasis:TranscriptAnnotation rdfs:subClassOf iasis:Annotation.
+iasis:MutationTypeAnnotation rdfs:subClassOf iasis:Annotation.
 
 
 ###############PartOf
