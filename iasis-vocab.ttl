@@ -5,9 +5,9 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix ssn: <http://www.w3.org/ns/ssn/> .
 #########Classes
-#####iasis:Test rdf:type	owl:Class.
+####iasis:Test rdf:type	owl:Class.
 #iasis:BloodTest rdf:type	owl:Class.
-#####iasis:VocTerm rdf:type	owl:Class.
+####iasis:VocTerm rdf:type	owl:Class.
 iasis:Concept rdf:type	owl:Class.
 iasis:Publication	rdf:type	owl:Class.
 iasis:Annotation	rdf:type	owl:Class.
@@ -21,7 +21,7 @@ iasis:VocTerm rdf:type	owl:Class.
 #iasis:CUITerm	rdf:type	owl:Thing.
 #iasis:LCAnnotation	rdf:type	owl:Class.
 #iasis:ADAnnotation	rdf:type	owl:Class.
-#####iasis:AnalysisTool	rdf:type	owl:Class.
+####iasis:AnalysisTool	rdf:type	owl:Class.
 iasis:BioMarkerLevel	rdf:type	owl:Class.
 iasis:TConcentration	rdf:type	owl:Class.
 iasis:TDose	rdf:type	owl:Class.
@@ -29,8 +29,8 @@ ssn:Observation rdf:type	owl:Class.
 ssn:Measurement	rdf:type	owl:Class.
 ssn:Unit	rdf:type	owl:Class.
 #iasis:Protein rdf:type	owl:Class.
-#####iasis:Requested_Test rdf:type	owl:Class.
-#####iasis:Analytic rdf:type	owl:Class.
+####iasis:Requested_Test rdf:type	owl:Class.
+####iasis:Analytic rdf:type	owl:Class.
 #iasis:Sample rdf:type	owl:Class.
 #iasis:Clinical_Note rdf:type	owl:Class.
 #iasis:Liquid_Biopsy rdf:type	owl:Class.
@@ -52,13 +52,13 @@ iasis:UMLS_Relation rdf:type	owl:Class.
 #iasis:AFFECT__SPEC__ rdf:type	owl:Class.
 #iasis:ASSOCIATED_WITH rdf:type	owl:Class.
 #iasis:AUGMENTS rdf:type	owl:Class.
-#####iasis:CAUSE rdf:type	owl:Class.
+####iasis:CAUSE rdf:type	owl:Class.
 #iasis:COEXISTS_WITH rdf:type	owl:Class.
 #iasis:DIAGNOSES rdf:type	owl:Class.
 #iasis:DISRUPTS rdf:type	owl:Class.
 #iasis:ISA rdf:type	owl:Class.
 #iasis:ADMINISTERED_TO rdf:type	owl:Class.
-#####iasis:CAUSE__SPEC__ rdf:type	owl:Class.
+####iasis:CAUSE__SPEC__ rdf:type	owl:Class.
 #iasis:Compared_With rdf:type	owl:Class.
 #iasis:COMPLICATES rdf:type	owl:Class.
 #iasis:INHIBITS rdf:type	owl:Class.
@@ -98,7 +98,6 @@ iasis:CNV rdf:type owl:Class.
 iasis:CGI rdf:type owl:Class.
 iasis:GExp rdf:type owl:Class.
 iasis:Transcript rdf:type owl:Class.
-iasis:MutationType rdf:type owl:Class.
 
 iasis:GeneAnnotation     rdf:type     owl:Class.
 iasis:SampleAnnotation     rdf:type     owl:Class.
@@ -108,8 +107,16 @@ iasis:CNVAnnotation     rdf:type     owl:Class.
 iasis:CGIAnnotation     rdf:type     owl:Class.
 iasis:GExpAnnotation     rdf:type     owl:Class.
 iasis:TranscriptAnnotation     rdf:type     owl:Class.
-iasis:MutationTypeAnnotation     rdf:type     owl:Class.
 
+
+iasis:MutationType rdf:type owl:Class.
+iasis:GeneralMutationType rdf:type owl:Class. #### extracted from CNV dataset 
+iasis:AdHocMutationType rdf:type owl:Class. #### extracted from mutation dataset
+iasis:MutationZygosity rdf:type owl:Class. #### extracted from mutation dataset
+iasis:LOH rdf:type owl:Class. #### extracted from mutation dataset
+iasis:SNP rdf:type owl:Class. #### extracted from mutation dataset
+iasis:Methylation rdf:type owl:Class. #### extracted from methylation dataset
+iasis:Regulation rdf:type owl:Class. #### extracted from methylation dataset
 
 #########Properties
 iasis:requestedTest rdf:type	owl:ObjectProperty.
@@ -120,7 +127,7 @@ iasis:id	rdf:type	owl:ObjectProperty.
 iasis:ann_label	rdf:type	owl:DatatypeProperty.
 iasis:source	rdf:type	owl:ObjectProperty.
 iasis:prec_tool	rdf:type	owl:ObjectProperty.
-#####iasis:mentioned_in	rdf:type	owl:ObjectProperty.
+####iasis:mentioned_in	rdf:type	owl:ObjectProperty.
 iasis:maps	rdf:type	owl:ObjectProperty.
 iasis:birthday	rdf:type	owl:DatatypeProperty.
 iasis:gender	rdf:type	owl:DatatypeProperty.
@@ -137,9 +144,9 @@ iasis:has_biopsy	rdf:type	owl:ObjectProperty.
 iasis:bm_description	rdf:type	owl:ObjectProperty.
 iasis:has_level	rdf:type	owl:ObjectProperty.
 iasis:prescripted_drug	rdf:type	owl:ObjectProperty.
-#####iasis:d_date	rdf:type	owl:DatatypeProperty.
+####iasis:d_date	rdf:type	owl:DatatypeProperty.
 iasis:death_cause	rdf:type	owl:ObjectProperty.
-#####iasis:is_died	rdf:type	owl:ObjectProperty.
+####iasis:is_died	rdf:type	owl:ObjectProperty.
 iasis:obs_start_time	rdf:type	owl:DatatypeProperty.
 iasis:obs_end_time	rdf:type	owl:DatatypeProperty.
 iasis:trt_start_time	rdf:type	owl:DatatypeProperty.
@@ -181,7 +188,7 @@ iasis:cUITerm	rdf:type owl:DatatypeProperty.
 
 #### COSMIC requirements:
 
-iasis:description rdf:type owl:DatatypeProperty.     ### as a property of Annotation class
+iasis:description rdf:type owl:DatatypeProperty.     #### as a property of Annotation class
 iasis:sample_identification rdf:type owl:ObjectProperty.
 iasis:gene_identification rdf:type owl:ObjectProperty.
 iasis:tumor_identification rdf:type owl:ObjectProperty.
@@ -276,8 +283,8 @@ iasis:prescripted_drug	rdfs:domain	iasis:Treatment;
 			rdfs:range	iasis:InterAnnotation.
 iasis:is_died	rdfs:domain iasis:Patient;
 		rdfs:range	iasis:Death.
-#####iasis:d_date	rdfs:domain	iasis:Death;
-#####			rdfs:range	rdfs:Literal.
+####iasis:d_date	rdfs:domain	iasis:Death;
+####			rdfs:range	rdfs:Literal.
 iasis:death_cause	rdfs:domain	iasis:Death;
 			rdfs:range	iasis:CondAnnotation.
 iasis:obs_start_time	rdfs:domain iasis:Patient;
@@ -538,7 +545,7 @@ iasis:ADPublication	rdfs:subClassOf	iasis:Publication.
 
 iasis:UMLS_Relation rdfs:subClassOf iasis:Relation.
 iasis:Has_Risk_Of rdfs:subClassOf iasis:Relation.
-#####iasis:Has_Mesh	rdfs:subClassOf iasis:Relation.
+####iasis:Has_Mesh	rdfs:subClassOf iasis:Relation.
 iasis:Mentioned_In rdfs:subClassOf iasis:Relation.
 
 
@@ -551,13 +558,13 @@ iasis:Effect rdfs:subClassOf iasis:UMLS_Relation.
 iasis:AFFECT__SPEC__ rdfs:subClassOf iasis:UMLS_Relation.
 iasis:ASSOCIATED_WITH rdfs:subClassOf iasis:UMLS_Relation.
 iasis:AUGMENTS rdfs:subClassOf iasis:UMLS_Relation.
-#####iasis:CAUSES rdfs:subClassOf iasis:UMLS_Relation.
+####iasis:CAUSES rdfs:subClassOf iasis:UMLS_Relation.
 iasis:COEXISTS_WITH rdfs:subClassOf iasis:UMLS_Relation.
 iasis:DIAGNOSES rdfs:subClassOf iasis:UMLS_Relation.
 iasis:DISRUPTS rdfs:subClassOf iasis:UMLS_Relation.
 iasis:ISA rdfs:subClassOf iasis:UMLS_Relation.
 iasis:ADMINISTERED_TO rdfs:subClassOf iasis:UMLS_Relation.
-#####iasis:CAUSES__SPEC__ rdfs:subClassOf iasis:UMLS_Relation.
+####iasis:CAUSES__SPEC__ rdfs:subClassOf iasis:UMLS_Relation.
 iasis:Compared_With rdfs:subClassOf iasis:UMLS_Relation.
 iasis:COMPLICATES rdfs:subClassOf iasis:UMLS_Relation.
 iasis:INHIBITS rdfs:subClassOf iasis:UMLS_Relation.
@@ -605,6 +612,13 @@ iasis:GExpAnnotation rdfs:subClassOf iasis:Annotation.
 iasis:TranscriptAnnotation rdfs:subClassOf iasis:Annotation.
 iasis:MutationTypeAnnotation rdfs:subClassOf iasis:Annotation.
 
+iasis:GeneralMutationType rdfs:subClassOf iasis:MutationType. 
+iasis:AdHocMutationType rdfs:subClassOf iasis:MutationType.
+iasis:MutationZygosity rdfs:subClassOf iasis:Mutation.
+iasis:LOH rdfs:subClassOf iasis:Mutation.
+iasis:SNP rdfs:subClassOf iasis:Mutation.
+iasis:Methylation rdfs:subClassOf iasis:CGI.
+iasis:Regulation rdfs:subClassOf iasis:GExp.
 
 ###############PartOf
 iasis:Clinical_Note iasis:partOf iasis:Clinical_Record.
