@@ -379,6 +379,66 @@ iasis:cUITerm rdfs:domain iasis:Annotation;
 
 
 
+#### COSMIC requirements:
+
+iasis:description rdfs:domain iasis:Annotation;
+					rdfs:range iasis:Literal.   
+iasis:sample_identification rdfs:domain iasis:Sample;
+					rdfs:range iasis:SampleAnnotation.
+iasis:gene_identification rdfs:domain iasis:Gene;
+							rdfs:range iasis:GeneAnnotation.
+iasis:tumor_identification rdfs:domain iasis:Tumor;
+							rdfs:range iasis:tumorAnnotation.
+iasis:mutation_identification rdfs:domain iasis:Mutation;
+								rdfs:range iasis:MutationAnnotation.
+iasis:cnv_identification rdfs:domain iasis:CNV;
+							rdfs:range iasis:CNVAnnotation.
+iasis:cgi_identification rdfs:domain iasis:CGI;
+							rdfs:range iasis:CGIAnnotation.
+iasis:gexp_identification rdfs:domain iasis:GExp;
+							rdfs:range iasis:GExpAnnotation.
+iasis:transcript_identification rdfs:domain iasis:Transcript;
+							rdfs:range iasis:TranscriptAnnotation.
+iasis:mutation_type_identification rdfs:domain iasis:MutationType;
+							rdfs:range iasis:MutationTypeAnnotation.
+
+iasis:cds_length rdf:type owl:DatatypeProperty.
+iasis:age rdf:type owl:DatatypeProperty.
+iasis:primary_site rdf:type owl:DatatypeProperty.
+iasis:site_subtype rdf:type owl:DatatypeProperty.
+iasis:primary_histology rdf:type owl:DatatypeProperty.
+iasis:histology_subtype rdf:type owl:DatatypeProperty.
+iasis:mentioned_in rdf:type owl:ObjectProperty.
+iasis:chromosome rdf:type owl:DatatypeProperty.
+iasis:strand rdf:type owl:DatatypeProperty.
+iasis:start rdf:type owl:DatatypeProperty.
+iasis:end rdf:type owl:DatatypeProperty.
+iasis:genomic_position rdf:type owl:DatatypeProperty.
+iasis:study_id rdf:type owl:DatatypeProperty.
+iasis:mutation_cds rdf:type owl:DatatypeProperty.
+iasis:mutation_aa rdf:type owl:DatatypeProperty.
+iasis:mutation_zygosity rdf:type owl:DatatypeProperty.
+iasis:loh rdf:type owl:DatatypeProperty.
+iasis:being_snp rdf:type owl:DatatypeProperty.
+iasis:fathmm_prediction rdf:type owl:DatatypeProperty.
+iasis:fathmm_score rdf:type owl:DatatypeProperty.
+iasis:mutation_somatic_status rdf:type owl:DatatypeProperty.
+iasis:regulation rdf:type owl:DatatypeProperty.
+iasis:z_score rdf:type owl:DatatypeProperty.
+iasis:methylation rdf:type owl:DatatypeProperty.
+iasis:beta_value rdf:type owl:DatatypeProperty.
+iasis:avg_beta_value rdf:type owl:DatatypeProperty.
+iasis:two_sided_p-value rdf:type owl:DatatypeProperty.
+iasis:total_cn rdf:type owl:DatatypeProperty.
+iasis:minor_allele rdf:type owl:DatatypeProperty.
+iasis:is_located rdf:type owl:ObjectProperty.
+iasis:expressed_as rdf:type owl:ObjectProperty.
+iasis:occurred_in rdf:type owl:ObjectProperty.
+iasis:is_taken_from rdf:type owl:ObjectProperty.
+iasis:classifies_as rdf:type owl:ObjectProperty.
+
+
+
 ###############Subclasses
 iasis:LCAnnotation	rdfs:subClassOf	iasis:Annotation.
 iasis:ADAnnotation	rdfs:subClassOf	iasis:Annotation.
