@@ -229,6 +229,7 @@ iasis:mutation_aa rdf:type owl:DatatypeProperty.
 iasis:fathmm_prediction rdf:type owl:DatatypeProperty.
 iasis:fathmm_score rdf:type owl:DatatypeProperty.
 iasis:mutation_somatic_status rdf:type owl:DatatypeProperty.
+iasis:tumor_origin rdf:type owl:DatatypeProperty.
 iasis:z_score rdf:type owl:DatatypeProperty.
 iasis:beta_value rdf:type owl:DatatypeProperty.
 iasis:avg_beta_value rdf:type owl:DatatypeProperty.
@@ -467,6 +468,8 @@ iasis:fathmm_score rdfs:domain iasis:Mutation;
 					rdfs:range iasis:Literal.
 iasis:mutation_somatic_status rdfs:domain iasis:Mutation;
 								rdfs:range rdfs:Literal.
+iasis:tumor_origin rdfs:domain iasis:Mutation;
+					rdfs:range rdfs:Literal.
 iasis:z_score rdfs:domain iasis:GExp;
 				rdfs:range rdfs:Literal.
 iasis:beta_value rdfs:domain iasis:CGI;
