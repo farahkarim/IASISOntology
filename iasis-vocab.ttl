@@ -399,7 +399,7 @@ iasis:cUITerm rdfs:domain iasis:Annotation;
 #### COSMIC requirements:
 
 iasis:description rdfs:domain iasis:Annotation;
-					rdfs:range iasis:Literal.   
+					rdfs:range rdfs:Literal.   
 iasis:sample_identification rdfs:domain iasis:Sample;
 					rdfs:range iasis:SampleAnnotation.
 iasis:gene_identification rdfs:domain iasis:Gene;
