@@ -459,13 +459,13 @@ iasis:study_id rdfs:domain iasis:CGI;
 iasis:study_id rdfs:domain iasis:GExp;
 				rdfs:range iasis:VocTerm.
 iasis:mutation_cds rdfs:domain iasis:Mutation;
-					rdfs:range iasis:Literal.
+					rdfs:range rdfs:Literal.
 iasis:mutation_aa rdfs:domain iasis:Mutation;
 					rdfs:range rdfs:Literal.
 iasis:fathmm_prediction rdfs:domain iasis:Mutation;
 						rdfs:range rdfs:Literal.
 iasis:fathmm_score rdfs:domain iasis:Mutation;
-					rdfs:range iasis:Literal.
+					rdfs:range rdfs:Literal.
 iasis:mutation_somatic_status rdfs:domain iasis:Mutation;
 								rdfs:range rdfs:Literal.
 iasis:tumor_origin rdfs:domain iasis:Mutation;
