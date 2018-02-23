@@ -389,8 +389,6 @@ iasis:cnv_identification rdfs:domain iasis:CNV;
 			rdfs:range iasis:CNVAnnotation.
 iasis:cgi_identification rdfs:domain iasis:CGI;
 			rdfs:range iasis:CGIAnnotation.
-iasis:gexp_identification rdfs:domain iasis:GE;
-			rdfs:range iasis:GEAnnotation.
 iasis:cUITerm rdfs:domain iasis:Annotation;
 				rdfs:range	rdfs:Literal.
 
@@ -518,7 +516,6 @@ iasis:CondAnnotation	rdfs:subClassOf	iasis:Annotation.
 iasis:InterAnnotation	rdfs:subClassOf	iasis:Annotation.
 iasis:LCAnnotation	rdfs:subClassOf	iasis:Annotation.
 iasis:ADAnnotation	rdfs:subClassOf	iasis:Annotation.
-iasis:GeneAnnotation rdfs:subClassOf	iasis:Annotation.
 
 iasis:Liquid_Biopsy rdfs:subClassOf	iasis:BloodTest.
 
