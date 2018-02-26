@@ -7,7 +7,6 @@
 #########Classes
 ####iasis:Test rdf:type	owl:Class.
 #iasis:BloodTest rdf:type	owl:Class.
-####iasis:VocTerm rdf:type	owl:Class.
 iasis:Concept rdf:type	owl:Class.
 iasis:Publication	rdf:type	owl:Class.
 iasis:Annotation	rdf:type	owl:Class.
@@ -30,7 +29,6 @@ ssn:Measurement	rdf:type	owl:Class.
 ssn:Unit	rdf:type	owl:Class.
 ####iasis:Requested_Test rdf:type	owl:Class.
 ####iasis:Analytic rdf:type	owl:Class.
-#iasis:Sample rdf:type	owl:Class.
 #iasis:Clinical_Note rdf:type	owl:Class.
 #iasis:Liquid_Biopsy rdf:type	owl:Class.
 #iasis:Image rdf:type	owl:Class.
@@ -78,10 +76,7 @@ iasis:UMLS_Relation rdf:type	owl:Class.
 #iasis:STIMULATES rdf:type	owl:Class.
 #iasis:TREATS rdf:type	owl:Class.
 #iasis:USES rdf:type	owl:Class.
-#iasis:Physical_Interaction rdf:type	owl:Class.
-#iasis:Protein_RNA_Interaction rdf:type	owl:Class.
-#iasis:Protein_RNA_Interaction_Probability rdf:type	owl:Class.
-#iasis:Trans_eQTL_regulation rdf:type	owl:Class.
+
 #iasis:Regulatory_Interaction rdf:type	owl:Class.
 #iasis:Relation rdf:type	owl:Class.
 #iasis:Has_Risk_Of rdf:type	owl:Class.
@@ -91,6 +86,7 @@ iasis:UMLS_Relation rdf:type	owl:Class.
 
 #### COSMIC requirements:
 
+iasis:Sample rdf:type	owl:Class.
 iasis:Tumor rdf:type owl:Class.
 iasis:Mutation rdf:type owl:Class.
 iasis:CNV rdf:type owl:Class.
@@ -589,10 +585,7 @@ iasis:PRODUCES rdfs:subClassOf iasis:UMLS_Relation.
 iasis:STIMULATES rdfs:subClassOf iasis:UMLS_Relation.
 iasis:TREATS rdfs:subClassOf iasis:UMLS_Relation.
 iasis:USES rdfs:subClassOf iasis:UMLS_Relation.
-iasis:Physical_Interaction rdfs:subClassOf iasis:UMLS_Relation.
-iasis:Protein_RNA_Interaction rdfs:subClassOf iasis:UMLS_Relation.
-iasis:Protein_RNA_Interaction_Probability rdfs:subClassOf iasis:UMLS_Relation.
-iasis:Trans_eQTL_regulation rdfs:subClassOf iasis:UMLS_Relation.
+
 iasis:Regulatory_Interaction rdfs:subClassOf iasis:UMLS_Relation.
 
 
