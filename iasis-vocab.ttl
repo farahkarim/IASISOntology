@@ -28,7 +28,6 @@ iasis:TDose	rdf:type	owl:Class.
 ssn:Observation rdf:type	owl:Class.
 ssn:Measurement	rdf:type	owl:Class.
 ssn:Unit	rdf:type	owl:Class.
-#iasis:Protein rdf:type	owl:Class.
 ####iasis:Requested_Test rdf:type	owl:Class.
 ####iasis:Analytic rdf:type	owl:Class.
 #iasis:Sample rdf:type	owl:Class.
@@ -128,6 +127,12 @@ iasis:Regulation rdf:type owl:Class. #### extracted from methylation dataset
 iasis:NormalExpressed rdf:type owl:Class.
 iasis:OverExpressed rdf:type owl:Class.
 iasis:UnderExpressed rdf:type owl:Class.
+
+#### WP3 requirements:
+
+iasis:Protein rdf:type	owl:Class.
+iasis:ProteinAnnotation rdf:type owl:Class.
+
 
 
 #########Properties
@@ -629,6 +634,12 @@ iasis:Regulation rdfs:subClassOf iasis:GExp.
 iasis:NormalExpressed rdfs:subClassOf iasis:Regulation.
 iasis:OverExpressed rdfs:subClassOf iasis:Regulation.
 iasis:UnderExpressed rdfs:subClassOf iasis:Regulation.
+
+
+#### WP3 requirements:
+
+iasis:Protein rdfs:subClassOf iasis:Concept.
+iasis:ProteinAnnotation rdfs:sybClassOf iasis:Annotation.
 
 ###############PartOf
 iasis:Clinical_Note iasis:partOf iasis:Clinical_Record.
