@@ -347,7 +347,7 @@ iasis:sample_identification rdfs:domain iasis:Sample;
 iasis:gene_identification rdfs:domain iasis:Gene;
 							rdfs:range iasis:GeneAnnotation.
 iasis:tumor_identification rdfs:domain iasis:Tumor;
-							rdfs:range iasis:tumorAnnotation.
+							rdfs:range iasis:TumorAnnotation.
 iasis:mutation_identification rdfs:domain iasis:Mutation;
 								rdfs:range iasis:MutationAnnotation.
 iasis:cnv_identification rdfs:domain iasis:CNV;
@@ -433,7 +433,7 @@ iasis:is_located rdfs:domain iasis:CNV;
 iasis:is_located rdfs:domain iasis:CGI;
 					rdfs:range iasis:Tumor.
 iasis:expressed_as rdfs:domain iasis:Gene;
-					rdfs:range iasis:GE.
+					rdfs:range iasis:GExp.
 iasis:occurred_in rdfs:domain iasis:CNV;
 					rdfs:range iasis:Sample.
 iasis:occurred_in rdfs:domain iasis:CNV;
