@@ -175,7 +175,6 @@ ssn:value	rdf:type	owl:DatatypeProperty.
 iasis:has_annotation rdf:type	owl:ObjectProperty.
 
 iasis:confidence rdf:type	owl:DatatypeProperty.
-#iasis:prediction_tool rdf:type	owl:ObjectProperty.
 iasis:is_related_to rdf:type	owl:ObjectProperty.
 iasis:annotates rdf:type owl:ObjectProperty.
 iasis:cUITerm	rdf:type owl:DatatypeProperty.
@@ -459,8 +458,6 @@ iasis:LCAnnotation	rdfs:subClassOf	iasis:Annotation.
 iasis:ADAnnotation	rdfs:subClassOf	iasis:Annotation.
 iasis:CondAnnotation	rdfs:subClassOf	iasis:Annotation.
 iasis:InterAnnotation	rdfs:subClassOf	iasis:Annotation.
-iasis:LCAnnotation	rdfs:subClassOf	iasis:Annotation.
-iasis:ADAnnotation	rdfs:subClassOf	iasis:Annotation.
 
 iasis:Liquid_Biopsy rdfs:subClassOf	iasis:BloodTest.
 
@@ -508,7 +505,7 @@ iasis:DIAGNOSES rdfs:subClassOf iasis:UMLS_Relation.
 iasis:DISRUPTS rdfs:subClassOf iasis:UMLS_Relation.
 iasis:ISA rdfs:subClassOf iasis:UMLS_Relation.
 iasis:ADMINISTERED_TO rdfs:subClassOf iasis:UMLS_Relation.
-####iasis:CAUSES__SPEC__ rdfs:subClassOf iasis:UMLS_Relation.
+####iasis:CAUSE__SPEC__ rdfs:subClassOf iasis:UMLS_Relation.
 iasis:Compared_With rdfs:subClassOf iasis:UMLS_Relation.
 iasis:COMPLICATES rdfs:subClassOf iasis:UMLS_Relation.
 iasis:INHIBITS rdfs:subClassOf iasis:UMLS_Relation.
