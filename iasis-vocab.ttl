@@ -204,7 +204,7 @@ iasis:strand rdf:type owl:DatatypeProperty.
 iasis:start rdf:type owl:DatatypeProperty.
 iasis:end rdf:type owl:DatatypeProperty.
 iasis:genomic_position rdf:type owl:DatatypeProperty.
-iasis:study_id rdf:type owl:DatatypeProperty.
+iasis:study_id rdf:type owl:ObjectProperty.
 iasis:mutation_cds rdf:type owl:DatatypeProperty.
 iasis:mutation_aa rdf:type owl:DatatypeProperty.
 iasis:fathmm_prediction rdf:type owl:DatatypeProperty.
