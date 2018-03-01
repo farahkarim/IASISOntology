@@ -6,8 +6,8 @@
 @prefix ssn: <http://www.w3.org/ns/ssn/> .
 @prefix dce: <http://purl.org/dc/elements/1.1/>.
 #########Classes
-####iasis:Test rdf:type	owl:Class.
-#iasis:BloodTest rdf:type	owl:Class.
+iasis:Test rdf:type	owl:Class.
+iasis:BloodTest rdf:type	owl:Class.
 iasis:Concept rdf:type	owl:Class.
 iasis:Publication	rdf:type	owl:Class.
 iasis:Annotation	rdf:type	owl:Class.
@@ -16,7 +16,7 @@ iasis:Treatment	rdf:type	owl:Class.
 iasis:Biopsy	rdf:type	owl:Class;
                 rdfs:comment "From clinical data, LC patients" ;
                 rdfs:label "an examination of tissue removed from a living body to discover the presence, cause, or extent of a disease.";
-				dce:creator iasis:sam.
+				dce:creator iasis:samaneh.
 
 iasis:BioMarker	rdf:type	owl:Class.
 iasis:PubRepository	rdf:type	owl:Class.
@@ -34,58 +34,58 @@ ssn:Measurement	rdf:type	owl:Class.
 ssn:Unit	rdf:type	owl:Class.
 ####iasis:Requested_Test rdf:type	owl:Class.
 ####iasis:Analytic rdf:type	owl:Class.
-#iasis:Clinical_Note rdf:type	owl:Class.
-#iasis:Clinical_Record rdfs:subClassOf iasis:Concept
-#iasis:Liquid_Biopsy rdf:type	owl:Class.
-#iasis:Image rdf:type	owl:Class.
-#iasis:Drug rdf:type	owl:Class.
-#iasis:Gene rdf:type	owl:Class.
+iasis:Clinical_Note rdf:type	owl:Class.
+iasis:Clinical_Record rdfs:subClassOf iasis:Concept.
+iasis:Liquid_Biopsy rdf:type	owl:Class.
+iasis:Image rdf:type	owl:Class.
+iasis:Drug rdf:type	owl:Class.
+iasis:Gene rdf:type	owl:Class.
 
 
-#iasis:LCPublication	rdf:type	owl:Class.
-#iasis:ADPublication	rdf:type	owl:Class.
+iasis:LCPublication	rdf:type	owl:Class.
+iasis:ADPublication	rdf:type	owl:Class.
 
-#iasis:LCPatient	rdf:type	owl:Class.
-#iasis:ADPatient	rdf:type	owl:Class.
-#iasis:LCTreatment	rdf:type	owl:Class.
-#iasis:ADTreatment	rdf:type	owl:Class.
+iasis:LCPatient	rdf:type	owl:Class.
+iasis:ADPatient	rdf:type	owl:Class.
+iasis:LCTreatment	rdf:type	owl:Class.
+iasis:ADTreatment	rdf:type	owl:Class.
 iasis:UMLS_Relation rdf:type	owl:Class.
-#iasis:Effect rdf:type	owl:Class.
-#iasis:AFFECT__SPEC__ rdf:type	owl:Class.
-#iasis:ASSOCIATED_WITH rdf:type	owl:Class.
-#iasis:AUGMENTS rdf:type	owl:Class.
-####iasis:CAUSE rdf:type	owl:Class.
-#iasis:COEXISTS_WITH rdf:type	owl:Class.
-#iasis:DIAGNOSES rdf:type	owl:Class.
-#iasis:DISRUPTS rdf:type	owl:Class.
-#iasis:ISA rdf:type	owl:Class.
-#iasis:ADMINISTERED_TO rdf:type	owl:Class.
-####iasis:CAUSE__SPEC__ rdf:type	owl:Class.
-#iasis:Compared_With rdf:type	owl:Class.
-#iasis:COMPLICATES rdf:type	owl:Class.
-#iasis:INHIBITS rdf:type	owl:Class.
-#iasis:INTERACTS_WITH rdf:type	owl:Class.
-#iasis:LOCATION_OF rdf:type	owl:Class.
-#iasis:Lower_Than rdf:type	owl:Class.
-#iasis:MANIFESTATION_OF rdf:type	owl:Class.
-#iasis:METHOD_OF rdf:type	owl:Class.
-#iasis:OCCURS_IN rdf:type	owl:Class.
-#iasis:OCCURS_IN__SPEC__ rdf:type	owl:Class.
-#iasis:PART_OF rdf:type	owl:Class.
-#iasis:PART_OF__SPEC__ rdf:type	owl:Class.
-#iasis:PRECEDES rdf:type	owl:Class.
-#iasis:PREDISPOSES rdf:type	owl:Class.
-#iasis:PROCESS_OF rdf:type	owl:Class.
-#iasis:PROCESS_OF__SPEC__ rdf:type	owl:Class.
-#iasis:PRODUCES rdf:type	owl:Class.
-#iasis:STIMULATES rdf:type	owl:Class.
-#iasis:TREATS rdf:type	owl:Class.
-#iasis:USES rdf:type	owl:Class.
+iasis:Effect rdf:type	owl:Class.
+iasis:AFFECT__SPEC__ rdf:type	owl:Class.
+iasis:ASSOCIATED_WITH rdf:type	owl:Class.
+iasis:AUGMENTS rdf:type	owl:Class.
+iasis:CAUSE rdf:type	owl:Class.
+iasis:COEXISTS_WITH rdf:type	owl:Class.
+iasis:DIAGNOSES rdf:type	owl:Class.
+iasis:DISRUPTS rdf:type	owl:Class.
+iasis:ISA rdf:type	owl:Class.
+iasis:ADMINISTERED_TO rdf:type	owl:Class.
+iasis:CAUSE__SPEC__ rdf:type	owl:Class.
+iasis:Compared_With rdf:type	owl:Class.
+iasis:COMPLICATES rdf:type	owl:Class.
+iasis:INHIBITS rdf:type	owl:Class.
+iasis:INTERACTS_WITH rdf:type	owl:Class.
+iasis:LOCATION_OF rdf:type	owl:Class.
+iasis:Lower_Than rdf:type	owl:Class.
+iasis:MANIFESTATION_OF rdf:type	owl:Class.
+iasis:METHOD_OF rdf:type	owl:Class.
+iasis:OCCURS_IN rdf:type	owl:Class.
+iasis:OCCURS_IN__SPEC__ rdf:type	owl:Class.
+iasis:PART_OF rdf:type	owl:Class.
+iasis:PART_OF__SPEC__ rdf:type	owl:Class.
+iasis:PRECEDES rdf:type	owl:Class.
+iasis:PREDISPOSES rdf:type	owl:Class.
+iasis:PROCESS_OF rdf:type	owl:Class.
+iasis:PROCESS_OF__SPEC__ rdf:type	owl:Class.
+iasis:PRODUCES rdf:type	owl:Class.
+iasis:STIMULATES rdf:type	owl:Class.
+iasis:TREATS rdf:type	owl:Class.
+iasis:USES rdf:type	owl:Class.
 
-#iasis:Relation rdf:type	owl:Class.
-#iasis:Has_Risk_Of rdf:type	owl:Class.
-#####iasis:Has_MESH	rdf:type	owl:Class.
-#iasis:Mentioned_In rdf:type	owl:Class.
+iasis:Relation rdf:type	owl:Class.
+iasis:Has_Risk_Of rdf:type	owl:Class.
+iasis:Has_MESH	rdf:type	owl:Class.
+iasis:Mentioned_In rdf:type	owl:Class.
 
 
 #### COSMIC requirements:
@@ -144,7 +144,6 @@ iasis:id	rdf:type	owl:ObjectProperty.
 iasis:ann_label	rdf:type	owl:DatatypeProperty.
 iasis:source	rdf:type	owl:ObjectProperty.
 iasis:prec_tool	rdf:type	owl:ObjectProperty.
-####iasis:mentioned_in	rdf:type	owl:ObjectProperty.
 iasis:maps	rdf:type	owl:ObjectProperty.
 iasis:birthday	rdf:type	owl:DatatypeProperty.
 iasis:gender	rdf:type	owl:DatatypeProperty.
@@ -463,8 +462,6 @@ iasis:ADAnnotation	rdfs:subClassOf	iasis:Annotation.
 
 iasis:Liquid_Biopsy rdfs:subClassOf	iasis:BloodTest.
 
-iasis:Clinical_Note rdfs:subClassOf iasis:Clinical_Record.
-
 iasis:Publication	rdfs:subClassOf	iasis:Concept.
 iasis:Patient	rdfs:subClassOf	iasis:Concept.
 iasis:Treatment	rdfs:subClassOf	iasis:Concept.
@@ -499,13 +496,13 @@ iasis:Effect rdfs:subClassOf iasis:UMLS_Relation.
 iasis:AFFECT__SPEC__ rdfs:subClassOf iasis:UMLS_Relation.
 iasis:ASSOCIATED_WITH rdfs:subClassOf iasis:UMLS_Relation.
 iasis:AUGMENTS rdfs:subClassOf iasis:UMLS_Relation.
-####iasis:CAUSES rdfs:subClassOf iasis:UMLS_Relation.
+iasis:CAUSES rdfs:subClassOf iasis:UMLS_Relation.
 iasis:COEXISTS_WITH rdfs:subClassOf iasis:UMLS_Relation.
 iasis:DIAGNOSES rdfs:subClassOf iasis:UMLS_Relation.
 iasis:DISRUPTS rdfs:subClassOf iasis:UMLS_Relation.
 iasis:ISA rdfs:subClassOf iasis:UMLS_Relation.
 iasis:ADMINISTERED_TO rdfs:subClassOf iasis:UMLS_Relation.
-####iasis:CAUSE__SPEC__ rdfs:subClassOf iasis:UMLS_Relation.
+iasis:CAUSE__SPEC__ rdfs:subClassOf iasis:UMLS_Relation.
 iasis:Compared_With rdfs:subClassOf iasis:UMLS_Relation.
 iasis:COMPLICATES rdfs:subClassOf iasis:UMLS_Relation.
 iasis:INHIBITS rdfs:subClassOf iasis:UMLS_Relation.
