@@ -4,23 +4,28 @@
 @prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix ssn: <http://www.w3.org/ns/ssn/> .
+@prefix dce: <http://purl.org/dc/elements/1.1/>.
 #########Classes
 ####iasis:Test rdf:type	owl:Class.
 #iasis:BloodTest rdf:type	owl:Class.
 iasis:Concept rdf:type	owl:Class.
 iasis:Publication	rdf:type	owl:Class.
 iasis:Annotation	rdf:type	owl:Class.
-#iasis:Patient	rdf:type	owl:Class.
-#iasis:Treatment	rdf:type	owl:Class.
-#iasis:Biopsy	rdf:type	owl:Class.
-#iasis:BioMarker	rdf:type	owl:Class.
-#iasis:PubRepository	rdf:type	owl:Class.
+iasis:Patient	rdf:type	owl:Class.
+iasis:Treatment	rdf:type	owl:Class.
+iasis:Biopsy	rdf:type	owl:Class;
+                rdfs:comment "From clinical data, LC patients" ;
+                rdfs:label "an examination of tissue removed from a living body to discover the presence, cause, or extent of a disease.";
+				dce:creator iasis:sam.
+
+iasis:BioMarker	rdf:type	owl:Class.
+iasis:PubRepository	rdf:type	owl:Class.
 iasis:Vocabulary	rdf:type	owl:Class.
 iasis:VocTerm rdf:type	owl:Class.
-#iasis:CUITerm	rdf:type	owl:Thing.
-#iasis:LCAnnotation	rdf:type	owl:Class.
-#iasis:ADAnnotation	rdf:type	owl:Class.
-####iasis:AnalysisTool	rdf:type	owl:Class.
+iasis:CUITerm	rdf:type	owl:Thing.
+iasis:LCAnnotation	rdf:type	owl:Class.
+iasis:ADAnnotation	rdf:type	owl:Class.
+iasis:AnalysisTool	rdf:type	owl:Class. 
 iasis:BioMarkerLevel	rdf:type	owl:Class.
 iasis:TConcentration	rdf:type	owl:Class.
 iasis:TDose	rdf:type	owl:Class.
@@ -464,16 +469,14 @@ iasis:Liquid_Biopsy rdfs:subClassOf	iasis:BloodTest.
 iasis:Clinical_Note rdfs:subClassOf iasis:Clinical_Record.
 
 iasis:Publication	rdfs:subClassOf	iasis:Concept.
-iasis:Annotation	rdfs:subClassOf	iasis:Concept.
 iasis:Patient	rdfs:subClassOf	iasis:Concept.
 iasis:Treatment	rdfs:subClassOf	iasis:Concept.
-#iasis:Biopsy	rdfs:subClassOf	iasis:Concept.
+iasis:Biopsy	rdfs:subClassOf	iasis:Test.
 iasis:BioMarker	rdfs:subClassOf	iasis:Concept.
 iasis:Protein rdfs:subClassOf	iasis:Concept.
 iasis:Clinical_Record rdfs:subClassOf iasis:Concept.
 iasis:Test rdfs:subClassOf	iasis:Concept.
 iasis:Image rdfs:subClassOf	iasis:Concept.
-iasis:Genotype_Tissue_Expression rdfs:subClassOf iasis:Concept.
 iasis:Drug rdfs:subClassOf	iasis:Concept.
 iasis:Gene rdfs:subClassOf	iasis:Concept.
 
@@ -531,6 +534,7 @@ iasis:USES rdfs:subClassOf iasis:UMLS_Relation.
 #### COSMIC requirements:
 
 iasis:Tumor rdfs:subClassOf iasis:Concept.
+iasis:Sample rdfs:subClassOf iasis:Concept.
 iasis:Mutation rdfs:subClassOf iasis:Concept.
 iasis:CNV rdfs:subClassOf iasis:Concept.
 iasis:CGI rdfs:subClassOf iasis:Concept.
