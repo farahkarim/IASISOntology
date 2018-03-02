@@ -479,7 +479,7 @@ iasis:UnderExpressed rdfs:subClassOf iasis:Regulation.
 #### WP3 requirements:
 
 iasis:Protein rdfs:subClassOf iasis:Concept.
-iasis:ProteinAnnotation rdfs:sybClassOf iasis:Annotation.
+iasis:ProteinAnnotation rdfs:subClassOf iasis:Annotation.
 
 ###############PartOf
 iasis:Clinical_Note iasis:partOf iasis:Clinical_Record.
