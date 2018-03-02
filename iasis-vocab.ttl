@@ -36,7 +36,6 @@ iasis:Clinical_Note rdf:type	owl:Class.
 
 
 iasis:Relation rdf:type	owl:Class.
-iasis:Has_MESH	rdf:type	owl:Class.
 
 
 #### COSMIC requirements:
@@ -425,6 +424,7 @@ iasis:ADPublication	rdfs:subClassOf	iasis:Publication.
 iasis:UMLS_Relation rdfs:subClassOf iasis:Relation.
 iasis:Has_Risk_Of rdfs:subClassOf iasis:Relation.
 iasis:Mentioned_In rdfs:subClassOf iasis:Relation.
+iasis:Has_MESH	rdfs:subClassOf iasis:Relation.
 
 
 iasis:BloodTest rdfs:subClassOf	iasis:Test.
