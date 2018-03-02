@@ -53,7 +53,6 @@ iasis:Relation rdf:type	owl:Class.
 
 #### WP3 requirements:
 
-iasis:ProteinAnnotation rdf:type owl:Class.
 
 
 
