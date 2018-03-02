@@ -36,9 +36,7 @@ iasis:Clinical_Note rdf:type	owl:Class.
 
 
 iasis:Relation rdf:type	owl:Class.
-iasis:Has_Risk_Of rdf:type	owl:Class.
 iasis:Has_MESH	rdf:type	owl:Class.
-iasis:Mentioned_In rdf:type	owl:Class.
 
 
 #### COSMIC requirements:
