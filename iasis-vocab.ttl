@@ -32,7 +32,7 @@ iasis:Relation rdf:type	owl:Class.
 
 
 #iasis:MutationType rdf:type owl:Class.
-iasis:GeneralMutationType rdf:type owl:Class. #### extracted from CNV dataset 
+#iasis:GeneralMutationType rdf:type owl:Class. 
 iasis:AdHocMutationType rdf:type owl:Class. #### extracted from mutation dataset
 iasis:MutationZygosity rdf:type owl:Class. #### extracted from mutation dataset
 iasis:Homozygous rdf:type owl:Class.
@@ -459,7 +459,7 @@ iasis:GExpAnnotation rdfs:subClassOf iasis:Annotation.
 iasis:TranscriptAnnotation rdfs:subClassOf iasis:Annotation.
 iasis:MutationTypeAnnotation rdfs:subClassOf iasis:Annotation.
 
-iasis:GeneralMutationType rdfs:subClassOf iasis:MutationType. 
+iasis:GeneralMutationType rdfs:subClassOf iasis:MutationType. #### extracted from CNV dataset 
 iasis:AdHocMutationType rdfs:subClassOf iasis:MutationType.
 iasis:MutationZygosity rdfs:subClassOf iasis:Mutation.
 iasis:Homozygous rdfs:subClassOf iasis:MutationZygosity.
