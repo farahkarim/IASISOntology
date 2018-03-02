@@ -81,6 +81,7 @@ iasis:has_biopsy	rdf:type	owl:ObjectProperty.
 iasis:bm_description	rdf:type	owl:ObjectProperty.
 iasis:has_level	rdf:type	owl:ObjectProperty.
 iasis:prescripted_drug	rdf:type	owl:ObjectProperty.
+iasis:is_died rdf:type	owl:DatatypeProperty.
 iasis:death_cause	rdf:type	owl:ObjectProperty.
 iasis:obs_start_time	rdf:type	owl:DatatypeProperty.
 iasis:obs_end_time	rdf:type	owl:DatatypeProperty.
@@ -195,8 +196,8 @@ iasis:has_level	rdfs:domain	iasis:BioMarker;
 iasis:prescripted_drug	rdfs:domain	iasis:Treatment;
 			rdfs:range	iasis:InterAnnotation.
 iasis:is_died	rdfs:domain iasis:Patient;
-		rdfs:range	iasis:Death.
-iasis:death_cause	rdfs:domain	iasis:Death;
+		rdfs:range	rdfs:Literal.
+iasis:death_cause	rdfs:domain	iasis:Patient;
 			rdfs:range	iasis:CondAnnotation.
 iasis:obs_start_time	rdfs:domain iasis:Patient;
 		rdfs:range	rdfs:Literal.
