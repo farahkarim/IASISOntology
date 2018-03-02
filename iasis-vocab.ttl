@@ -12,7 +12,7 @@ iasis:Concept rdf:type	owl:Class.
 #iasis:Publication	rdf:type	owl:Class.
 iasis:Annotation	rdf:type	owl:Class.
 #iasis:Patient	rdf:type	owl:Class.
-iasis:Treatment	rdf:type	owl:Class.
+#iasis:Treatment	rdf:type	owl:Class.
 iasis:Biopsy	rdf:type	owl:Class;
                 rdfs:comment "From clinical data, LC patients" ;
                 rdfs:label "an examination of tissue removed from a living body to discover the presence, cause, or extent of a disease.";
