@@ -32,10 +32,7 @@ ssn:Measurement	rdf:type	owl:Class.
 ssn:Unit	rdf:type	owl:Class.
 iasis:Clinical_Note rdf:type	owl:Class.
 
-iasis:LCPatient	rdf:type	owl:Class.
-iasis:ADPatient	rdf:type	owl:Class.
-iasis:LCTreatment	rdf:type	owl:Class.
-iasis:ADTreatment	rdf:type	owl:Class.
+
 
 
 iasis:Relation rdf:type	owl:Class.
