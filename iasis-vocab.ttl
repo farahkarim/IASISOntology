@@ -18,7 +18,7 @@ iasis:Annotation	rdf:type	owl:Class.
   #              rdfs:label "an examination of tissue removed from a living body to discover the presence, cause, or extent of a disease.";
 	#			dce:creator iasis:samaneh.
 
-iasis:BioMarker	rdf:type	owl:Class.
+#iasis:BioMarker	rdf:type	owl:Class.
 iasis:PubRepository	rdf:type	owl:Class.
 iasis:Vocabulary	rdf:type	owl:Class.
 iasis:VocTerm rdf:type	owl:Class.
