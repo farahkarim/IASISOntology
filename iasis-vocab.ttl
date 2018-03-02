@@ -479,7 +479,7 @@ iasis:BloodTest rdfs:subClassOf	iasis:Test.
 iasis:LCTreatment	rdfs:subClassOf	iasis:Treatment.
 iasis:ADTreatment	rdfs:subClassOf	iasis:Treatment.
 
-iasis:Effect rdfs:subClassOf iasis:UMLS_Relation.
+iasis:AFFECTS rdfs:subClassOf iasis:UMLS_Relation.
 iasis:AFFECT__SPEC__ rdfs:subClassOf iasis:UMLS_Relation.
 iasis:ASSOCIATED_WITH rdfs:subClassOf iasis:UMLS_Relation.
 iasis:AUGMENTS rdfs:subClassOf iasis:UMLS_Relation.
