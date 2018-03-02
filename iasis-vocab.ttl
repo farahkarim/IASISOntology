@@ -48,7 +48,7 @@ iasis:Relation rdf:type	owl:Class.
 #iasis:HighMethylated rdf:type owl:Class.
 #iasis:Regulation rdf:type owl:Class. #### extracted from methylation dataset
 #iasis:NormalExpressed rdf:type owl:Class.
-iasis:OverExpressed rdf:type owl:Class.
+#iasis:OverExpressed rdf:type owl:Class.
 iasis:UnderExpressed rdf:type owl:Class.
 
 #### WP3 requirements:
