@@ -38,7 +38,7 @@ iasis:Relation rdf:type	owl:Class.
 #iasis:Homozygous rdf:type owl:Class.
 #iasis:Heterozygous rdf:type owl:Class.
 #iasis:LOH rdf:type owl:Class. #### extracted from mutation dataset
-iasis:HaveLOH rdf:type owl:Class.
+#iasis:HaveLOH rdf:type owl:Class.
 iasis:NoLOH rdf:type owl:Class.
 iasis:SNP rdf:type owl:Class. #### extracted from mutation dataset
 iasis:IsSNP rdf:type owl:Class.
