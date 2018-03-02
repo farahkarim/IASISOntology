@@ -31,7 +31,6 @@ ssn:Observation rdf:type	owl:Class.
 ssn:Measurement	rdf:type	owl:Class.
 ssn:Unit	rdf:type	owl:Class.
 iasis:Clinical_Note rdf:type	owl:Class.
-iasis:Drug rdf:type	owl:Class.
 iasis:Gene rdf:type	owl:Class.
 
 
