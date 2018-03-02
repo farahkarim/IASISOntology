@@ -36,7 +36,7 @@ iasis:Relation rdf:type	owl:Class.
 #iasis:CNV rdf:type owl:Class.
 #iasis:CGI rdf:type owl:Class.
 #iasis:GExp rdf:type owl:Class.
-iasis:Transcript rdf:type owl:Class.
+#iasis:Transcript rdf:type owl:Class.
 
 iasis:GeneAnnotation     rdf:type     owl:Class.
 iasis:SampleAnnotation     rdf:type     owl:Class.
