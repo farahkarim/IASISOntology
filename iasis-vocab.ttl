@@ -378,7 +378,6 @@ iasis:Patient	rdfs:subClassOf	iasis:Concept.
 iasis:Treatment	rdfs:subClassOf	iasis:Concept.
 iasis:Biopsy	rdfs:subClassOf	iasis:Test.
 iasis:BioMarker	rdfs:subClassOf	iasis:Concept.
-iasis:Protein rdfs:subClassOf	iasis:Concept.
 iasis:Clinical_Record rdfs:subClassOf iasis:Concept.
 iasis:Test rdfs:subClassOf	iasis:Concept.
 iasis:Image rdfs:subClassOf	iasis:Concept.
