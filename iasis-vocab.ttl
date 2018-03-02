@@ -7,7 +7,7 @@
 @prefix dce: <http://purl.org/dc/elements/1.1/>.
 #########Classes
 #iasis:Test rdf:type	owl:Class.
-iasis:BloodTest rdf:type	owl:Class.
+#iasis:BloodTest rdf:type	owl:Class.
 iasis:Concept rdf:type	owl:Class.
 iasis:Publication	rdf:type	owl:Class.
 iasis:Annotation	rdf:type	owl:Class.
