@@ -9,7 +9,7 @@
 #iasis:Test rdf:type	owl:Class.
 #iasis:BloodTest rdf:type	owl:Class.
 iasis:Concept rdf:type	owl:Class.
-iasis:Publication	rdf:type	owl:Class.
+#iasis:Publication	rdf:type	owl:Class.
 iasis:Annotation	rdf:type	owl:Class.
 iasis:Patient	rdf:type	owl:Class.
 iasis:Treatment	rdf:type	owl:Class.
