@@ -6,19 +6,13 @@
 @prefix ssn: <http://www.w3.org/ns/ssn/> .
 @prefix dce: <http://purl.org/dc/elements/1.1/>.
 #########Classes
-#iasis:Test rdf:type	owl:Class.
-#iasis:BloodTest rdf:type	owl:Class.
 iasis:Concept rdf:type	owl:Class.
-#iasis:Publication	rdf:type	owl:Class.
 iasis:Annotation	rdf:type	owl:Class.
-#iasis:Patient	rdf:type	owl:Class.
-#iasis:Treatment	rdf:type	owl:Class.
 #iasis:Biopsy	rdf:type	owl:Class;
  #               rdfs:comment "From clinical data, LC patients" ;
   #              rdfs:label "an examination of tissue removed from a living body to discover the presence, cause, or extent of a disease.";
 	#			dce:creator iasis:samaneh.
 
-#iasis:BioMarker	rdf:type	owl:Class.
 iasis:PubRepository	rdf:type	owl:Class.
 iasis:Vocabulary	rdf:type	owl:Class.
 iasis:VocTerm rdf:type	owl:Class.
@@ -31,16 +25,12 @@ ssn:Observation rdf:type	owl:Class.
 ssn:Measurement	rdf:type	owl:Class.
 ssn:Unit	rdf:type	owl:Class.
 iasis:Clinical_Note rdf:type	owl:Class.
-
-
-
-
 iasis:Relation rdf:type	owl:Class.
 
 
 #### COSMIC requirements:
 
-iasis:Sample rdf:type	owl:Class.
+#iasis:Sample rdf:type	owl:Class.
 iasis:Tumor rdf:type owl:Class.
 iasis:Mutation rdf:type owl:Class.
 iasis:CNV rdf:type owl:Class.
