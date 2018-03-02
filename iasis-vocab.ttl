@@ -47,7 +47,6 @@ iasis:LCPatient	rdf:type	owl:Class.
 iasis:ADPatient	rdf:type	owl:Class.
 iasis:LCTreatment	rdf:type	owl:Class.
 iasis:ADTreatment	rdf:type	owl:Class.
-iasis:UMLS_Relation rdf:type	owl:Class.
 
 
 iasis:Relation rdf:type	owl:Class.
