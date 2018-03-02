@@ -42,7 +42,7 @@ iasis:Relation rdf:type	owl:Class.
 #iasis:NoLOH rdf:type owl:Class.
 #iasis:SNP rdf:type owl:Class. #### extracted from mutation dataset
 #iasis:IsSNP rdf:type owl:Class.
-iasis:IsNotSNP rdf:type owl:Class.
+#iasis:IsNotSNP rdf:type owl:Class.
 iasis:Methylation rdf:type owl:Class. #### extracted from methylation dataset
 iasis:LowMethylated rdf:type owl:Class.
 iasis:HighMethylated rdf:type owl:Class.
