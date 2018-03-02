@@ -31,7 +31,7 @@ iasis:Relation rdf:type	owl:Class.
 #### COSMIC requirements:
 
 
-iasis:MutationType rdf:type owl:Class.
+#iasis:MutationType rdf:type owl:Class.
 iasis:GeneralMutationType rdf:type owl:Class. #### extracted from CNV dataset 
 iasis:AdHocMutationType rdf:type owl:Class. #### extracted from mutation dataset
 iasis:MutationZygosity rdf:type owl:Class. #### extracted from mutation dataset
