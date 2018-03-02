@@ -31,7 +31,7 @@ iasis:Relation rdf:type	owl:Class.
 #### COSMIC requirements:
 
 #iasis:Sample rdf:type	owl:Class.
-iasis:Tumor rdf:type owl:Class.
+#iasis:Tumor rdf:type owl:Class.
 iasis:Mutation rdf:type owl:Class.
 iasis:CNV rdf:type owl:Class.
 iasis:CGI rdf:type owl:Class.
