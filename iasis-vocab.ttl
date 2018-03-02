@@ -194,7 +194,7 @@ iasis:classifies_as rdf:type owl:ObjectProperty.
 ###########Domains And Ranges
 iasis:partOf rdfs:domain	iasis:Concept;
 					rdfs:range	iasis:Concept.
-iasis:requestedTest rdfs:domain	iasis:Observation;
+iasis:requestedTest rdfs:domain	ssn:Observation;
 					rdfs:range	iasis:Test.
 iasis:provenance	rdfs:domain	iasis:Publication;
 					rdfs:range	iasis:PubRepository.
