@@ -32,8 +32,6 @@ iasis:TDose	rdf:type	owl:Class.
 ssn:Observation rdf:type	owl:Class.
 ssn:Measurement	rdf:type	owl:Class.
 ssn:Unit	rdf:type	owl:Class.
-####iasis:Requested_Test rdf:type	owl:Class.
-####iasis:Analytic rdf:type	owl:Class.
 iasis:Clinical_Note rdf:type	owl:Class.
 iasis:Clinical_Record rdfs:subClassOf iasis:Concept.
 iasis:Liquid_Biopsy rdf:type	owl:Class.
@@ -160,9 +158,7 @@ iasis:has_biopsy	rdf:type	owl:ObjectProperty.
 iasis:bm_description	rdf:type	owl:ObjectProperty.
 iasis:has_level	rdf:type	owl:ObjectProperty.
 iasis:prescripted_drug	rdf:type	owl:ObjectProperty.
-####iasis:d_date	rdf:type	owl:DatatypeProperty.
 iasis:death_cause	rdf:type	owl:ObjectProperty.
-####iasis:is_died	rdf:type	owl:ObjectProperty.
 iasis:obs_start_time	rdf:type	owl:DatatypeProperty.
 iasis:obs_end_time	rdf:type	owl:DatatypeProperty.
 iasis:trt_start_time	rdf:type	owl:DatatypeProperty.
@@ -277,8 +273,6 @@ iasis:prescripted_drug	rdfs:domain	iasis:Treatment;
 			rdfs:range	iasis:InterAnnotation.
 iasis:is_died	rdfs:domain iasis:Patient;
 		rdfs:range	iasis:Death.
-####iasis:d_date	rdfs:domain	iasis:Death;
-####			rdfs:range	rdfs:Literal.
 iasis:death_cause	rdfs:domain	iasis:Death;
 			rdfs:range	iasis:CondAnnotation.
 iasis:obs_start_time	rdfs:domain iasis:Patient;
@@ -305,21 +299,15 @@ ssn:uom	rdfs:domain	ssn:Measurement;
 		rdfs:range	ssn:Unit.	
 ssn:value	rdfs:domain	ssn:Measurement;
 		rdfs:range	rdfs:Literal.
-#iasis:has_annotation rdfs:domain iasis:Protein;
-#		rdfs:range iasis:Annotation.
 iasis:has_annotation rdfs:domain iasis:Relation;
 		rdfs:range iasis:Annotation.
 iasis:annotates rdfs:domain iasis:Relation;
 		rdfs:range iasis:Concept.
-#iasis:has_annotation rdfs:domain iasis:Relation;
-#		rdfs:range iasis:Concept.
 
 iasis:confidence rdfs:domain iasis:Relation;
 			rdfs:range	rdfs:Literal.
 iasis:prec_tool rdfs:domain iasis:Relation;
 			rdfs:range iasis:Analysis_Tool.
-#iasis:is_related_to rdfs:domain iasis:Annotation;
-#			rdfs:range iasis:Relations.
 
 iasis:is_related_to rdfs:domain iasis:Concept;
 			rdfs:range iasis:Relation.
@@ -483,7 +471,6 @@ iasis:ADPublication	rdfs:subClassOf	iasis:Publication.
 
 iasis:UMLS_Relation rdfs:subClassOf iasis:Relation.
 iasis:Has_Risk_Of rdfs:subClassOf iasis:Relation.
-####iasis:Has_Mesh	rdfs:subClassOf iasis:Relation.
 iasis:Mentioned_In rdfs:subClassOf iasis:Relation.
 
 
