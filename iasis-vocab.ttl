@@ -37,7 +37,10 @@ iasis:Relation rdf:type	owl:Class.
 #iasis:MutationZygosity rdf:type owl:Class. 
 #iasis:Homozygous rdf:type owl:Class.
 #iasis:Heterozygous rdf:type owl:Class.
-#iasis:LOH rdf:type owl:Class. #### extracted from mutation dataset
+iasis:LOH rdf:type owl:Class;
+          rdfs:comment "extracted from mutation dataset";
+          rdfs:creator iasis:samaneh.
+
 #iasis:HaveLOH rdf:type owl:Class.
 #iasis:NoLOH rdf:type owl:Class.
 #iasis:SNP rdf:type owl:Class. #### extracted from mutation dataset
@@ -103,8 +106,9 @@ iasis:annotates rdf:type owl:ObjectProperty.
 iasis:cUITerm	rdf:type owl:DatatypeProperty.
 
 #### COSMIC requirements:
-
-iasis:description rdf:type owl:DatatypeProperty.     #### as a property of Annotation class
+iasis:description rdf:type owl:DatatypeProperty;
+                  rdfs:comment "a property of Annotation Class";
+				  rdfs:creator iasis:samaneh.	
 iasis:sample_identification rdf:type owl:ObjectProperty.
 iasis:gene_identification rdf:type owl:ObjectProperty.
 iasis:tumor_identification rdf:type owl:ObjectProperty.
@@ -456,9 +460,15 @@ iasis:GExpAnnotation rdfs:subClassOf iasis:Annotation.
 iasis:TranscriptAnnotation rdfs:subClassOf iasis:Annotation.
 iasis:MutationTypeAnnotation rdfs:subClassOf iasis:Annotation.
 
-iasis:GeneralMutationType rdfs:subClassOf iasis:MutationType. #### extracted from CNV dataset 
-iasis:AdHocMutationType rdfs:subClassOf iasis:MutationType. #### extracted from mutation dataset
-iasis:MutationZygosity rdfs:subClassOf iasis:Mutation.      #### extracted from mutation dataset
+iasis:GeneralMutationType rdfs:subClassOf iasis:MutationType;
+                          rdfs:comment "extracted from CNV dataset";
+                          rdfs:creator iasis:samaneh.
+iasis:AdHocMutationType rdfs:subClassOf iasis:MutationType;
+                        rdfs:comment "extracted from mutation dataset";
+                        rdfs:creator iasis:samaneh.
+iasis:MutationZygosity rdfs:subClassOf iasis:Mutation;
+                       rdfs:comment "extracted from mutation dataset";
+                       rdfs:creator iasis:samaneh.
 iasis:Homozygous rdfs:subClassOf iasis:MutationZygosity.
 iasis:Heterozygous rdfs:subClassOf iasis:MutationZygosity.
 iasis:LOH rdfs:subClassOf iasis:Mutation.
