@@ -12,7 +12,6 @@ iasis:Biopsy	rdf:type	owl:Class;
                 rdfs:comment "From clinical data, LC patients" ;
                 rdfs:label "an examination of tissue removed from a living body to discover the presence, cause, or extent of a disease.";
 				dce:creator iasis:samaneh.
-
 iasis:PubRepository	rdf:type	owl:Class.
 iasis:Vocabulary	rdf:type	owl:Class.
 iasis:VocTerm rdf:type	owl:Class.
@@ -28,9 +27,23 @@ iasis:Clinical_Note rdf:type	owl:Class.
 iasis:Relation rdf:type	owl:Class.
 
 
+iasis:PublicationAnnotation rdf:type owl:Class;
+                            dce:creator iasis:samaneh.
+iasis:PatientAnnotation rdf:type owl:Class;
+                        dce:creator iasis:samaneh.
+iasis:TreatmentAnnotation rdf:type owl:Class;
+                          dce:creator iasis:samaneh.
+iasis:BioMarkerAnnotation rdf:type owl:Class;
+                          dce:creator iasis:samaneh.
+iasis:ClinicalRecordAnnotation rdf:type owl:Class;
+                               dce:creator iasis:samaneh.
+iasis:TestAnnotation rdf:type owl:Class;
+                     dce:creator iasis:samaneh.
+iasis:ImageAnnotation rdf:type owl:Class;
+                      dce:creator iasis:samaneh.
+iasis:DrugAnnotation rdf:type owl:Class;
+                     dce:creator iasis:samaneh.
 #### COSMIC requirements:
-
-
 iasis:MutationType rdf:type owl:Class;
                    dce:creator iasis:samaneh.
 iasis:GeneralMutationType rdf:type owl:Class;
