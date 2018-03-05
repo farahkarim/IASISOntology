@@ -8,10 +8,10 @@
 #########Classes
 iasis:Concept rdf:type	owl:Class.
 iasis:Annotation	rdf:type	owl:Class.
-#iasis:Biopsy	rdf:type	owl:Class;
- #               rdfs:comment "From clinical data, LC patients" ;
-  #              rdfs:label "an examination of tissue removed from a living body to discover the presence, cause, or extent of a disease.";
-	#			dce:creator iasis:samaneh.
+iasis:Biopsy	rdf:type	owl:Class;
+                rdfs:comment "From clinical data, LC patients" ;
+                rdfs:label "an examination of tissue removed from a living body to discover the presence, cause, or extent of a disease.";
+				dce:creator iasis:samaneh.
 
 iasis:PubRepository	rdf:type	owl:Class.
 iasis:Vocabulary	rdf:type	owl:Class.
@@ -31,28 +31,34 @@ iasis:Relation rdf:type	owl:Class.
 #### COSMIC requirements:
 
 
-#iasis:MutationType rdf:type owl:Class.
-#iasis:GeneralMutationType rdf:type owl:Class. 
-#iasis:AdHocMutationType rdf:type owl:Class. 
-#iasis:MutationZygosity rdf:type owl:Class. 
-#iasis:Homozygous rdf:type owl:Class.
-#iasis:Heterozygous rdf:type owl:Class.
+iasis:MutationType rdf:type owl:Class.
+iasis:GeneralMutationType rdf:type owl:Class. 
+iasis:AdHocMutationType rdf:type owl:Class. 
+iasis:MutationZygosity rdf:type owl:Class. 
+iasis:Homozygous rdf:type owl:Class.
+iasis:Heterozygous rdf:type owl:Class.
 iasis:LOH rdf:type owl:Class;
           rdfs:comment "extracted from mutation dataset";
-          rdfs:creator iasis:samaneh.
+          dce:creator iasis:samaneh.
 
-#iasis:HaveLOH rdf:type owl:Class.
-#iasis:NoLOH rdf:type owl:Class.
-#iasis:SNP rdf:type owl:Class. #### extracted from mutation dataset
-#iasis:IsSNP rdf:type owl:Class.
-#iasis:IsNotSNP rdf:type owl:Class.
-#iasis:Methylation rdf:type owl:Class. #### extracted from methylation dataset
-#iasis:LowMethylated rdf:type owl:Class.
-#iasis:HighMethylated rdf:type owl:Class.
-#iasis:Regulation rdf:type owl:Class. #### extracted from methylation dataset
-#iasis:NormalExpressed rdf:type owl:Class.
-#iasis:OverExpressed rdf:type owl:Class.
-#iasis:UnderExpressed rdf:type owl:Class.
+iasis:HaveLOH rdf:type owl:Class.
+iasis:NoLOH rdf:type owl:Class.
+iasis:SNP rdf:type owl:Class;
+          rdfs:comment "extracted from mutation dataset";
+          dce:creator iasis:samaneh.
+iasis:IsSNP rdf:type owl:Class.
+iasis:IsNotSNP rdf:type owl:Class.
+iasis:Methylation rdf:type owl:Class;
+                   rdfs:comment "extracted from methylation dataset";
+                   dce:creator iasis:samaneh.
+iasis:LowMethylated rdf:type owl:Class.
+iasis:HighMethylated rdf:type owl:Class.
+iasis:Regulation rdf:type owl:Class;
+                  rdfs:comment "extracted from methylation dataset";
+                  dce:creator iasis:samaneh.
+iasis:NormalExpressed rdf:type owl:Class.
+iasis:OverExpressed rdf:type owl:Class.
+iasis:UnderExpressed rdf:type owl:Class.
 
 #### WP3 requirements:
 
@@ -108,7 +114,7 @@ iasis:cUITerm	rdf:type owl:DatatypeProperty.
 #### COSMIC requirements:
 iasis:description rdf:type owl:DatatypeProperty;
                   rdfs:comment "a property of Annotation Class";
-				  rdfs:creator iasis:samaneh.	
+				  dce:creator iasis:samaneh.	
 iasis:sample_identification rdf:type owl:ObjectProperty.
 iasis:gene_identification rdf:type owl:ObjectProperty.
 iasis:tumor_identification rdf:type owl:ObjectProperty.
@@ -462,13 +468,13 @@ iasis:MutationTypeAnnotation rdfs:subClassOf iasis:Annotation.
 
 iasis:GeneralMutationType rdfs:subClassOf iasis:MutationType;
                           rdfs:comment "extracted from CNV dataset";
-                          rdfs:creator iasis:samaneh.
+                          dce:creator iasis:samaneh.
 iasis:AdHocMutationType rdfs:subClassOf iasis:MutationType;
                         rdfs:comment "extracted from mutation dataset";
-                        rdfs:creator iasis:samaneh.
+                        dce:creator iasis:samaneh.
 iasis:MutationZygosity rdfs:subClassOf iasis:Mutation;
                        rdfs:comment "extracted from mutation dataset";
-                       rdfs:creator iasis:samaneh.
+                       dce:creator iasis:samaneh.
 iasis:Homozygous rdfs:subClassOf iasis:MutationZygosity.
 iasis:Heterozygous rdfs:subClassOf iasis:MutationZygosity.
 iasis:LOH rdfs:subClassOf iasis:Mutation.
