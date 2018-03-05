@@ -31,34 +31,48 @@ iasis:Relation rdf:type	owl:Class.
 #### COSMIC requirements:
 
 
-iasis:MutationType rdf:type owl:Class.
-iasis:GeneralMutationType rdf:type owl:Class. 
-iasis:AdHocMutationType rdf:type owl:Class. 
-iasis:MutationZygosity rdf:type owl:Class. 
-iasis:Homozygous rdf:type owl:Class.
-iasis:Heterozygous rdf:type owl:Class.
+iasis:MutationType rdf:type owl:Class;
+                   dce:creator iasis:samaneh.
+iasis:GeneralMutationType rdf:type owl:Class;
+                          dce:creator iasis:samaneh.
+iasis:AdHocMutationType rdf:type owl:Class;
+                        dce:creator iasis:samaneh.
+iasis:MutationZygosity rdf:type owl:Class;
+                       dce:creator iasis:samaneh.
+iasis:Homozygous rdf:type owl:Class;
+                 dce:creator iasis:samaneh.
+iasis:Heterozygous rdf:type owl:Class;
+                   dce:creator iasis:samaneh.
 iasis:LOH rdf:type owl:Class;
           rdfs:comment "extracted from mutation dataset";
           dce:creator iasis:samaneh.
-
-iasis:HaveLOH rdf:type owl:Class.
-iasis:NoLOH rdf:type owl:Class.
+iasis:HaveLOH rdf:type owl:Class;
+              dce:creator iasis:samaneh.
+iasis:NoLOH rdf:type owl:Class;
+            dce:creator iasis:samaneh.
 iasis:SNP rdf:type owl:Class;
           rdfs:comment "extracted from mutation dataset";
           dce:creator iasis:samaneh.
-iasis:IsSNP rdf:type owl:Class.
-iasis:IsNotSNP rdf:type owl:Class.
+iasis:IsSNP rdf:type owl:Class;
+            dce:creator iasis:samaneh.
+iasis:IsNotSNP rdf:type owl:Class;
+               dce:creator iasis:samaneh.
 iasis:Methylation rdf:type owl:Class;
                    rdfs:comment "extracted from methylation dataset";
                    dce:creator iasis:samaneh.
-iasis:LowMethylated rdf:type owl:Class.
-iasis:HighMethylated rdf:type owl:Class.
+iasis:LowMethylated rdf:type owl:Class;
+                    dce:creator iasis:samaneh.
+iasis:HighMethylated rdf:type owl:Class;
+                     dce:creator iasis:samaneh.
 iasis:Regulation rdf:type owl:Class;
                   rdfs:comment "extracted from methylation dataset";
                   dce:creator iasis:samaneh.
-iasis:NormalExpressed rdf:type owl:Class.
-iasis:OverExpressed rdf:type owl:Class.
-iasis:UnderExpressed rdf:type owl:Class.
+iasis:NormalExpressed rdf:type owl:Class;
+                      dce:creator iasis:samaneh.
+iasis:OverExpressed rdf:type owl:Class;
+                    dce:creator iasis:samaneh.
+iasis:UnderExpressed rdf:type owl:Class;
+                     dce:creator iasis:samaneh.
 
 #### WP3 requirements:
 
@@ -115,48 +129,84 @@ iasis:cUITerm	rdf:type owl:DatatypeProperty.
 iasis:description rdf:type owl:DatatypeProperty;
                   rdfs:comment "a property of Annotation Class";
 				  dce:creator iasis:samaneh.	
-iasis:sample_identification rdf:type owl:ObjectProperty.
-iasis:gene_identification rdf:type owl:ObjectProperty.
-iasis:tumor_identification rdf:type owl:ObjectProperty.
-iasis:mutation_identification rdf:type owl:ObjectProperty.
-iasis:cnv_identification rdf:type owl:ObjectProperty.
-iasis:cgi_identification rdf:type owl:ObjectProperty.
-iasis:gexp_identification rdf:type owl:ObjectProperty.
-iasis:transcript_identification rdf:type owl:ObjectProperty.
-iasis:mutation_type_identification rdf:type owl:ObjectProperty.
-
-iasis:cds_length rdf:type owl:DatatypeProperty.
-iasis:age rdf:type owl:DatatypeProperty.
-iasis:primary_site rdf:type owl:DatatypeProperty.
-iasis:site_subtype rdf:type owl:DatatypeProperty.
-iasis:primary_histology rdf:type owl:DatatypeProperty.
-iasis:histology_subtype rdf:type owl:DatatypeProperty.
-iasis:mentioned_in rdf:type owl:ObjectProperty.
-iasis:chromosome rdf:type owl:DatatypeProperty.
-iasis:strand rdf:type owl:DatatypeProperty.
-iasis:start rdf:type owl:DatatypeProperty.
-iasis:end rdf:type owl:DatatypeProperty.
-iasis:genomic_position rdf:type owl:DatatypeProperty.
-iasis:study_id rdf:type owl:ObjectProperty.
-iasis:mutation_cds rdf:type owl:DatatypeProperty.
-iasis:mutation_aa rdf:type owl:DatatypeProperty.
-iasis:fathmm_prediction rdf:type owl:DatatypeProperty.
-iasis:fathmm_score rdf:type owl:DatatypeProperty.
-iasis:mutation_somatic_status rdf:type owl:DatatypeProperty.
-iasis:tumor_origin rdf:type owl:DatatypeProperty.
-iasis:z_score rdf:type owl:DatatypeProperty.
-iasis:beta_value rdf:type owl:DatatypeProperty.
-iasis:avg_beta_value rdf:type owl:DatatypeProperty.
-iasis:two_sided_p-value rdf:type owl:DatatypeProperty.
-iasis:total_cn rdf:type owl:DatatypeProperty.
-iasis:minor_allele rdf:type owl:DatatypeProperty.
-
-iasis:is_located rdf:type owl:ObjectProperty.
-iasis:expressed_as rdf:type owl:ObjectProperty.
-iasis:occurred_in rdf:type owl:ObjectProperty.
-iasis:is_taken_from rdf:type owl:ObjectProperty.
-iasis:classifies_as rdf:type owl:ObjectProperty.
-
+iasis:sample_identification rdf:type owl:ObjectProperty;
+                            dce:creator iasis:samaneh.
+iasis:gene_identification rdf:type owl:ObjectProperty;
+                          dce:creator iasis:samaneh.
+iasis:tumor_identification rdf:type owl:ObjectProperty;
+                           dce:creator iasis:samaneh.
+iasis:mutation_identification rdf:type owl:ObjectProperty;
+                              dce:creator iasis:samaneh.
+iasis:cnv_identification rdf:type owl:ObjectProperty;
+                         dce:creator iasis:samaneh.
+iasis:cgi_identification rdf:type owl:ObjectProperty;
+                         dce:creator iasis:samaneh.
+iasis:gexp_identification rdf:type owl:ObjectProperty;
+                          dce:creator iasis:samaneh.
+iasis:transcript_identification rdf:type owl:ObjectProperty;
+                                dce:creator iasis:samaneh.
+iasis:mutation_type_identification rdf:type owl:ObjectProperty;
+                                   dce:creator iasis:samaneh.
+iasis:cds_length rdf:type owl:DatatypeProperty;
+                 dce:creator iasis:samaneh.
+iasis:age rdf:type owl:DatatypeProperty;
+          dce:creator iasis:samaneh.
+iasis:primary_site rdf:type owl:DatatypeProperty;
+                   dce:creator iasis:samaneh.
+iasis:site_subtype rdf:type owl:DatatypeProperty;
+                   dce:creator iasis:samaneh.
+iasis:primary_histology rdf:type owl:DatatypeProperty;
+                        dce:creator iasis:samaneh.
+iasis:histology_subtype rdf:type owl:DatatypeProperty;
+                        dce:creator iasis:samaneh.
+iasis:mentioned_in rdf:type owl:ObjectProperty;
+                   dce:creator iasis:samaneh.
+iasis:chromosome rdf:type owl:DatatypeProperty;
+                 dce:creator iasis:samaneh.
+iasis:strand rdf:type owl:DatatypeProperty;
+             dce:creator iasis:samaneh.
+iasis:start rdf:type owl:DatatypeProperty;
+            dce:creator iasis:samaneh.
+iasis:end rdf:type owl:DatatypeProperty;
+          dce:creator iasis:samaneh.
+iasis:genomic_position rdf:type owl:DatatypeProperty;
+                       dce:creator iasis:samaneh.
+iasis:study_id rdf:type owl:ObjectProperty;
+               dce:creator iasis:samaneh.
+iasis:mutation_cds rdf:type owl:DatatypeProperty;
+                   dce:creator iasis:samaneh.
+iasis:mutation_aa rdf:type owl:DatatypeProperty;
+                  dce:creator iasis:samaneh.  
+iasis:fathmm_prediction rdf:type owl:DatatypeProperty;
+                        dce:creator iasis:samaneh.
+iasis:fathmm_score rdf:type owl:DatatypeProperty;
+                   dce:creator iasis:samaneh.
+iasis:mutation_somatic_status rdf:type owl:DatatypeProperty;
+                              dce:creator iasis:samaneh.
+iasis:tumor_origin rdf:type owl:DatatypeProperty;
+                   dce:creator iasis:samaneh.
+iasis:z_score rdf:type owl:DatatypeProperty;
+              dce:creator iasis:samaneh.
+iasis:beta_value rdf:type owl:DatatypeProperty;
+                 dce:creator iasis:samaneh.
+iasis:avg_beta_value rdf:type owl:DatatypeProperty;
+                     dce:creator iasis:samaneh.
+iasis:two_sided_p-value rdf:type owl:DatatypeProperty;
+                        dce:creator iasis:samaneh.
+iasis:total_cn rdf:type owl:DatatypeProperty;
+               dce:creator iasis:samaneh.      
+iasis:minor_allele rdf:type owl:DatatypeProperty;
+                   dce:creator iasis:samaneh.
+iasis:is_located rdf:type owl:ObjectProperty;
+                 dce:creator iasis:samaneh.
+iasis:expressed_as rdf:type owl:ObjectProperty;
+                   dce:creator iasis:samaneh.
+iasis:occurred_in rdf:type owl:ObjectProperty;
+                  dce:creator iasis:samaneh.
+iasis:is_taken_from rdf:type owl:ObjectProperty;
+                    dce:creator iasis:samaneh.
+iasis:classifies_as rdf:type owl:ObjectProperty;
+                    dce:creator iasis:samaneh.  
 
 ###########Domains And Ranges
 iasis:partOf rdfs:domain	iasis:Concept;
