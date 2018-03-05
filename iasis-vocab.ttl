@@ -497,25 +497,40 @@ iasis:USES rdfs:subClassOf iasis:UMLS_Relation.
 
 #### COSMIC requirements:
 
-iasis:Tumor rdfs:subClassOf iasis:Concept.
-iasis:Sample rdfs:subClassOf iasis:Concept.
-iasis:Mutation rdfs:subClassOf iasis:Concept.
-iasis:CNV rdfs:subClassOf iasis:Concept.
-iasis:CGI rdfs:subClassOf iasis:Concept.
-iasis:GExp rdfs:subClassOf iasis:Concept.
-iasis:Transcript rdfs:subClassOf iasis:Concept.
-iasis:MutationType rdfs:subClassOf iasis:Concept.
-
-iasis:GeneAnnotation rdfs:subClassOf iasis:Annotation.
-iasis:SampleAnnotation rdfs:subClassOf iasis:Annotation.
-iasis:TumorAnnotation rdfs:subClassOf iasis:Annotation.
-iasis:MutationAnnotation rdfs:subClassOf iasis:Annotation.
-iasis:CNVAnnotation rdfs:subClassOf iasis:Annotation.
-iasis:CGIAnnotation rdfs:subClassOf iasis:Annotation.
-iasis:GExpAnnotation rdfs:subClassOf iasis:Annotation.
-iasis:TranscriptAnnotation rdfs:subClassOf iasis:Annotation.
-iasis:MutationTypeAnnotation rdfs:subClassOf iasis:Annotation.
-
+iasis:Tumor rdfs:subClassOf iasis:Concept;
+            dce:creator iasis:samaneh.
+iasis:Sample rdfs:subClassOf iasis:Concept;
+             dce:creator iasis:samaneh.
+iasis:Mutation rdfs:subClassOf iasis:Concept;
+               dce:creator iasis:samaneh.
+iasis:CNV rdfs:subClassOf iasis:Concept;
+          dce:creator iasis:samaneh.
+iasis:CGI rdfs:subClassOf iasis:Concept;
+          dce:creator iasis:samaneh.
+iasis:GExp rdfs:subClassOf iasis:Concept;
+           dce:creator iasis:samaneh.
+iasis:Transcript rdfs:subClassOf iasis:Concept;
+                 dce:creator iasis:samaneh.
+iasis:MutationType rdfs:subClassOf iasis:Concept;
+                   dce:creator iasis:samaneh.
+iasis:GeneAnnotation rdfs:subClassOf iasis:Annotation;
+                     dce:creator iasis:samaneh.
+iasis:SampleAnnotation rdfs:subClassOf iasis:Annotation;
+                       dce:creator iasis:samaneh.
+iasis:TumorAnnotation rdfs:subClassOf iasis:Annotation;
+                      dce:creator iasis:samaneh.
+iasis:MutationAnnotation rdfs:subClassOf iasis:Annotation;
+                         dce:creator iasis:samaneh.
+iasis:CNVAnnotation rdfs:subClassOf iasis:Annotation;
+                    dce:creator iasis:samaneh.
+iasis:CGIAnnotation rdfs:subClassOf iasis:Annotation;
+                    dce:creator iasis:samaneh.
+iasis:GExpAnnotation rdfs:subClassOf iasis:Annotation;
+                     dce:creator iasis:samaneh.
+iasis:TranscriptAnnotation rdfs:subClassOf iasis:Annotation;
+                           dce:creator iasis:samaneh.
+iasis:MutationTypeAnnotation rdfs:subClassOf iasis:Annotation;
+                             dce:creator iasis:samaneh.
 iasis:GeneralMutationType rdfs:subClassOf iasis:MutationType;
                           rdfs:comment "extracted from CNV dataset";
                           dce:creator iasis:samaneh.
@@ -525,28 +540,45 @@ iasis:AdHocMutationType rdfs:subClassOf iasis:MutationType;
 iasis:MutationZygosity rdfs:subClassOf iasis:Mutation;
                        rdfs:comment "extracted from mutation dataset";
                        dce:creator iasis:samaneh.
-iasis:Homozygous rdfs:subClassOf iasis:MutationZygosity.
-iasis:Heterozygous rdfs:subClassOf iasis:MutationZygosity.
-iasis:LOH rdfs:subClassOf iasis:Mutation.
-iasis:HaveLOH rdfs:subClassOf iasis:LOH.
-iasis:NoLOH rdfs:subClassOf iasis:LOH.
-iasis:SNP rdfs:subClassOf iasis:Mutation.
-iasis:IsSNP rdfs:subClassOf iasis:SNP.
-iasis:IsNotSNP rdfs:subClassOf iasis:SNP.
-iasis:Methylation rdfs:subClassOf iasis:CGI.
-iasis:LowMethylated rdfs:subClassOf iasis:Methylation.
-iasis:HighMethylated rdfs:subClassOf iasis:Methylation.
-iasis:Regulation rdfs:subClassOf iasis:GExp.
-iasis:NormalExpressed rdfs:subClassOf iasis:Regulation.
-iasis:OverExpressed rdfs:subClassOf iasis:Regulation.
-iasis:UnderExpressed rdfs:subClassOf iasis:Regulation.
+iasis:Homozygous rdfs:subClassOf iasis:MutationZygosity;
+                 dce:creator iasis:samaneh.
+iasis:Heterozygous rdfs:subClassOf iasis:MutationZygosity;
+                   dce:creator iasis:samaneh.
+iasis:LOH rdfs:subClassOf iasis:Mutation;
+          dce:creator iasis:samaneh.
+iasis:HaveLOH rdfs:subClassOf iasis:LOH;
+              dce:creator iasis:samaneh. 
+iasis:NoLOH rdfs:subClassOf iasis:LOH;
+            dce:creator iasis:samaneh.
+iasis:SNP rdfs:subClassOf iasis:Mutation;
+          dce:creator iasis:samaneh.
+iasis:IsSNP rdfs:subClassOf iasis:SNP;
+            dce:creator iasis:samaneh.
+iasis:IsNotSNP rdfs:subClassOf iasis:SNP;
+               dce:creator iasis:samaneh.
+iasis:Methylation rdfs:subClassOf iasis:CGI;
+                  dce:creator iasis:samaneh.
+iasis:LowMethylated rdfs:subClassOf iasis:Methylation;
+                    dce:creator iasis:samaneh.
+iasis:HighMethylated rdfs:subClassOf iasis:Methylation;
+                     dce:creator iasis:samaneh.
+iasis:Regulation rdfs:subClassOf iasis:GExp;
+                 dce:creator iasis:samaneh.
+iasis:NormalExpressed rdfs:subClassOf iasis:Regulation;
+                      dce:creator iasis:samaneh.
+iasis:OverExpressed rdfs:subClassOf iasis:Regulation;
+                    dce:creator iasis:samaneh.
+iasis:UnderExpressed rdfs:subClassOf iasis:Regulation;
+                     dce:creator iasis:samaneh.
 
 
 #### WP3 requirements:
 
 
-iasis:Protein rdfs:subClassOf iasis:Concept.
-iasis:ProteinAnnotation rdfs:subClassOf iasis:Annotation.
+iasis:Protein rdfs:subClassOf iasis:Concept;
+              dce:creator iasis:samaneh.
+iasis:ProteinAnnotation rdfs:subClassOf iasis:Annotation;
+                        dce:creator iasis:samaneh.
 
 ###############PartOf
 iasis:Clinical_Note iasis:partOf iasis:Clinical_Record.
