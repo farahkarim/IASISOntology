@@ -59,9 +59,45 @@ iasis:LCPatient rdf:type owl:Class.
 iasis:ADPatient rdf:type owl:Class.
 iasis:LCPublication rdf:type owl:Class.
 iasis:ADPublication rdf:type owl:Class.
+iasis:BloodTest rdf:type owl:Class.
+iasis:LCTreatment	rdf:type owl:Class.
+iasis:ADTreatment	rdf:type owl:Class.
+
 iasis:UMLS_Relation rdf:type owl:Class.
-
-
+iasis:Has_Risk_Of rdf:type owl:Class.
+iasis:Mentioned_In rdf:type owl:Class.
+iasis:Has_MESH	rdf:type owl:Class.
+iasis:AFFECTS rdf:type owl:Class.
+iasis:AFFECT__SPEC_ rdf:type owl:Class.
+iasis:ASSOCIATED_WITH rdf:type owl:Class.
+iasis:AUGMENTS rdf:type owl:Class.
+iasis:CAUSES rdf:type owl:Class.
+iasis:COEXISTS_WITH rdf:type owl:Class.
+iasis:DIAGNOSES rdf:type owl:Class.
+iasis:DISRUPTS rdf:type owl:Class.
+iasis:ISA rdf:type owl:Class.
+iasis:ADMINISTERED_TO rdf:type owl:Class.
+iasis:CAUSE__SPEC__ rdf:type owl:Class.
+iasis:Compared_With rdf:type owl:Class.
+iasis:COMPLICATES rdf:type owl:Class.
+iasis:INHIBITS rdf:type owl:Class.
+iasis:INTERACTS_WITH rdf:type owl:Class.
+iasis:LOCATION_OF rdf:type owl:Class.
+iasis:Lower_Than rdf:type owl:Class.
+iasis:MANIFESTATION_OF rdf:type owl:Class.
+iasis:METHOD_OF rdf:type owl:Class.
+iasis:OCCURS_IN rdf:type owl:Class.
+iasis:OCCURS_IN__SPEC__ rdf:type owl:Class.
+iasis:PART_OF rdf:type owl:Class.
+iasis:PART_OF__SPEC__ rdf:type owl:Class.
+iasis:PRECEDES rdf:type owl:Class.
+iasis:PREDISPOSES rdf:type owl:Class.
+iasis:PROCESS_OF rdf:type owl:Class.
+iasis:PROCESS_OF__SPEC__ rdf:type owl:Class.
+iasis:PRODUCES rdf:type owl:Class.
+iasis:STIMULATES rdf:type owl:Class.
+iasis:TREATS rdf:type owl:Class.
+iasis:USES rdf:type owl:Class.
 
 
 #### COSMIC requirements:
