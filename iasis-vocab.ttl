@@ -229,6 +229,23 @@ iasis:is_related_to rdf:type	owl:ObjectProperty.
 iasis:annotates rdf:type owl:ObjectProperty.
 iasis:cUITerm	rdf:type owl:DatatypeProperty.
 
+iasis:publication_identification rdf:type owl:ObjectProperty;
+                            dce:creator iasis:samaneh.
+iasis:patient_identification rdf:type owl:ObjectProperty;
+                        dce:creator iasis:samaneh.
+iasis:treatment_identification rdf:type owl:ObjectProperty;
+                          dce:creator iasis:samaneh.
+iasis:biomarker_identification rdf:type owl:ObjectProperty;
+                          dce:creator iasis:samaneh.
+iasis:clinicalrecord_identification rdf:type owl:ObjectProperty;
+                               dce:creator iasis:samaneh.
+iasis:test_identification rdf:type owl:ObjectProperty;
+                     dce:creator iasis:samaneh.
+iasis:image_identification rdf:type owl:ObjectProperty;
+                      dce:creator iasis:samaneh.
+iasis:drug_identification rdf:type owl:ObjectProperty;
+                     dce:creator iasis:samaneh.
+
 #### COSMIC requirements:
 iasis:description rdf:type owl:DatatypeProperty;
                   rdfs:comment "a property of Annotation Class";
@@ -403,7 +420,30 @@ iasis:is_related_to rdfs:domain iasis:Concept;
 iasis:cUITerm rdfs:domain iasis:Annotation;
 				rdfs:range	rdfs:Literal.
 
-
+iasis:publication_identification rdfs:domain iasis:Publication;
+                                 rdfs:range iasis:PublicationAnnotation;  
+                                 dce:creator iasis:samaneh.
+iasis:patient_identification rdfs:domain iasis:Patient;
+                             rdfs:range iasis:PatientAnnotation;
+                             dce:creator iasis:samaneh.
+iasis:treatment_identification rdfs:domain iasis:Treatment;
+                               rdfs:range iasis:TreatmentAnnotation;
+                               dce:creator iasis:samaneh.
+iasis:biomarker_identification rdfs:domain iasis:BioMarker;
+                               rdfs:range iasis:BioMarkerAnnotation;
+                               dce:creator iasis:samaneh.
+iasis:clinicalrecord_identification rdfs:domain iasis:ClinicalRecord;
+                                    rdfs:range iasis:ClinicalRecordAnnotation;
+                                    dce:creator iasis:samaneh.
+iasis:test_identification rdfs:domain iasis:Test;
+                          rdfs:range iasis:TestAnnotation;
+                          dce:creator iasis:samaneh.
+iasis:image_identification rdfs:domain iasis:Image;
+                           rdfs:range iasis:ImageAnnotation;
+                           dce:creator iasis:samaneh.
+iasis:drug_identification rdfs:domain iasis:Drug;
+                          rdfs:range iasis:DrugAnnotation;
+                          dce:creator iasis:samaneh.
 
 #### COSMIC requirements:
 
