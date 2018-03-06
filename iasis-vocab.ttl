@@ -43,6 +43,25 @@ iasis:ImageAnnotation rdf:type owl:Class;
                       dce:creator iasis:samaneh.
 iasis:DrugAnnotation rdf:type owl:Class;
                      dce:creator iasis:samaneh.
+iasis:Tumor rdf:type owl:Class.
+iasis:Sample rdf:type owl:Class.
+iasis:Mutation rdf:type owl:Class.
+iasis:CNV rdf:type owl:Class.
+iasis:CGI rdf:type owl:Class.
+iasis:GExp rdf:type owl:Class.
+iasis:Transcript rdf:type owl:Class.
+iasis:GeneAnnotation rdf:type owl:Class.
+iasis:SampleAnnotation rdf:type owl:Class.
+iasis:TumorAnnotation rdf:type owl:Class.
+iasis:MutationAnnotation rdf:type owl:Class.
+iasis:CNVAnnotation rdf:type owl:Class.
+iasis:CGIAnnotation rdf:type owl:Class.
+iasis:GExpAnnotation rdf:type owl:Class.
+iasis:TranscriptAnnotation rdf:type owl:Class.
+iasis:MutationTypeAnnotation rdf:type owl:Class.
+iasis:Protein rdf:type owl:Class.
+iasis:ProteinAnnotation rdf:type owl:Class.
+
 
 iasis:LCAnnotation rdf:type owl:Class.
 iasis:ADAnnotation rdf:type owl:Class.
