@@ -23,13 +23,13 @@ iasis:TDose	rdf:type	owl:Class.
 ssn:Observation rdf:type	owl:Class.
 ssn:Measurement	rdf:type	owl:Class.
 ssn:Unit	rdf:type	owl:Class.
-iasis:Clinical_Note rdf:type	owl:Class.
+iasis:ClinicalNote rdf:type	owl:Class.
 iasis:Relation rdf:type	owl:Class.
-iasis:Liquid_Biopsy rdf:type owl:Class.
+iasis:LiquidBiopsy rdf:type owl:Class.
 iasis:Patient rdf:type owl:Class.
 iasis:Treatment rdf:type owl:Class.
 iasis:BioMarker rdf:type owl:Class.
-iasis:Clinical_Record rdf:type owl:Class.
+iasis:ClinicalRecord rdf:type owl:Class.
 iasis:Test rdf:type owl:Class.
 iasis:Image rdf:type owl:Class.
 iasis:Drug rdf:type owl:Class.
@@ -343,16 +343,16 @@ iasis:dose rdfs:domain iasis:Treatment;
 					rdfs:range	iasis:TDose.
 iasis:t_date	rdfs:domain	iasis:Treatment;
 			rdfs:range	rdfs:Literal.
-iasis:b_date	rdfs:domain	iasis:Liquid_Biopsy;
+iasis:b_date	rdfs:domain	iasis:LiquidBiopsy;
 			rdfs:range	rdfs:Literal.
 iasis:has_treatment rdfs:domain iasis:Patient;
 					rdfs:range	iasis:Treatment.
-iasis:diagnostic	rdfs:domain	iasis:Liquid_Biopsy;
+iasis:diagnostic	rdfs:domain	iasis:LiquidBiopsy;
 					rdfs:range	iasis:CondAnnotation.
-iasis:has_bioMarker	rdfs:domain	iasis:Liquid_Biopsy;
+iasis:has_bioMarker	rdfs:domain	iasis:LiquidBiopsy;
 					rdfs:range	iasis:BioMarker.
 iasis:has_biopsy	rdfs:domain	iasis:LCPatient;
-					rdfs:range	iasis:Liquid_Biopsy.
+					rdfs:range	iasis:LiquidBiopsy.
 iasis:bm_description	rdfs:domain	iasis:BioMarker;
 			rdfs:range	iasis:Annotation.
 iasis:has_level	rdfs:domain	iasis:BioMarker;
@@ -395,7 +395,7 @@ iasis:annotates rdfs:domain iasis:Relation;
 iasis:confidence rdfs:domain iasis:Relation;
 			rdfs:range	rdfs:Literal.
 iasis:prec_tool rdfs:domain iasis:Relation;
-			rdfs:range iasis:Analysis_Tool.
+			rdfs:range iasis:AnalysisTool.
 
 iasis:is_related_to rdfs:domain iasis:Concept;
 			rdfs:range iasis:Relation.
@@ -579,13 +579,13 @@ iasis:classifies_as rdfs:domain iasis:CNV;
 iasis:LCAnnotation	rdfs:subClassOf	iasis:Annotation.
 iasis:ADAnnotation	rdfs:subClassOf	iasis:Annotation.
 
-iasis:Liquid_Biopsy rdfs:subClassOf	iasis:BloodTest.
+iasis:LiquidBiopsy rdfs:subClassOf	iasis:BloodTest.
 
 iasis:Patient	rdfs:subClassOf	iasis:Concept.
 iasis:Treatment	rdfs:subClassOf	iasis:Concept.
 iasis:Biopsy	rdfs:subClassOf	iasis:Test.
 iasis:BioMarker	rdfs:subClassOf	iasis:Concept.
-iasis:Clinical_Record rdfs:subClassOf iasis:Concept.
+iasis:ClinicalRecord rdfs:subClassOf iasis:Concept.
 iasis:Test rdfs:subClassOf	iasis:Concept.
 iasis:Image rdfs:subClassOf	iasis:Concept.
 iasis:Drug rdfs:subClassOf	iasis:Concept.
@@ -728,6 +728,6 @@ iasis:ProteinAnnotation rdfs:subClassOf iasis:Annotation;
                         dce:creator iasis:samaneh.
 
 ###############PartOf
-iasis:Clinical_Note iasis:partOf iasis:Clinical_Record.
-iasis:Image iasis:partOf iasis:Clinical_Record.
-iasis:Test iasis:partOf iasis:Clinical_Record.
+iasis:ClinicalNote iasis:partOf iasis:ClinicalRecord.
+iasis:Image iasis:partOf iasis:ClinicalRecord.
+iasis:Test iasis:partOf iasis:ClinicalRecord.
