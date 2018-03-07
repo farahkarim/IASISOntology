@@ -520,14 +520,17 @@ iasis:mentioned_in rdfs:domain iasis:Mutation;
 				   rdfs:range iasis:VocTerm;
                    dce:creator iasis:samaneh.
 iasis:chromosome rdfs:domain iasis:CNV;
-				 rdfs:range rdfs:Literal;
+				 rdfs:range rdfs:Chromosome;
                  dce:creator iasis:samaneh.
 iasis:chromosome rdfs:domain iasis:Mutation;
-				 rdfs:range rdfs:Literal;
+				 rdfs:range rdfs:Chromosome;
                  dce:creator iasis:samaneh.
 iasis:chromosome rdfs:domain iasis:CGI;
-				 rdfs:range rdfs:Literal;
+				 rdfs:range rdfs:Chromosome;
                  dce:creator iasis:samaneh.
+iasis:value rdfs:domain iasis:Chromosome;
+            rdfs:range rdfs:Literal;
+            dce:creator iasis:samaneh.
 iasis:strand rdfs:domain iasis:Mutation;
 			 rdfs:range rdfs:Literal;
              dce:creator iasis:samaneh.
