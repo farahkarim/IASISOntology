@@ -183,7 +183,8 @@ iasis:Protein rdf:type owl:Class;
               dce:creator iasis:samaneh.
 iasis:ProteinAnnotation rdf:type owl:Class;
                         dce:creator iasis:samaneh.
-
+iasis:Transcription rdf:type owl:Class;
+                    dce:creator iasis:samaneh.
 #########Properties
 iasis:requestedTest rdf:type	owl:ObjectProperty.
 iasis:partOf rdf:type	owl:ObjectProperty.
@@ -329,6 +330,12 @@ iasis:is_taken_from rdf:type owl:ObjectProperty;
                     dce:creator iasis:samaneh.
 iasis:classifies_as rdf:type owl:ObjectProperty;
                     dce:creator iasis:samaneh.  
+
+#### WP3 requirements:
+
+iasis:trans_eqtl rdf:type owl:ObjectProperty;
+                 dce:creator iasis:samaneh.
+
 
 ###########Domains And Ranges
 iasis:partOf rdfs:domain	iasis:Concept;
@@ -614,6 +621,11 @@ iasis:classifies_as rdfs:domain iasis:CNV;
 					rdfs:range iasis:MutationType;
                     dce:creator iasis:samaneh.
 
+##### WP3 requirements:
+
+iasis:trans_eqtl rdfs:domain iasis:SNP;
+                 rdfs:range iasis:Transcript;
+                 dce:creator iasis:samaneh.
 
 
 ###############Subclasses
@@ -767,7 +779,8 @@ iasis:Protein rdfs:subClassOf iasis:Concept;
               dce:creator iasis:samaneh.
 iasis:ProteinAnnotation rdfs:subClassOf iasis:Annotation;
                         dce:creator iasis:samaneh.
-
+iasis:Transcription rdfs:subClassOf iasis:Relation;
+                    dce:creator iasis:samaneh.
 ###############PartOf
 iasis:ClinicalNote iasis:partOf iasis:ClinicalRecord.
 iasis:Image iasis:partOf iasis:ClinicalRecord.
