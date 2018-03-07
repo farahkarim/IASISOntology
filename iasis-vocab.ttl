@@ -186,7 +186,7 @@ iasis:ProteinAnnotation rdf:type owl:Class;
 iasis:Transcription rdf:type owl:Class;
                     dce:creator iasis:samaneh.
 #########Properties
-iasis:requestedTest rdf:type	owl:ObjectProperty.
+
 iasis:partOf rdf:type	owl:ObjectProperty.
 iasis:provenance	rdf:type	owl:ObjectProperty.
 iasis:confidence	rdf:type	owl:DatatypeProperty.
@@ -195,7 +195,6 @@ iasis:ann_label	rdf:type	owl:DatatypeProperty.
 iasis:source	rdf:type	owl:ObjectProperty.
 iasis:prec_tool	rdf:type	owl:ObjectProperty.
 iasis:maps	rdf:type	owl:ObjectProperty.
-iasis:birthday	rdf:type	owl:DatatypeProperty.
 iasis:gender	rdf:type	owl:DatatypeProperty.
 iasis:research_id	rdf:type	owl:DatatypeProperty.
 iasis:gen_diagnostic	rdf:type	owl:ObjectProperty.
@@ -231,22 +230,8 @@ iasis:is_related_to rdf:type	owl:ObjectProperty.
 iasis:annotates rdf:type owl:ObjectProperty.
 iasis:cUITerm	rdf:type owl:DatatypeProperty.
 
-iasis:publication_identification rdf:type owl:ObjectProperty;
-                            dce:creator iasis:samaneh.
-iasis:patient_identification rdf:type owl:ObjectProperty;
-                        dce:creator iasis:samaneh.
-iasis:treatment_identification rdf:type owl:ObjectProperty;
-                          dce:creator iasis:samaneh.
-iasis:biomarker_identification rdf:type owl:ObjectProperty;
-                          dce:creator iasis:samaneh.
-iasis:clinicalrecord_identification rdf:type owl:ObjectProperty;
-                               dce:creator iasis:samaneh.
-iasis:test_identification rdf:type owl:ObjectProperty;
-                     dce:creator iasis:samaneh.
-iasis:image_identification rdf:type owl:ObjectProperty;
-                      dce:creator iasis:samaneh.
 iasis:drug_identification rdf:type owl:ObjectProperty;
-                     dce:creator iasis:samaneh.
+                         dce:creator iasis:samaneh.
 
 #### COSMIC requirements:
 iasis:description rdf:type owl:DatatypeProperty;
