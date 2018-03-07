@@ -175,6 +175,27 @@ iasis:OverExpressed rdf:type owl:Class;
                     dce:creator iasis:samaneh.
 iasis:UnderExpressed rdf:type owl:Class;
                      dce:creator iasis:samaneh.
+iasis:Chromosome rdf:type owl:Class;
+                 dce:creator iasis:samaneh.
+iasis:Start rdf:type owl:Class;
+            rdfs:comment "to skip having balnk node due to having several domain for a property";
+            dce:creator iasis:samaneh.
+iasis:End rdf:type owl:Class;
+          rdfs:comment "to skip having balnk node due to having several domain for a property";
+          dce:creator iasis:samaneh.
+iasis:StudyId rdf:type owl:Class;
+              rdfs:comment "to skip having balnk node due to having several domain for a property";
+              dce:creator iasis:samaneh.
+iasis:IsLocated rdf:type owl:Class;
+                rdfs:comment "to skip having balnk node due to having several domain for a property";
+                dce:creator iasis:samaneh.
+iasis:OccurredIn rdf:type owl:Class;
+                 rdfs:comment "to skip having balnk node due to having several domain for a property";
+                 dce:creator iasis:samaneh.
+iasis:ClassifiesAs rdf:type owl:Class;
+                   rdfs:comment "to skip having balnk node due to having several domain for a property";
+                   dce:creator iasis:samaneh.
+
 
 #### WP3 requirements:
 
@@ -331,7 +352,7 @@ iasis:classifies_as rdf:type owl:ObjectProperty;
 
 ###########Domains And Ranges
 iasis:partOf rdfs:domain	iasis:Concept;
-					rdfs:range	iasis:Concept.
+			 rdfs:range	iasis:Concept.
 iasis:requestedTest rdfs:domain	ssn:Observation;
 					rdfs:range	iasis:Test.
 iasis:provenance	rdfs:domain	iasis:Publication;
@@ -758,6 +779,20 @@ iasis:OverExpressed rdfs:subClassOf iasis:Regulation;
 iasis:UnderExpressed rdfs:subClassOf iasis:Regulation;
                      dce:creator iasis:samaneh.
 
+iasis:Chromosome rdfs:subClassOf iasis:Relation;
+                 dce:creator iasis:samaneh.
+iasis:Start rdfs:subClassOf iasis:Relation;                       
+            dce:creator iasis:samaneh.
+iasis:End rdfs:subClassOf iasis:Relation;
+          dce:creator iasis:samaneh.
+iasis:StudyId rdfs:subClassOf iasis:Relation;
+              dce:creator iasis:samaneh.
+iasis:IsLocated rdfs:subClassOf iasis:relation;
+                dce:creator iasis:samaneh.
+iasis:OccurredIn rdfs:subClassOf iasis:Relation;
+                 dce:creator iasis:samaneh.
+iasis:ClassifiesAs rdfs:subClassOf iasis:Relation;
+                   dce:creator iasis:samaneh.
 
 #### WP3 requirements:
 
