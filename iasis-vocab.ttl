@@ -335,8 +335,10 @@ iasis:classifies_as rdf:type owl:ObjectProperty;
 
 iasis:trans_eqtl rdf:type owl:ObjectProperty;
                  dce:creator iasis:samaneh.
-iasis:transcribed rdf:type owl:ObjectProperty;
-                  dce:creator iasis:samaneh.
+iasis:physical_interaction rdf:type owl:ObjectProperty;
+                           dce:creator iasis:samaneh.
+iasis:translates_as rdf:type owl:ObjectProperty;
+                    dce:creatoe iasis:samaneh.
 
 ###########Domains And Ranges
 iasis:partOf rdfs:domain	iasis:Concept;
@@ -636,6 +638,12 @@ iasis:is_related_to rdfs:domain iasis:Gene;
 iasis:is_related_to rdfs:domain iasis:GExp;
 			        rdfs:range iasis:Transcription;
                     dce:creator iasis:samaneh.
+iasis:physical_interaction rdfs:domain iasis:Protein;
+                           rdfs:range iasis:Transcript;
+                           dce:creator iasis:samaneh.
+iasis:translates_as rdfs:domain iasis:Transcript;
+                    rdfs:range iasis:Protein;  
+                    dce:creatoe iasis:samaneh.
 
 ###############Subclasses
 iasis:LCAnnotation	rdfs:subClassOf	iasis:Annotation.
