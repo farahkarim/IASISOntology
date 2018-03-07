@@ -519,13 +519,13 @@ iasis:histology_subtype rdfs:domain iasis:Tumor;
 iasis:mentioned_in rdfs:domain iasis:Mutation;
 				   rdfs:range iasis:VocTerm;
                    dce:creator iasis:samaneh.
-iasis:chromosome rdfs:domain iasis:CNV;
+iasis:chromosome1 rdfs:domain iasis:CNV;
 				 rdfs:range rdfs:Chromosome;
                  dce:creator iasis:samaneh.
-iasis:chromosome rdfs:domain iasis:Mutation;
+iasis:chromosome2 rdfs:domain iasis:Mutation;
 				 rdfs:range rdfs:Chromosome;
                  dce:creator iasis:samaneh.
-iasis:chromosome rdfs:domain iasis:CGI;
+iasis:chromosome3 rdfs:domain iasis:CGI;
 				 rdfs:range rdfs:Chromosome;
                  dce:creator iasis:samaneh.
 iasis:value rdfs:domain iasis:Chromosome;
