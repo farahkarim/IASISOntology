@@ -210,27 +210,22 @@ iasis:EcogObservation	rdf:type	owl:Class;
 iasis:LiquidBiopsyObservation	rdf:type	owl:Class;
 								rdfs:comment "Each LiquidBiopsy on a patient would be documented as a separate observation.";
 								dce:creator	iasis:samaneh.
+iasis:DiagnosisAgeGroup	rdf:type	owl:Class;
+						rdfs:comment "Shows the age range group in which the patient was diagnosed with Cancer.";
+						dce:creator	iasis:samaneh.
 iasis:YoungerThan25	rdf:type	owl:Class;
-					rdfs:comment "Shows the age range group in which the patient was diagnosed with Cancer.";
 					dce:creator	iasis:samaneh.
 iasis:Between26and35	rdf:type	owl:Class;
-						rdfs:comment "Shows the age range group in which the patient was diagnosed with Cancer.";
 						dce:creator	iasis:samaneh.
 iasis:Between36and45	rdf:type	owl:Class;
-						rdfs:comment "Shows the age range group in which the patient was diagnosed with Cancer.";
 						dce:creator	iasis:samaneh.
 iasis:Between46and55	rdf:type	owl:Class;
-						rdfs:comment "Shows the age range group in which the patient was diagnosed with Cancer.";
 						dce:creator	iasis:samaneh.
 iasis:Between56and65	rdf:type	owl:Class;
-						rdfs:comment "Shows the age range group in which the patient was diagnosed with Cancer.";
-						rdfs:label "DiagnosisAgeGroup";
 						dce:creator	iasis:samaneh.
 iasis:Between66and75	rdf:type	owl:Class;
-						rdfs:comment "Shows the age range group in which the patient was diagnosed with Cancer.";
 						dce:creator	iasis:samaneh.
 iasis:OlderThan75	rdf:type	owl:Class;
-					rdfs:comment "Shows the age range group in which the patient was diagnosed with Cancer.";
 					dce:creator	iasis:samaneh.
 
 #########Properties
@@ -960,6 +955,22 @@ iasis:EcogObservation	rdfs:subClassOf	iasis:Observation;
 								dce:creator	iasis:samaneh.
 iasis:TumorStageObservation	rdfs:subClassOf	iasis:Observation;
 								dce:creator	iasis:samaneh.
+iasis:YoungerThan25	rdfs:subClassOf	iasis:DiagnosisAgeGroup;
+					dce:creator	iasis:samaneh.
+iasis:Between26and35	rdfs:subClassOf	iasis:DiagnosisAgeGroup;
+						dce:creator	iasis:samaneh.
+iasis:Between36and45	rdfs:subClassOf	iasis:DiagnosisAgeGroup;
+						dce:creator	iasis:samaneh.
+iasis:Between46and55	rdfs:subClassOf	iasis:DiagnosisAgeGroup;
+						dce:creator	iasis:samaneh.
+iasis:Between56and65	rdfs:subClassOf	iasis:DiagnosisAgeGroup;
+						dce:creator	iasis:samaneh.
+iasis:Between66and75	rdfs:subClassOf	iasis:DiagnosisAgeGroup;
+						dce:creator	iasis:samaneh.
+iasis:OlderThan75	rdfs:subClassOf	iasis:DiagnosisAgeGroup;
+					dce:creator	iasis:samaneh.
+
+
 ###############PartOf
 iasis:ClinicalNote iasis:partOf iasis:ClinicalRecord.
 iasis:Image iasis:partOf iasis:ClinicalRecord.
