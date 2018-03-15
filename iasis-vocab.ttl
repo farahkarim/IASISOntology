@@ -8,10 +8,10 @@
 #########Classes
 iasis:Concept rdf:type	owl:Class.
 iasis:Annotation	rdf:type	owl:Class.
-iasis:Biopsy	rdf:type	owl:Class;
-                rdfs:comment "From clinical data, LC patients" ;
-                rdfs:label "an examination of tissue removed from a living body to discover the presence, cause, or extent of a disease.";
-				dce:creator iasis:samaneh.
+#iasis:Biopsy	rdf:type	owl:Class;
+ #               rdfs:comment "From clinical data, LC patients" ;
+  #              rdfs:label "an examination of tissue removed from a living body to discover the presence, cause, or extent of a disease.";
+	#			dce:creator iasis:samaneh.
 iasis:PubRepository	rdf:type	owl:Class.
 iasis:Vocabulary	rdf:type	owl:Class.
 iasis:VocTerm rdf:type	owl:Class.
@@ -189,12 +189,14 @@ iasis:Transcription rdf:type owl:Class;
 #### WP2 requirements:
 
 iasis:Smokers	rdf:type	owl:Class;
-				rdfs:comment "A patient may belong to Smokers.";
+				rdfs:comment "A patient may belong to Smokers class.";
 				dce:creator	iasis:samaneh.
 iasis:EGFR	rdf:type	owl:Class;
 			rdfs:comment "Somatic mutations that lead to EGFR overexpression have been associated with several cancers including squamous-cell carcinoma of the lung";
+			rdfs:label "EGFR_mutated";
 			dce:creator	iasis:samaneh.
 iasis:TumorStage	rdf:type owl:Class;
+					rdfs:comment "Represents the assessment of the stage of tumor in a particular date.";
 					dce:creator	iasis:samaneh.
 iasis:Ecog	rdf:type	owl:Class;
 			rdfs:comment "ECOG Performance Status describes a patient's level of functioning in terms of her/his ability for caring her/himself, daily activities and phyical abilities.";
@@ -209,25 +211,32 @@ iasis:LiquidBiopsyObservation	rdf:type	owl:Class;
 								rdfs:comment "Each LiquidBiopsy on a patient would be documented as a separate observation.";
 								dce:creator	iasis:samaneh.
 iasis:YoungerThan25	rdf:type	owl:Class;
-					rdfs:comment "Shows DiagnosisAgeGroup which is the age range group in which the patient was diagnosed with Cancer.";
+					rdfs:comment "Shows the age range group in which the patient was diagnosed with Cancer.";
+					rdfs:label "DiagnosisAgeGroup";
 					dce:creator	iasis:samaneh.
 iasis:Between26and35	rdf:type	owl:Class;
-						rdfs:comment "Shows DiagnosisAgeGroup which is the age range group in which the patient was diagnosed with Cancer.";
+						rdfs:comment "Shows the age range group in which the patient was diagnosed with Cancer.";
+						rdfs:label "DiagnosisAgeGroup";
 						dce:creator	iasis:samaneh.
 iasis:Between36and45	rdf:type	owl:Class;
-						rdfs:comment "Shows DiagnosisAgeGroup which is the age range group in which the patient was diagnosed with Cancer.";
+						rdfs:comment "Shows the age range group in which the patient was diagnosed with Cancer.";
+						rdfs:label "DiagnosisAgeGroup";
 						dce:creator	iasis:samaneh.
 iasis:Between46and55	rdf:type	owl:Class;
-						rdfs:comment "Shows DiagnosisAgeGroup which is the age range group in which the patient was diagnosed with Cancer.";
+						rdfs:comment "Shows the age range group in which the patient was diagnosed with Cancer.";
+						rdfs:label "DiagnosisAgeGroup";
 						dce:creator	iasis:samaneh.
 iasis:Between56and65	rdf:type	owl:Class;
-						rdfs:comment "Shows DiagnosisAgeGroup which is the age range group in which the patient was diagnosed with Cancer.";
+						rdfs:comment "Shows the age range group in which the patient was diagnosed with Cancer.";
+						rdfs:label "DiagnosisAgeGroup";
 						dce:creator	iasis:samaneh.
 iasis:Between66and75	rdf:type	owl:Class;
-						rdfs:comment "Shows DiagnosisAgeGroup which is the age range group in which the patient was diagnosed with Cancer.";
+						rdfs:comment "Shows the age range group in which the patient was diagnosed with Cancer.";
+						rdfs:label "DiagnosisAgeGroup";
 						dce:creator	iasis:samaneh.
 iasis:OlderThan75	rdf:type	owl:Class;
-					rdfs:comment "Shows DiagnosisAgeGroup which is the age range group in which the patient was diagnosed with Cancer.";
+					rdfs:comment "Shows the age range group in which the patient was diagnosed with Cancer.";
+					rdfs:label "DiagnosisAgeGroup";
 					dce:creator	iasis:samaneh.
 
 #########Properties
@@ -680,7 +689,6 @@ iasis:LCAnnotation	rdfs:subClassOf	iasis:Annotation.
 iasis:ADAnnotation	rdfs:subClassOf	iasis:Annotation.
 
 iasis:LiquidBiopsy rdfs:subClassOf	iasis:BloodTest.
-
 iasis:Patient	rdfs:subClassOf	iasis:Concept.
 iasis:Treatment	rdfs:subClassOf	iasis:Concept.
 iasis:Biopsy	rdfs:subClassOf	iasis:Test.
@@ -828,6 +836,17 @@ iasis:ProteinAnnotation rdfs:subClassOf iasis:Annotation;
                         dce:creator iasis:samaneh.
 iasis:Transcription rdfs:subClassOf iasis:Relation;
                     dce:creator iasis:samaneh.
+
+#### WP2 requirements:
+
+iasis:EGFR	rdfs:subClassOf iasis:Mutation;
+			dce:creator	iasis:samaneh.
+iasis:LiquidBiopsyObservation	rdfs:subClassOf	iasis:Observation;
+								dce:creator	iasis:samaneh.
+iasis:EcogObservation	rdfs:subClassOf	iasis:Observation;
+								dce:creator	iasis:samaneh.
+iasis:TumorStageObservation	rdfs:subClassOf	iasis:Observation;
+								dce:creator	iasis:samaneh.
 ###############PartOf
 iasis:ClinicalNote iasis:partOf iasis:ClinicalRecord.
 iasis:Image iasis:partOf iasis:ClinicalRecord.
