@@ -212,19 +212,15 @@ iasis:LiquidBiopsyObservation	rdf:type	owl:Class;
 								dce:creator	iasis:samaneh.
 iasis:YoungerThan25	rdf:type	owl:Class;
 					rdfs:comment "Shows the age range group in which the patient was diagnosed with Cancer.";
-					rdfs:label "DiagnosisAgeGroup";
 					dce:creator	iasis:samaneh.
 iasis:Between26and35	rdf:type	owl:Class;
 						rdfs:comment "Shows the age range group in which the patient was diagnosed with Cancer.";
-						rdfs:label "DiagnosisAgeGroup";
 						dce:creator	iasis:samaneh.
 iasis:Between36and45	rdf:type	owl:Class;
 						rdfs:comment "Shows the age range group in which the patient was diagnosed with Cancer.";
-						rdfs:label "DiagnosisAgeGroup";
 						dce:creator	iasis:samaneh.
 iasis:Between46and55	rdf:type	owl:Class;
 						rdfs:comment "Shows the age range group in which the patient was diagnosed with Cancer.";
-						rdfs:label "DiagnosisAgeGroup";
 						dce:creator	iasis:samaneh.
 iasis:Between56and65	rdf:type	owl:Class;
 						rdfs:comment "Shows the age range group in which the patient was diagnosed with Cancer.";
@@ -232,11 +228,9 @@ iasis:Between56and65	rdf:type	owl:Class;
 						dce:creator	iasis:samaneh.
 iasis:Between66and75	rdf:type	owl:Class;
 						rdfs:comment "Shows the age range group in which the patient was diagnosed with Cancer.";
-						rdfs:label "DiagnosisAgeGroup";
 						dce:creator	iasis:samaneh.
 iasis:OlderThan75	rdf:type	owl:Class;
 					rdfs:comment "Shows the age range group in which the patient was diagnosed with Cancer.";
-					rdfs:label "DiagnosisAgeGroup";
 					dce:creator	iasis:samaneh.
 
 #########Properties
