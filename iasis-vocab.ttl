@@ -185,6 +185,29 @@ iasis:ProteinAnnotation rdf:type owl:Class;
                         dce:creator iasis:samaneh.
 iasis:Transcription rdf:type owl:Class;
                     dce:creator iasis:samaneh.
+
+#### WP2 requirements:
+
+iasis:Smokers	rdf:type	owl:Class;
+				rdfs:comment "A patient may belong to Smokers.";
+				dce:creator	iasis:samaneh.
+iasis:EGFR	rdf:type	owl:Class;
+			rdfs:comment "Somatic mutations that lead to EGFR overexpression have been associated with several cancers including squamous-cell carcinoma of the lung";
+			dce:creator	iasis:samaneh.
+iasis:TumorStage	rdf:type owl:Class;
+					dce:creator	iasis:samaneh.
+iasis:Ecog	rdf:type	owl:Class;
+			rdfs:comment "ECOG Performance Status describes a patient's level of functioning in terms of her/his ability for caring her/himself, daily activities and phyical abilities.";
+			dce:creator	iasis:samaneh.
+iasis:TumorObservation	rdf:type	owl:Class;
+						rdfs:comment "";
+						dce:creator	iasis:samaneh.
+iasis:EcogObservation	rdf:type	owl:Class;
+						rdfs:comment "Each time patient visits the hospital, the ecog is assessed as a new ecogObservation.";
+						dce:creator	iasis:samaneh.
+iasis:LiquidBiopsyObservation	rdf:type	owl:Class;
+								rdfs:comment "Each LiquidBiopsy on a patient would be documented as a separate observation.";
+								dce:creator	iasis:samaneh.
 #########Properties
 
 iasis:partOf rdf:type	owl:ObjectProperty.
