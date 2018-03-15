@@ -208,6 +208,28 @@ iasis:EcogObservation	rdf:type	owl:Class;
 iasis:LiquidBiopsyObservation	rdf:type	owl:Class;
 								rdfs:comment "Each LiquidBiopsy on a patient would be documented as a separate observation.";
 								dce:creator	iasis:samaneh.
+iasis:YoungerThan25	rdf:type	owl:Class;
+					rdfs:comment "Shows DiagnosisAgeGroup which is the age range group in which the patient was diagnosed with Cancer.";
+					dce:creator	iasis:samaneh.
+iasis:Between26and35	rdf:type	owl:Class;
+						rdfs:comment "Shows DiagnosisAgeGroup which is the age range group in which the patient was diagnosed with Cancer.";
+						dce:creator	iasis:samaneh.
+iasis:Between36and45	rdf:type	owl:Class;
+						rdfs:comment "Shows DiagnosisAgeGroup which is the age range group in which the patient was diagnosed with Cancer.";
+						dce:creator	iasis:samaneh.
+iasis:Between46and55	rdf:type	owl:Class;
+						rdfs:comment "Shows DiagnosisAgeGroup which is the age range group in which the patient was diagnosed with Cancer.";
+						dce:creator	iasis:samaneh.
+iasis:Between56and65	rdf:type	owl:Class;
+						rdfs:comment "Shows DiagnosisAgeGroup which is the age range group in which the patient was diagnosed with Cancer.";
+						dce:creator	iasis:samaneh.
+iasis:Between66and75	rdf:type	owl:Class;
+						rdfs:comment "Shows DiagnosisAgeGroup which is the age range group in which the patient was diagnosed with Cancer.";
+						dce:creator	iasis:samaneh.
+iasis:OlderThan75	rdf:type	owl:Class;
+					rdfs:comment "Shows DiagnosisAgeGroup which is the age range group in which the patient was diagnosed with Cancer.";
+					dce:creator	iasis:samaneh.
+
 #########Properties
 
 iasis:partOf rdf:type	owl:ObjectProperty.
