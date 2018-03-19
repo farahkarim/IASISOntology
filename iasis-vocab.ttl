@@ -178,6 +178,9 @@ iasis:UnderExpressed rdf:type owl:Class;
 iasis:ResistanceMutation	rdf:type	owl:Class;
 							rdfs:comment "Mutations identified in the literature as resistance mutations, including those conferring acquired resistance (after treatment) and intrinsic resistance (before treatment)";
 							dce:creator	iasis:samaneh.
+iasis:CancerGeneCensus	rdf:type	owl:Class;
+						rdf:comment "The Cancer Gene Census is a list of genes known to be involved in cancer.";
+						dce:creator	iasis:samaneh.
 #### WP3 requirements:
 
 iasis:Protein rdf:type owl:Class;
