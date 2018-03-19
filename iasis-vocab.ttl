@@ -188,7 +188,7 @@ iasis:Transcription rdf:type owl:Class;
 #### WP2 requirements:
 
 iasis:LiquidBiopsy rdf:type owl:Class.
-iasis:Smokers	rdf:type	owl:Class;
+iasis:Smoker	rdf:type	owl:Class;
 				rdfs:comment "A patient may belong to Smokers class.";
 				dce:creator	iasis:samaneh.
 iasis:EGFR	rdf:type	owl:Class;
