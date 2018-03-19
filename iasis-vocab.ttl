@@ -300,13 +300,17 @@ iasis:cds_length rdf:type owl:DatatypeProperty;
                  dce:creator iasis:samaneh.
 iasis:age rdf:type owl:DatatypeProperty;
           dce:creator iasis:samaneh.
-iasis:primary_site rdf:type owl:DatatypeProperty;
-                   dce:creator iasis:samaneh.
-iasis:site_subtype rdf:type owl:DatatypeProperty;
-                   dce:creator iasis:samaneh.
-iasis:primary_histology rdf:type owl:DatatypeProperty;
+iasis:primaryTissue	rdf:type owl:DatatypeProperty;
+                   	dce:creator iasis:samaneh.
+iasis:tissueSubtype1	rdf:type owl:DatatypeProperty;
+                   	 	dce:creator iasis:samaneh.
+iasis:tissueSubtype2	rdf:type owl:DatatypeProperty;
+                   	 	dce:creator iasis:samaneh.
+iasis:primaryHistology rdf:type owl:DatatypeProperty;
                         dce:creator iasis:samaneh.
-iasis:histology_subtype rdf:type owl:DatatypeProperty;
+iasis:histologySubtype1	rdf:type owl:DatatypeProperty;
+                        dce:creator iasis:samaneh.
+iasis:histologySubtype2	rdf:type owl:DatatypeProperty;
                         dce:creator iasis:samaneh.
 iasis:mentioned_in rdf:type owl:ObjectProperty;
                    dce:creator iasis:samaneh.
@@ -573,18 +577,24 @@ iasis:cds_length rdfs:domain iasis:Gene;
 iasis:age rdfs:domain iasis:Sample;          
 		  rdfs:range rdfs:Literal;
           dce:creator iasis:samaneh.
-iasis:primary_site rdfs:domain iasis:Tumor;
-				   rdfs:range rdfs:Literal;
-                   dce:creator iasis:samaneh.
-iasis:site_subtype rdfs:domain iasis:Tumor;
-				   rdfs:range rdfs:Literal;
-                   dce:creator iasis:samaneh.  
-iasis:primary_histology rdfs:domain iasis:Tumor;
-					    rdfs:range rdfs:Literal;
-                        dce:creator iasis:samaneh.
-iasis:histology_subtype rdfs:domain iasis:Tumor;
-					    rdfs:range rdfs:Literal;
-                        dce:creator iasis:samaneh.
+iasis:primaryTissue	rdfs:domain iasis:Sample;
+					rdfs:range	rdfs:Literal;
+                   	dce:creator iasis:samaneh.
+iasis:tissueSubtype1	rdfs:domain iasis:Sample;
+						rdfs:range	rdfs:Literal;
+                   		dce:creator iasis:samaneh.
+iasis:tissueSubtype2	rdfs:domain iasis:Sample;
+						rdfs:range	rdfs:Literal;
+                   		dce:creator iasis:samaneh.
+iasis:primaryHistology rdfs:domain iasis:Sample;
+						rdfs:range	rdfs:Literal;
+                   		dce:creator iasis:samaneh.
+iasis:histologySubtype1	rdfs:domain iasis:Sample;
+						rdfs:range	rdfs:Literal;
+                   		dce:creator iasis:samaneh.
+iasis:histologySubtype2	rdfs:domain iasis:Sample;
+						rdfs:range	rdfs:Literal;
+                   		dce:creator iasis:samaneh.
 iasis:mentioned_in rdfs:domain iasis:Mutation;
 				   rdfs:range iasis:VocTerm;
                    dce:creator iasis:samaneh.
