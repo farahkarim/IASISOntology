@@ -399,6 +399,9 @@ iasis:tumorStage	rdf:type	owl:DatatypeProperty;
 iasis:biopsyConsecutiveId	rdf:type	owl:ObjectProperty;
 							rdfs:comment "This is the consecutive ID that we assign to biobsy tests according to their date.";
 							dce:creator	iasis:samaneh.
+iasis:sampleDate	rdf:type	owl:DatatypeProperty;
+					rdfs:comment "Date of the biopsy sample";
+					dce:creator	iasis:samaneh.
 iasis:resultDate	rdf:type	owl:DatatypeProperty;
 					rdfs:comment "Date of the biopsy result";
 					dce:creator	iasis:samaneh.
@@ -777,6 +780,9 @@ iasis:tumorStage	rdfs:domain	iasis:TumorStageObservation;
 iasis:biopsyConsecutiveId	rdfs:domain	iasis:LiquidBiopsyObservation;
 							rdfs:range	iasis:VocTerm;
 							dce:creator	iasis:samaneh.
+iasis:sampleDate	rdfs:domain	iasis:LiquidBiopsyObservation;
+					rdfs:range	xsd:date;
+					dce:creator	iasis:samaneh.
 iasis:resultDate	rdfs:domain	iasis:LiquidBiopsyObservation;
 					rdfs:range	xsd:date;
 					dce:creator	iasis:samaneh.
