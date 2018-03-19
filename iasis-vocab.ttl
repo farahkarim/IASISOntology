@@ -361,6 +361,9 @@ iasis:is_taken_from rdf:type owl:ObjectProperty;
 iasis:classifies_as rdf:type owl:ObjectProperty;
                     dce:creator iasis:samaneh.  
 
+iasis:sampleSource	rdf:type	owl:DatatypeProperty;
+					rdfs:comment "Appears in resistanceMutation dataset";
+					dce:creator	iasis:samaneh.
 #### WP3 requirements:
 
 iasis:trans_eqtl rdf:type owl:ObjectProperty;
@@ -712,7 +715,9 @@ iasis:classifies_as rdfs:domain iasis:Mutation;
 iasis:classifies_as rdfs:domain iasis:CNV;
 					rdfs:range iasis:MutationType;
                     dce:creator iasis:samaneh.
-
+iasis:sampleSource	rdfs:domain	iasis:Sample;
+					rdfs:range	rdfs:Literal;
+					dce:creator	iasis:samaneh.
 ##### WP3 requirements:
 
 iasis:trans_eqtl rdfs:domain iasis:SNP;
