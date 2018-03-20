@@ -369,6 +369,9 @@ iasis:classifies_as rdf:type owl:ObjectProperty;
 iasis:sampleSource	rdf:type	owl:DatatypeProperty;
 					rdfs:comment "Appears in resistanceMutation dataset";
 					dce:creator	iasis:samaneh.
+iasis:transcribed_as	rdf:type	owl:ObjectProperty;
+						rdfs:comment "As connection between Gene and Transcription Relation.";
+						dce:creator	iasis:samaneh.
 #### WP3 requirements:
 
 iasis:trans_eqtl rdf:type owl:ObjectProperty;
@@ -517,7 +520,10 @@ iasis:prec_tool rdfs:domain iasis:Relation;
 			rdfs:range iasis:AnalysisTool.
 
 iasis:is_related_to rdfs:domain iasis:Concept;
-			rdfs:range iasis:Relation.
+					rdfs:range iasis:Relation.
+iasis:is_related_to	rdfs:domain	iasis:Gene;
+						rdfs:range	iasis:Sample;
+						dce:creator	iasis:samaneh.
 
 iasis:cUITerm rdfs:domain iasis:Annotation;
 				rdfs:range	rdfs:Literal.
@@ -723,6 +729,9 @@ iasis:classifies_as rdfs:domain iasis:CNV;
 iasis:sampleSource	rdfs:domain	iasis:Sample;
 					rdfs:range	rdfs:Literal;
 					dce:creator	iasis:samaneh.
+iasis:transcribed_as	rdfs:domain	iasis:Gene;	
+						rdfs:range	iasis:Transcription;
+						dce:creator	iasis:samaneh.
 ##### WP3 requirements:
 
 iasis:trans_eqtl rdfs:domain iasis:SNP;
