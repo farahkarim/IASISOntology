@@ -372,6 +372,8 @@ iasis:sampleSource	rdf:type	owl:DatatypeProperty;
 iasis:transcribed_as	rdf:type	owl:ObjectProperty;
 						rdfs:comment "As connection between Gene and Transcription Relation.";
 						dce:creator	iasis:samaneh.
+iasis:resistance_to	rdf:type	owl:ObjectProperty;
+					dce:creator	iasis:samaneh.
 #### WP3 requirements:
 
 iasis:trans_eqtl rdf:type owl:ObjectProperty;
@@ -732,6 +734,9 @@ iasis:sampleSource	rdfs:domain	iasis:Sample;
 iasis:transcribed_as	rdfs:domain	iasis:Gene;	
 						rdfs:range	iasis:Transcription;
 						dce:creator	iasis:samaneh.
+iasis:resistance_to	rdfs:domain	iasis:Mutation;
+					rdfs:range	iasis:Drug;
+					dce:creator	iasis:samaneh.
 ##### WP3 requirements:
 
 iasis:trans_eqtl rdfs:domain iasis:SNP;
