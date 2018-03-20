@@ -16,6 +16,9 @@ iasis:PubRepository	rdf:type	owl:Class.
 iasis:Vocabulary	rdf:type	owl:Class.
 iasis:VocTerm rdf:type	owl:Class.
 iasis:CUITerm	rdf:type	owl:Thing.
+iasis:PMID	rdf:type	owl:Class;
+			rdfs:comment "PubMed IDs";
+			dce:creator	iasis:samaneh.
 iasis:AnalysisTool	rdf:type	owl:Class. 
 iasis:BioMarkerLevel	rdf:type	owl:Class.
 iasis:TConcentration	rdf:type	owl:Class.
@@ -612,7 +615,7 @@ iasis:histologySubtype2	rdfs:domain iasis:Sample;
 						rdfs:range	rdfs:Literal;
                    		dce:creator iasis:samaneh.
 iasis:mentioned_in rdfs:domain iasis:Mutation;
-				   rdfs:range iasis:VocTerm;
+				   rdfs:range iasis:PMID;
                    dce:creator iasis:samaneh.
 iasis:chromosome rdfs:domain iasis:CNV;
 				 rdfs:range rdfs:Chromosome;
