@@ -244,6 +244,7 @@ iasis:confidence	rdf:type	owl:DatatypeProperty.
 iasis:id	rdf:type	owl:ObjectProperty.
 iasis:ann_label	rdf:type	owl:DatatypeProperty.
 iasis:source	rdf:type	owl:ObjectProperty.
+iasis:description	rdf:type	owl:DatatypeProperty.
 iasis:prec_tool	rdf:type	owl:ObjectProperty.
 iasis:maps	rdf:type	owl:ObjectProperty.
 iasis:research_id	rdf:type	owl:DatatypeProperty.
@@ -456,6 +457,9 @@ iasis:ann_label rdfs:domain	iasis:Annotation;
 			rdfs:range	rdfs:Literal.
 iasis:source	rdfs:domain iasis:Annotation;
 				rdfs:range	iasis:Vocabulary.
+iasis:description 	rdfs:domain	iasis:Annotation;
+					rdfs:range	rdfs:Literal;
+					dce:creator	iasis:samaneh.
 iasis:maps	rdfs:domain	iasis:Annotation;
 			rdfs:range	iasis:Annotation.
 iasis:birthday	rdfs:domain iasis:Patient;
