@@ -199,6 +199,9 @@ iasis:LiquidBiopsy rdf:type owl:Class.
 iasis:Smoker	rdf:type	owl:Class;
 				rdfs:comment "A patient may belong to Smokers class.";
 				dce:creator	iasis:samaneh.
+iasis:NonSmoker	rdf:type	owl:Class;
+				rdfs:comment "A patient may belong to Smokers class.";
+				dce:creator	iasis:samaneh.
 iasis:EGFR	rdf:type	owl:Class;
 			rdfs:comment "Somatic mutations that lead to EGFR overexpression have been associated with several cancers including squamous-cell carcinoma of the lung";
 			rdfs:label "EGFR_mutated";
