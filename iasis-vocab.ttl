@@ -212,8 +212,8 @@ iasis:TumorStage	rdf:type owl:Class;
 iasis:Ecog	rdf:type	owl:Class;
 			rdfs:comment "ECOG Performance Status describes a patient's level of functioning in terms of her/his ability for caring her/himself, daily activities and phyical abilities.";
 			dce:creator	iasis:samaneh.
-iasis:TumorObservation	rdf:type	owl:Class;
-						rdfs:comment "";
+iasis:TumorStageObservation	rdf:type	owl:Class;
+							rdfs:comment "";
 						dce:creator	iasis:samaneh.
 iasis:EcogObservation	rdf:type	owl:Class;
 						rdfs:comment "Each time patient visits the hospital, the ecog is assessed as a new ecogObservation.";
@@ -1005,7 +1005,7 @@ iasis:LiquidBiopsyObservation	rdfs:subClassOf	iasis:Observation;
 iasis:EcogObservation	rdfs:subClassOf	iasis:Observation;
 								dce:creator	iasis:samaneh.
 iasis:TumorStageObservation	rdfs:subClassOf	iasis:Observation;
-								dce:creator	iasis:samaneh.
+							dce:creator	iasis:samaneh.
 iasis:YoungerThan25	rdfs:subClassOf	iasis:DiagnosisAgeGroup;
 					dce:creator	iasis:samaneh.
 iasis:Between26and35	rdfs:subClassOf	iasis:DiagnosisAgeGroup;
