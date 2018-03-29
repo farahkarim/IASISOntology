@@ -202,10 +202,13 @@ iasis:Smoker	rdf:type	owl:Class;
 iasis:NonSmoker	rdf:type	owl:Class;
 				rdfs:comment "A patient may belong to Smokers class.";
 				dce:creator	iasis:samaneh.
-iasis:EGFR	rdf:type	owl:Class;
-			rdfs:comment "Somatic mutations that lead to EGFR overexpression have been associated with several cancers including squamous-cell carcinoma of the lung";
-			rdfs:label "EGFR_mutated";
-			dce:creator	iasis:samaneh.
+iasis:MutatedEGFR	rdf:type	owl:Class;
+					rdfs:comment "Somatic mutations that lead to EGFR overexpression have been associated with several cancers including squamous-cell carcinoma of the lung";
+					rdfs:label "EGFR_mutated";
+					dce:creator	iasis:samaneh.
+iasis:NormalEGFR	rdf:type	owl:Class;
+					rdfs:comment "No evidence of somatic mutation that lead to EGFR overexpression.";
+					dce:creator	iasis:samaneh.
 iasis:TumorStage	rdf:type owl:Class;
 					rdfs:comment "Represents the assessment of the stage of tumor in a particular date.";
 					dce:creator	iasis:samaneh.
@@ -396,6 +399,8 @@ iasis:gender	rdf:type	owl:DatatypeProperty.
 iasis:hasBiopsy	rdf:type	owl:ObjectProperty.
 iasis:birthDate	rdf:type	owl:DatatypeProperty;
 				dce:creator	iasis:samaneh.
+iasis:ageStart	rdf:type	owl:DatatypeProperty;
+				dce:creator	iasis:samaneh.
 iasis:identifier	rdf:type	owl:ObjectProperty;
 					dce:creator	iasis:samaneh.
 iasis:diagnosisAge	rdf:type	owl:DatatypeProperty;
@@ -420,9 +425,7 @@ iasis:ecogValue	rdf:type	owl:DatatypeProperty;
 iasis:tumorStage	rdf:type	owl:DatatypeProperty;
 					rdfs:comment "Range: ['I','II','III','IV']";
 					dce:creator	iasis:samaneh.
-iasis:biopsyConsecutiveId	rdf:type	owl:ObjectProperty;
-							rdfs:comment "This is the consecutive ID that we assign to biobsy tests according to their date.";
-							dce:creator	iasis:samaneh.
+
 iasis:sampleDate	rdf:type	owl:DatatypeProperty;
 					rdfs:comment "Date of the biopsy sample";
 					dce:creator	iasis:samaneh.
@@ -441,9 +444,18 @@ iasis:copiesMicroliterFam	rdf:type	owl:DatatypeProperty;
 iasis:copiesMicroliterVic	rdf:type	owl:DatatypeProperty;
 							rdfs:comment "Number of non-mutated copies per microliter of blood";
 							dce:creator	iasis:samaneh.
-
-
-
+iasis:monthsInTreatment	rdf:type	owl:DatatypeProperty;
+						rdfs:comment "Not included in the original data from WP2, but is calulated as part of in-house preprocessing.";
+						dce:creator	iasis:samaneh.
+iasis:weeksInTreatment	rdf:type	owl:DatatypeProperty;
+						rdfs:comment "Not included in the original data from WP2, but is calulated as part of in-house preprocessing.";
+						dce:cretaor	iasis:samaneh.
+iasis:biopsyList	rdf:type	owl:DatatypeProperty;
+					rdfs:comment "Not included in the original data from WP2, but is calulated as part of in-house preprocessing.";
+					dce:creator	iasis:samaneh.
+iasis:ecogList	rdf:type	owl:DatatypeProperty;
+				rdfs:comment "Not included in the original data from WP2, but is calulated as part of in-house preprocessing.";
+				dce:creator	iasis:samaneh.
 
 ###########Domains And Ranges
 iasis:partOf rdfs:domain	iasis:Concept;
@@ -776,6 +788,9 @@ iasis:gender	rdfs:domain iasis:LCPatient;
 iasis:birthDate	rdfs:domain	iasis:LCPatient;
 				rdfs:range	xsd:date;
 				dce:creator	iasis:samaneh.
+iasis:ageStart	rdfs:domain	iasis:LCPatient;
+				rdfs:range	rdfs:Literal;
+				dce:creator	iasis:samaneh.
 iasis:identifier	rdfs:domain	iasis:LCPatient;
 					rdfs:range	iasis:VocTerm;
 					dce:creator	iasis:samaneh.
@@ -821,9 +836,6 @@ iasis:ecogValue	rdfs:domain	iasis:EcogObservation;
 iasis:tumorStage	rdfs:domain	iasis:TumorStageObservation;
 					rdfs:range	rdfs:Literal;
 					dce:creator	iasis:samaneh.
-iasis:biopsyConsecutiveId	rdfs:domain	iasis:LiquidBiopsyObservation;
-							rdfs:range	iasis:VocTerm;
-							dce:creator	iasis:samaneh.
 iasis:sampleDate	rdfs:domain	iasis:LiquidBiopsyObservation;
 					rdfs:range	xsd:date;
 					dce:creator	iasis:samaneh.
@@ -842,6 +854,18 @@ iasis:copiesMicroliterFam	rdfs:domain	iasis:LiquidBiopsyObservation;
 iasis:copiesMicroliterVic	rdfs:domain	iasis:LiquidBiopsyObservation;
 							rdfs:range	rdfs:Literal;
 							dce:creator	iasis:samaneh.
+iasis:monthsInTreatment	rdfs:domain	iasis:LCPatient;
+						rdfs:range	rdfs:Literals;
+						dce:creator	iasis:samaneh.
+iasis:weeksInTreatment	rdfs:domain	iasis:LCPatient;
+						rdfs:range	rdfs:Literals;
+						dce:creator	iasis:samaneh.
+iasis:biopsyList	rdfs:domain	iasis:LiquidBiopsy;
+					rdfs:range	rdfs:Literal;
+					dce:creator	iasis:samaneh.
+iasis:ecogList	rdfs:domain	iasis:TumorStage;
+				rdfs:range	rdfs:Literal;
+				dce:creator	iasis:samaneh.
 ###############Subclasses
 iasis:LCAnnotation	rdfs:subClassOf	iasis:Annotation.
 iasis:ADAnnotation	rdfs:subClassOf	iasis:Annotation.
@@ -998,8 +1022,8 @@ iasis:Transcription rdfs:subClassOf iasis:Relation;
 #### WP2 requirements:
 
 iasis:LiquidBiopsy rdfs:subClassOf	iasis:BloodTest.
-iasis:EGFR	rdfs:subClassOf iasis:Mutation;
-			dce:creator	iasis:samaneh.
+iasis:MutatedEGFR	rdfs:subClassOf iasis:Mutation;
+					dce:creator	iasis:samaneh.
 iasis:LiquidBiopsyObservation	rdfs:subClassOf	iasis:Observation;
 								dce:creator	iasis:samaneh.
 iasis:EcogObservation	rdfs:subClassOf	iasis:Observation;
