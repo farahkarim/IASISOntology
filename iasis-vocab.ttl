@@ -329,6 +329,9 @@ iasis:histologySubtype2	rdf:type owl:DatatypeProperty;
                         dce:creator iasis:samaneh.
 iasis:mentioned_in rdf:type owl:ObjectProperty;
                    dce:creator iasis:samaneh.
+iasis:mutation_pepSeq	rdf:type	owl:DatatypeProperty;
+						rdfs:comment "The new column produced from Mutation AA column, excluding p.";
+						dce:creator	iasis:samaneh.
 iasis:chromosome rdf:type owl:DatatypeProperty;
                  dce:creator iasis:samaneh.
 iasis:strand rdf:type owl:DatatypeProperty;
@@ -636,14 +639,20 @@ iasis:histologySubtype2	rdfs:domain iasis:Sample;
 iasis:mentioned_in rdfs:domain iasis:Mutation;
 				   rdfs:range iasis:PMID;
                    dce:creator iasis:samaneh.
+iasis:mutation_pepSeq	rdfs:domain	iasis:Mutation;
+						rdfs:range rdfs:Literal;
+						dce:creator	iasis:samaneh.
+iasis:mutation_pepSeq	rdfs:domain	iasis:ResistanceMutation;
+						rdfs:range rdfs:Literal;
+						dce:creator	iasis:samaneh.
 iasis:chromosome rdfs:domain iasis:CNV;
-				 rdfs:range rdfs:Chromosome;
+				 rdfs:range rdfs:Literal;
                  dce:creator iasis:samaneh.
 iasis:chromosome rdfs:domain iasis:Mutation;
-				 rdfs:range rdfs:Chromosome;
+				 rdfs:range rdfs:Literal;
                  dce:creator iasis:samaneh.
 iasis:chromosome rdfs:domain iasis:CGI;
-				 rdfs:range rdfs:Chromosome;
+				 rdfs:range rdfs:Literal;
                  dce:creator iasis:samaneh.
 iasis:strand rdfs:domain iasis:Mutation;
 			 rdfs:range rdfs:Literal;
