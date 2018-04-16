@@ -311,6 +311,9 @@ iasis:transcript_identification rdf:type owl:ObjectProperty;
                                 dce:creator iasis:samaneh.
 iasis:mutationType_identification rdf:type owl:ObjectProperty;
                                    dce:creator iasis:samaneh.
+iasis:protein_identification rdf:type owl:ObjectProperty;
+                             dce:creator iasis:samaneh.
+
 iasis:cds_length rdf:type owl:DatatypeProperty;
                  dce:creator iasis:samaneh.
 iasis:age rdf:type owl:DatatypeProperty;
@@ -612,6 +615,10 @@ iasis:transcript_identification rdfs:domain iasis:Transcript;
 iasis:mutationType_identification rdfs:domain iasis:MutationType;            
 							       rdfs:range iasis:MutationTypeAnnotation;
                                    dce:creator iasis:samaneh.
+iasis:protein_identification rdfs:domain iasis:Protein;            
+							       rdfs:range iasis:ProteinAnnotation;
+                                   dce:creator iasis:samaneh.
+
 iasis:cds_length rdfs:domain iasis:Gene;
 				 rdfs:range rdfs:Literal;
                  dce:creator iasis:samaneh.
