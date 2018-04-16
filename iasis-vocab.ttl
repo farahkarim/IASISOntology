@@ -192,6 +192,8 @@ iasis:ProteinAnnotation rdf:type owl:Class;
                         dce:creator iasis:samaneh.
 iasis:Transcription rdf:type owl:Class;
                     dce:creator iasis:samaneh.
+iasis:RBP_RNA_PhysicalInteraction	rdf:type	owl:Class;
+									dce:creator	iasis:samaneh.
 
 #### WP2 requirements:
 
@@ -394,10 +396,12 @@ iasis:resistance_to	rdf:type	owl:ObjectProperty;
 
 iasis:trans_eqtl rdf:type owl:ObjectProperty;
                  dce:creator iasis:samaneh.
-iasis:physical_interaction rdf:type owl:ObjectProperty;
-                           dce:creator iasis:samaneh.
 iasis:translates_as rdf:type owl:ObjectProperty;
                     dce:creatoe iasis:samaneh.
+iasis:globalscore rdf:type owl:DatatypeProperty;
+                  dce:creatoe iasis:samaneh.
+iasis:omixcore rdf:type owl:DatatypeProperty;
+               dce:creatoe iasis:samaneh.
 
 #### WP2 requirements:
 
@@ -789,12 +793,23 @@ iasis:is_related_to rdfs:domain iasis:Gene;
 iasis:is_related_to rdfs:domain iasis:GExp;
 			        rdfs:range iasis:Transcription;
                     dce:creator iasis:samaneh.
-iasis:physical_interaction rdfs:domain iasis:Protein;
-                           rdfs:range iasis:Transcript;
-                           dce:creator iasis:samaneh.
+iasis:is_related_to rdfs:domain iasis:Protein;
+			        rdfs:range iasis:RBP_RNA_PhysicalInteraction;
+                    dce:creator iasis:samaneh.
+iasis:is_related_to rdfs:domain iasis:Transcript;
+			        rdfs:range iasis:RBP_RNA_PhysicalInteraction;
+                    dce:creator iasis:samaneh.
 iasis:translates_as rdfs:domain iasis:Transcript;
                     rdfs:range iasis:Protein;  
                     dce:creatoe iasis:samaneh.
+iasis:globalscore rdfs:domain iasis:RBP_RNA_PhysicalInteraction;
+                  rdfs:range iasis:Literal;  
+                  dce:creatoe iasis:samaneh.
+iasis:omixcore rdfs:domain iasis:RBP_RNA_PhysicalInteraction;
+               rdfs:range iasis:Literal;  
+               dce:creatoe iasis:samaneh.
+
+
 #### WP2 requirements:
 iasis:hasBiopsy	rdfs:domain	iasis:LCPatient;
 				rdfs:range	iasis:LiquidBiopsy.
