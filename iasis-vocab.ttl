@@ -467,6 +467,12 @@ iasis:ecogList	rdf:type	owl:DatatypeProperty;
 				rdfs:comment "Not included in the original data from WP2, but is calulated as part of in-house preprocessing.";
 				dce:creator	iasis:samaneh.
 
+#### DrugTarget Interactions requirements:
+
+iasis:interacts	rdf:type	owl:ObjectProperty;
+				rdfs:comment "Drugs interacts with protein target!";
+				dce:creator iasis:samaneh.
+
 ###########Domains And Ranges
 iasis:partOf rdfs:domain	iasis:Concept;
 			 rdfs:range	iasis:Concept.
