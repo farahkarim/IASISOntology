@@ -254,34 +254,10 @@ iasis:is_related_to rdf:type	owl:ObjectProperty.
 iasis:annotates rdf:type owl:ObjectProperty.
 iasis:cUITerm	rdf:type owl:DatatypeProperty.
 
-iasis:drug_identification rdf:type owl:ObjectProperty;
-                         dce:creator iasis:samaneh.
-
 #### COSMIC requirements:
 iasis:description rdf:type owl:DatatypeProperty;
                   rdfs:comment "a property of Annotation Class";
 				  dce:creator iasis:samaneh.	
-iasis:sample_identification rdf:type owl:ObjectProperty;
-                            dce:creator iasis:samaneh.
-iasis:gene_identification rdf:type owl:ObjectProperty;
-                          dce:creator iasis:samaneh.
-iasis:tumor_identification rdf:type owl:ObjectProperty;
-                           dce:creator iasis:samaneh.
-iasis:mutation_identification rdf:type owl:ObjectProperty;
-                              dce:creator iasis:samaneh.
-iasis:cnv_identification rdf:type owl:ObjectProperty;
-                         dce:creator iasis:samaneh.
-iasis:cgi_identification rdf:type owl:ObjectProperty;
-                         dce:creator iasis:samaneh.
-iasis:gexp_identification rdf:type owl:ObjectProperty;
-                          dce:creator iasis:samaneh.
-iasis:transcript_identification rdf:type owl:ObjectProperty;
-                                dce:creator iasis:samaneh.
-iasis:mutationType_identification rdf:type owl:ObjectProperty;
-                                   dce:creator iasis:samaneh.
-iasis:protein_identification rdf:type owl:ObjectProperty;
-                             dce:creator iasis:samaneh.
-
 iasis:cds_length rdf:type owl:DatatypeProperty;
                  dce:creator iasis:samaneh.
 iasis:age rdf:type owl:DatatypeProperty;
