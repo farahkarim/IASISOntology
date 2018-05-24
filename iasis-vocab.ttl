@@ -430,6 +430,14 @@ iasis:ann_label rdfs:domain	iasis:Annotation;
 			rdfs:range	rdfs:Literal.
 iasis:source	rdfs:domain iasis:Annotation;
 				rdfs:range	iasis:Vocabulary.
+
+iasis:id	rdfs:domain iasis:Concept;
+			rdfs:range	iasis:VocTerm.
+iasis:ann_label rdfs:domain	iasis:Concept;
+			rdfs:range	rdfs:Literal.
+iasis:source	rdfs:domain iasis:Concept;
+				rdfs:range	iasis:Vocabulary.
+
 iasis:description 	rdfs:domain	iasis:Annotation;
 					rdfs:range	rdfs:Literal;
 					dce:creator	iasis:samaneh.
@@ -513,64 +521,12 @@ iasis:cUITerm rdfs:domain iasis:Annotation;
 iasis:publication_identification rdfs:domain iasis:Publication;
                                  rdfs:range iasis:PublicationAnnotation;  
                                  dce:creator iasis:samaneh.
-iasis:patient_identification rdfs:domain iasis:Patient;
-                             rdfs:range iasis:PatientAnnotation;
-                             dce:creator iasis:samaneh.
-iasis:treatment_identification rdfs:domain iasis:Treatment;
-                               rdfs:range iasis:TreatmentAnnotation;
-                               dce:creator iasis:samaneh.
-iasis:biomarker_identification rdfs:domain iasis:BioMarker;
-                               rdfs:range iasis:BioMarkerAnnotation;
-                               dce:creator iasis:samaneh.
-iasis:clinicalrecord_identification rdfs:domain iasis:ClinicalRecord;
-                                    rdfs:range iasis:ClinicalRecordAnnotation;
-                                    dce:creator iasis:samaneh.
-iasis:test_identification rdfs:domain iasis:Test;
-                          rdfs:range iasis:TestAnnotation;
-                          dce:creator iasis:samaneh.
-iasis:image_identification rdfs:domain iasis:Image;
-                           rdfs:range iasis:ImageAnnotation;
-                           dce:creator iasis:samaneh.
-iasis:drug_identification rdfs:domain iasis:Drug;
-                          rdfs:range iasis:DrugAnnotation;
-                          dce:creator iasis:samaneh.
 
 #### COSMIC requirements:
 
 iasis:description rdfs:domain iasis:Annotation;
 				  rdfs:range rdfs:Literal;
                   dce:creator iasis:samaneh.   
-iasis:sample_identification rdfs:domain iasis:Sample;
-					        rdfs:range iasis:SampleAnnotation;
-                            dce:creator iasis:samaneh.
-iasis:gene_identification rdfs:domain iasis:Gene;
-						  rdfs:range iasis:GeneAnnotation;
-                          dce:creator iasis:samaneh.
-iasis:tumor_identification rdfs:domain iasis:Tumor;
-						   rdfs:range iasis:TumorAnnotation;
-                           dce:creator iasis:samaneh.
-iasis:mutation_identification rdfs:domain iasis:Mutation;
-							  rdfs:range iasis:MutationAnnotation;
-                              dce:creator iasis:samaneh.
-iasis:cnv_identification rdfs:domain iasis:CNV;
-						 rdfs:range iasis:CNVAnnotation;
-                         dce:creator iasis:samaneh.
-iasis:cgi_identification rdfs:domain iasis:CGI;
-					     rdfs:range iasis:CGIAnnotation;
-                         dce:creator iasis:samaneh.
-iasis:gexp_identification rdfs:domain iasis:GExp;
-						  rdfs:range iasis:GExpAnnotation;
-                          dce:creator iasis:samaneh.
-iasis:transcript_identification rdfs:domain iasis:Transcript;
-							    rdfs:range iasis:TranscriptAnnotation;
-                                dce:creator iasis:samaneh.
-iasis:mutationType_identification rdfs:domain iasis:MutationType;            
-							       rdfs:range iasis:MutationTypeAnnotation;
-                                   dce:creator iasis:samaneh.
-iasis:protein_identification rdfs:domain iasis:Protein;            
-							       rdfs:range iasis:ProteinAnnotation;
-                                   dce:creator iasis:samaneh.
-
 iasis:cds_length rdfs:domain iasis:Gene;
 				 rdfs:range rdfs:Literal;
                  dce:creator iasis:samaneh.
@@ -727,6 +683,10 @@ iasis:transcribed_as	rdfs:domain	iasis:Gene;
 iasis:resistance_to	rdfs:domain	iasis:Mutation;
 					rdfs:range	iasis:Drug;
 					dce:creator	iasis:samaneh.
+iasis:is_related_to	rdfs:domain	iasis:Transcription;
+					rdfs:range	iasis:Gene;
+					dce:creator	iasis:samaneh.
+
 ##### WP3 requirements:
 
 iasis:trans_eqtl rdfs:domain iasis:SNP;
@@ -928,24 +888,6 @@ iasis:Transcript rdfs:subClassOf iasis:Concept;
                  dce:creator iasis:samaneh.
 iasis:MutationType rdfs:subClassOf iasis:Concept;
                    dce:creator iasis:samaneh.
-iasis:GeneAnnotation rdfs:subClassOf iasis:Annotation;
-                     dce:creator iasis:samaneh.
-iasis:SampleAnnotation rdfs:subClassOf iasis:Annotation;
-                       dce:creator iasis:samaneh.
-iasis:TumorAnnotation rdfs:subClassOf iasis:Annotation;
-                      dce:creator iasis:samaneh.
-iasis:MutationAnnotation rdfs:subClassOf iasis:Annotation;
-                         dce:creator iasis:samaneh.
-iasis:CNVAnnotation rdfs:subClassOf iasis:Annotation;
-                    dce:creator iasis:samaneh.
-iasis:CGIAnnotation rdfs:subClassOf iasis:Annotation;
-                    dce:creator iasis:samaneh.
-iasis:GExpAnnotation rdfs:subClassOf iasis:Annotation;
-                     dce:creator iasis:samaneh.
-iasis:TranscriptAnnotation rdfs:subClassOf iasis:Annotation;
-                           dce:creator iasis:samaneh.
-iasis:MutationTypeAnnotation rdfs:subClassOf iasis:Annotation;
-                             dce:creator iasis:samaneh.
 iasis:GeneralMutationType rdfs:subClassOf iasis:MutationType;
                           rdfs:comment "extracted from CNV dataset";
                           dce:creator iasis:samaneh.
@@ -993,8 +935,6 @@ iasis:ResistanceMutation	rdfs:subClassOf	iasis:Mutation;
 
 iasis:Protein rdfs:subClassOf iasis:Concept;
               dce:creator iasis:samaneh.
-iasis:ProteinAnnotation rdfs:subClassOf iasis:Annotation;
-                        dce:creator iasis:samaneh.
 iasis:Transcription rdfs:subClassOf iasis:Relation;
                     dce:creator iasis:samaneh.
 
