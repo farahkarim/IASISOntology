@@ -275,6 +275,9 @@ iasis:mentioned_in rdf:type owl:ObjectProperty;
 iasis:mutation_pepSeq	rdf:type	owl:DatatypeProperty;
 						rdfs:comment "The new column produced from Mutation AA column, excluding p.";
 						dce:creator	iasis:samaneh.
+iasis:mutation_NucleotideSeq	rdf:type	owl:DatatypeProperty;
+								rdfs:comment "The new column produced from Mutation CDS column, excluding c. Those including extra characters are ignored to be added to this column.";
+								dce:creator	iasis:samaneh.
 iasis:chromosome rdf:type owl:DatatypeProperty;
                  dce:creator iasis:samaneh.
 iasis:strand rdf:type owl:DatatypeProperty;
@@ -546,6 +549,9 @@ iasis:mutation_pepSeq	rdfs:domain	iasis:Mutation;
 						rdfs:range rdfs:Literal;
 						dce:creator	iasis:samaneh.
 iasis:mutation_pepSeq	rdfs:domain	iasis:ResistanceMutation;
+						rdfs:range rdfs:Literal;
+						dce:creator	iasis:samaneh.
+iasis:mutation_NucleotideSeq	rdfs:domain	iasis:Mutation;
 						rdfs:range rdfs:Literal;
 						dce:creator	iasis:samaneh.
 iasis:chromosome rdfs:domain iasis:CNV;
