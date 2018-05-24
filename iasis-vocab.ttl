@@ -48,20 +48,6 @@ iasis:LCAnnotation rdf:type owl:Class.
 iasis:ADAnnotation rdf:type owl:Class.
 iasis:PublicationAnnotation rdf:type owl:Class;
                             dce:creator iasis:samaneh.
-iasis:PatientAnnotation rdf:type owl:Class;
-                        dce:creator iasis:samaneh.
-iasis:TreatmentAnnotation rdf:type owl:Class;
-                          dce:creator iasis:samaneh.
-iasis:BioMarkerAnnotation rdf:type owl:Class;
-                          dce:creator iasis:samaneh.
-iasis:ClinicalRecordAnnotation rdf:type owl:Class;
-                               dce:creator iasis:samaneh.
-iasis:TestAnnotation rdf:type owl:Class;
-                     dce:creator iasis:samaneh.
-iasis:ImageAnnotation rdf:type owl:Class;
-                      dce:creator iasis:samaneh.
-iasis:DrugAnnotation rdf:type owl:Class;
-                     dce:creator iasis:samaneh.
 
 iasis:UMLS_Relation rdf:type owl:Class.
 iasis:Has_Risk_Of rdf:type owl:Class.
@@ -118,24 +104,6 @@ iasis:Transcript rdf:type owl:Class;
                  dce:creator iasis:samaneh.
 iasis:MutationType rdf:type owl:Class;
                    dce:creator iasis:samaneh.
-iasis:GeneAnnotation rdf:type owl:Class;
-                     dce:creator iasis:samaneh.
-iasis:SampleAnnotation rdf:type owl:Class;
-                       dce:creator iasis:samaneh.
-iasis:TumorAnnotation rdf:type owl:Class;
-                      dce:creator iasis:samaneh.
-iasis:MutationAnnotation rdf:type owl:Class;
-                         dce:creator iasis:samaneh.
-iasis:CNVAnnotation rdf:type owl:Class;
-                    dce:creator iasis:samaneh.
-iasis:CGIAnnotation rdf:type owl:Class;
-                    dce:creator iasis:samaneh.
-iasis:GExpAnnotation rdf:type owl:Class;
-                     dce:creator iasis:samaneh.
-iasis:TranscriptAnnotation rdf:type owl:Class;
-                           dce:creator iasis:samaneh.
-iasis:MutationTypeAnnotation rdf:type owl:Class;
-                             dce:creator iasis:samaneh.
 
 iasis:GeneralMutationType rdf:type owl:Class;
                           dce:creator iasis:samaneh.
@@ -188,8 +156,6 @@ iasis:CancerGeneCensus	rdf:type	owl:Class;
 
 iasis:Protein rdf:type owl:Class;
               dce:creator iasis:samaneh.
-iasis:ProteinAnnotation rdf:type owl:Class;
-                        dce:creator iasis:samaneh.
 iasis:Transcription rdf:type owl:Class;
                     dce:creator iasis:samaneh.
 iasis:RBP_RNA_PhysicalInteraction	rdf:type	owl:Class;
