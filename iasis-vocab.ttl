@@ -236,10 +236,7 @@ iasis:obs_start_time	rdf:type	owl:DatatypeProperty.
 iasis:obs_end_time	rdf:type	owl:DatatypeProperty.
 iasis:trt_start_time	rdf:type	owl:DatatypeProperty.
 iasis:trt_end_time rdf:type owl:DatatypeProperty.
-ssn:generates	rdf:type	owl:ObjectProperty.
-ssn:generated_by	rdf:type	owl:ObjectProperty.
 ssn:obs_time	rdf:type	owl:DatatypeProperty.
-ssn:feature_of_interest	rdf:type	owl:ObjectProperty.
 ssn:result	rdf:type	owl:ObjectProperty.
 ssn:uom	rdf:type	owl:ObjectProperty.
 ssn:value	rdf:type	owl:DatatypeProperty.
@@ -417,8 +414,6 @@ iasis:interacts	rdf:type	owl:ObjectProperty;
 ###########Domains And Ranges
 iasis:partOf rdfs:domain	iasis:Concept;
 			 rdfs:range	iasis:Concept.
-iasis:requestedTest rdfs:domain	ssn:Observation;
-					rdfs:range	iasis:Test.
 iasis:provenance	rdfs:domain	iasis:Publication;
 					rdfs:range	iasis:PubRepository.
 iasis:confidence rdfs:domain iasis:Relation;
@@ -464,8 +459,6 @@ iasis:bm_description	rdfs:domain	iasis:BioMarker;
 			rdfs:range	iasis:Annotation.
 iasis:has_level	rdfs:domain	iasis:BioMarker;
 			rdfs:range	iasis:BioMarkerLevel.
-iasis:prescripted_drug	rdfs:domain	iasis:Treatment;
-			rdfs:range	iasis:InterAnnotation.
 iasis:is_died	rdfs:domain iasis:Patient;
 		rdfs:range	rdfs:Literal.
 iasis:obs_start_time	rdfs:domain iasis:Patient;
@@ -476,14 +469,8 @@ iasis:trt_start_time	rdfs:domain iasis:Treatment;
 		rdfs:range	rdfs:Literal.
 iasis:trt_end_time	rdfs:domain iasis:Treatment;
 		rdfs:range	rdfs:Literal.
-ssn:generates	rdfs:domain iasis:Treatment;
-		rdfs:range	ssn:Observation.
-ssn:generated_by	rdfs:domain ssn:Observation;
-		rdfs:range	iasis:Treatment.
 ssn:obs_time	rdfs:domain ssn:Observation;
 		rdfs:range	rdfs:Literal.
-ssn:feature_of_interest	rdfs:domain ssn:Observation;
-		rdfs:range	iasis:Patient.
 ssn:result	rdfs:domain ssn:Observation;
 		rdfs:range	ssn:Measurement.
 ssn:uom	rdfs:domain	ssn:Measurement;
