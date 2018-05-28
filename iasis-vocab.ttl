@@ -244,7 +244,7 @@ ssn:value	rdf:type	owl:DatatypeProperty.
 iasis:has_annotation rdf:type	owl:ObjectProperty.
 
 iasis:confidence rdf:type	owl:DatatypeProperty.
-iasis:is_related_to rdf:type	owl:ObjectProperty.
+iasis:isRelatedTo rdf:type	owl:ObjectProperty.
 iasis:annotates rdf:type owl:ObjectProperty.
 iasis:cUITerm	rdf:type owl:DatatypeProperty.
 
@@ -674,22 +674,22 @@ iasis:transcription_isRelatedTo_gene	rdfs:domain	iasis:Transcription;
 iasis:trans_eqtl rdfs:domain iasis:SNP;
                  rdfs:range iasis:Transcript;
                  dce:creator iasis:samaneh.
-iasis:is_related_to rdfs:domain iasis:Transcript;
-			        rdfs:range iasis:Transcription;
-                    dce:creator iasis:samaneh.
-iasis:is_related_to rdfs:domain iasis:Gene;
-			        rdfs:range iasis:Transcription;
-                    dce:creator iasis:samaneh.
-iasis:is_related_to rdfs:domain iasis:GExp;
-			        rdfs:range iasis:Transcription;
-                    dce:creator iasis:samaneh.
-iasis:is_related_to rdfs:domain iasis:Protein;
-			        rdfs:range iasis:RBP_RNA_PhysicalInteraction;
-                    dce:creator iasis:samaneh.
-iasis:is_related_to rdfs:domain iasis:Transcript;
-			        rdfs:range iasis:RBP_RNA_PhysicalInteraction;
-                    dce:creator iasis:samaneh.
-iasis:translates_as rdfs:domain iasis:Transcript;
+iasis:transcript_isRelatedTo_transcription	rdfs:domain iasis:Transcript;
+			        						rdfs:range iasis:Transcription;
+                    						dce:creator iasis:samaneh.
+iasis:gene_isRelatedTo_transcription	rdfs:domain iasis:Gene;
+			        					rdfs:range iasis:Transcription;
+                    					dce:creator iasis:samaneh.
+iasis:gexp_isRelatedTo_transcription	rdfs:domain iasis:GExp;
+			        					rdfs:range iasis:Transcription;
+                    					dce:creator iasis:samaneh.
+iasis:protein_isRelatedTo_physicalInteraction	rdfs:domain iasis:Protein;
+			        							rdfs:range iasis:RBP_RNA_PhysicalInteraction;
+                    							dce:creator iasis:samaneh.
+iasis:transcript_isRelatedTo_physicalInteraction	rdfs:domain iasis:Transcript;
+			        								rdfs:range iasis:RBP_RNA_PhysicalInteraction;
+                    								dce:creator iasis:samaneh.
+iasis:translates_as	rdfs:domain iasis:Transcript;
                     rdfs:range iasis:Protein;  
                     dce:creatoe iasis:samaneh.
 iasis:globalscore rdfs:domain iasis:RBP_RNA_PhysicalInteraction;
