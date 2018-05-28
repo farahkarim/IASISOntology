@@ -488,11 +488,11 @@ iasis:confidence rdfs:domain iasis:Relation;
 iasis:prec_tool rdfs:domain iasis:Relation;
 			rdfs:range iasis:AnalysisTool.
 
-iasis:is_related_to rdfs:domain iasis:Concept;
+iasis:isRelatedTo rdfs:domain iasis:Concept;
 					rdfs:range iasis:Relation.
-iasis:is_related_to	rdfs:domain	iasis:Gene;
-						rdfs:range	iasis:Sample;
-						dce:creator	iasis:samaneh.
+iasis:gene_isRelatedTo_sample	rdfs:domain	iasis:Gene;
+								rdfs:range	iasis:Sample;
+								dce:creator	iasis:samaneh.
 
 iasis:cUITerm rdfs:domain iasis:Annotation;
 				rdfs:range	rdfs:Literal.
@@ -536,51 +536,51 @@ iasis:mentioned_in rdfs:domain iasis:Mutation;
 iasis:mutation_pepSeq	rdfs:domain	iasis:Mutation;
 						rdfs:range rdfs:Literal;
 						dce:creator	iasis:samaneh.
-iasis:mutation_pepSeq	rdfs:domain	iasis:ResistanceMutation;
-						rdfs:range rdfs:Literal;
-						dce:creator	iasis:samaneh.
+iasis:resistance_mutation_pepSeq	rdfs:domain	iasis:ResistanceMutation;
+									rdfs:range rdfs:Literal;
+									dce:creator	iasis:samaneh.
 iasis:mutation_NucleotideSeq	rdfs:domain	iasis:Mutation;
 						rdfs:range rdfs:Literal;
 						dce:creator	iasis:samaneh.
-iasis:chromosome rdfs:domain iasis:CNV;
-				 rdfs:range rdfs:Literal;
-                 dce:creator iasis:samaneh.
-iasis:chromosome rdfs:domain iasis:Mutation;
-				 rdfs:range rdfs:Literal;
-                 dce:creator iasis:samaneh.
-iasis:chromosome rdfs:domain iasis:CGI;
-				 rdfs:range rdfs:Literal;
-                 dce:creator iasis:samaneh.
-iasis:strand rdfs:domain iasis:Mutation;
-			 rdfs:range rdfs:Literal;
-             dce:creator iasis:samaneh.
-iasis:start rdfs:domain iasis:CNV;
-			rdfs:range rdfs:Literal;
-            dce:creator iasis:samaneh.
-iasis:start rdfs:domain iasis:Mutation;
-			rdfs:range rdfs:Literal;
-            dce:creator iasis:samaneh.
-iasis:end rdfs:domain iasis:CNV;
-		  rdfs:range rdfs:Literal;
-          dce:creator iasis:samaneh.
-iasis:end rdfs:domain iasis:Mutation;
-		  rdfs:range rdfs:Literal;
-          dce:creator iasis:samaneh.
+iasis:cnv_chromosome	rdfs:domain iasis:CNV;
+				 		rdfs:range rdfs:Literal;
+                 		dce:creator iasis:samaneh.
+iasis:mutation_chromosome	rdfs:domain iasis:Mutation;
+				 			rdfs:range rdfs:Literal;
+                 			dce:creator iasis:samaneh.
+iasis:cgi_chromosome	rdfs:domain iasis:CGI;
+				 		rdfs:range rdfs:Literal;
+                 		dce:creator iasis:samaneh.
+iasis:mutation_strand	rdfs:domain iasis:Mutation;
+			 			rdfs:range rdfs:Literal;
+            			dce:creator iasis:samaneh.
+iasis:cnv_start	rdfs:domain iasis:CNV;
+				rdfs:range rdfs:Literal;
+            	dce:creator iasis:samaneh.
+iasis:mutation_start	rdfs:domain iasis:Mutation;
+						rdfs:range rdfs:Literal;
+            			dce:creator iasis:samaneh.
+iasis:cnv_end	rdfs:domain iasis:CNV;
+		  		rdfs:range rdfs:Literal;
+          		dce:creator iasis:samaneh.
+iasis:mutation_end	rdfs:domain iasis:Mutation;
+		  			rdfs:range rdfs:Literal;
+          			dce:creator iasis:samaneh.
 iasis:genomic_position rdfs:domain iasis:CGI;
 					   rdfs:range rdfs:Literal;
                        dce:creator iasis:samaneh.
-iasis:study_id rdfs:domain iasis:CNV;
-			   rdfs:range iasis:VocTerm;
-               dce:creator iasis:samaneh.
-iasis:study_id rdfs:domain iasis:Mutation;
-			   rdfs:range iasis:VocTerm;
-               dce:creator iasis:samaneh.
-iasis:study_id rdfs:domain iasis:CGI;
-			   rdfs:range iasis:VocTerm;
-               dce:creator iasis:samaneh.
-iasis:study_id rdfs:domain iasis:GExp;
-			   rdfs:range iasis:VocTerm;
-               dce:creator iasis:samaneh.
+iasis:cnv_study_id	rdfs:domain iasis:CNV;
+			   		rdfs:range iasis:VocTerm;
+               		dce:creator iasis:samaneh.
+iasis:mutation_study_id	rdfs:domain iasis:Mutation;
+			   			rdfs:range iasis:VocTerm;
+               			dce:creator iasis:samaneh.
+iasis:cgi_study_id	rdfs:domain iasis:CGI;
+			   		rdfs:range iasis:VocTerm;
+               		dce:creator iasis:samaneh.
+iasis:gexp_study_id	rdfs:domain iasis:GExp;
+			   		rdfs:range iasis:VocTerm;
+               		dce:creator iasis:samaneh.
 iasis:mutation_cds rdfs:domain iasis:Mutation;
 				   rdfs:range rdfs:Literal;
                    dce:creator iasis:samaneh.
@@ -617,57 +617,57 @@ iasis:total_cn rdfs:domain iasis:CNV;
 iasis:minor_allele rdfs:domain iasis:CNV;
 				   rdfs:range rdfs:Literal;
                    dce:creator iasis:samaneh.
-iasis:is_located rdfs:domain iasis:CGI;
-				 rdfs:range iasis:Gene;
-                 dce:creator iasis:samaneh.
-iasis:is_located rdfs:domain iasis:CGI;
-				 rdfs:range iasis:Sample;
-                 dce:creator iasis:samaneh.
-iasis:is_located rdfs:domain iasis:CNV;
-			     rdfs:range iasis:Gene;
-                 dce:creator iasis:samaneh.
-iasis:is_located rdfs:domain iasis:CGI;
-				 rdfs:range iasis:Tumor;
-                 dce:creator iasis:samaneh.
-iasis:expressed_as rdfs:domain iasis:Gene;
-				   rdfs:range iasis:GExp;
-                   dce:creator iasis:samaneh. 
-iasis:occurred_in rdfs:domain iasis:CNV;
-				  rdfs:range iasis:Sample;
-                  dce:creator iasis:samaneh.
-iasis:occurred_in rdfs:domain iasis:CNV;
-				  rdfs:range iasis:Tumor;
-                  dce:creator iasis:samaneh.
-iasis:occurred_in rdfs:domain iasis:Mutation;
-				  rdfs:range iasis:Gene;
-                  dce:creator iasis:samaneh.
-iasis:occurred_in rdfs:domain iasis:Mutation;
-				  rdfs:range iasis:Tumor;
-                  dce:creator iasis:samaneh.
-iasis:occurred_in rdfs:domain iasis:Mutation;
-				  rdfs:range iasis:Sample;
-                  dce:creator iasis:samaneh.
-iasis:is_taken_from rdfs:domain iasis:Sample;
-					rdfs:range iasis:Tumor;
-                    dce:creator iasis:samaneh.
-iasis:classifies_as rdfs:domain iasis:Mutation;
-					rdfs:range iasis:MutationType;
-                    dce:creator iasis:samaneh.
-iasis:classifies_as rdfs:domain iasis:CNV;
-					rdfs:range iasis:MutationType;
-                    dce:creator iasis:samaneh.
+iasis:cgi_isLocatedIn_gene	rdfs:domain iasis:CGI;
+				 			rdfs:range iasis:Gene;
+                 			dce:creator iasis:samaneh.
+iasis:cgi_isLocatedIn_sample	rdfs:domain iasis:CGI;
+					 			rdfs:range iasis:Sample;
+                 				dce:creator iasis:samaneh.
+iasis:cnv_isLocatedIn_gene	rdfs:domain iasis:CNV;
+			     			rdfs:range iasis:Gene;
+                 			dce:creator iasis:samaneh.
+iasis:cgi_isLocatedIn_tumor	rdfs:domain iasis:CGI;
+				 			rdfs:range iasis:Tumor;
+                 			dce:creator iasis:samaneh.
+iasis:gene_isExpressedAs_gexp	rdfs:domain iasis:Gene;
+				   				rdfs:range iasis:GExp;
+                   				dce:creator iasis:samaneh. 
+iasis:cnv_isLocatedIn_sample	rdfs:domain iasis:CNV;
+				  				rdfs:range iasis:Sample;
+                  				dce:creator iasis:samaneh.
+iasis:cnv_isLocatedIn_tumor	rdfs:domain iasis:CNV;
+				  			rdfs:range iasis:Tumor;
+                  			dce:creator iasis:samaneh.
+iasis:mutation_isLocatedIn_gene	rdfs:domain iasis:Mutation;
+				  				rdfs:range iasis:Gene;
+                  				dce:creator iasis:samaneh.
+iasis:mutation_isLocatedIn_tumor	rdfs:domain iasis:Mutation;
+				  					rdfs:range iasis:Tumor;
+                  					dce:creator iasis:samaneh.
+iasis:mutation_isLocatedIn_sample	rdfs:domain iasis:Mutation;
+				  					rdfs:range iasis:Sample;
+                  					dce:creator iasis:samaneh.
+iasis:sample_isTakenFrom_tumor	rdfs:domain iasis:Sample;
+								rdfs:range iasis:Tumor;
+                    			dce:creator iasis:samaneh.
+iasis:mutation_isClassifiedAs_mutationType	rdfs:domain iasis:Mutation;
+											rdfs:range iasis:MutationType;
+                    						dce:creator iasis:samaneh.
+iasis:cnv_isClassifiedAs_mutationType	rdfs:domain iasis:CNV;
+										rdfs:range iasis:MutationType;
+                    					dce:creator iasis:samaneh.
 iasis:sampleSource	rdfs:domain	iasis:Sample;
 					rdfs:range	rdfs:Literal;
 					dce:creator	iasis:samaneh.
-iasis:transcribed_as	rdfs:domain	iasis:Gene;	
-						rdfs:range	iasis:Transcription;
-						dce:creator	iasis:samaneh.
-iasis:resistance_to	rdfs:domain	iasis:Mutation;
-					rdfs:range	iasis:Drug;
-					dce:creator	iasis:samaneh.
-iasis:is_related_to	rdfs:domain	iasis:Transcription;
-					rdfs:range	iasis:Gene;
-					dce:creator	iasis:samaneh.
+iasis:gene_isTranscribedAs_transcription	rdfs:domain	iasis:Gene;	
+											rdfs:range	iasis:Transcription;
+											dce:creator	iasis:samaneh.
+iasis:mutation_isResistantTo_drug	rdfs:domain	iasis:Mutation;
+									rdfs:range	iasis:Drug;
+									dce:creator	iasis:samaneh.
+iasis:transcription_isRelatedTo_gene	rdfs:domain	iasis:Transcription;
+										rdfs:range	iasis:Gene;
+										dce:creator	iasis:samaneh.
 
 ##### WP3 requirements:
 
