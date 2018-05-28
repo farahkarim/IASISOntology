@@ -217,6 +217,7 @@ iasis:provenance	rdf:type	owl:ObjectProperty.
 iasis:confidence	rdf:type	owl:DatatypeProperty.
 iasis:id	rdf:type	owl:ObjectProperty.
 iasis:ann_label	rdf:type	owl:DatatypeProperty.
+iasis:label	rdf:type	owl:DatatypeProperty.
 iasis:source	rdf:type	owl:ObjectProperty.
 iasis:description	rdf:type	owl:DatatypeProperty.
 iasis:prec_tool	rdf:type	owl:ObjectProperty.
@@ -427,7 +428,7 @@ iasis:source	rdfs:domain iasis:Annotation;
 
 iasis:id	rdfs:domain iasis:Concept;
 			rdfs:range	iasis:VocTerm.
-iasis:ann_label rdfs:domain	iasis:Concept;
+iasis:label rdfs:domain	iasis:Concept;
 			rdfs:range	rdfs:Literal.
 iasis:source	rdfs:domain iasis:Concept;
 				rdfs:range	iasis:Vocabulary.
