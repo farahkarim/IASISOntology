@@ -244,7 +244,10 @@ ssn:value	rdf:type	owl:DatatypeProperty.
 iasis:has_annotation rdf:type	owl:ObjectProperty.
 
 iasis:confidence rdf:type	owl:DatatypeProperty.
-iasis:isRelatedTo rdf:type	owl:ObjectProperty.
+iasis:isRelatedTo	rdf:type	owl:ObjectProperty;
+					rdfs:comment "relation between superclasses Concept and Relation classes".
+iasis:gene_isRelatedTo_sample	rdf:type	owl:ObjectProperty;
+								rdfs:comment "relation between Gene and Sample classes".
 iasis:annotates rdf:type owl:ObjectProperty.
 iasis:cUITerm	rdf:type owl:DatatypeProperty.
 
@@ -271,23 +274,40 @@ iasis:histologySubtype2	rdf:type owl:DatatypeProperty;
 iasis:mentioned_in rdf:type owl:ObjectProperty;
                    dce:creator iasis:samaneh.
 iasis:mutation_pepSeq	rdf:type	owl:DatatypeProperty;
-						rdfs:comment "The new column produced from Mutation AA column, excluding p.";
+						rdfs:comment "The new column produced from Mutation AA column, excluding p. in mutation dataset";
 						dce:creator	iasis:samaneh.
+iasis:resistance_mutation_pepSeq	rdf:type	owl:DatatypeProperty;
+									rdfs:comment "The new column produced from Mutation AA column, excluding p. in restanceMutation dataset";
+									dce:creator	iasis:samaneh.
 iasis:mutation_NucleotideSeq	rdf:type	owl:DatatypeProperty;
 								rdfs:comment "The new column produced from Mutation CDS column, excluding c. Those including extra characters are ignored to be added to this column.";
 								dce:creator	iasis:samaneh.
-iasis:chromosome rdf:type owl:DatatypeProperty;
+iasis:cnv_chromosome rdf:type owl:DatatypeProperty;
                  dce:creator iasis:samaneh.
-iasis:strand rdf:type owl:DatatypeProperty;
+iasis:mutation_chromosome rdf:type owl:DatatypeProperty;
+                 dce:creator iasis:samaneh.
+iasis:cgi_chromosome rdf:type owl:DatatypeProperty;
+                 dce:creator iasis:samaneh.
+iasis:mutation_strand rdf:type owl:DatatypeProperty;
              dce:creator iasis:samaneh.
-iasis:start rdf:type owl:DatatypeProperty;
-            dce:creator iasis:samaneh.
-iasis:end rdf:type owl:DatatypeProperty;
-          dce:creator iasis:samaneh.
+iasis:cnv_start	rdf:type owl:DatatypeProperty;
+            	dce:creator iasis:samaneh.
+iasis:mutation_start	rdf:type owl:DatatypeProperty;
+            			dce:creator iasis:samaneh.
+iasis:cnv_end	rdf:type owl:DatatypeProperty;
+          		dce:creator iasis:samaneh.
+iasis:mutation_end	rdf:type owl:DatatypeProperty;
+          			dce:creator iasis:samaneh.
 iasis:genomic_position rdf:type owl:DatatypeProperty;
                        dce:creator iasis:samaneh.
-iasis:study_id rdf:type owl:ObjectProperty;
-               dce:creator iasis:samaneh.
+iasis:cnv_study_id	rdf:type owl:ObjectProperty;
+               		dce:creator iasis:samaneh.
+iasis:mutation_study_id	rdf:type owl:ObjectProperty;
+               			dce:creator iasis:samaneh.
+iasis:cgi_study_id	rdf:type owl:ObjectProperty;
+               		dce:creator iasis:samaneh.
+iasis:gexp_study_id	rdf:type owl:ObjectProperty;
+               		dce:creator iasis:samaneh.
 iasis:mutation_cds rdf:type owl:DatatypeProperty;
                    dce:creator iasis:samaneh.
 iasis:mutation_aa rdf:type owl:DatatypeProperty;
@@ -312,29 +332,54 @@ iasis:total_cn rdf:type owl:DatatypeProperty;
                dce:creator iasis:samaneh.      
 iasis:minor_allele rdf:type owl:DatatypeProperty;
                    dce:creator iasis:samaneh.
-iasis:is_located rdf:type owl:ObjectProperty;
-                 dce:creator iasis:samaneh.
-iasis:expressed_as rdf:type owl:ObjectProperty;
-                   dce:creator iasis:samaneh.
-iasis:occurred_in rdf:type owl:ObjectProperty;
-                  dce:creator iasis:samaneh.
-iasis:is_taken_from rdf:type owl:ObjectProperty;
-                    dce:creator iasis:samaneh.
-iasis:classifies_as rdf:type owl:ObjectProperty;
-                    dce:creator iasis:samaneh.  
-
+iasis:cgi_isLocatedIn_gene	rdf:type owl:ObjectProperty;
+                 			dce:creator iasis:samaneh.
+iasis:cgi_isLocatedIn_sample	rdf:type owl:ObjectProperty;
+                 				dce:creator iasis:samaneh.
+iasis:cnv_isLocatedIn_gene	rdf:type owl:ObjectProperty;
+                 			dce:creator iasis:samaneh.
+iasis:cgi_isLocatedIn_tumor	rdf:type owl:ObjectProperty;
+                 			dce:creator iasis:samaneh.
+iasis:gene_isExpressedAs_gexp	rdf:type owl:ObjectProperty;
+                   				dce:creator iasis:samaneh.
+iasis:cnv_isLocatedIn_sample	rdf:type owl:ObjectProperty;
+                 				dce:creator iasis:samaneh.
+iasis:cnv_isLocatedIn_tumor	rdf:type owl:ObjectProperty;
+                 			dce:creator iasis:samaneh.
+iasis:mutation_isLocatedIn_gene	rdf:type owl:ObjectProperty;
+                 				dce:creator iasis:samaneh.
+iasis:mutation_isLocatedIn_tumor	rdf:type owl:ObjectProperty;
+                 					dce:creator iasis:samaneh.
+iasis:mutation_isLocatedIn_sample	rdf:type owl:ObjectProperty;
+                 					dce:creator iasis:samaneh.
+iasis:sample_isTakenFrom_tumor	rdf:type owl:ObjectProperty;
+                    			dce:creator iasis:samaneh.
+iasis:mutation_isClassifiedAs_mutationType	rdf:type owl:ObjectProperty;
+                    						dce:creator iasis:samaneh.  
+iasis:cnv_isClassifiedAs_mutationType	rdf:type owl:ObjectProperty;
+										dce:creator iasis:samaneh.
 iasis:sampleSource	rdf:type	owl:DatatypeProperty;
 					rdfs:comment "Appears in resistanceMutation dataset";
 					dce:creator	iasis:samaneh.
-iasis:transcribed_as	rdf:type	owl:ObjectProperty;
-						rdfs:comment "As connection between Gene and Transcription Relation.";
-						dce:creator	iasis:samaneh.
-iasis:resistance_to	rdf:type	owl:ObjectProperty;
-					dce:creator	iasis:samaneh.
+iasis:gene_isTranscribedAs_transcription	rdf:type	owl:ObjectProperty;
+											rdfs:comment "As connection between Gene and Transcription Relation.";
+											dce:creator	iasis:samaneh.
+iasis:mutation_isResistantTo_drug	rdf:type	owl:ObjectProperty;
+									dce:creator	iasis:samaneh.
 #### WP3 requirements:
 
 iasis:trans_eqtl rdf:type owl:ObjectProperty;
                  dce:creator iasis:samaneh.
+iasis:transcript_isRelatedTo_transcription	rdf:type owl:ObjectProperty;
+                 							dce:creator iasis:samaneh.
+iasis:gene_isRelatedTo_transcription	rdf:type owl:ObjectProperty;
+                 						dce:creator iasis:samaneh.
+iasis:gexp_isRelatedTo_transcription	rdf:type owl:ObjectProperty;
+                 						dce:creator iasis:samaneh.
+iasis:protein_isrelatedTo_physicalInteraction	rdf:type owl:ObjectProperty;
+                 								dce:creator iasis:samaneh.
+iasis:transcript_isrelatedTo_physicalInteraction	rdf:type owl:ObjectProperty;
+                	 								dce:creator iasis:samaneh.
 iasis:translates_as rdf:type owl:ObjectProperty;
                     dce:creatoe iasis:samaneh.
 iasis:globalscore rdf:type owl:DatatypeProperty;
