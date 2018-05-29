@@ -366,6 +366,8 @@ iasis:gene_isTranscribedAs_transcription	rdf:type	owl:ObjectProperty;
 											dce:creator	iasis:samaneh.
 iasis:mutation_isResistantTo_drug	rdf:type	owl:ObjectProperty;
 									dce:creator	iasis:samaneh.
+iasis:transcription_isRelatedTo_gene	rdf:type	owl:ObjectProperty;
+										dce:creator	iasis:samaneh.
 #### WP3 requirements:
 
 iasis:trans_eqtl rdf:type owl:ObjectProperty;
@@ -376,9 +378,9 @@ iasis:gene_isRelatedTo_transcription	rdf:type owl:ObjectProperty;
                  						dce:creator iasis:samaneh.
 iasis:gexp_isRelatedTo_transcription	rdf:type owl:ObjectProperty;
                  						dce:creator iasis:samaneh.
-iasis:protein_isrelatedTo_physicalInteraction	rdf:type owl:ObjectProperty;
+iasis:protein_isRelatedTo_physicalInteraction	rdf:type owl:ObjectProperty;
                  								dce:creator iasis:samaneh.
-iasis:transcript_isrelatedTo_physicalInteraction	rdf:type owl:ObjectProperty;
+iasis:transcript_isRelatedTo_physicalInteraction	rdf:type owl:ObjectProperty;
                 	 								dce:creator iasis:samaneh.
 iasis:translates_as rdf:type owl:ObjectProperty;
                     dce:creatoe iasis:samaneh.
