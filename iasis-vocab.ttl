@@ -467,6 +467,16 @@ iasis:ecogList	rdf:type	owl:DatatypeProperty;
 iasis:interacts	rdf:type	owl:ObjectProperty;
 				rdfs:comment "Drugs interacts with protein target!";
 				dce:creator iasis:samaneh.
+iasis:drug_interactsWith_protein	rdf:type	owl:ObjectProperty;
+									dce:creator iasis:samaneh.
+iasis:cosSim_isRelatedTo_drug	rdf:type	owl:ObjectProperty;
+								dce:creator iasis:samaneh.
+iasis:cosSim_isRelatedTo_hpo	rdf:type	owl:ObjectProperty;
+								dce:creator iasis:samaneh.
+iasis:hasSideEffect	rdf:type	owl:ObjectProperty;
+								dce:creator iasis:samaneh.
+iasis:similarity_value	rdf:type	owl:DataTypeProperty;
+						dce:creator iasis:samaneh.
 
 ###########Domains And Ranges
 iasis:partOf rdfs:domain	iasis:Concept;
@@ -760,7 +770,26 @@ iasis:omixcore rdfs:domain iasis:RBP_RNA_PhysicalInteraction;
                rdfs:range iasis:Literal;  
                dce:creatoe iasis:samaneh.
 
+#### Drug requirements:
 
+iasis:mentioned_in	rdfs:domain	iasis:Drug;
+					rdfs:range	iasis:Publication;
+					dce:creator	iasis:samaneh.
+iasis:drug_interactsWith_protein	rdfs:domain	iasis:Drug;
+									rdfs:range	iasis:Protein;
+									dce:creator iasis:samaneh.
+iasis:cosSim_isRelatedTo_drug	rdfs:domain	iasis:CosSim;
+								rdfs:range	iasis:Drug;
+								dce:creator iasis:samaneh.
+iasis:cosSim_isRelatedTo_hpo	rdfs:domain	iasis:CosSim;
+								rdfs:range	iasis:HPO;
+								dce:creator iasis:samaneh.
+iasis:similarity_value	rdfs:domain	iasis:CosSim;
+						rdfs:range	iasis:Literal;
+						dce:creator iasis:samaneh.
+iasis:hasSideEffect	rdfs:domain	iasis:Drug;
+					rdfs:range	iasis:HPO;
+					dce:creator iasis:samaneh.
 #### WP2 requirements:
 iasis:hasBiopsy	rdfs:domain	iasis:LCPatient;
 				rdfs:range	iasis:LiquidBiopsy.
