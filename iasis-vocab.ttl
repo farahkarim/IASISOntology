@@ -368,6 +368,10 @@ iasis:mutation_isResistantTo_drug	rdf:type	owl:ObjectProperty;
 									dce:creator	iasis:samaneh.
 iasis:transcription_isRelatedTo_gene	rdf:type	owl:ObjectProperty;
 										dce:creator	iasis:samaneh.
+iasis:mutation_isLocatedIn_sample	rdf:type owl:ObjectProperty;
+                  					dce:creator iasis:samaneh.
+iasis:transcript_isRelatedTo_gene	rdf:type owl:ObjectProperty;
+									dce:creator iasis:samaneh.
 #### WP3 requirements:
 
 iasis:trans_eqtl rdf:type owl:ObjectProperty;
@@ -694,6 +698,9 @@ iasis:mutation_isLocatedIn_tumor	rdfs:domain iasis:Mutation;
 iasis:mutation_isLocatedIn_sample	rdfs:domain iasis:Mutation;
 				  					rdfs:range iasis:Sample;
                   					dce:creator iasis:samaneh.
+iasis:mutation_isLocatedIn_transcript	rdfs:domain iasis:Mutation;
+				  						rdfs:range iasis:Transcript;
+                  						dce:creator iasis:samaneh.
 iasis:sample_isTakenFrom_tumor	rdfs:domain iasis:Sample;
 								rdfs:range iasis:Tumor;
                     			dce:creator iasis:samaneh.
@@ -715,7 +722,9 @@ iasis:mutation_isResistantTo_drug	rdfs:domain	iasis:Mutation;
 iasis:transcription_isRelatedTo_gene	rdfs:domain	iasis:Transcription;
 										rdfs:range	iasis:Gene;
 										dce:creator	iasis:samaneh.
-
+iasis:transcript_isRelatedTo_gene	rdfs:domain iasis:Transcript;
+									rdfs:range	iasis:Gene;
+									dce:creator	iasis:samaneh.
 ##### WP3 requirements:
 
 iasis:trans_eqtl rdfs:domain iasis:SNP;
