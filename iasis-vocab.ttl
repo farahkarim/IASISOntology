@@ -161,6 +161,11 @@ iasis:Transcription rdf:type owl:Class;
 iasis:RBP_RNA_PhysicalInteraction	rdf:type	owl:Class;
 									dce:creator	iasis:samaneh.
 
+#### Drug requirements:
+
+iasis:HPO rdf:type owl:Class.
+iasis:CosSim rdf:type owl:Class.
+
 #### WP2 requirements:
 
 iasis:LiquidBiopsy rdf:type owl:Class.
@@ -975,6 +980,11 @@ iasis:Protein rdfs:subClassOf iasis:Concept;
               dce:creator iasis:samaneh.
 iasis:Transcription rdfs:subClassOf iasis:Relation;
                     dce:creator iasis:samaneh.
+
+#### Drug requirements:
+iasis:HPO rdfs:subClassOf	iasis:Concept.
+iasis:CosSim rdfs:subClassOf	iasis:Concept.
+
 
 #### WP2 requirements:
 
