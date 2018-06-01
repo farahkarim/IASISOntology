@@ -165,6 +165,7 @@ iasis:RBP_RNA_PhysicalInteraction	rdf:type	owl:Class;
 
 iasis:HPO rdf:type owl:Class.
 iasis:CosSim rdf:type owl:Class.
+iasis:CosSim rdf:type owl:Class.
 
 #### WP2 requirements:
 
@@ -398,6 +399,22 @@ iasis:globalscore rdf:type owl:DatatypeProperty;
 iasis:omixcore rdf:type owl:DatatypeProperty;
                dce:creatoe iasis:samaneh.
 
+#### Drug requirements:
+
+iasis:interacts	rdf:type	owl:ObjectProperty;
+				rdfs:comment "Drugs interacts with protein target!";
+				dce:creator iasis:samaneh.
+iasis:drug_interactsWith_protein	rdf:type	owl:ObjectProperty;
+									dce:creator iasis:samaneh.
+iasis:cosSim_isRelatedTo_drug	rdf:type	owl:ObjectProperty;
+								dce:creator iasis:samaneh.
+iasis:cosSim_isRelatedTo_hpo	rdf:type	owl:ObjectProperty;
+								dce:creator iasis:samaneh.
+iasis:hasSideEffect	rdf:type	owl:ObjectProperty;
+								dce:creator iasis:samaneh.
+iasis:similarity_value	rdf:type	owl:DataTypeProperty;
+						dce:creator iasis:samaneh.
+
 #### WP2 requirements:
 
 iasis:gender	rdf:type	owl:DatatypeProperty.
@@ -461,22 +478,6 @@ iasis:biopsyList	rdf:type	owl:DatatypeProperty;
 iasis:ecogList	rdf:type	owl:DatatypeProperty;
 				rdfs:comment "Not included in the original data from WP2, but is calulated as part of in-house preprocessing.";
 				dce:creator	iasis:samaneh.
-
-#### DrugTarget Interactions requirements:
-
-iasis:interacts	rdf:type	owl:ObjectProperty;
-				rdfs:comment "Drugs interacts with protein target!";
-				dce:creator iasis:samaneh.
-iasis:drug_interactsWith_protein	rdf:type	owl:ObjectProperty;
-									dce:creator iasis:samaneh.
-iasis:cosSim_isRelatedTo_drug	rdf:type	owl:ObjectProperty;
-								dce:creator iasis:samaneh.
-iasis:cosSim_isRelatedTo_hpo	rdf:type	owl:ObjectProperty;
-								dce:creator iasis:samaneh.
-iasis:hasSideEffect	rdf:type	owl:ObjectProperty;
-								dce:creator iasis:samaneh.
-iasis:similarity_value	rdf:type	owl:DataTypeProperty;
-						dce:creator iasis:samaneh.
 
 ###########Domains And Ranges
 iasis:partOf rdfs:domain	iasis:Concept;
@@ -790,6 +791,7 @@ iasis:similarity_value	rdfs:domain	iasis:CosSim;
 iasis:hasSideEffect	rdfs:domain	iasis:Drug;
 					rdfs:range	iasis:HPO;
 					dce:creator iasis:samaneh.
+
 #### WP2 requirements:
 iasis:hasBiopsy	rdfs:domain	iasis:LCPatient;
 				rdfs:range	iasis:LiquidBiopsy.
@@ -1011,6 +1013,7 @@ iasis:Transcription rdfs:subClassOf iasis:Relation;
                     dce:creator iasis:samaneh.
 
 #### Drug requirements:
+
 iasis:HPO rdfs:subClassOf	iasis:Concept.
 iasis:CosSim rdfs:subClassOf	iasis:Concept.
 
@@ -1040,7 +1043,6 @@ iasis:Between66and75	rdfs:subClassOf	iasis:DiagnosisAgeGroup;
 						dce:creator	iasis:samaneh.
 iasis:OlderThan75	rdfs:subClassOf	iasis:DiagnosisAgeGroup;
 					dce:creator	iasis:samaneh.
-
 
 ###############PartOf
 iasis:ClinicalNote iasis:partOf iasis:ClinicalRecord.
