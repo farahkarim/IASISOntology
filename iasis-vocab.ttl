@@ -165,7 +165,12 @@ iasis:RBP_RNA_PhysicalInteraction	rdf:type	owl:Class;
 
 iasis:HPO rdf:type owl:Class.
 iasis:CosSim rdf:type owl:Class.
-iasis:CosSim rdf:type owl:Class.
+iasis:Sicomp rdf:type owl:Class.
+iasis:SmithWatermanSim rdf:type owl:Class.
+iasis:HPO rdf:type owl:Class.
+iasis:Enzyme rdf:type owl:Class.
+iasis:GPCR rdf:type owl:Class.
+
 
 #### WP2 requirements:
 
@@ -1016,7 +1021,11 @@ iasis:Transcription rdfs:subClassOf iasis:Relation;
 
 iasis:HPO rdfs:subClassOf	iasis:Concept.
 iasis:CosSim rdfs:subClassOf	iasis:Concept.
-
+iasis:Sicomp rdfs:subClassOf	iasis:Concept.
+iasis:SmithWatermanSim rdfs:subClassOf	iasis:Concept.
+iasis:HPO rdfs:subClassOf	iasis:Concept.
+iasis:Enzyme rdfs:subClassOf	iasis:Concept.
+iasis:GPCR rdfs:subClassOf	iasis:Concept.
 
 #### WP2 requirements:
 
