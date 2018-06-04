@@ -110,13 +110,6 @@ iasis:IsSNP rdf:type owl:Class;
             dce:creator iasis:samaneh.
 iasis:IsNotSNP rdf:type owl:Class;
                dce:creator iasis:samaneh.
-iasis:Methylation rdf:type owl:Class;
-                   rdfs:comment "extracted from methylation dataset";
-                   dce:creator iasis:samaneh.
-iasis:LowMethylated rdf:type owl:Class;
-                    dce:creator iasis:samaneh.
-iasis:HighMethylated rdf:type owl:Class;
-                     dce:creator iasis:samaneh.
 iasis:Regulation rdf:type owl:Class;
                   rdfs:comment "extracted from methylation dataset";
                   dce:creator iasis:samaneh.
@@ -326,6 +319,8 @@ iasis:total_cn rdf:type owl:DatatypeProperty;
                dce:creator iasis:samaneh.      
 iasis:minor_allele rdf:type owl:DatatypeProperty;
                    dce:creator iasis:samaneh.
+iasis:methylation rdf:type owl:DatatypeProperty;
+                  dce:creator iasis:samaneh.
 iasis:gene_isRelatedTo_sample	rdf:type	owl:ObjectProperty;
 								rdfs:comment "relation between Gene and Sample classes".
 iasis:cgi_isLocatedIn_gene	rdf:type owl:ObjectProperty;
@@ -650,6 +645,9 @@ iasis:total_cn rdfs:domain iasis:CNV;
 iasis:minor_allele rdfs:domain iasis:CNV;
 				   rdfs:range rdfs:Literal;
                    dce:creator iasis:samaneh.
+iasis:methylation	rdfs:domain	iasis:CGI;
+					rdfs:range	rdfs:Literal;
+                  	dce:creator iasis:samaneh.
 iasis:gene_isRelatedTo_sample	rdfs:domain	iasis:Gene;
 								rdfs:range	iasis:Sample;
 								dce:creator	iasis:samaneh.
@@ -965,12 +963,6 @@ iasis:IsSNP rdfs:subClassOf iasis:SNP;
             dce:creator iasis:samaneh.
 iasis:IsNotSNP rdfs:subClassOf iasis:SNP;
                dce:creator iasis:samaneh.
-iasis:Methylation rdfs:subClassOf iasis:CGI;
-                  dce:creator iasis:samaneh.
-iasis:LowMethylated rdfs:subClassOf iasis:Methylation;
-                    dce:creator iasis:samaneh.
-iasis:HighMethylated rdfs:subClassOf iasis:Methylation;
-                     dce:creator iasis:samaneh.
 iasis:Regulation rdfs:subClassOf iasis:GExp;
                  dce:creator iasis:samaneh.
 iasis:NormalExpressed rdfs:subClassOf iasis:Regulation;
