@@ -90,16 +90,6 @@ iasis:GeneralMutationType rdf:type owl:Class;
                           dce:creator iasis:samaneh.
 iasis:AdHocMutationType rdf:type owl:Class;
                         dce:creator iasis:samaneh.
-iasis:Regulation rdf:type owl:Class;
-                  rdfs:comment "extracted from methylation dataset";
-                  dce:creator iasis:samaneh.
-iasis:NormalExpressed rdf:type owl:Class;
-                      dce:creator iasis:samaneh.
-iasis:OverExpressed rdf:type owl:Class;
-                    dce:creator iasis:samaneh.
-iasis:UnderExpressed rdf:type owl:Class;
-                     dce:creator iasis:samaneh.
-
 iasis:ResistanceMutation	rdf:type	owl:Class;
 							rdfs:comment "Mutations identified in the literature as resistance mutations, including those conferring acquired resistance (after treatment) and intrinsic resistance (before treatment)";
 							dce:creator	iasis:samaneh.
@@ -307,6 +297,8 @@ iasis:loh	rdf:type owl:DatatypeProperty;
 			dce:creator iasis:samaneh.
 iasis:snp	rdf:type owl:DatatypeProperty;
             dce:creator iasis:samaneh.
+iasis:regulation	rdf:type owl:DatatypeProperty;
+            		dce:creator iasis:samaneh.
 iasis:gene_isRelatedTo_sample	rdf:type	owl:ObjectProperty;
 								rdfs:comment "relation between Gene and Sample classes".
 iasis:cgi_isLocatedIn_gene	rdf:type owl:ObjectProperty;
@@ -643,6 +635,9 @@ iasis:loh	rdfs:domain	iasis:Mutation;
 iasis:snp	rdfs:domain	iasis:Mutation;
 			rdfs:range	rdfs:Literal;
 			dce:creator iasis:samaneh.
+iasis:regulation	rdfs:domain	iasis:GExp;
+					rdfs:range	rdfs:Literal;
+					dce:creator iasis:samaneh.
 iasis:gene_isRelatedTo_sample	rdfs:domain	iasis:Gene;
 								rdfs:range	iasis:Sample;
 								dce:creator	iasis:samaneh.
@@ -939,14 +934,6 @@ iasis:GeneralMutationType rdfs:subClassOf iasis:MutationType;
 iasis:AdHocMutationType rdfs:subClassOf iasis:MutationType;
                         rdfs:comment "extracted from mutation dataset";
                         dce:creator iasis:samaneh.
-iasis:Regulation rdfs:subClassOf iasis:GExp;
-                 dce:creator iasis:samaneh.
-iasis:NormalExpressed rdfs:subClassOf iasis:Regulation;
-                      dce:creator iasis:samaneh.
-iasis:OverExpressed rdfs:subClassOf iasis:Regulation;
-                    dce:creator iasis:samaneh.
-iasis:UnderExpressed rdfs:subClassOf iasis:Regulation;
-                     dce:creator iasis:samaneh.
 iasis:ResistanceMutation	rdfs:subClassOf	iasis:Mutation;
 							dce:creator	iasis:samaneh.
 
