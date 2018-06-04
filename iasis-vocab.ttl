@@ -309,8 +309,6 @@ iasis:cnv_isLocatedIn_gene	rdf:type owl:ObjectProperty;
                  			dce:creator iasis:samaneh.
 iasis:cgi_isLocatedIn_tumor	rdf:type owl:ObjectProperty;
                  			dce:creator iasis:samaneh.
-iasis:gene_isExpressedAs_gexp	rdf:type owl:ObjectProperty;
-                   				dce:creator iasis:samaneh.
 iasis:cnv_isLocatedIn_sample	rdf:type owl:ObjectProperty;
                  				dce:creator iasis:samaneh.
 iasis:cnv_isLocatedIn_tumor	rdf:type owl:ObjectProperty;
@@ -344,7 +342,7 @@ iasis:trans_eqtl rdf:type owl:ObjectProperty;
                  dce:creator iasis:samaneh.
 iasis:transcript_isRelatedTo_transcription	rdf:type owl:ObjectProperty;
                  							dce:creator iasis:samaneh.
-iasis:gexp_isRelatedTo_transcription	rdf:type owl:ObjectProperty;
+iasis:transcription_isExpressedAs_gexp	rdf:type owl:ObjectProperty;
                  						dce:creator iasis:samaneh.
 iasis:protein_isRelatedTo_physicalInteraction	rdf:type owl:ObjectProperty;
                  								dce:creator iasis:samaneh.
@@ -652,10 +650,7 @@ iasis:cnv_isLocatedIn_gene	rdfs:domain iasis:CNV;
                  			dce:creator iasis:samaneh.
 iasis:cgi_isLocatedIn_tumor	rdfs:domain iasis:CGI;
 				 			rdfs:range iasis:Tumor;
-                 			dce:creator iasis:samaneh.
-iasis:gene_isExpressedAs_gexp	rdfs:domain iasis:Gene;
-				   				rdfs:range iasis:GExp;
-                   				dce:creator iasis:samaneh. 
+                 			dce:creator iasis:samaneh. 
 iasis:cnv_isLocatedIn_sample	rdfs:domain iasis:CNV;
 				  				rdfs:range iasis:Sample;
                   				dce:creator iasis:samaneh.
@@ -701,8 +696,8 @@ iasis:trans_eqtl rdfs:domain iasis:SNP;
 iasis:transcript_isRelatedTo_transcription	rdfs:domain iasis:Transcript;
 			        						rdfs:range iasis:Transcription;
                     						dce:creator iasis:samaneh.
-iasis:gexp_isRelatedTo_transcription	rdfs:domain iasis:GExp;
-			        					rdfs:range iasis:Transcription;
+iasis:transcription_isExpressedAs_gexp	rdfs:domain iasis:Transcription;
+			        					rdfs:range iasis:GExp;
                     					dce:creator iasis:samaneh.
 iasis:protein_isRelatedTo_physicalInteraction	rdfs:domain iasis:Protein;
 			        							rdfs:range iasis:RBP_RNA_PhysicalInteraction;
