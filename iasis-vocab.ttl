@@ -9,25 +9,26 @@
 #########Classes
 iasis:Concept rdf:type	owl:Class.
 iasis:Annotation	rdf:type	owl:Class.
-
 iasis:Vocabulary	rdf:type	owl:Class.
 iasis:VocTerm	rdf:type	owl:Class.
 iasis:CUITerm	rdf:type	owl:Thing.
-
-ssn:Observation rdf:type	owl:Class.
+iasis:SourceName	rdf:type	owl:Class.
 ssn:Measurement	rdf:type	owl:Class.
 ssn:Unit	rdf:type	owl:Class.
-
-
-iasis:Patient rdf:type owl:Class.
-iasis:LCPatient rdf:type owl:Class.
-iasis:ADPatient rdf:type owl:Class.
-
 iasis:Test rdf:type owl:Class.
 iasis:Image rdf:type owl:Class.
-iasis:Drug rdf:type owl:Class.
-iasis:Gene rdf:type owl:Class.
 
+
+#### WP4 requirements: 
+
+iasis:Publication	rdf:type	owl:Class.
+iasis:LCPublication rdf:type	owl:Class.
+iasis:ADPublication rdf:type	owl:Class.
+iasis:LCAnnotation rdf:type	owl:Class.
+iasis:ADAnnotation rdf:type	owl:Class.
+iasis:Relation rdf:type	owl:Class.
+
+#### UMLS predictions:
 
 iasis:UMLS_Relation rdf:type owl:Class.
 iasis:Has_Risk_Of rdf:type owl:Class.
@@ -65,20 +66,9 @@ iasis:STIMULATES rdf:type owl:Class.
 iasis:TREATS rdf:type owl:Class.
 iasis:USES rdf:type owl:Class.
 
-
-#### WP4 requirements: 
-
-iasis:Publication	rdf:type	owl:Class.
-iasis:LCPublication rdf:type owl:Class.
-iasis:ADPublication rdf:type owl:Class.
-iasis:LCAnnotation rdf:type owl:Class.
-iasis:ADAnnotation rdf:type owl:Class.
-iasis:Relation rdf:type	owl:Class.
-
-
-
 #### COSMIC requirements:
 
+iasis:Gene rdf:type owl:Class.
 iasis:Tumor rdf:type owl:Class;
             dce:creator iasis:samaneh.
 iasis:Sample rdf:type owl:Class;
@@ -154,6 +144,7 @@ iasis:RBP_RNA_PhysicalInteraction	rdf:type	owl:Class;
 
 #### Drug requirements:
 
+iasis:Drug rdf:type owl:Class.
 iasis:HPO rdf:type owl:Class.
 iasis:CosSim rdf:type owl:Class.
 iasis:Sicomp rdf:type owl:Class.
@@ -167,7 +158,11 @@ iasis:NuclearReceptor rdf:type owl:Class.
 
 #### WP2 requirements:
 
+iasis:Patient rdf:type owl:Class.
+iasis:LCPatient rdf:type owl:Class.
+#iasis:ADPatient rdf:type owl:Class.
 iasis:LiquidBiopsy rdf:type owl:Class.
+
 iasis:Smoker	rdf:type	owl:Class;
 				rdfs:comment "A patient may belong to Smokers class.";
 				dce:creator	iasis:samaneh.
@@ -223,44 +218,10 @@ iasis:label	rdf:type	owl:DatatypeProperty;
 			dce:creator	iasis:samaneh.
 iasis:source	rdf:type	owl:ObjectProperty.
 
-
-iasis:partOf rdf:type	owl:ObjectProperty.
-iasis:provenance	rdf:type	owl:ObjectProperty.
-iasis:confidence	rdf:type	owl:DatatypeProperty.
-
-
-
-iasis:description	rdf:type	owl:DatatypeProperty.
-iasis:prec_tool	rdf:type	owl:ObjectProperty.
-iasis:maps	rdf:type	owl:ObjectProperty.
-iasis:research_id	rdf:type	owl:DatatypeProperty.
-iasis:concentration	rdf:type	owl:ObjectProperty.
-iasis:dose	rdf:type	owl:ObjectProperty.
-iasis:t_date	rdf:type	owl:DatatypeProperty.
-iasis:b_date	rdf:type	owl:DatatypeProperty.
-iasis:has_treatment	rdf:type	owl:ObjectProperty.
-iasis:has_bioMarker	rdf:type	owl:ObjectProperty.
-iasis:bm_description	rdf:type	owl:ObjectProperty.
-iasis:has_level	rdf:type	owl:ObjectProperty.
-iasis:prescripted_drug	rdf:type	owl:ObjectProperty.
-iasis:is_died rdf:type	owl:DatatypeProperty.
-iasis:obs_start_time	rdf:type	owl:DatatypeProperty.
-iasis:obs_end_time	rdf:type	owl:DatatypeProperty.
-iasis:trt_start_time	rdf:type	owl:DatatypeProperty.
-iasis:trt_end_time rdf:type owl:DatatypeProperty.
-ssn:obs_time	rdf:type	owl:DatatypeProperty.
-ssn:result	rdf:type	owl:ObjectProperty.
-ssn:uom	rdf:type	owl:ObjectProperty.
-ssn:value	rdf:type	owl:DatatypeProperty.
-
-
-iasis:confidence rdf:type	owl:DatatypeProperty.
 iasis:isRelatedTo	rdf:type	owl:ObjectProperty;
 					rdfs:comment "relation between superclasses Concept and Relation classes".
-iasis:gene_isRelatedTo_sample	rdf:type	owl:ObjectProperty;
-								rdfs:comment "relation between Gene and Sample classes".
-iasis:annotates rdf:type owl:ObjectProperty.
-iasis:cUITerm	rdf:type owl:DatatypeProperty.
+
+#iasis:cUITerm	rdf:type owl:DatatypeProperty.
 
 #### WP4 requirements:
 
@@ -365,6 +326,8 @@ iasis:total_cn rdf:type owl:DatatypeProperty;
                dce:creator iasis:samaneh.      
 iasis:minor_allele rdf:type owl:DatatypeProperty;
                    dce:creator iasis:samaneh.
+iasis:gene_isRelatedTo_sample	rdf:type	owl:ObjectProperty;
+								rdfs:comment "relation between Gene and Sample classes".
 iasis:cgi_isLocatedIn_gene	rdf:type owl:ObjectProperty;
                  			dce:creator iasis:samaneh.
 iasis:cgi_isLocatedIn_sample	rdf:type owl:ObjectProperty;
@@ -525,93 +488,56 @@ iasis:ecogList	rdf:type	owl:DatatypeProperty;
 				dce:creator	iasis:samaneh.
 
 ###########Domains And Ranges
-iasis:partOf rdfs:domain	iasis:Concept;
-			 rdfs:range	iasis:Concept.
-iasis:provenance	rdfs:domain	iasis:Publication;
-					rdfs:range	iasis:PubRepository.
-iasis:confidence rdfs:domain iasis:Relation;
-				rdfs:range	rdfs:Literal.
+
 iasis:id	rdfs:domain iasis:Annotation;
 			rdfs:range	iasis:VocTerm.
-iasis:ann_label rdfs:domain	iasis:Annotation;
-			rdfs:range	rdfs:Literal.
-iasis:source	rdfs:domain iasis:Annotation;
-				rdfs:range	iasis:Vocabulary.
-
 iasis:id	rdfs:domain iasis:Concept;
 			rdfs:range	iasis:VocTerm.
+iasis:annLabel	rdfs:domain	iasis:Annotation;
+				rdfs:range	rdfs:Literal.
 iasis:label rdfs:domain	iasis:Concept;
 			rdfs:range	rdfs:Literal.
+iasis:source	rdfs:domain iasis:Annotation;
+				rdfs:range	iasis:SourceName.
 iasis:source	rdfs:domain iasis:Concept;
-				rdfs:range	iasis:Vocabulary.
-
-iasis:description 	rdfs:domain	iasis:Annotation;
-					rdfs:range	rdfs:Literal;
-					dce:creator	iasis:samaneh.
-iasis:maps	rdfs:domain	iasis:Annotation;
-			rdfs:range	iasis:Annotation.
-iasis:birthday	rdfs:domain iasis:Patient;
-				rdfs:range	rdfs:Literal.
-iasis:gender	rdfs:domain iasis:Patient;
-				rdfs:range	rdfs:Literal.
-iasis:research_id	rdfs:domain iasis:Patient;
-					rdfs:range	rdfs:Literal.
-iasis:concentration rdfs:domain iasis:Treatment;
-					rdfs:range	iasis:TConcentration.
-iasis:dose rdfs:domain iasis:Treatment;
-					rdfs:range	iasis:TDose.
-iasis:t_date	rdfs:domain	iasis:Treatment;
-			rdfs:range	rdfs:Literal.
-iasis:b_date	rdfs:domain	iasis:LiquidBiopsy;
-			rdfs:range	rdfs:Literal.
-iasis:has_treatment rdfs:domain iasis:Patient;
-					rdfs:range	iasis:Treatment.
-iasis:has_bioMarker	rdfs:domain	iasis:LiquidBiopsy;
-					rdfs:range	iasis:BioMarker.
-iasis:bm_description	rdfs:domain	iasis:BioMarker;
-			rdfs:range	iasis:Annotation.
-iasis:has_level	rdfs:domain	iasis:BioMarker;
-			rdfs:range	iasis:BioMarkerLevel.
-iasis:is_died	rdfs:domain iasis:Patient;
-		rdfs:range	rdfs:Literal.
-iasis:obs_start_time	rdfs:domain iasis:Patient;
-		rdfs:range	rdfs:Literal.
-iasis:obs_end_time	rdfs:domain iasis:Patient;
-		rdfs:range	rdfs:Literal.
-iasis:trt_start_time	rdfs:domain iasis:Treatment;
-		rdfs:range	rdfs:Literal.
-iasis:trt_end_time	rdfs:domain iasis:Treatment;
-		rdfs:range	rdfs:Literal.
-ssn:obs_time	rdfs:domain ssn:Observation;
-		rdfs:range	rdfs:Literal.
-ssn:result	rdfs:domain ssn:Observation;
-		rdfs:range	ssn:Measurement.
-ssn:uom	rdfs:domain	ssn:Measurement;
-		rdfs:range	ssn:Unit.	
-ssn:value	rdfs:domain	ssn:Measurement;
-		rdfs:range	rdfs:Literal.
-iasis:has_annotation rdfs:domain iasis:Relation;
-		rdfs:range iasis:Annotation.
-iasis:annotates rdfs:domain iasis:Relation;
-		rdfs:range iasis:Concept.
-
-iasis:confidence rdfs:domain iasis:Relation;
-			rdfs:range	rdfs:Literal.
-iasis:prec_tool rdfs:domain iasis:Relation;
-			rdfs:range iasis:AnalysisTool.
-
+				rdfs:range	iasis:SourceName.
 iasis:isRelatedTo rdfs:domain iasis:Concept;
 					rdfs:range iasis:Relation.
-iasis:gene_isRelatedTo_sample	rdfs:domain	iasis:Gene;
-								rdfs:range	iasis:Sample;
-								dce:creator	iasis:samaneh.
 
-iasis:cUITerm rdfs:domain iasis:Annotation;
-				rdfs:range	rdfs:Literal.
 
-iasis:publication_identification rdfs:domain iasis:Publication;
-                                 rdfs:range iasis:PublicationAnnotation;  
-                                 dce:creator iasis:samaneh.
+#iasis:cUITerm rdfs:domain iasis:Annotation;
+#				rdfs:range	rdfs:Literal.
+
+#### WP4 requirements:
+
+iasis:semanticTypes	rdfs:domain	iasis:ADAnnotation;
+					rdfs:range	iasis:Vocabulary;	
+					dce:creator	iasis:samaneh.
+iasis:year	rdfs:domain	iasis:ADPublication;
+			rdfs:range	rdfs:Lirteral;	
+			dce:creator	iasis:samaneh.
+iasis:authors	rdfs:domain	iasis:ADPublication;
+				rdfs:range	rdfs:Literal;	
+				dce:creator	iasis:samaneh.
+iasis:year	rdfs:domain	iasis:ADPublication;
+			rdfs:range	rdfs:Literal;	
+			dce:creator	iasis:samaneh.
+iasis:journal	rdfs:domain	iasis:ADPublication;
+				rdfs:range	rdfs:Literal;	
+				dce:creator	iasis:samaneh.
+iasis:precTool	rdfs:domain	iasis:Relation;
+				rdfs:range	iasis:Vocabulary;	
+				rdfs:comment "At the moment in the mapping the range belongs to precTool whih should be modified.";
+				dce:creator	iasis:samaneh.
+iasis:confidence 	rdfs:domain	iasis:Relation;
+					rdfs:range	rdfs:Literal;	
+					dce:creator	iasis:samaneh.
+iasis:hasAnnotation rdfs:domain	iasis:Relation;
+					rdfs:range	rdfs:ADAnnotation;	
+					dce:creator	iasis:samaneh.
+iasis:annotates rdfs:domain	iasis:Relation;
+				rdfs:range	rdfs:ADPublication;	
+				dce:creator	iasis:samaneh. 
 
 #### COSMIC requirements:
 
@@ -729,6 +655,9 @@ iasis:total_cn rdfs:domain iasis:CNV;
 iasis:minor_allele rdfs:domain iasis:CNV;
 				   rdfs:range rdfs:Literal;
                    dce:creator iasis:samaneh.
+iasis:gene_isRelatedTo_sample	rdfs:domain	iasis:Gene;
+								rdfs:range	iasis:Sample;
+								dce:creator	iasis:samaneh.
 iasis:cgi_isLocatedIn_gene	rdfs:domain iasis:CGI;
 				 			rdfs:range iasis:Gene;
                  			dce:creator iasis:samaneh.
@@ -954,6 +883,9 @@ iasis:ecogList	rdfs:domain	iasis:TumorStage;
 				rdfs:range	rdfs:Literal;
 				dce:creator	iasis:samaneh.
 ###############Subclasses
+
+
+
 iasis:LCAnnotation	rdfs:subClassOf	iasis:Annotation.
 iasis:ADAnnotation	rdfs:subClassOf	iasis:Annotation.
 
@@ -1017,6 +949,14 @@ iasis:STIMULATES rdfs:subClassOf iasis:UMLS_Relation.
 iasis:TREATS rdfs:subClassOf iasis:UMLS_Relation.
 iasis:USES rdfs:subClassOf iasis:UMLS_Relation.
 
+#### WP4 requirements: 
+
+iasis:Publication	rdfs:subClassOf iasis:Concept.
+iasis:LCPublication rdfs:subClassOf iasis:Publication.
+iasis:ADPublication rdf:type	owl:Class.
+iasis:LCAnnotation rdf:type	owl:Class.
+iasis:ADAnnotation rdf:type	owl:Class.
+iasis:Relation rdf:type	owl:Class.
 
 #### COSMIC requirements:
 
