@@ -330,9 +330,9 @@ iasis:cnv_isClassifiedAs_mutationType	rdf:type owl:ObjectProperty;
 iasis:sampleSource	rdf:type	owl:DatatypeProperty;
 					rdfs:comment "Appears in resistanceMutation dataset";
 					dce:creator	iasis:samaneh.
-iasis:gene_isTranscribedAs_transcript	rdf:type	owl:ObjectProperty;
-										rdfs:comment "As connection between Gene and Transcription Relation.";
-										dce:creator	iasis:samaneh.
+iasis:gene_isTranscribedAs_transcription	rdf:type	owl:ObjectProperty;
+											rdfs:comment "As connection between Gene and Transcription Relation.";
+											dce:creator	iasis:samaneh.
 iasis:mutation_isResistantTo_drug	rdf:type	owl:ObjectProperty;
 									dce:creator	iasis:samaneh.
 iasis:mutation_isLocatedIn_sample	rdf:type owl:ObjectProperty;
@@ -686,9 +686,9 @@ iasis:cnv_isClassifiedAs_mutationType	rdfs:domain iasis:CNV;
 iasis:sampleSource	rdfs:domain	iasis:Sample;
 					rdfs:range	rdfs:Literal;
 					dce:creator	iasis:samaneh.
-iasis:gene_isTranscribedAs_transcript	rdfs:domain	iasis:Gene;	
-										rdfs:range	iasis:Transcript;
-										dce:creator	iasis:samaneh.
+iasis:gene_isTranscribedAs_transcription	rdfs:domain	iasis:Gene;	
+											rdfs:range	iasis:Transcription;
+											dce:creator	iasis:samaneh.
 iasis:mutation_isResistantTo_drug	rdfs:domain	iasis:Mutation;
 									rdfs:range	iasis:Drug;
 									dce:creator	iasis:samaneh.
