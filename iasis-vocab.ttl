@@ -8,46 +8,25 @@
 #########Classes
 iasis:Concept rdf:type	owl:Class.
 iasis:Annotation	rdf:type	owl:Class.
-#iasis:Biopsy	rdf:type	owl:Class;
- #               rdfs:comment "From clinical data, LC patients" ;
-  #              rdfs:label "an examination of tissue removed from a living body to discover the presence, cause, or extent of a disease.";
-	#			dce:creator iasis:samaneh.
-iasis:PubRepository	rdf:type	owl:Class.
+
 iasis:Vocabulary	rdf:type	owl:Class.
-iasis:VocTerm rdf:type	owl:Class.
+iasis:VocTerm	rdf:type	owl:Class.
 iasis:CUITerm	rdf:type	owl:Thing.
-iasis:PMID	rdf:type	owl:Class;
-			rdfs:comment "PubMed IDs";
-			dce:creator	iasis:samaneh.
-iasis:AnalysisTool	rdf:type	owl:Class. 
-iasis:BioMarkerLevel	rdf:type	owl:Class.
-iasis:TConcentration	rdf:type	owl:Class.
-iasis:TDose	rdf:type	owl:Class.
+
 ssn:Observation rdf:type	owl:Class.
 ssn:Measurement	rdf:type	owl:Class.
 ssn:Unit	rdf:type	owl:Class.
-iasis:ClinicalNote rdf:type	owl:Class.
+
 iasis:Relation rdf:type	owl:Class.
 iasis:Patient rdf:type owl:Class.
-iasis:Treatment rdf:type owl:Class.
-iasis:BioMarker rdf:type owl:Class.
-iasis:ClinicalRecord rdf:type owl:Class.
+iasis:LCPatient rdf:type owl:Class.
+iasis:ADPatient rdf:type owl:Class.
+
 iasis:Test rdf:type owl:Class.
 iasis:Image rdf:type owl:Class.
 iasis:Drug rdf:type owl:Class.
 iasis:Gene rdf:type owl:Class.
-iasis:LCPatient rdf:type owl:Class.
-iasis:ADPatient rdf:type owl:Class.
-iasis:LCPublication rdf:type owl:Class.
-iasis:ADPublication rdf:type owl:Class.
-iasis:BloodTest rdf:type owl:Class.
-iasis:LCTreatment	rdf:type owl:Class.
-iasis:ADTreatment	rdf:type owl:Class.
 
-iasis:LCAnnotation rdf:type owl:Class.
-iasis:ADAnnotation rdf:type owl:Class.
-iasis:PublicationAnnotation rdf:type owl:Class;
-                            dce:creator iasis:samaneh.
 
 iasis:UMLS_Relation rdf:type owl:Class.
 iasis:Has_Risk_Of rdf:type owl:Class.
@@ -84,6 +63,22 @@ iasis:PRODUCES rdf:type owl:Class.
 iasis:STIMULATES rdf:type owl:Class.
 iasis:TREATS rdf:type owl:Class.
 iasis:USES rdf:type owl:Class.
+
+
+#### WP4 requirements: 
+
+iasis:Publication	rdf:type	owl:Class.
+iasis:PMID	rdf:type	owl:Class;
+			rdfs:comment "PubMed IDs";
+			dce:creator	iasis:samaneh.
+iasis:LCPublication rdf:type owl:Class.
+iasis:ADPublication rdf:type owl:Class.
+iasis:LCAnnotation rdf:type owl:Class.
+iasis:ADAnnotation rdf:type owl:Class.
+iasis:PublicationAnnotation rdf:type owl:Class;
+                            dce:creator iasis:samaneh.
+
+
 
 
 #### COSMIC requirements:
@@ -225,13 +220,20 @@ iasis:OlderThan75	rdf:type	owl:Class;
 
 #########Properties
 
+iasis:id	rdf:type	owl:ObjectProperty.
+iasis:annLabel	rdf:type	owl:DatatypeProperty;
+				dce:creator	iasis:samaneh.
+iasis:label	rdf:type	owl:DatatypeProperty;
+			dce:creator	iasis:samaneh.
+iasis:source	rdf:type	owl:ObjectProperty.
+
+
 iasis:partOf rdf:type	owl:ObjectProperty.
 iasis:provenance	rdf:type	owl:ObjectProperty.
 iasis:confidence	rdf:type	owl:DatatypeProperty.
-iasis:id	rdf:type	owl:ObjectProperty.
-iasis:ann_label	rdf:type	owl:DatatypeProperty.
-iasis:label	rdf:type	owl:DatatypeProperty.
-iasis:source	rdf:type	owl:ObjectProperty.
+
+
+
 iasis:description	rdf:type	owl:DatatypeProperty.
 iasis:prec_tool	rdf:type	owl:ObjectProperty.
 iasis:maps	rdf:type	owl:ObjectProperty.
@@ -254,7 +256,7 @@ ssn:obs_time	rdf:type	owl:DatatypeProperty.
 ssn:result	rdf:type	owl:ObjectProperty.
 ssn:uom	rdf:type	owl:ObjectProperty.
 ssn:value	rdf:type	owl:DatatypeProperty.
-iasis:has_annotation rdf:type	owl:ObjectProperty.
+
 
 iasis:confidence rdf:type	owl:DatatypeProperty.
 iasis:isRelatedTo	rdf:type	owl:ObjectProperty;
@@ -263,6 +265,16 @@ iasis:gene_isRelatedTo_sample	rdf:type	owl:ObjectProperty;
 								rdfs:comment "relation between Gene and Sample classes".
 iasis:annotates rdf:type owl:ObjectProperty.
 iasis:cUITerm	rdf:type owl:DatatypeProperty.
+
+#### WP4 requirements:
+
+iasis:hasAnnotation rdf:type	owl:ObjectProperty.
+iasis:semantic_types	rdf:type	owl:ObjectProperty;
+						dce:creator	iasis:samaneh.
+iasis:year	rdf:type	owl:DatatypeProperty;
+			dce:creator	iasis:samaneh.
+iasis:authors	rdf:type	owl:DatatypeProperty;
+				dce:creator	iasis:samaneh.
 
 #### COSMIC requirements:
 iasis:description rdf:type owl:DatatypeProperty;
@@ -939,7 +951,7 @@ iasis:ADAnnotation	rdfs:subClassOf	iasis:Annotation.
 
 iasis:Patient	rdfs:subClassOf	iasis:Concept.
 iasis:Treatment	rdfs:subClassOf	iasis:Concept.
-####iasis:Biopsy	rdfs:subClassOf	iasis:Test.
+
 iasis:BioMarker	rdfs:subClassOf	iasis:Concept.
 iasis:ClinicalRecord rdfs:subClassOf iasis:Concept.
 iasis:Test rdfs:subClassOf	iasis:Concept.
