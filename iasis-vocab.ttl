@@ -357,25 +357,20 @@ iasis:cnv_isClassifiedAs_mutationType	rdf:type owl:ObjectProperty;
 iasis:sampleSource	rdf:type	owl:DatatypeProperty;
 					rdfs:comment "Appears in resistanceMutation dataset";
 					dce:creator	iasis:samaneh.
-iasis:gene_isTranscribedAs_transcription	rdf:type	owl:ObjectProperty;
-											rdfs:comment "As connection between Gene and Transcription Relation.";
-											dce:creator	iasis:samaneh.
+iasis:gene_isTranscribedAs_transcript	rdf:type	owl:ObjectProperty;
+										rdfs:comment "As connection between Gene and Transcription Relation.";
+										dce:creator	iasis:samaneh.
 iasis:mutation_isResistantTo_drug	rdf:type	owl:ObjectProperty;
 									dce:creator	iasis:samaneh.
-iasis:transcription_isRelatedTo_gene	rdf:type	owl:ObjectProperty;
-										dce:creator	iasis:samaneh.
 iasis:mutation_isLocatedIn_sample	rdf:type owl:ObjectProperty;
                   					dce:creator iasis:samaneh.
-iasis:transcript_isRelatedTo_gene	rdf:type owl:ObjectProperty;
-									dce:creator iasis:samaneh.
+
 #### WP3 requirements:
 
 iasis:trans_eqtl rdf:type owl:ObjectProperty;
                  dce:creator iasis:samaneh.
 iasis:transcript_isRelatedTo_transcription	rdf:type owl:ObjectProperty;
                  							dce:creator iasis:samaneh.
-iasis:gene_isRelatedTo_transcription	rdf:type owl:ObjectProperty;
-                 						dce:creator iasis:samaneh.
 iasis:gexp_isRelatedTo_transcription	rdf:type owl:ObjectProperty;
                  						dce:creator iasis:samaneh.
 iasis:protein_isRelatedTo_physicalInteraction	rdf:type owl:ObjectProperty;
@@ -703,18 +698,13 @@ iasis:cnv_isClassifiedAs_mutationType	rdfs:domain iasis:CNV;
 iasis:sampleSource	rdfs:domain	iasis:Sample;
 					rdfs:range	rdfs:Literal;
 					dce:creator	iasis:samaneh.
-iasis:gene_isTranscribedAs_transcription	rdfs:domain	iasis:Gene;	
-											rdfs:range	iasis:Transcription;
-											dce:creator	iasis:samaneh.
+iasis:gene_isTranscribedAs_transcript	rdfs:domain	iasis:Gene;	
+										rdfs:range	iasis:Transcript;
+										dce:creator	iasis:samaneh.
 iasis:mutation_isResistantTo_drug	rdfs:domain	iasis:Mutation;
 									rdfs:range	iasis:Drug;
 									dce:creator	iasis:samaneh.
-iasis:transcription_isRelatedTo_gene	rdfs:domain	iasis:Transcription;
-										rdfs:range	iasis:Gene;
-										dce:creator	iasis:samaneh.
-iasis:transcript_isRelatedTo_gene	rdfs:domain iasis:Transcript;
-									rdfs:range	iasis:Gene;
-									dce:creator	iasis:samaneh.
+
 ##### WP3 requirements:
 
 iasis:trans_eqtl rdfs:domain iasis:SNP;
@@ -723,9 +713,6 @@ iasis:trans_eqtl rdfs:domain iasis:SNP;
 iasis:transcript_isRelatedTo_transcription	rdfs:domain iasis:Transcript;
 			        						rdfs:range iasis:Transcription;
                     						dce:creator iasis:samaneh.
-iasis:gene_isRelatedTo_transcription	rdfs:domain iasis:Gene;
-			        					rdfs:range iasis:Transcription;
-                    					dce:creator iasis:samaneh.
 iasis:gexp_isRelatedTo_transcription	rdfs:domain iasis:GExp;
 			        					rdfs:range iasis:Transcription;
                     					dce:creator iasis:samaneh.
