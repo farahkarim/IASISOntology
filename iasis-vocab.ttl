@@ -5,6 +5,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix ssn: <http://www.w3.org/ns/ssn/> .
 @prefix dce: <http://purl.org/dc/elements/1.1/>.
+
 #########Classes
 iasis:Concept rdf:type	owl:Class.
 iasis:Annotation	rdf:type	owl:Class.
@@ -17,7 +18,7 @@ ssn:Observation rdf:type	owl:Class.
 ssn:Measurement	rdf:type	owl:Class.
 ssn:Unit	rdf:type	owl:Class.
 
-iasis:Relation rdf:type	owl:Class.
+
 iasis:Patient rdf:type owl:Class.
 iasis:LCPatient rdf:type owl:Class.
 iasis:ADPatient rdf:type owl:Class.
@@ -68,16 +69,11 @@ iasis:USES rdf:type owl:Class.
 #### WP4 requirements: 
 
 iasis:Publication	rdf:type	owl:Class.
-iasis:PMID	rdf:type	owl:Class;
-			rdfs:comment "PubMed IDs";
-			dce:creator	iasis:samaneh.
 iasis:LCPublication rdf:type owl:Class.
 iasis:ADPublication rdf:type owl:Class.
 iasis:LCAnnotation rdf:type owl:Class.
 iasis:ADAnnotation rdf:type owl:Class.
-iasis:PublicationAnnotation rdf:type owl:Class;
-                            dce:creator iasis:samaneh.
-
+iasis:Relation rdf:type	owl:Class.
 
 
 
@@ -268,15 +264,27 @@ iasis:cUITerm	rdf:type owl:DatatypeProperty.
 
 #### WP4 requirements:
 
-iasis:hasAnnotation rdf:type	owl:ObjectProperty.
-iasis:semantic_types	rdf:type	owl:ObjectProperty;
+iasis:semanticTypes	rdf:type	owl:ObjectProperty;
 						dce:creator	iasis:samaneh.
 iasis:year	rdf:type	owl:DatatypeProperty;
 			dce:creator	iasis:samaneh.
 iasis:authors	rdf:type	owl:DatatypeProperty;
 				dce:creator	iasis:samaneh.
+iasis:year	rdf:type	owl:DatatypeProperty;
+				dce:creator	iasis:samaneh.
+iasis:journal	rdf:type	owl:DatatypeProperty;
+				dce:creator	iasis:samaneh.
+iasis:precTool	rdf:type	owl:ObjectProperty;
+				dce:creator	iasis:samaneh.
+iasis:confidence 	rdf:type	owl:DatatypeProperty;
+					dce:creator	iasis:samaneh.
+iasis:hasAnnotation rdf:type	owl:ObjectProperty;
+					dce:creator	iasis:samaneh.
+iasis:annotates rdf:type	owl:ObjectProperty;
+				dce:creator	iasis:samaneh. 
 
 #### COSMIC requirements:
+
 iasis:description rdf:type owl:DatatypeProperty;
                   rdfs:comment "a property of Annotation Class";
 				  dce:creator iasis:samaneh.	
