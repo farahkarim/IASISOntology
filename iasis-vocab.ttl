@@ -884,39 +884,24 @@ iasis:ecogList	rdfs:domain	iasis:TumorStage;
 				dce:creator	iasis:samaneh.
 ###############Subclasses
 
-
-
-iasis:LCAnnotation	rdfs:subClassOf	iasis:Annotation.
-iasis:ADAnnotation	rdfs:subClassOf	iasis:Annotation.
-
-iasis:Patient	rdfs:subClassOf	iasis:Concept.
-iasis:Treatment	rdfs:subClassOf	iasis:Concept.
-
-iasis:BioMarker	rdfs:subClassOf	iasis:Concept.
-iasis:ClinicalRecord rdfs:subClassOf iasis:Concept.
 iasis:Test rdfs:subClassOf	iasis:Concept.
 iasis:Image rdfs:subClassOf	iasis:Concept.
-iasis:Drug rdfs:subClassOf	iasis:Concept.
-iasis:Gene rdfs:subClassOf	iasis:Concept.
 
-iasis:LCPatient	rdfs:subClassOf	iasis:Patient.
-iasis:ADPatient	rdfs:subClassOf	iasis:Patient.
+#### WP4 requirements: 
 
+iasis:Publication	rdfs:subClassOf iasis:Concept.
+iasis:LCPublication rdfs:subClassOf iasis:Publication.
+iasis:ADPublication rdfs:subClassOf iasis:Publication.
+iasis:LCAnnotation rdfs:subClassOf iasis:Annotation.
+iasis:ADAnnotation rdfs:subClassOf iasis:Annotation.
+iasis:Relation rdfs:subClassOf iasis:Concept.
 
-iasis:LCPublication	rdfs:subClassOf	iasis:Publication.
-iasis:ADPublication	rdfs:subClassOf	iasis:Publication.
+#### UMLS requirements:
 
 iasis:UMLS_Relation rdfs:subClassOf iasis:Relation.
 iasis:Has_Risk_Of rdfs:subClassOf iasis:Relation.
 iasis:Mentioned_In rdfs:subClassOf iasis:Relation.
 iasis:Has_MESH	rdfs:subClassOf iasis:Relation.
-
-
-iasis:BloodTest rdfs:subClassOf	iasis:Test.
-
-iasis:LCTreatment	rdfs:subClassOf	iasis:Treatment.
-iasis:ADTreatment	rdfs:subClassOf	iasis:Treatment.
-
 iasis:AFFECTS rdfs:subClassOf iasis:UMLS_Relation.
 iasis:AFFECT__SPEC__ rdfs:subClassOf iasis:UMLS_Relation.
 iasis:ASSOCIATED_WITH rdfs:subClassOf iasis:UMLS_Relation.
@@ -949,17 +934,9 @@ iasis:STIMULATES rdfs:subClassOf iasis:UMLS_Relation.
 iasis:TREATS rdfs:subClassOf iasis:UMLS_Relation.
 iasis:USES rdfs:subClassOf iasis:UMLS_Relation.
 
-#### WP4 requirements: 
-
-iasis:Publication	rdfs:subClassOf iasis:Concept.
-iasis:LCPublication rdfs:subClassOf iasis:Publication.
-iasis:ADPublication rdf:type	owl:Class.
-iasis:LCAnnotation rdf:type	owl:Class.
-iasis:ADAnnotation rdf:type	owl:Class.
-iasis:Relation rdf:type	owl:Class.
-
 #### COSMIC requirements:
 
+iasis:Gene rdfs:subClassOf	iasis:Concept.
 iasis:Tumor rdfs:subClassOf iasis:Concept;
             dce:creator iasis:samaneh.
 iasis:Sample rdfs:subClassOf iasis:Concept;
@@ -1028,6 +1005,7 @@ iasis:Transcription rdfs:subClassOf iasis:Relation;
 
 #### Drug requirements:
 
+iasis:Drug rdfs:subClassOf	iasis:Concept.
 iasis:HPO rdfs:subClassOf	iasis:Concept.
 iasis:CosSim rdfs:subClassOf	iasis:Concept.
 iasis:Sicomp rdfs:subClassOf	iasis:Concept.
@@ -1040,7 +1018,10 @@ iasis:NuclearReceptor rdfs:subClassOf	iasis:Concept.
 
 #### WP2 requirements:
 
-iasis:LiquidBiopsy rdfs:subClassOf	iasis:BloodTest.
+iasis:Patient	rdfs:subClassOf	iasis:Concept.
+iasis:LCPatient	rdfs:subClassOf	iasis:Patient.
+iasis:ADPatient	rdfs:subClassOf	iasis:Patient.
+
 iasis:MutatedEGFR	rdfs:subClassOf iasis:Mutation;
 					dce:creator	iasis:samaneh.
 iasis:LiquidBiopsyObservation	rdfs:subClassOf	iasis:Observation;
