@@ -90,26 +90,6 @@ iasis:GeneralMutationType rdf:type owl:Class;
                           dce:creator iasis:samaneh.
 iasis:AdHocMutationType rdf:type owl:Class;
                         dce:creator iasis:samaneh.
-iasis:MutationZygosity rdf:type owl:Class;
-                       dce:creator iasis:samaneh.
-iasis:Homozygous rdf:type owl:Class;
-                 dce:creator iasis:samaneh.
-iasis:Heterozygous rdf:type owl:Class;
-                   dce:creator iasis:samaneh.
-iasis:LOH rdf:type owl:Class;
-          rdfs:comment "extracted from mutation dataset";
-          dce:creator iasis:samaneh.
-iasis:HaveLOH rdf:type owl:Class;
-              dce:creator iasis:samaneh.
-iasis:NoLOH rdf:type owl:Class;
-            dce:creator iasis:samaneh.
-iasis:SNP rdf:type owl:Class;
-          rdfs:comment "extracted from mutation dataset";
-          dce:creator iasis:samaneh.
-iasis:IsSNP rdf:type owl:Class;
-            dce:creator iasis:samaneh.
-iasis:IsNotSNP rdf:type owl:Class;
-               dce:creator iasis:samaneh.
 iasis:Regulation rdf:type owl:Class;
                   rdfs:comment "extracted from methylation dataset";
                   dce:creator iasis:samaneh.
@@ -321,6 +301,12 @@ iasis:minor_allele rdf:type owl:DatatypeProperty;
                    dce:creator iasis:samaneh.
 iasis:methylation rdf:type owl:DatatypeProperty;
                   dce:creator iasis:samaneh.
+iasis:zygosity	rdf:type owl:DatatypeProperty;
+               	dce:creator iasis:samaneh.
+iasis:loh	rdf:type owl:DatatypeProperty;
+			dce:creator iasis:samaneh.
+iasis:snp	rdf:type owl:DatatypeProperty;
+            dce:creator iasis:samaneh.
 iasis:gene_isRelatedTo_sample	rdf:type	owl:ObjectProperty;
 								rdfs:comment "relation between Gene and Sample classes".
 iasis:cgi_isLocatedIn_gene	rdf:type owl:ObjectProperty;
@@ -648,6 +634,15 @@ iasis:minor_allele rdfs:domain iasis:CNV;
 iasis:methylation	rdfs:domain	iasis:CGI;
 					rdfs:range	rdfs:Literal;
                   	dce:creator iasis:samaneh.
+iasis:zygosity	rdfs:domain	iasis:Mutation;
+				rdfs:range	rdfs:Literal;
+                dce:creator iasis:samaneh.
+iasis:loh	rdfs:domain	iasis:Mutation;
+			rdfs:range	rdfs:Literal;
+			dce:creator iasis:samaneh.
+iasis:snp	rdfs:domain	iasis:Mutation;
+			rdfs:range	rdfs:Literal;
+			dce:creator iasis:samaneh.
 iasis:gene_isRelatedTo_sample	rdfs:domain	iasis:Gene;
 								rdfs:range	iasis:Sample;
 								dce:creator	iasis:samaneh.
@@ -944,25 +939,6 @@ iasis:GeneralMutationType rdfs:subClassOf iasis:MutationType;
 iasis:AdHocMutationType rdfs:subClassOf iasis:MutationType;
                         rdfs:comment "extracted from mutation dataset";
                         dce:creator iasis:samaneh.
-iasis:MutationZygosity rdfs:subClassOf iasis:Mutation;
-                       rdfs:comment "extracted from mutation dataset";
-                       dce:creator iasis:samaneh.
-iasis:Homozygous rdfs:subClassOf iasis:MutationZygosity;
-                 dce:creator iasis:samaneh.
-iasis:Heterozygous rdfs:subClassOf iasis:MutationZygosity;
-                   dce:creator iasis:samaneh.
-iasis:LOH rdfs:subClassOf iasis:Mutation;
-          dce:creator iasis:samaneh.
-iasis:HaveLOH rdfs:subClassOf iasis:LOH;
-              dce:creator iasis:samaneh. 
-iasis:NoLOH rdfs:subClassOf iasis:LOH;
-            dce:creator iasis:samaneh.
-iasis:SNP rdfs:subClassOf iasis:Mutation;
-          dce:creator iasis:samaneh.
-iasis:IsSNP rdfs:subClassOf iasis:SNP;
-            dce:creator iasis:samaneh.
-iasis:IsNotSNP rdfs:subClassOf iasis:SNP;
-               dce:creator iasis:samaneh.
 iasis:Regulation rdfs:subClassOf iasis:GExp;
                  dce:creator iasis:samaneh.
 iasis:NormalExpressed rdfs:subClassOf iasis:Regulation;
