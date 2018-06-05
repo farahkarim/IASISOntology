@@ -18,14 +18,13 @@ ssn:Unit	rdf:type	owl:Class.
 iasis:Test rdf:type owl:Class.
 iasis:Image rdf:type owl:Class.
 
-
 #### WP4 requirements: 
 
 iasis:Publication	rdf:type	owl:Class.
-iasis:LCPublication rdf:type	owl:Class.
-iasis:ADPublication rdf:type	owl:Class.
-iasis:LCAnnotation rdf:type	owl:Class.
-iasis:ADAnnotation rdf:type	owl:Class.
+#iasis:LCPublication rdf:type	owl:Class.
+#iasis:ADPublication rdf:type	owl:Class.
+#iasis:LCAnnotation rdf:type	owl:Class.
+#iasis:ADAnnotation rdf:type	owl:Class.
 iasis:Relation rdf:type	owl:Class.
 
 #### UMLS predictions:
@@ -221,8 +220,8 @@ iasis:histologySubtype1	rdf:type owl:DatatypeProperty;
                         dce:creator iasis:samaneh.
 iasis:histologySubtype2	rdf:type owl:DatatypeProperty;
                         dce:creator iasis:samaneh.
-iasis:mentioned_in rdf:type owl:ObjectProperty;
-                   dce:creator iasis:samaneh.
+iasis:mutation_mentionedIn_publication	rdf:type owl:ObjectProperty;
+                   						dce:creator iasis:samaneh.
 iasis:mutation_pepSeq	rdf:type	owl:DatatypeProperty;
 						rdfs:comment "The new column produced from Mutation AA column, excluding p. in mutation dataset";
 						dce:creator	iasis:samaneh.
@@ -475,19 +474,19 @@ iasis:isRelatedTo rdfs:domain iasis:Concept;
 
 #### WP4 requirements:
 
-iasis:semanticTypes	rdfs:domain	iasis:ADAnnotation;
+iasis:semanticTypes	rdfs:domain	iasis:Annotation;
 					rdfs:range	iasis:Vocabulary;	
 					dce:creator	iasis:samaneh.
-iasis:year	rdfs:domain	iasis:ADPublication;
+iasis:year	rdfs:domain	iasis:Publication;
 			rdfs:range	rdfs:Lirteral;	
 			dce:creator	iasis:samaneh.
-iasis:authors	rdfs:domain	iasis:ADPublication;
+iasis:authors	rdfs:domain	iasis:Publication;
 				rdfs:range	rdfs:Literal;	
 				dce:creator	iasis:samaneh.
-iasis:year	rdfs:domain	iasis:ADPublication;
+iasis:year	rdfs:domain	iasis:Publication;
 			rdfs:range	rdfs:Literal;	
 			dce:creator	iasis:samaneh.
-iasis:journal	rdfs:domain	iasis:ADPublication;
+iasis:journal	rdfs:domain	iasis:Publication;
 				rdfs:range	rdfs:Literal;	
 				dce:creator	iasis:samaneh.
 iasis:precTool	rdfs:domain	iasis:Relation;
@@ -498,10 +497,10 @@ iasis:confidence 	rdfs:domain	iasis:Relation;
 					rdfs:range	rdfs:Literal;	
 					dce:creator	iasis:samaneh.
 iasis:hasAnnotation rdfs:domain	iasis:Relation;
-					rdfs:range	rdfs:ADAnnotation;	
+					rdfs:range	rdfs:Annotation;	
 					dce:creator	iasis:samaneh.
 iasis:annotates rdfs:domain	iasis:Relation;
-				rdfs:range	rdfs:ADPublication;	
+				rdfs:range	rdfs:Publication;	
 				dce:creator	iasis:samaneh. 
 
 #### COSMIC requirements:
@@ -533,9 +532,9 @@ iasis:histologySubtype1	rdfs:domain iasis:Sample;
 iasis:histologySubtype2	rdfs:domain iasis:Sample;
 						rdfs:range	rdfs:Literal;
                    		dce:creator iasis:samaneh.
-iasis:mentioned_in rdfs:domain iasis:Mutation;
-				   rdfs:range iasis:PMID;
-                   dce:creator iasis:samaneh.
+iasis:mutation_mentionedIn_Publication	rdfs:domain iasis:Mutation;
+				   						rdfs:range iasis:Publication;
+                   						dce:creator iasis:samaneh.
 iasis:mutation_pepSeq	rdfs:domain	iasis:Mutation;
 						rdfs:range rdfs:Literal;
 						dce:creator	iasis:samaneh.
@@ -863,10 +862,10 @@ iasis:Image rdfs:subClassOf	iasis:Concept.
 #### WP4 requirements: 
 
 iasis:Publication	rdfs:subClassOf iasis:Concept.
-iasis:LCPublication rdfs:subClassOf iasis:Publication.
-iasis:ADPublication rdfs:subClassOf iasis:Publication.
-iasis:LCAnnotation rdfs:subClassOf iasis:Annotation.
-iasis:ADAnnotation rdfs:subClassOf iasis:Annotation.
+#iasis:LCPublication rdfs:subClassOf iasis:Publication.
+#iasis:ADPublication rdfs:subClassOf iasis:Publication.
+#iasis:LCAnnotation rdfs:subClassOf iasis:Annotation.
+#iasis:ADAnnotation rdfs:subClassOf iasis:Annotation.
 iasis:Relation rdfs:subClassOf iasis:Concept.
 
 #### UMLS requirements:
