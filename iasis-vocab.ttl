@@ -21,10 +21,10 @@ iasis:Image rdf:type owl:Class.
 #### WP4 requirements: 
 
 iasis:Publication	rdf:type	owl:Class.
-#iasis:LCPublication rdf:type	owl:Class.
-#iasis:ADPublication rdf:type	owl:Class.
-#iasis:LCAnnotation rdf:type	owl:Class.
-#iasis:ADAnnotation rdf:type	owl:Class.
+iasis:LCPublication rdf:type	owl:Class.
+iasis:ADPublication rdf:type	owl:Class.
+iasis:LCAnnotation rdf:type	owl:Class.
+iasis:ADAnnotation rdf:type	owl:Class.
 iasis:Relation rdf:type	owl:Class.
 
 #### UMLS predictions:
@@ -862,10 +862,10 @@ iasis:Image rdfs:subClassOf	iasis:Concept.
 #### WP4 requirements: 
 
 iasis:Publication	rdfs:subClassOf iasis:Concept.
-#iasis:LCPublication rdfs:subClassOf iasis:Publication.
-#iasis:ADPublication rdfs:subClassOf iasis:Publication.
-#iasis:LCAnnotation rdfs:subClassOf iasis:Annotation.
-#iasis:ADAnnotation rdfs:subClassOf iasis:Annotation.
+iasis:LCPublication rdfs:subClassOf iasis:Publication.
+iasis:ADPublication rdfs:subClassOf iasis:Publication.
+iasis:LCAnnotation rdfs:subClassOf iasis:Annotation.
+iasis:ADAnnotation rdfs:subClassOf iasis:Annotation.
 iasis:Relation rdfs:subClassOf iasis:Concept.
 
 #### UMLS requirements:
