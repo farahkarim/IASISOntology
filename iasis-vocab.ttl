@@ -532,7 +532,7 @@ iasis:histologySubtype1	rdfs:domain iasis:Sample;
 iasis:histologySubtype2	rdfs:domain iasis:Sample;
 						rdfs:range	rdfs:Literal;
                    		dce:creator iasis:samaneh.
-iasis:mutation_mentionedIn_Publication	rdfs:domain iasis:Mutation;
+iasis:mutation_mentionedIn_publication	rdfs:domain iasis:Mutation;
 				   						rdfs:range iasis:Publication;
                    						dce:creator iasis:samaneh.
 iasis:mutation_pepSeq	rdfs:domain	iasis:Mutation;
