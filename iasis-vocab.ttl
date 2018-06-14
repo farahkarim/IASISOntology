@@ -336,8 +336,9 @@ iasis:mutation_isLocatedIn_sample	rdf:type owl:ObjectProperty;
 
 #### WP3 requirements:
 
-iasis:trans_eqtl rdf:type owl:ObjectProperty;
-                 dce:creator iasis:samaneh.
+iasis:variant_affects_transcript	rdf:type owl:ObjectProperty;
+                 					rdfs:comment "It's trans-eQTL: trans-acting expression quantitative trait loci, i.e. genomic variants that affect the expression of distant (trans) genes) from three sources: GTEx, Joehanes et al. and a Dutch group (Lude Franke)";
+									dce:creator iasis:samaneh.
 iasis:transcript_isRelatedTo_transcription	rdf:type owl:ObjectProperty;
                  							dce:creator iasis:samaneh.
 iasis:transcription_isExpressedAs_gexp	rdf:type owl:ObjectProperty;
@@ -692,9 +693,9 @@ iasis:mutation_isResistantTo_drug	rdfs:domain	iasis:Mutation;
 
 ##### WP3 requirements:
 
-iasis:trans_eqtl rdfs:domain iasis:SNP;
-                 rdfs:range iasis:Transcript;
-                 dce:creator iasis:samaneh.
+iasis:variant_affects_transcript	rdfs:domain iasis:SNP;
+                 					rdfs:range iasis:Transcript;
+                 					dce:creator iasis:samaneh.
 iasis:transcript_isRelatedTo_transcription	rdfs:domain iasis:Transcript;
 			        						rdfs:range iasis:Transcription;
                     						dce:creator iasis:samaneh.
