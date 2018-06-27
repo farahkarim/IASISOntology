@@ -118,19 +118,6 @@ iasis:LCPatient rdf:type owl:Class.
 #iasis:ADPatient rdf:type owl:Class.
 iasis:LiquidBiopsy rdf:type owl:Class.
 
-iasis:Smoker	rdf:type	owl:Class;
-				rdfs:comment "A patient may belong to Smokers class.";
-				dce:creator	iasis:samaneh.
-iasis:NonSmoker	rdf:type	owl:Class;
-				rdfs:comment "A patient may belong to Smokers class.";
-				dce:creator	iasis:samaneh.
-iasis:MutatedEGFR	rdf:type	owl:Class;
-					rdfs:comment "Somatic mutations that lead to EGFR overexpression have been associated with several cancers including squamous-cell carcinoma of the lung";
-					rdfs:label "EGFR_mutated";
-					dce:creator	iasis:samaneh.
-iasis:NormalEGFR	rdf:type	owl:Class;
-					rdfs:comment "No evidence of somatic mutation that lead to EGFR overexpression.";
-					dce:creator	iasis:samaneh.
 iasis:TumorStage	rdf:type owl:Class;
 					rdfs:comment "Represents the assessment of the stage of tumor in a particular date.";
 					dce:creator	iasis:samaneh.
@@ -149,20 +136,6 @@ iasis:LiquidBiopsyObservation	rdf:type	owl:Class;
 iasis:DiagnosisAgeGroup	rdf:type	owl:Class;
 						rdfs:comment "Shows the age range group in which the patient was diagnosed with Cancer.";
 						dce:creator	iasis:samaneh.
-iasis:YoungerThan25	rdf:type	owl:Class;
-					dce:creator	iasis:samaneh.
-iasis:Between26and35	rdf:type	owl:Class;
-						dce:creator	iasis:samaneh.
-iasis:Between36and45	rdf:type	owl:Class;
-						dce:creator	iasis:samaneh.
-iasis:Between46and55	rdf:type	owl:Class;
-						dce:creator	iasis:samaneh.
-iasis:Between56and65	rdf:type	owl:Class;
-						dce:creator	iasis:samaneh.
-iasis:Between66and75	rdf:type	owl:Class;
-						dce:creator	iasis:samaneh.
-iasis:OlderThan75	rdf:type	owl:Class;
-					dce:creator	iasis:samaneh.
 
 #########Properties
 
@@ -954,28 +927,12 @@ iasis:Patient	rdfs:subClassOf	iasis:Concept.
 iasis:LCPatient	rdfs:subClassOf	iasis:Patient.
 iasis:ADPatient	rdfs:subClassOf	iasis:Patient.
 
-iasis:MutatedEGFR	rdfs:subClassOf iasis:Mutation;
-					dce:creator	iasis:samaneh.
 iasis:LiquidBiopsyObservation	rdfs:subClassOf	iasis:Observation;
 								dce:creator	iasis:samaneh.
 iasis:EcogObservation	rdfs:subClassOf	iasis:Observation;
 								dce:creator	iasis:samaneh.
 iasis:TumorStageObservation	rdfs:subClassOf	iasis:Observation;
 							dce:creator	iasis:samaneh.
-iasis:YoungerThan25	rdfs:subClassOf	iasis:DiagnosisAgeGroup;
-					dce:creator	iasis:samaneh.
-iasis:Between26and35	rdfs:subClassOf	iasis:DiagnosisAgeGroup;
-						dce:creator	iasis:samaneh.
-iasis:Between36and45	rdfs:subClassOf	iasis:DiagnosisAgeGroup;
-						dce:creator	iasis:samaneh.
-iasis:Between46and55	rdfs:subClassOf	iasis:DiagnosisAgeGroup;
-						dce:creator	iasis:samaneh.
-iasis:Between56and65	rdfs:subClassOf	iasis:DiagnosisAgeGroup;
-						dce:creator	iasis:samaneh.
-iasis:Between66and75	rdfs:subClassOf	iasis:DiagnosisAgeGroup;
-						dce:creator	iasis:samaneh.
-iasis:OlderThan75	rdfs:subClassOf	iasis:DiagnosisAgeGroup;
-					dce:creator	iasis:samaneh.
 
 ###############PartOf
 iasis:ClinicalNote iasis:partOf iasis:ClinicalRecord.
