@@ -337,30 +337,40 @@ iasis:drug_interactsWith_protein	rdf:type	owl:ObjectProperty;
 									dce:creator iasis:samaneh.
 iasis:drug_interactsWith_enzyme	rdf:type	owl:ObjectProperty;
 								dce:creator iasis:samaneh.
-iasis:drug_interactsWith_gpcr	rdf:type	owl:ObjectProperty;
-								dce:creator iasis:samaneh.
-iasis:drug_interactsWith_ionChannel	rdf:type	owl:ObjectProperty;
-									dce:creator iasis:samaneh.
-iasis:drug_interactsWith_nuclearReceptor	rdf:type	owl:ObjectProperty;
-											dce:creator iasis:samaneh.
-iasis:cosSim_isRelatedTo_drug	rdf:type	owl:ObjectProperty;
-								dce:creator iasis:samaneh.
-iasis:cosSim_isRelatedTo_hpo	rdf:type	owl:ObjectProperty;
-								dce:creator iasis:samaneh.
-iasis:sicomp_isRelatedTo_drug	rdf:type	owl:ObjectProperty;
-								dce:creator iasis:samaneh.
-iasis:smithWatermanSim_isRelatedTo_enzyme	rdf:type	owl:ObjectProperty;
-											dce:creator iasis:samaneh.
-iasis:smithWatermanSim_isRelatedTo_gpcr	rdf:type	owl:ObjectProperty;
-										dce:creator iasis:samaneh.
-iasis:smithWatermanSim_isRelatedTo_ionChannel	rdf:type	owl:ObjectProperty;
-												dce:creator iasis:samaneh.
-iasis:smithWatermanSim_isRelatedTo_nuclearReceptor	rdf:type	owl:ObjectProperty;
-													dce:creator iasis:samaneh.
 iasis:hasSideEffect	rdf:type	owl:ObjectProperty;
 								dce:creator iasis:samaneh.
-iasis:smithWatermanSim_similarity_value	rdf:type	owl:DataTypeProperty;
-										dce:creator iasis:samaneh.
+iasis:dse_AvgFrequency	rdf:type	owl:dataTypeProperty;
+						dce:creator iasis:samaneh.
+iasis:dse_StandardDeviation	rdf:type	owl:dataTypeProperty;
+							dce:creator iasis:samaneh.
+iasis:drug_isRelatedTo_dse	rdf:type	owl:ObjectProperty;
+								dce:creator iasis:samaneh.
+iasis:sideEffect_isRelatedTo_dse	rdf:type	owl:ObjectProperty;
+									dce:creator	iasis:samaneh.
+
+#iasis:drug_interactsWith_gpcr	rdf:type	owl:ObjectProperty;
+#								dce:creator iasis:samaneh.
+#iasis:drug_interactsWith_ionChannel	rdf:type	owl:ObjectProperty;
+#									dce:creator iasis:samaneh.
+#iasis:drug_interactsWith_nuclearReceptor	rdf:type	owl:ObjectProperty;
+#											dce:creator iasis:samaneh.
+#iasis:cosSim_isRelatedTo_drug	rdf:type	owl:ObjectProperty;
+#								dce:creator iasis:samaneh.
+#iasis:cosSim_isRelatedTo_hpo	rdf:type	owl:ObjectProperty;
+#								dce:creator iasis:samaneh.
+#iasis:sicomp_isRelatedTo_drug	rdf:type	owl:ObjectProperty;
+#								dce:creator iasis:samaneh.
+#iasis:smithWatermanSim_isRelatedTo_enzyme	rdf:type	owl:ObjectProperty;
+#											dce:creator iasis:samaneh.
+#iasis:smithWatermanSim_isRelatedTo_gpcr	rdf:type	owl:ObjectProperty;
+#										dce:creator iasis:samaneh.
+#iasis:smithWatermanSim_isRelatedTo_ionChannel	rdf:type	owl:ObjectProperty;
+#												dce:creator iasis:samaneh.
+#iasis:smithWatermanSim_isRelatedTo_nuclearReceptor	rdf:type	owl:ObjectProperty;
+#													dce:creator iasis:samaneh.
+#iasis:smithWatermanSim_similarity_value	rdf:type	owl:DataTypeProperty;
+#										dce:creator iasis:samaneh.
+
 
 #### WP2 requirements:
 
@@ -710,43 +720,54 @@ iasis:drug_interactsWith_protein	rdfs:domain	iasis:Drug;
 iasis:drug_interactsWith_enzyme	rdfs:domain	iasis:Drug;
 								rdfs:range	iasis:Enzyme;
 								dce:creator iasis:samaneh.
-iasis:drug_interactsWith_gpcr	rdfs:domain	iasis:Drug;
-								rdfs:range	iasis:GPCR;
-								dce:creator iasis:samaneh.
-iasis:drug_interactsWith_ionChannel	rdfs:domain	iasis:Drug;
-									rdfs:range	iasis:IonChannel;
-									dce:creator iasis:samaneh.
-iasis:drug_interactsWith_nuclearReceptor	rdfs:domain	iasis:Drug;
-										rdfs:range	iasis:NuclearReceptor;
-										dce:creator iasis:samaneh.
-
-iasis:cosSim_isRelatedTo_drug	rdfs:domain	iasis:CosSim;
-								rdfs:range	iasis:Drug;
-								dce:creator iasis:samaneh.
-iasis:cosSim_isRelatedTo_hpo	rdfs:domain	iasis:CosSim;
-								rdfs:range	iasis:HPO;
-								dce:creator iasis:samaneh.
-iasis:sicomp_isRelatedTo_drug	rdfs:domain	iasis:Sicomp;
-								rdfs:range	iasis:Drug;
-								dce:creator iasis:samaneh.
-iasis:smithWatermanSim_similarity_value	rdfs:domain	iasis:SmithWatermanSim;
-										rdfs:range	iasis:Literal;
-										dce:creator iasis:samaneh.
 iasis:hasSideEffect	rdfs:domain	iasis:Drug;
 					rdfs:range	iasis:HPO;
 					dce:creator iasis:samaneh.
-iasis:smithWatermanSim_isRelatedTo_enzyme	rdfs:domain	iasis:SmithWatermanSim;
-											rdfs:range	iasis:Enzyme;
-											dce:creator	iasis:samaneh.
-iasis:smithWatermanSim_isRelatedTo_gpcr	rdfs:domain	iasis:SmithWatermanSim;
-										rdfs:range	iasis:GPCR;
-										dce:creator	iasis:samaneh.
-iasis:smithWatermanSim_isRelatedTo_ionChannel	rdfs:domain	iasis:SmithWatermanSim;
-												rdfs:range	iasis:IonChannel;
-												dce:creator	iasis:samaneh.
-iasis:smithWatermanSim_isRelatedTo_nuclearReceptor	rdfs:domain	iasis:SmithWatermanSim;
-													rdfs:range	iasis:NuclearReceptor;
-													dce:creator	iasis:samaneh.
+iasis:dse_AvgFrequency	rdfs:domain	iasis:DrugSideEffect;
+						rdfs:range	iasis:Literal;
+						dce:creator iasis:samaneh.
+iasis:dse_StandardDeviation	rdfs:domain	iasis:DrugSideEffect;
+							rdfs:range	iasis:Literal;
+							dce:creator iasis:samaneh.
+iasis:drug_isRelatedTo_dse	rdfs:domain	iasis:Drug;
+							rdfs:range	iasis:DrugSideEffect;
+								dce:creator iasis:samaneh.
+iasis:sideEffect_isRelatedTo_dse	rdfs:domain	iasis:SideEffect;
+									rdfs:range	iasis:DrugSideEffect;
+									dce:creator iasis:samaneh.
+#iasis:drug_interactsWith_gpcr	rdfs:domain	iasis:Drug;
+#								rdfs:range	iasis:GPCR;
+#								dce:creator iasis:samaneh.
+#iasis:drug_interactsWith_ionChannel	rdfs:domain	iasis:Drug;
+#									rdfs:range	iasis:IonChannel;
+#									dce:creator iasis:samaneh.
+#iasis:drug_interactsWith_nuclearReceptor	rdfs:domain	iasis:Drug;
+#										rdfs:range	iasis:NuclearReceptor;
+#										dce:creator iasis:samaneh.
+#iasis:cosSim_isRelatedTo_drug	rdfs:domain	iasis:CosSim;
+#								rdfs:range	iasis:Drug;
+#								dce:creator iasis:samaneh.
+#iasis:cosSim_isRelatedTo_hpo	rdfs:domain	iasis:CosSim;
+#								rdfs:range	iasis:HPO;
+#								dce:creator iasis:samaneh.
+#iasis:sicomp_isRelatedTo_drug	rdfs:domain	iasis:Sicomp;
+#								rdfs:range	iasis:Drug;
+#								dce:creator iasis:samaneh.
+#iasis:smithWatermanSim_similarity_value	rdfs:domain	iasis:SmithWatermanSim;
+#										rdfs:range	iasis:Literal;
+#										dce:creator iasis:samaneh.
+#iasis:smithWatermanSim_isRelatedTo_enzyme	rdfs:domain	iasis:SmithWatermanSim;
+#											rdfs:range	iasis:Enzyme;
+#											dce:creator	iasis:samaneh.
+#iasis:smithWatermanSim_isRelatedTo_gpcr	rdfs:domain	iasis:SmithWatermanSim;
+#										rdfs:range	iasis:GPCR;
+#										dce:creator	iasis:samaneh.
+#iasis:smithWatermanSim_isRelatedTo_ionChannel	rdfs:domain	iasis:SmithWatermanSim;
+#												rdfs:range	iasis:IonChannel;
+#												dce:creator	iasis:samaneh.
+#iasis:smithWatermanSim_isRelatedTo_nuclearReceptor	rdfs:domain	iasis:SmithWatermanSim;
+#													rdfs:range	iasis:NuclearReceptor;
+#													dce:creator	iasis:samaneh.
 
 
 #### WP2 requirements:
