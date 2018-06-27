@@ -371,11 +371,18 @@ iasis:ageStart	rdf:type	owl:DatatypeProperty;
 				dce:creator	iasis:samaneh.
 iasis:identifier	rdf:type	owl:ObjectProperty;
 					dce:creator	iasis:samaneh.
+iasis:toxicHabit	rdf:type	owl:DatatypeProperty;
+					dce:creator	iasis:samaneh.
 iasis:diagnosisAge	rdf:type	owl:DatatypeProperty;
 					rdfs:comment "The age on which the patient was diagnosed with Cancer.";
 					dce:creator	iasis:samaneh.
+iasis:diagnosisAgeGroup	rdf:type	owl:DatatypeProperty;
+						rdfs:comment "The age group on which the patient was diagnosed with Cancer.";
+						dce:creator	iasis:samaneh.
 iasis:diagnosisDate	rdf:type	owl:DatatypeProperty;
 					rdfs:comment "The date on which the patient was diagnosed with Cancer.";
+					dce:creator	iasis:samaneh.
+iasis:egfrMutation	rdf:type	owl:DatatypeProperty;
 					dce:creator	iasis:samaneh.
 iasis:hasEcog	rdf:type	owl:ObjectProperty;
 				dce:creator	iasis:samaneh.
@@ -766,6 +773,15 @@ iasis:identifier	rdfs:domain	iasis:TumorStageObservation;
 					rdfs:range	iasis:VocTerm;
 					dce:creator	iasis:samaneh.
 iasis:diagnosisAge	rdfs:domain	iasis:LCPatient;
+					rdfs:range	rdfs:Literal;
+					dce:creator	iasis:samaneh.
+iasis:diagnosisAgeGroup	rdfs:domain	iasis:LCPatient;
+						rdfs:range	rdfs:Literal;
+						dce:creator	iasis:samaneh.
+iasis:toxicHabit	rdfs:domain	iasis:LCPatient;
+					rdfs:range	rdfs:Literal;
+					dce:creator	iasis:samaneh.
+iasis:egfrMutation	rdfs:domain	iasis:LCPatient;
 					rdfs:range	rdfs:Literal;
 					dce:creator	iasis:samaneh.
 iasis:diagnosisDate	rdfs:domain	iasis:LCPatient;
