@@ -335,6 +335,8 @@ iasis:drug_interactsWith_protein	rdf:type	owl:ObjectProperty;
 									dce:creator iasis:samaneh.
 iasis:drug_interactsWith_enzyme	rdf:type	owl:ObjectProperty;
 								dce:creator iasis:samaneh.
+iasis:drug_isPredictedToInteractWith_enzyme	rdf:type	owl:ObjectProperty;
+											dce:creator	iasis:samaneh.
 iasis:drug_interactsWith_drug	rdf:type	owl:ObjectProperty;
 								dce:creator iasis:samaneh.
 iasis:drug_isPredictedToInteractWith_drug	rdf:type	owl:ObjectProperty;
@@ -722,11 +724,14 @@ iasis:drug_interactsWith_protein	rdfs:domain	iasis:Drug;
 iasis:drug_interactsWith_enzyme	rdfs:domain	iasis:Drug;
 								rdfs:range	iasis:Enzyme;
 								dce:creator iasis:samaneh.
+iasis:drug_isPredictedToInteractWith_enzyme	rdfs:domain	iasis:Drug;
+											rdfs:range	iasis:Enzyme;
+											dce:creator iasis:samaneh.
 iasis:drug_interactsWith_drug	rdfs:domain	iasis:Drug;
 								rdfs:range	iasis:Drug;
 								dce:creator iasis:samaneh.
 iasis:drug_isPredictedToInteractWith_drug	rdfs:domain	iasis:Drug;
-											rdfs:range	iasis:drug;
+											rdfs:range	iasis:Drug;
 											dce:creator iasis:samaneh.
 iasis:hasSideEffect	rdfs:domain	iasis:Drug;
 					rdfs:range	iasis:HPO;
