@@ -330,13 +330,15 @@ iasis:omixcore rdf:type owl:DatatypeProperty;
 
 #### Drug requirements:
 
-iasis:interacts	rdf:type	owl:ObjectProperty;
-				rdfs:comment "Drugs interacts with protein target!";
-				dce:creator iasis:samaneh.
+
 iasis:drug_interactsWith_protein	rdf:type	owl:ObjectProperty;
 									dce:creator iasis:samaneh.
 iasis:drug_interactsWith_enzyme	rdf:type	owl:ObjectProperty;
 								dce:creator iasis:samaneh.
+iasis:drug_interactsWith_drug	rdf:type	owl:ObjectProperty;
+								dce:creator iasis:samaneh.
+iasis:drug_isPredictedToInteractWith_drug	rdf:type	owl:ObjectProperty;
+											dce:creator iasis:samaneh.
 iasis:hasSideEffect	rdf:type	owl:ObjectProperty;
 								dce:creator iasis:samaneh.
 iasis:dse_AvgFrequency	rdf:type	owl:dataTypeProperty;
@@ -720,6 +722,12 @@ iasis:drug_interactsWith_protein	rdfs:domain	iasis:Drug;
 iasis:drug_interactsWith_enzyme	rdfs:domain	iasis:Drug;
 								rdfs:range	iasis:Enzyme;
 								dce:creator iasis:samaneh.
+iasis:drug_interactsWith_drug	rdfs:domain	iasis:Drug;
+								rdfs:range	iasis:Drug;
+								dce:creator iasis:samaneh.
+iasis:drug_isPredictedToInteractWith_drug	rdfs:domain	iasis:Drug;
+											rdfs:range	iasis:drug;
+											dce:creator iasis:samaneh.
 iasis:hasSideEffect	rdfs:domain	iasis:Drug;
 					rdfs:range	iasis:HPO;
 					dce:creator iasis:samaneh.
