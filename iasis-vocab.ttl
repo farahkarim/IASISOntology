@@ -101,7 +101,8 @@ iasis:RBP_RNA_PhysicalInteraction	rdf:type	owl:Class;
 
 iasis:Drug rdf:type owl:Class.
 iasis:SideEffect rdf:type owl:Class.
-iasis:DrugSideEffect rdf:type owl:Class.
+iasis:DrugSideEffect	rdf:type owl:Class;
+						rdfs:comment "The Drug SideEffect relation should be a class since has two properties".				
 iasis:Enzyme rdf:type owl:Class.
 
 #iasis:CosSim rdf:type owl:Class.
