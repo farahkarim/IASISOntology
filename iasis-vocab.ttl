@@ -224,45 +224,76 @@ iasis:histologySubtype2	rdf:type owl:DatatypeProperty;
 						rdfs:label	"Primary Histology 2nd level subclassification";
                         dce:creator iasis:samaneh.
 iasis:mutation_mentionedIn_publication	rdf:type owl:ObjectProperty;
-										rdfs:comment	"Derived from Mutation and ResistanceMutation datasets.";
+										rdfs:comment	"Extracted from Mutation dataset.";
 										rdfs:label	"The mutation is mentioned in publication";
                    						dce:creator iasis:samaneh.
 iasis:mutation_pepSeq	rdf:type	owl:DatatypeProperty;
 						rdfs:comment "The new column produced from Mutation AA column, excluding p. in mutation dataset";
+						rdfs:label	"Mutation Peptide Sequece";
 						dce:creator	iasis:samaneh.
 iasis:resistance_mutation_pepSeq	rdf:type	owl:DatatypeProperty;
 									rdfs:comment "The new column produced from Mutation AA column, excluding p. in restanceMutation dataset";
+									rdfs:label	"ResistanceMutation Peptide Sequence";
 									dce:creator	iasis:samaneh.
 iasis:mutation_NucleotideSeq	rdf:type	owl:DatatypeProperty;
 								rdfs:comment "The new column produced from Mutation CDS column, excluding c. Those including extra characters are ignored to be added to this column.";
+								rdfs:label	"Mutation Nucleotide Sequence";
 								dce:creator	iasis:samaneh.
-iasis:cnv_chromosome rdf:type owl:DatatypeProperty;
-                 dce:creator iasis:samaneh.
-iasis:mutation_chromosome rdf:type owl:DatatypeProperty;
-                 dce:creator iasis:samaneh.
-iasis:cgi_chromosome rdf:type owl:DatatypeProperty;
-                 dce:creator iasis:samaneh.
-iasis:mutation_strand rdf:type owl:DatatypeProperty;
-             dce:creator iasis:samaneh.
+iasis:cnv_chromosome	rdf:type owl:DatatypeProperty;
+						rdfs:comment	"Chromose in which the CNV is located on";
+						rdfs:label	"Chromosome";
+                 		dce:creator iasis:samaneh.
+iasis:mutation_chromosome	rdf:type owl:DatatypeProperty;
+							rdfs:comment	"Chromosome in which the mutation is occured";
+							rdfs:label	"Chromosome";
+                			dce:creator iasis:samaneh.
+iasis:cgi_chromosome	rdf:type owl:DatatypeProperty;
+						rdfs:comment	"Chromosome in which the CGI is loacted";
+						rdfs:label	"Chromosome";
+                 		dce:creator iasis:samaneh.
+iasis:mutation_strand	rdf:type owl:DatatypeProperty;
+						rdfs:comment	"Strand in which the mutation is occured";
+						rdfs:label	"Strand";
+             			dce:creator iasis:samaneh.
 iasis:cnv_start	rdf:type owl:DatatypeProperty;
+				rdfs:comment	"The starting point of CNV";
+				rdfs:label	"Start";
             	dce:creator iasis:samaneh.
 iasis:mutation_start	rdf:type owl:DatatypeProperty;
+						rdfs:comment	"The starting point of the mutation";
+						rdfs:label	"Start";
             			dce:creator iasis:samaneh.
 iasis:cnv_end	rdf:type owl:DatatypeProperty;
+				rdfs:comment	"The ending point of CNV";
+				rdfs:label	"End";
           		dce:creator iasis:samaneh.
 iasis:mutation_end	rdf:type owl:DatatypeProperty;
+					rdfs:comment	"The ending point of the mutation";
+					rdfs:label	"End";
           			dce:creator iasis:samaneh.
-iasis:genomic_position rdf:type owl:DatatypeProperty;
-                       dce:creator iasis:samaneh.
+iasis:genomic_position	rdf:type owl:DatatypeProperty;
+						rdfs:comment	"The genomic position";
+						rdfs:label	"Genomic Position";
+                       	dce:creator iasis:samaneh.
 iasis:cnv_study_id	rdf:type owl:ObjectProperty;
+					rdfs:comment	"The ID of the study in which the CNV is mentioned";
+					rdfs:label	"StudyID";
                		dce:creator iasis:samaneh.
 iasis:mutation_study_id	rdf:type owl:ObjectProperty;
+						rdfs:comment	"The ID of the study in which the mutation is mentioned";
+						rdfs:label	"StudyID";
                			dce:creator iasis:samaneh.
 iasis:cgi_study_id	rdf:type owl:ObjectProperty;
+					rdfs:comment	"The ID of the study in which the CGI is mentioned";
+					rdfs:label	"StudyID";
                		dce:creator iasis:samaneh.
 iasis:gexp_study_id	rdf:type owl:ObjectProperty;
+					rdfs:comment	"The ID of the srudy in which the geneExpression is mentioned";
+					rdfs:label	"StudyID";
                		dce:creator iasis:samaneh.
-iasis:mutation_cds rdf:type owl:DatatypeProperty;
+iasis:mutation_cds 	rdf:type owl:DatatypeProperty;
+					rdfs:comment	"The nucleotide sequence of the mutatiojn";
+					rdfs:label	"";
                    dce:creator iasis:samaneh.
 iasis:mutation_aa rdf:type owl:DatatypeProperty;
                   dce:creator iasis:samaneh.  
