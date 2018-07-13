@@ -298,6 +298,8 @@ iasis:cnv_isLocatedIn_sample	rdf:type owl:ObjectProperty;
 iasis:cnv_isLocatedIn_tumor	rdf:type owl:ObjectProperty;
                  			dce:creator iasis:samaneh.
 iasis:mutation_isLocatedIn_gene	rdf:type owl:ObjectProperty;
+								rdfs:comment	"The Gene in which the mutation occurs";
+								rdfs:label	"The Mutation is located in Gene:";
                  				dce:creator iasis:samaneh.
 iasis:mutation_isLocatedIn_tumor	rdf:type owl:ObjectProperty;
                  					dce:creator iasis:samaneh.
