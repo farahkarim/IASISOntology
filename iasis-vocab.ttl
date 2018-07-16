@@ -21,10 +21,6 @@ iasis:Image rdf:type owl:Class.
 #### WP4 requirements: 
 
 iasis:Publication	rdf:type	owl:Class.
-#iasis:LCPublication rdf:type	owl:Class.
-#iasis:ADPublication rdf:type	owl:Class.
-#iasis:LCAnnotation rdf:type	owl:Class.
-#iasis:ADAnnotation rdf:type	owl:Class.
 iasis:Relation rdf:type	owl:Class.
 
 #### UMLS predictions:
