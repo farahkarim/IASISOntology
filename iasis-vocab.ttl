@@ -179,7 +179,9 @@ iasis:isRelatedTo	rdf:type	owl:ObjectProperty;
 					rdfs:comment "relation between superclasses Concept and Relation classes";
 					dce:creator	iasis:farah.
 
-#iasis:cUITerm	rdf:type owl:DatatypeProperty.
+#iasis:cUITerm	rdf:type owl:DatatypeProperty;
+#iasis:cUITerm rdfs:domain iasis:Annotation;
+#				rdfs:range	rdfs:Literal.
 
 #### WP4 requirements:
 
@@ -205,49 +207,82 @@ iasis:annotates rdf:type	owl:ObjectProperty;
 #### COSMIC requirements:
 
 iasis:description	rdf:type owl:DatatypeProperty;
-                  	rdfs:comment "a property of Annotation Class";
 					rdfs:label	"Description";
-				  	dce:creator iasis:samaneh.	
+					rdfs:domain iasis:Annotation;
+				  	rdfs:range rdfs:Literal;
+                  	rdfs:comment "a property of Annotation Class";
+				  	dce:creator iasis:samaneh.
+
 iasis:cds_length 	rdf:type owl:DatatypeProperty;
+					rdfs:label	"LengthOfGene";
+					rdfs:domain iasis:Gene;
+				 	rdfs:range rdfs:Literal;
 					rdfs:comment	"Length of the gene by counting the number of base pair that are included.";
-					rdfs:label	"Length of the gene";
                  	dce:creator iasis:samaneh.
+
 iasis:age	rdf:type owl:DatatypeProperty;
 			rdfs:comment	"Information about the information of sample";
-			rdfs:label	"Age of sample";
+			rdfs:label	"AgeOfSample";
+			rdfs:domain iasis:Sample;          
+		  	rdfs:range rdfs:Literal;
           	dce:creator iasis:samaneh.
+
 iasis:primaryTissue	rdf:type owl:DatatypeProperty;
+					rdfs:label	"PrimaryTissue";
+					rdfs:domain iasis:Sample;
+					rdfs:range	rdfs:Literal;
 					rdfs:comment	"The primary tissue/cancer from which the sample originated.";
-					rdfs:label	"Primary Tissue";
                    	dce:creator iasis:samaneh.
+
 iasis:tissueSubtype1	rdf:type owl:DatatypeProperty;
+						rdfs:label	"PrimaryTissue_1stLevelSubclassification";
+						rdfs:domain iasis:Sample;
+						rdfs:range	rdfs:Literal;
 						rdfs:comment	"Sub classification (level 1) of the samples tissue of origin.";
-						rdfs:label	"Primary Tissue 1st level subclassification";
                    	 	dce:creator iasis:samaneh.
+
 iasis:tissueSubtype2	rdf:type owl:DatatypeProperty;
+						rdfs:label	"PrimaryTissue_2ndLevelSubclassification";
+						rdfs:domain iasis:Sample;
+						rdfs:range	rdfs:Literal;
 						rdfs:comment	"Sub classification (level 2) of the samples tissue of origin.";
-						rdfs:label	"Primary Tissue 2nd level subclassification";
                    	 	dce:creator iasis:samaneh.
+
 iasis:primaryHistology	rdf:type owl:DatatypeProperty;
+						rdfs:label	"PrimaryHistology";
+						rdfs:domain iasis:Sample;
+						rdfs:range	rdfs:Literal;
 						rdfs:comment	"The histological classification of sample.";
-						rdfs:label	"Primary Histology";
                         dce:creator iasis:samaneh.
+
 iasis:histologySubtype1	rdf:type owl:DatatypeProperty;
+						rdfs:label	"PrimaryHistology_1stLevelSubclassification";
+						rdfs:domain iasis:Sample;
+						rdfs:range	rdfs:Literal;
 						rdfs:comment	"Histological classification (level 1) of the sample.";
-						rdfs:label	"Primary Histology 1st level subclassification";
                         dce:creator iasis:samaneh.
+
 iasis:histologySubtype2	rdf:type owl:DatatypeProperty;
+						rdfs:domain iasis:Sample;
+						rdfs:range	rdfs:Literal;
 						rdfs:comment	"Histological classification (level 2) of the sample.";
-						rdfs:label	"Primary Histology 2nd level subclassification";
+						rdfs:label	"PrimaryHistology_2ndLevelSubclassification";
                         dce:creator iasis:samaneh.
+
 iasis:mutation_mentionedIn_publication	rdf:type owl:ObjectProperty;
+										rdfs:label	"MutationMentionedInPublication";
+										rdfs:domain iasis:Mutation;
+				   						rdfs:range iasis:Publication;
 										rdfs:comment	"Extracted from Mutation dataset.";
-										rdfs:label	"The mutation is mentioned in publication";
                    						dce:creator iasis:samaneh.
+
 iasis:mutation_pepSeq	rdf:type	owl:DatatypeProperty;
+						rdfs:label	"MutationPeptideSequece";
+						rdfs:domain	iasis:Mutation;
+						rdfs:range rdfs:Literal;
 						rdfs:comment "The new column produced from Mutation AA column, excluding p. in mutation dataset";
-						rdfs:label	"Mutation Peptide Sequece";
 						dce:creator	iasis:samaneh.
+
 iasis:resistance_mutation_pepSeq	rdf:type	owl:DatatypeProperty;
 									rdfs:comment "The new column produced from Mutation AA column, excluding p. in restanceMutation dataset";
 									rdfs:label	"ResistanceMutation Peptide Sequence";
@@ -532,45 +567,6 @@ iasis:ecogList	rdf:type	owl:DatatypeProperty;
 
 ###########Domains And Ranges
 
-iasis:id	rdfs:domain iasis:Annotation;
-			rdfs:range	iasis:VocTerm;
-			rdfs:comment	"Identification of insances of Annotation class";
-			rdfs:label	"ID";
-			dce:creator	iasis:farah.
-iasis:id	rdfs:domain iasis:Concept;
-			rdfs:range	iasis:VocTerm;
-			rdfs:comment	"Identification of insances of Concept class";
-			rdfs:label	"ID";
-			dce:creator	iasis:farah.
-iasis:annLabel	rdfs:domain	iasis:Annotation;
-				rdfs:range	rdfs:Literal;
-                rdfs:comment	"Label of instances of Annotation class";
-                rdfs:label	"Label";
-                dce:creator	iasis:samaneh.
-iasis:label rdfs:domain	iasis:Concept;
-			rdfs:range	rdfs:Literal;
-			rdfs:comment	"Label of instances of Concept class";
-			rdfs:label	"Label";
-			dce:creator	iasis:samaneh.
-iasis:source	rdfs:domain iasis:Annotation;
-				rdfs:range	iasis:SourceName;
-				rdfs:comment	"The name of the source from which the annotation is extracted or derived";
-				rdfs:label	"Source";
-				dce:creator	iasis:farah.
-iasis:source	rdfs:domain iasis:Concept;
-				rdfs:range	iasis:SourceName;
-				rdfs:comment	"The name of the source from which the concept is extracted or derived";
-				rdfs:label	"Source";
-				dce:creator	iasis:farah.
-iasis:isRelatedTo	rdfs:domain iasis:Concept;
-					rdfs:range iasis:Relation;
-					rdfs:comment "relation between superclasses Concept and Relation classes";
-					rdfs:label	"Annotation of the Concept";
-					dce:creator	iasis:farah.
-
-
-#iasis:cUITerm rdfs:domain iasis:Annotation;
-#				rdfs:range	rdfs:Literal.
 
 #### WP4 requirements:
 
