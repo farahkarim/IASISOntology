@@ -380,35 +380,89 @@ iasis:mutation_study_id	rdf:type owl:ObjectProperty;
                			dce:creator iasis:samaneh.
 
 iasis:cgi_study_id	rdf:type owl:ObjectProperty;
+					rdfs:label	"CpGislandStudyID";
+					rdfs:domain iasis:CGI;
+			   		rdfs:range iasis:VocTerm;
 					rdfs:comment	"The ID of the study in which the CGI is mentioned";
-					rdfs:label	"StudyID";
                		dce:creator iasis:samaneh.
+
 iasis:gexp_study_id	rdf:type owl:ObjectProperty;
+					rdfs:label	"gexpStudyID";
+					rdfs:domain iasis:GExp;
+			   		rdfs:range iasis:VocTerm;
 					rdfs:comment	"The ID of the srudy in which the geneExpression is mentioned";
-					rdfs:label	"StudyID";
                		dce:creator iasis:samaneh.
+
 iasis:mutation_cds 	rdf:type owl:DatatypeProperty;
-					rdfs:comment	"The nucleotide sequence of the mutatiojn";
-					rdfs:label	"";
-                   dce:creator iasis:samaneh.
-iasis:mutation_aa rdf:type owl:DatatypeProperty;
-                  dce:creator iasis:samaneh.  
+					rdfs:label	"mutationCDS";
+					rdfs:domain iasis:Mutation;
+				   	rdfs:range rdfs:Literal;
+					rdfs:comment	"The nucleotide sequence of the mutation";
+                   	dce:creator iasis:samaneh.
+
+iasis:mutation_aa 	rdf:type owl:DatatypeProperty;
+					rdfs:label	"mutationAA";
+					rdfs:domain iasis:Mutation;
+				  	rdfs:range rdfs:Literal;
+					rdfs:comment	"The peptide sequence of the mutation";
+                  	dce:creator iasis:samaneh. 
+
 iasis:fathmm_prediction rdf:type owl:DatatypeProperty;
+						rdfs:label	"";
+						rdfs:domain iasis:Mutation;
+						rdfs:range rdfs:Literal;
+						rdfs:comment	"";
                         dce:creator iasis:samaneh.
-iasis:fathmm_score rdf:type owl:DatatypeProperty;
-                   dce:creator iasis:samaneh.
-iasis:mutation_somatic_status rdf:type owl:DatatypeProperty;
-                              dce:creator iasis:samaneh.
-iasis:tumor_origin rdf:type owl:DatatypeProperty;
-                   dce:creator iasis:samaneh.
-iasis:z_score rdf:type owl:DatatypeProperty;
-              dce:creator iasis:samaneh.
-iasis:beta_value rdf:type owl:DatatypeProperty;
-                 dce:creator iasis:samaneh.
-iasis:avg_beta_value rdf:type owl:DatatypeProperty;
-                     dce:creator iasis:samaneh.
+
+iasis:fathmm_score 	rdf:type owl:DatatypeProperty;
+					rdfs:label	"";
+					rdfs:domain iasis:Mutation;
+				   	rdfs:range rdfs:Literal;
+					rdfs:comment	"";
+                   	dce:creator iasis:samaneh.
+
+iasis:mutation_somatic_status 	rdf:type owl:DatatypeProperty;
+								rdfs:label	"";
+								rdfs:domain iasis:Mutation;
+							  	rdfs:range rdfs:Literal;
+								rdfs:comment	"";
+                              	dce:creator iasis:samaneh.
+
+iasis:tumor_origin 	rdf:type owl:DatatypeProperty;
+					rdfs:label	"";
+					rdfs:domain iasis:Mutation;
+				   	rdfs:range rdfs:Literal;
+					rdfs:comment	"";
+                   	dce:creator iasis:samaneh.
+
+iasis:z_score 	rdf:type owl:DatatypeProperty;
+				rdfs:label	"";
+				rdfs:domain iasis:GExp;
+			  	rdfs:range rdfs:Literal;
+				rdfs:comment	"";
+              	dce:creator iasis:samaneh.
+
+iasis:beta_value	rdf:type owl:DatatypeProperty;
+					rdfs:label	"";
+					rdfs:domain iasis:CGI;
+				 	rdfs:range rdfs:Literal;
+					rdfs:comment	"";
+                 	dce:creator iasis:samaneh.
+
+iasis:avg_beta_value 	rdf:type owl:DatatypeProperty;
+						rdfs:label	"";
+						rdfs:domain iasis:CGI;
+					 	rdfs:range rdfs:Literal;
+						rdfs:comment	"";
+                     	dce:creator iasis:samaneh.
+
 iasis:two_sided_p-value rdf:type owl:DatatypeProperty;
+						rdfs:label	"";
+						rdfs:domain iasis:CGI;
+						rdfs:range rdfs:Literal;
+						rdfs:comment	"";
                         dce:creator iasis:samaneh.
+
 iasis:total_cn rdf:type owl:DatatypeProperty;
                dce:creator iasis:samaneh.      
 iasis:minor_allele rdf:type owl:DatatypeProperty;
@@ -646,42 +700,6 @@ iasis:annotates rdfs:domain	iasis:Relation;
 #### COSMIC requirements:
 
 
-iasis:cgi_study_id	rdfs:domain iasis:CGI;
-			   		rdfs:range iasis:VocTerm;
-               		dce:creator iasis:samaneh.
-iasis:gexp_study_id	rdfs:domain iasis:GExp;
-			   		rdfs:range iasis:VocTerm;
-               		dce:creator iasis:samaneh.
-iasis:mutation_cds rdfs:domain iasis:Mutation;
-				   rdfs:range rdfs:Literal;
-                   dce:creator iasis:samaneh.
-iasis:mutation_aa rdfs:domain iasis:Mutation;
-				  rdfs:range rdfs:Literal;
-                  dce:creator iasis:samaneh.
-iasis:fathmm_prediction rdfs:domain iasis:Mutation;
-						rdfs:range rdfs:Literal;
-                        dce:creator iasis:samaneh.
-iasis:fathmm_score rdfs:domain iasis:Mutation;
-				   rdfs:range rdfs:Literal;
-                   dce:creator iasis:samaneh.
-iasis:mutation_somatic_status rdfs:domain iasis:Mutation;
-							  rdfs:range rdfs:Literal;
-                              dce:creator iasis:samaneh.
-iasis:tumor_origin rdfs:domain iasis:Mutation;
-				   rdfs:range rdfs:Literal;
-                   dce:creator iasis:samaneh.
-iasis:z_score rdfs:domain iasis:GExp;
-			  rdfs:range rdfs:Literal;
-              dce:creator iasis:samaneh.
-iasis:beta_value rdfs:domain iasis:CGI;
-				 rdfs:range rdfs:Literal;
-                 dce:creator iasis:samaneh.
-iasis:avg_beta_value rdfs:domain iasis:CGI;
-					 rdfs:range rdfs:Literal;
-                     dce:creator iasis:samaneh.
-iasis:two_sided_p-value rdfs:domain iasis:CGI;
-						rdfs:range rdfs:Literal;
-                        dce:creator iasis:samaneh.
 iasis:total_cn rdfs:domain iasis:CNV;
 			   rdfs:range rdfs:Literal;
                dce:creator iasis:samaneh.
