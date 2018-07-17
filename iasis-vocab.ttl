@@ -149,29 +149,34 @@ iasis:id	rdfs:label	"ConceptID";
 			rdfs:range	iasis:VocTerm;
 			rdfs:comment	"Identification of insances of Concept class";
 			dce:creator	iasis:farah.
+
 iasis:annLabel	rdf:type	owl:DatatypeProperty;
 				rdfs:label	"AnnotationLabel";
 				rdfs:domain	iasis:Annotation;
 				rdfs:range	rdfs:Literal;
                 rdfs:comment	"Label of instances of Annotation class";
                 dce:creator	iasis:samaneh.
+
 iasis:label	rdf:type	owl:DatatypeProperty;
 			rdfs:label	"ConceptLabel";
 			rdfs:domain	iasis:Concept;
 			rdfs:range	rdfs:Literal;
 			rdfs:comment	"Label of instances of Concept class";
 			dce:creator	iasis:samaneh.
+
 iasis:source	rdf:type	owl:ObjectProperty;
 				rdfs:label	"AnnotationSource";
 				rdfs:domain iasis:Annotation;
 				rdfs:range	iasis:SourceName;
 				rdfs:comment	"The name of the source from which the annotation is extracted or derived";
 				dce:creator	iasis:farah.
+
 iasis:source	rdfs:label	"ConceptSource";
 				rdfs:domain iasis:Concept;
 				rdfs:range	iasis:SourceName;
 				rdfs:comment	"The name of the source from which the concept is extracted or derived";
 				dce:creator	iasis:farah.
+
 iasis:isRelatedTo	rdf:type	owl:ObjectProperty;
 					rdfs:label	"AnnotationOfConcept";
 					rdfs:domain iasis:Concept;
@@ -284,57 +289,96 @@ iasis:mutation_pepSeq	rdf:type	owl:DatatypeProperty;
 						dce:creator	iasis:samaneh.
 
 iasis:resistance_mutation_pepSeq	rdf:type	owl:DatatypeProperty;
+									rdfs:label	"ResistanceMutationPeptideSequence";
+									rdfs:domain	iasis:ResistanceMutation;
+									rdfs:range rdfs:Literal;
 									rdfs:comment "The new column produced from Mutation AA column, excluding p. in restanceMutation dataset";
-									rdfs:label	"ResistanceMutation Peptide Sequence";
 									dce:creator	iasis:samaneh.
+
 iasis:mutation_NucleotideSeq	rdf:type	owl:DatatypeProperty;
+								rdfs:label	"MutationNucleotideSequence";
+								rdfs:domain	iasis:Mutation;
+								rdfs:range rdfs:Literal;
 								rdfs:comment "The new column produced from Mutation CDS column, excluding c. Those including extra characters are ignored to be added to this column.";
-								rdfs:label	"Mutation Nucleotide Sequence";
 								dce:creator	iasis:samaneh.
+
 iasis:cnv_chromosome	rdf:type owl:DatatypeProperty;
+						rdfs:label	"cnvChromosome";
+						rdfs:domain iasis:CNV;
+				 		rdfs:range rdfs:Literal;
 						rdfs:comment	"Chromose in which the CNV is located on";
-						rdfs:label	"Chromosome";
                  		dce:creator iasis:samaneh.
+
 iasis:mutation_chromosome	rdf:type owl:DatatypeProperty;
+							rdfs:label	"mutationChromosome";
+							rdfs:domain iasis:Mutation;
+				 			rdfs:range rdfs:Literal;
 							rdfs:comment	"Chromosome in which the mutation is occured";
-							rdfs:label	"Chromosome";
                 			dce:creator iasis:samaneh.
+
 iasis:cgi_chromosome	rdf:type owl:DatatypeProperty;
+						rdfs:label	"CpGislandChromosome";
+						rdfs:domain iasis:CGI;
+				 		rdfs:range rdfs:Literal;
 						rdfs:comment	"Chromosome in which the CGI is loacted";
-						rdfs:label	"Chromosome";
                  		dce:creator iasis:samaneh.
+
 iasis:mutation_strand	rdf:type owl:DatatypeProperty;
+						rdfs:label	"mutationStrand";
+						rdfs:domain iasis:Mutation;
+			 			rdfs:range rdfs:Literal;
 						rdfs:comment	"Strand in which the mutation is occured";
-						rdfs:label	"Strand";
              			dce:creator iasis:samaneh.
+
 iasis:cnv_start	rdf:type owl:DatatypeProperty;
+				rdfs:label	"cnvStartPosition";
+				rdfs:domain iasis:CNV;
+				rdfs:range rdfs:Literal;
 				rdfs:comment	"The starting point of CNV";
-				rdfs:label	"Start";
             	dce:creator iasis:samaneh.
+
 iasis:mutation_start	rdf:type owl:DatatypeProperty;
+						rdfs:label	"mutationStartPosition";
+						rdfs:domain iasis:Mutation;
+						rdfs:range rdfs:Literal;
 						rdfs:comment	"The starting point of the mutation";
-						rdfs:label	"Start";
             			dce:creator iasis:samaneh.
+
 iasis:cnv_end	rdf:type owl:DatatypeProperty;
+				rdfs:label	"cnvEndPosition";
+				rdfs:domain iasis:CNV;
+		  		rdfs:range rdfs:Literal;
 				rdfs:comment	"The ending point of CNV";
-				rdfs:label	"End";
           		dce:creator iasis:samaneh.
+
 iasis:mutation_end	rdf:type owl:DatatypeProperty;
+					rdfs:label	"mutationEndPosition";
+					rdfs:domain iasis:Mutation;
+		  			rdfs:range rdfs:Literal;
 					rdfs:comment	"The ending point of the mutation";
-					rdfs:label	"End";
           			dce:creator iasis:samaneh.
+
 iasis:genomic_position	rdf:type owl:DatatypeProperty;
+						rdfs:label	"CpGislandGenomicPosition";
+						rdfs:domain iasis:CGI;
+					   	rdfs:range rdfs:Literal;	
 						rdfs:comment	"The genomic position";
-						rdfs:label	"Genomic Position";
                        	dce:creator iasis:samaneh.
+
 iasis:cnv_study_id	rdf:type owl:ObjectProperty;
+					rdfs:label	"cnvStudyID";
+					rdfs:domain iasis:CNV;
+			   		rdfs:range iasis:VocTerm;
 					rdfs:comment	"The ID of the study in which the CNV is mentioned";
-					rdfs:label	"StudyID";
                		dce:creator iasis:samaneh.
+
 iasis:mutation_study_id	rdf:type owl:ObjectProperty;
+						rdfs:label	"mutationStudyID";
+						rdfs:domain iasis:Mutation;
+			   			rdfs:range iasis:VocTerm;
 						rdfs:comment	"The ID of the study in which the mutation is mentioned";
-						rdfs:label	"StudyID";
                			dce:creator iasis:samaneh.
+
 iasis:cgi_study_id	rdf:type owl:ObjectProperty;
 					rdfs:comment	"The ID of the study in which the CGI is mentioned";
 					rdfs:label	"StudyID";
@@ -601,78 +645,7 @@ iasis:annotates rdfs:domain	iasis:Relation;
 
 #### COSMIC requirements:
 
-iasis:description rdfs:domain iasis:Annotation;
-				  rdfs:range rdfs:Literal;
-                  dce:creator iasis:samaneh.   
-iasis:cds_length rdfs:domain iasis:Gene;
-				 rdfs:range rdfs:Literal;
-                 dce:creator iasis:samaneh.
-iasis:age rdfs:domain iasis:Sample;          
-		  rdfs:range rdfs:Literal;
-          dce:creator iasis:samaneh.
-iasis:primaryTissue	rdfs:domain iasis:Sample;
-					rdfs:range	rdfs:Literal;
-                   	dce:creator iasis:samaneh.
-iasis:tissueSubtype1	rdfs:domain iasis:Sample;
-						rdfs:range	rdfs:Literal;
-                   		dce:creator iasis:samaneh.
-iasis:tissueSubtype2	rdfs:domain iasis:Sample;
-						rdfs:range	rdfs:Literal;
-                   		dce:creator iasis:samaneh.
-iasis:primaryHistology rdfs:domain iasis:Sample;
-						rdfs:range	rdfs:Literal;
-                   		dce:creator iasis:samaneh.
-iasis:histologySubtype1	rdfs:domain iasis:Sample;
-						rdfs:range	rdfs:Literal;
-                   		dce:creator iasis:samaneh.
-iasis:histologySubtype2	rdfs:domain iasis:Sample;
-						rdfs:range	rdfs:Literal;
-                   		dce:creator iasis:samaneh.
-iasis:mutation_mentionedIn_publication	rdfs:domain iasis:Mutation;
-				   						rdfs:range iasis:Publication;
-                   						dce:creator iasis:samaneh.
-iasis:mutation_pepSeq	rdfs:domain	iasis:Mutation;
-						rdfs:range rdfs:Literal;
-						dce:creator	iasis:samaneh.
-iasis:resistance_mutation_pepSeq	rdfs:domain	iasis:ResistanceMutation;
-									rdfs:range rdfs:Literal;
-									dce:creator	iasis:samaneh.
-iasis:mutation_NucleotideSeq	rdfs:domain	iasis:Mutation;
-						rdfs:range rdfs:Literal;
-						dce:creator	iasis:samaneh.
-iasis:cnv_chromosome	rdfs:domain iasis:CNV;
-				 		rdfs:range rdfs:Literal;
-                 		dce:creator iasis:samaneh.
-iasis:mutation_chromosome	rdfs:domain iasis:Mutation;
-				 			rdfs:range rdfs:Literal;
-                 			dce:creator iasis:samaneh.
-iasis:cgi_chromosome	rdfs:domain iasis:CGI;
-				 		rdfs:range rdfs:Literal;
-                 		dce:creator iasis:samaneh.
-iasis:mutation_strand	rdfs:domain iasis:Mutation;
-			 			rdfs:range rdfs:Literal;
-            			dce:creator iasis:samaneh.
-iasis:cnv_start	rdfs:domain iasis:CNV;
-				rdfs:range rdfs:Literal;
-            	dce:creator iasis:samaneh.
-iasis:mutation_start	rdfs:domain iasis:Mutation;
-						rdfs:range rdfs:Literal;
-            			dce:creator iasis:samaneh.
-iasis:cnv_end	rdfs:domain iasis:CNV;
-		  		rdfs:range rdfs:Literal;
-          		dce:creator iasis:samaneh.
-iasis:mutation_end	rdfs:domain iasis:Mutation;
-		  			rdfs:range rdfs:Literal;
-          			dce:creator iasis:samaneh.
-iasis:genomic_position rdfs:domain iasis:CGI;
-					   rdfs:range rdfs:Literal;
-                       dce:creator iasis:samaneh.
-iasis:cnv_study_id	rdfs:domain iasis:CNV;
-			   		rdfs:range iasis:VocTerm;
-               		dce:creator iasis:samaneh.
-iasis:mutation_study_id	rdfs:domain iasis:Mutation;
-			   			rdfs:range iasis:VocTerm;
-               			dce:creator iasis:samaneh.
+
 iasis:cgi_study_id	rdfs:domain iasis:CGI;
 			   		rdfs:range iasis:VocTerm;
                		dce:creator iasis:samaneh.
