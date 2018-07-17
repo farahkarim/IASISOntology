@@ -137,11 +137,47 @@ iasis:DiagnosisAgeGroup	rdf:type	owl:Class;
 
 #########Properties
 
-iasis:id	rdf:type	owl:ObjectProperty.
-iasis:annLabel	rdf:type	owl:DatatypeProperty.
-iasis:label	rdf:type	owl:DatatypeProperty.
-iasis:source	rdf:type	owl:ObjectProperty.
-iasis:isRelatedTo	rdf:type	owl:ObjectProperty.
+iasis:id	rdf:type	owl:ObjectProperty;
+			rdfs:label	"AnnotationID";
+			rdfs:domain iasis:Annotation;
+			rdfs:range	iasis:VocTerm;
+			rdfs:comment	"Identification of insances of Annotation class";	
+			dce:creator	iasis:farah.
+
+iasis:id	rdfs:label	"ConceptID";
+			rdfs:domain iasis:Concept;
+			rdfs:range	iasis:VocTerm;
+			rdfs:comment	"Identification of insances of Concept class";
+			dce:creator	iasis:farah.
+iasis:annLabel	rdf:type	owl:DatatypeProperty;
+				rdfs:label	"AnnotationLabel";
+				rdfs:domain	iasis:Annotation;
+				rdfs:range	rdfs:Literal;
+                rdfs:comment	"Label of instances of Annotation class";
+                dce:creator	iasis:samaneh.
+iasis:label	rdf:type	owl:DatatypeProperty;
+			rdfs:label	"ConceptLabel";
+			rdfs:domain	iasis:Concept;
+			rdfs:range	rdfs:Literal;
+			rdfs:comment	"Label of instances of Concept class";
+			dce:creator	iasis:samaneh.
+iasis:source	rdf:type	owl:ObjectProperty;
+				rdfs:label	"AnnotationSource";
+				rdfs:domain iasis:Annotation;
+				rdfs:range	iasis:SourceName;
+				rdfs:comment	"The name of the source from which the annotation is extracted or derived";
+				dce:creator	iasis:farah.
+iasis:source	rdfs:label	"ConceptSource";
+				rdfs:domain iasis:Concept;
+				rdfs:range	iasis:SourceName;
+				rdfs:comment	"The name of the source from which the concept is extracted or derived";
+				dce:creator	iasis:farah.
+iasis:isRelatedTo	rdf:type	owl:ObjectProperty;
+					rdfs:label	"AnnotationOfConcept";
+					rdfs:domain iasis:Concept;
+					rdfs:range iasis:Relation;
+					rdfs:comment "relation between superclasses Concept and Relation classes";
+					dce:creator	iasis:farah.
 
 #iasis:cUITerm	rdf:type owl:DatatypeProperty.
 
