@@ -7,21 +7,61 @@
 @prefix dce: <http://purl.org/dc/elements/1.1/>.
 
 #########Classes
-iasis:Concept rdf:type	owl:Class.
-iasis:Annotation	rdf:type	owl:Class.
-iasis:Vocabulary	rdf:type	owl:Class.
-iasis:VocTerm	rdf:type	owl:Class.
-iasis:CUITerm	rdf:type	owl:Thing.
-iasis:SourceName	rdf:type	owl:Class.
-ssn:Measurement	rdf:type	owl:Class.
-ssn:Unit	rdf:type	owl:Class.
-iasis:Test rdf:type owl:Class.
-iasis:Image rdf:type owl:Class.
+iasis:Concept 	rdf:type	owl:Class;
+				rdfs:label	"Concept";
+				rdfs:comment "";
+				dce:creator	iasis:farah.
+
+iasis:Annotation	rdf:type	owl:Class;
+					rdfs:label	"Annotation";
+					rdfs:comment "";
+					dce:creator	iasis:farah.
+
+iasis:Vocabulary	rdf:type	owl:Class;
+					rdfs:label	"";
+					rdfs:comment "";
+					dce:creator	iasis:farah.
+
+iasis:VocTerm	rdf:type	owl:Class;
+				rdfs:label	"";
+				rdfs:comment "";
+				dce:creator	iasis:farah.
+
+iasis:CUITerm	rdf:type	owl:Thing;
+				rdfs:label	"";
+				rdfs:comment "";
+				dce:creator	iasis:farah.
+
+iasis:SourceName	rdf:type	owl:Class;
+					rdfs:label	"";
+					rdfs:comment "";
+					dce:creator	iasis:farah.
+
+iasis:Test 	rdf:type owl:Class;
+			rdfs:label	"";
+			rdfs:subClassOf	iasis:Concept;
+			rdfs:comment "";
+			dce:creator	iasis:farah.
+
+iasis:Image rdf:type owl:Class;
+			rdfs:label	"";
+			rdfs:subClassOf	iasis:Concept;
+			rdfs:comment "";
+			dce:creator	iasis:farah.
 
 #### WP4 requirements: 
 
-iasis:Publication	rdf:type	owl:Class.
-iasis:Relation rdf:type	owl:Class.
+iasis:Publication	rdf:type	owl:Class;
+					rdfs:label	"";
+					rdfs:subClassOf	iasis:Concept;
+					rdfs:comment "";
+					dce:creator	iasis:farah.
+
+iasis:Relation 	rdf:type	owl:Class;
+				rdfs:label	"";
+				rdfs:subClassOf	iasis:Concept;
+				rdfs:comment "";
+				dce:creator	iasis:farah.
 
 #### UMLS predictions:
 
@@ -63,27 +103,66 @@ iasis:USES rdf:type owl:Class.
 
 #### COSMIC requirements:
 
-iasis:Gene rdf:type owl:Class.
+iasis:Gene 	rdf:type owl:Class;
+			rdfs:label	"";
+			rdfs:subClassOf	iasis:Concept;
+			rdfs:comment "";
+			dce:creator	iasis:samaneh.
+
 iasis:Tumor rdf:type owl:Class;
-            dce:creator iasis:samaneh.
-iasis:Sample rdf:type owl:Class;
-             dce:creator iasis:samaneh.
-iasis:Mutation rdf:type owl:Class;
-               dce:creator iasis:samaneh.
-iasis:CNV rdf:type owl:Class;
-          dce:creator iasis:samaneh.
-iasis:CGI rdf:type owl:Class;
-          dce:creator iasis:samaneh.
-iasis:GExp rdf:type owl:Class;
-           dce:creator iasis:samaneh.
-iasis:Transcript rdf:type owl:Class;
-                 dce:creator iasis:samaneh.
+			rdfs:label	"";
+			rdfs:subClassOf	iasis:Concept;
+			rdfs:comment "";
+			dce:creator	iasis:samaneh.
+
+iasis:Sample 	rdf:type owl:Class;
+				rdfs:label	"";
+				rdfs:subClassOf	iasis:Concept;
+				rdfs:comment "";
+				dce:creator	iasis:samaneh.
+
+iasis:Mutation 	rdf:type owl:Class;
+				rdfs:label	"";
+				rdfs:subClassOf	iasis:Concept;
+				rdfs:comment "";
+				dce:creator	iasis:samaneh.
+
+iasis:CNV 	rdf:type owl:Class;
+			rdfs:label	"";
+			rdfs:subClassOf	iasis:Concept;
+			rdfs:comment "";
+			dce:creator	iasis:samaneh.
+
+iasis:CGI 	rdf:type owl:Class;
+			rdfs:label	"";
+			rdfs:subClassOf	iasis:Concept;
+			rdfs:comment "";
+			dce:creator	iasis:samaneh.
+
+iasis:GExp 	rdf:type owl:Class;
+			rdfs:label	"";
+			rdfs:subClassOf	iasis:Concept;
+			rdfs:comment "";
+			dce:creator	iasis:samaneh.
+
+iasis:Transcript	rdf:type owl:Class;
+					rdfs:label	"";
+					rdfs:subClassOf	iasis:Concept;
+					rdfs:comment "";
+					dce:creator	iasis:samaneh.
+
 iasis:ResistanceMutation	rdf:type	owl:Class;
+							rdfs:label	"";
+							rdfs:subClassOf	iasis:Mutation;
 							rdfs:comment "Mutations identified in the literature as resistance mutations, including those conferring acquired resistance (after treatment) and intrinsic resistance (before treatment)";
 							dce:creator	iasis:samaneh.
+
 iasis:CancerGeneCensus	rdf:type	owl:Class;
+						rdfs:label	"";
+						rdfs:subClassOf	iasis:Gene;
 						rdf:comment "The Cancer Gene Census is a list of genes known to be involved in cancer.";
 						dce:creator	iasis:samaneh.
+
 #### WP3 requirements:
 
 iasis:Protein rdf:type owl:Class;
@@ -1054,17 +1133,9 @@ iasis:annotates rdfs:domain	iasis:Relation;
 
 ###############Subclasses
 
-iasis:Test rdfs:subClassOf	iasis:Concept.
-iasis:Image rdfs:subClassOf	iasis:Concept.
 
 #### WP4 requirements: 
 
-iasis:Publication	rdfs:subClassOf iasis:Concept.
-#iasis:LCPublication rdfs:subClassOf iasis:Publication.
-#iasis:ADPublication rdfs:subClassOf iasis:Publication.
-#iasis:LCAnnotation rdfs:subClassOf iasis:Annotation.
-#iasis:ADAnnotation rdfs:subClassOf iasis:Annotation.
-iasis:Relation rdfs:subClassOf iasis:Concept.
 
 #### UMLS requirements:
 
@@ -1106,23 +1177,6 @@ iasis:USES rdfs:subClassOf iasis:UMLS_Relation.
 
 #### COSMIC requirements:
 
-iasis:Gene rdfs:subClassOf	iasis:Concept.
-iasis:Tumor rdfs:subClassOf iasis:Concept;
-            dce:creator iasis:samaneh.
-iasis:Sample rdfs:subClassOf iasis:Concept;
-             dce:creator iasis:samaneh.
-iasis:Mutation rdfs:subClassOf iasis:Concept;
-               dce:creator iasis:samaneh.
-iasis:CNV rdfs:subClassOf iasis:Concept;
-          dce:creator iasis:samaneh.
-iasis:CGI rdfs:subClassOf iasis:Concept;
-          dce:creator iasis:samaneh.
-iasis:GExp rdfs:subClassOf iasis:Concept;
-           dce:creator iasis:samaneh.
-iasis:Transcript rdfs:subClassOf iasis:Concept;
-                 dce:creator iasis:samaneh.
-iasis:ResistanceMutation	rdfs:subClassOf	iasis:Mutation;
-							dce:creator	iasis:samaneh.
 
 #### WP3 requirements:
 
@@ -1139,12 +1193,6 @@ iasis:SideEffect rdfs:subClassOf	iasis:Concept.
 iasis:DrugSideEffect rdfs:subClassOf	iasis:Concept.
 iasis:Enzyme rdfs:subClassOf	iasis:Concept.
 
-#iasis:CosSim rdfs:subClassOf	iasis:Concept.
-#iasis:Sicomp rdfs:subClassOf	iasis:Concept.
-#iasis:SmithWatermanSim rdfs:subClassOf	iasis:Concept.
-#iasis:GPCR rdfs:subClassOf	iasis:Concept.
-#iasis:IonChannel rdfs:subClassOf	iasis:Concept.
-#iasis:NuclearReceptor rdfs:subClassOf	iasis:Concept.
 
 #### WP2 requirements:
 
