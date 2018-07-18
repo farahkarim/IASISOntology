@@ -305,14 +305,15 @@ iasis:label	rdf:type	owl:DatatypeProperty;
 			rdfs:comment	"Label of instances of Concept class";
 			dce:creator	iasis:samaneh.
 
-iasis:source	rdf:type	owl:ObjectProperty;
+iasis:annSource	rdf:type	owl:ObjectProperty;
 				rdfs:label	"AnnotationSource";
 				rdfs:domain iasis:Annotation;
 				rdfs:range	iasis:SourceName;
 				rdfs:comment	"The name of the source from which the annotation is extracted or derived";
 				dce:creator	iasis:farah.
 
-iasis:source	rdfs:label	"ConceptSource";
+iasis:source	rdf:type	owl:ObjectProperty;
+				rdfs:label	"ConceptSource";
 				rdfs:domain iasis:Concept;
 				rdfs:range	iasis:SourceName;
 				rdfs:comment	"The name of the source from which the concept is extracted or derived";
