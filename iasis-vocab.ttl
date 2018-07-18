@@ -182,45 +182,45 @@ iasis:Protein 	rdf:type owl:Class;
 iasis:Transcription rdf:type owl:Class;
 					rdfs:label	"Transcription";
 					rdfs:subClassOf	iasis:Relation;
-					rdf:comment "";
+					rdf:comment "A process during which DNA is converted to RNA, a more portable set of instructions for the cell.";
 					dce:creator	iasis:samaneh.
 
 iasis:RBP_RNA_PhysicalInteraction	rdf:type	owl:Class;
-									rdfs:label	"";
+									rdfs:label	"RBP_RNA_interaction";
 									rdfs:subClassOf	iasis:Relation;
-									rdf:comment "";
+									rdf:comment "Interaction between RNA binding protein (the mediator factor) and RNA. ";
 									dce:creator	iasis:samaneh.
 
 #### Drug requirements:
 
 iasis:Drug	rdf:type owl:Class;
-			rdfs:label	"";
+			rdfs:label	"Drug";
 			rdfs:subClassOf	iasis:Concept;
-			rdf:comment "";
+			rdf:comment "A substance used as a medication or in the preparation of medication.";
 			dce:creator	iasis:samaneh.
 
 iasis:SideEffect	rdf:type owl:Class;
-					rdfs:label	"";
+					rdfs:label	"SideEffect";
 					rdfs:subClassOf	iasis:Concept;
-					rdf:comment "";
+					rdf:comment "An often harmful and unwanted effect of a drug or chemical that occurs along with the desired effect.";
 					dce:creator	iasis:samaneh.
 
 iasis:DrugSideEffect	rdf:type owl:Class;
-						rdfs:label	"";
+						rdfs:label	"DrugSideEffectRelation";
 						rdfs:subClassOf	iasis:Concept;
 						rdf:comment "The Drug SideEffect relation should be a class since has two properties";
 						dce:creator	iasis:samaneh.
 
 iasis:Enzyme	rdf:type owl:Class;
-				rdfs:label	"";
+				rdfs:label	"Enzyme";
 				rdfs:subClassOf	iasis:Concept;
-				rdf:comment "";
+				rdf:comment "Macromolecular biological catalyst that accelerate chemical reactions. Most enzymes are proteins.";
 				dce:creator	iasis:samaneh.
 
 #### WP2 requirements:
 
 iasis:Patient rdf:type owl:Class;
-					rdfs:label	"";
+					rdfs:label	"Patient";
 					rdfs:subClassOf	iasis:Concept;
 					rdf:comment "";
 					dce:creator	iasis:samaneh.
