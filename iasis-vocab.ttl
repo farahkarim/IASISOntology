@@ -37,17 +37,25 @@ iasis:SourceName	rdf:type	owl:Class;
 					rdfs:comment "";
 					dce:creator	iasis:farah.
 
-iasis:Test 	rdf:type owl:Class;
-			rdfs:label	"";
-			rdfs:subClassOf	iasis:Concept;
-			rdfs:comment "";
-			dce:creator	iasis:farah.
+iasis:ClinicalRecord 	rdf:type owl:Class;
+						rdfs:label	"";
+						rdfs:subClassOf	iasis:Concept;
+						rdfs:comment "";
+						dce:creator	iasis:maria-esther.
 
 iasis:Image rdf:type owl:Class;
 			rdfs:label	"";
 			rdfs:subClassOf	iasis:Concept;
+			iasis:partOf iasis:ClinicalRecord;
 			rdfs:comment "";
-			dce:creator	iasis:farah.
+			dce:creator	iasis:maria-esther.
+
+iasis:Test 	rdf:type owl:Class;
+			rdfs:label	"";
+			rdfs:subClassOf	iasis:Concept;
+			iasis:partOf iasis:ClinicalRecord;
+			rdfs:comment "";
+			dce:creator	iasis:maria-esther.
 
 #### WP4 requirements: 
 
@@ -165,45 +173,100 @@ iasis:CancerGeneCensus	rdf:type	owl:Class;
 
 #### WP3 requirements:
 
-iasis:Protein rdf:type owl:Class;
-              dce:creator iasis:samaneh.
+iasis:Protein 	rdf:type owl:Class;
+				rdfs:label	"";
+				rdfs:subClassOf	iasis:Concept;
+				rdf:comment "";
+				dce:creator	iasis:samaneh.
+
 iasis:Transcription rdf:type owl:Class;
-                    dce:creator iasis:samaneh.
+					rdfs:label	"";
+					rdfs:subClassOf	iasis:Relation;
+					rdf:comment "";
+					dce:creator	iasis:samaneh.
+
 iasis:RBP_RNA_PhysicalInteraction	rdf:type	owl:Class;
+									rdfs:label	"";
+									rdfs:subClassOf	iasis:Relation;
+									rdf:comment "";
 									dce:creator	iasis:samaneh.
 
 #### Drug requirements:
 
-iasis:Drug rdf:type owl:Class.
-iasis:SideEffect rdf:type owl:Class.
-iasis:DrugSideEffect	rdf:type owl:Class;
-						rdfs:comment "The Drug SideEffect relation should be a class since has two properties".				
-iasis:Enzyme rdf:type owl:Class.
+iasis:Drug	rdf:type owl:Class;
+			rdfs:label	"";
+			rdfs:subClassOf	iasis:Concept;
+			rdf:comment "";
+			dce:creator	iasis:samaneh.
 
+iasis:SideEffect	rdf:type owl:Class;
+					rdfs:label	"";
+					rdfs:subClassOf	iasis:Concept;
+					rdf:comment "";
+					dce:creator	iasis:samaneh.
+
+iasis:DrugSideEffect	rdf:type owl:Class;
+						rdfs:label	"";
+						rdfs:subClassOf	iasis:Concept;
+						rdf:comment "The Drug SideEffect relation should be a class since has two properties";
+						dce:creator	iasis:samaneh.
+
+iasis:Enzyme	rdf:type owl:Class;
+				rdfs:label	"";
+				rdfs:subClassOf	iasis:Concept;
+				rdf:comment "";
+				dce:creator	iasis:samaneh.
 
 #### WP2 requirements:
 
-iasis:Patient rdf:type owl:Class.
-iasis:LCPatient rdf:type owl:Class.
-#iasis:ADPatient rdf:type owl:Class.
-iasis:LiquidBiopsy rdf:type owl:Class.
+iasis:Patient rdf:type owl:Class;
+					rdfs:label	"";
+					rdfs:subClassOf	iasis:Concept;
+					rdf:comment "";
+					dce:creator	iasis:samaneh.
+
+iasis:LCPatient	rdf:type owl:Class;
+				rdfs:label	"";
+				rdfs:subClassOf	iasis:Patient;
+				rdf:comment "";
+				dce:creator	iasis:samaneh.
+	
+iasis:LiquidBiopsy 	rdf:type owl:Class;
+					rdfs:label	"";
+					rdfs:subClassOf	iasis:Test;
+					rdfs:comment	"";
+					dce:creator	iasis:samaneh.
 
 iasis:TumorStage	rdf:type owl:Class;
+					rdfs:label	"";
 					rdfs:comment "Represents the assessment of the stage of tumor in a particular date.";
 					dce:creator	iasis:samaneh.
+
 iasis:Ecog	rdf:type	owl:Class;
+			rdfs:label	"";
 			rdfs:comment "ECOG Performance Status describes a patient's level of functioning in terms of her/his ability for caring her/himself, daily activities and phyical abilities.";
 			dce:creator	iasis:samaneh.
+
 iasis:TumorStageObservation	rdf:type	owl:Class;
+							rdfs:label	"";
+							rdfs:subClassOf	iasis:Observation;
 							rdfs:comment "";
-						dce:creator	iasis:samaneh.
+							dce:creator	iasis:samaneh.
+
 iasis:EcogObservation	rdf:type	owl:Class;
+						rdfs:label	"";
+						rdfs:subClassOf	iasis:Observation;
 						rdfs:comment "Each time patient visits the hospital, the ecog is assessed as a new ecogObservation.";
 						dce:creator	iasis:samaneh.
+
 iasis:LiquidBiopsyObservation	rdf:type	owl:Class;
+								rdfs:label	"";
+								rdfs:subClassOf	iasis:Observation;
 								rdfs:comment "Each LiquidBiopsy on a patient would be documented as a separate observation.";
 								dce:creator	iasis:samaneh.
+
 iasis:DiagnosisAgeGroup	rdf:type	owl:Class;
+						rdfs:label	"";
 						rdfs:comment "Shows the age range group in which the patient was diagnosed with Cancer.";
 						dce:creator	iasis:samaneh.
 
@@ -1181,33 +1244,14 @@ iasis:USES rdfs:subClassOf iasis:UMLS_Relation.
 #### WP3 requirements:
 
 
-iasis:Protein rdfs:subClassOf iasis:Concept;
-              dce:creator iasis:samaneh.
-iasis:Transcription rdfs:subClassOf iasis:Relation;
-                    dce:creator iasis:samaneh.
+
 
 #### Drug requirements:
 
-iasis:Drug rdfs:subClassOf	iasis:Concept.
-iasis:SideEffect rdfs:subClassOf	iasis:Concept.
-iasis:DrugSideEffect rdfs:subClassOf	iasis:Concept.
-iasis:Enzyme rdfs:subClassOf	iasis:Concept.
 
 
 #### WP2 requirements:
 
-iasis:Patient	rdfs:subClassOf	iasis:Concept.
-iasis:LCPatient	rdfs:subClassOf	iasis:Patient.
-iasis:ADPatient	rdfs:subClassOf	iasis:Patient.
 
-iasis:LiquidBiopsyObservation	rdfs:subClassOf	iasis:Observation;
-								dce:creator	iasis:samaneh.
-iasis:EcogObservation	rdfs:subClassOf	iasis:Observation;
-								dce:creator	iasis:samaneh.
-iasis:TumorStageObservation	rdfs:subClassOf	iasis:Observation;
-							dce:creator	iasis:samaneh.
 
 ###############PartOf
-iasis:ClinicalNote iasis:partOf iasis:ClinicalRecord.
-iasis:Image iasis:partOf iasis:ClinicalRecord.
-iasis:Test iasis:partOf iasis:ClinicalRecord.
