@@ -463,64 +463,188 @@ iasis:two_sided_p-value rdf:type owl:DatatypeProperty;
 						rdfs:comment	"";
                         dce:creator iasis:samaneh.
 
-iasis:total_cn rdf:type owl:DatatypeProperty;
-               dce:creator iasis:samaneh.      
-iasis:minor_allele rdf:type owl:DatatypeProperty;
-                   dce:creator iasis:samaneh.
-iasis:methylation rdf:type owl:DatatypeProperty;
-                  dce:creator iasis:samaneh.
+iasis:total_cn 	rdf:type owl:DatatypeProperty;
+				rdfs:label	"";
+				rdfs:domain iasis:CNV;
+			   	rdfs:range rdfs:Literal;
+				rdfs:comment	"";
+               	dce:creator iasis:samaneh.    
+
+iasis:minor_allele 	rdf:type owl:DatatypeProperty;
+					rdfs:label	"";
+					rdfs:domain iasis:CNV;
+				   	rdfs:range rdfs:Literal;
+					rdfs:comment	"";
+                  	dce:creator iasis:samaneh.
+
+iasis:methylation 	rdf:type owl:DatatypeProperty;
+					rdfs:label	"";
+					rdfs:domain	iasis:CGI;
+					rdfs:range	rdfs:Literal;
+					rdfs:comment	"";
+                  	dce:creator iasis:samaneh.
+		
 iasis:zygosity	rdf:type owl:DatatypeProperty;
+				rdfs:label	"";
+				rdfs:domain	iasis:Mutation;
+				rdfs:range	rdfs:Literal;	
+				rdfs:comment	"";
                	dce:creator iasis:samaneh.
+
 iasis:loh	rdf:type owl:DatatypeProperty;
+			rdfs:label	"";
+			rdfs:domain	iasis:Mutation;
+			rdfs:range	rdfs:Literal;
+			rdfs:comment	"";
 			dce:creator iasis:samaneh.
+
 iasis:snp	rdf:type owl:DatatypeProperty;
+			rdfs:label	"";
+			rdfs:domain	iasis:Mutation;
+			rdfs:range	rdfs:Literal;
+			rdfs:comment	"";
             dce:creator iasis:samaneh.
+
 iasis:regulation	rdf:type owl:DatatypeProperty;
+					rdfs:label	"";
+					rdfs:domain	iasis:GExp;
+					rdfs:range	rdfs:Literal;
+					rdfs:comment	"";
             		dce:creator iasis:samaneh.
+
 iasis:mutationDescription	rdf:type owl:DatatypeProperty;
+							rdfs:label	"";
+							rdfs:domain	iasis:Mutation;
+							rdfs:range	iasis:Literal;
 							rdfs:comment "Is extracted from mutation dataset";
             				dce:creator iasis:samaneh.
+
 iasis:mutationType	rdf:type owl:DatatypeProperty;
+					rdfs:label	"";
+					rdfs:domain	iasis:CNV;
+					rdfs:range	iasis:Literal;
 					rdfs:comment "Is extracted from CNV dataset";
             		dce:creator iasis:samaneh.
+
 iasis:gene_isRelatedTo_sample	rdf:type	owl:ObjectProperty;
-								rdfs:comment "relation between Gene and Sample classes".
+								rdfs:label	"";
+								rdfs:domain	iasis:Gene;
+								rdfs:range	iasis:Sample;
+								rdfs:comment "relation between Gene and Sample classes";
+								dce:creator	iasis:samaneh.
+
 iasis:cgi_isLocatedIn_gene	rdf:type owl:ObjectProperty;
+							rdfs:label	"";
+							rdfs:domain iasis:CGI;
+				 			rdfs:range iasis:Gene;
+							rdfs:comment	"";
                  			dce:creator iasis:samaneh.
+
 iasis:cgi_isLocatedIn_sample	rdf:type owl:ObjectProperty;
+								rdfs:label	"";
+								rdfs:domain iasis:CGI;
+					 			rdfs:range iasis:Sample;
+								rdfs:comment	"";
                  				dce:creator iasis:samaneh.
+
 iasis:cnv_isLocatedIn_gene	rdf:type owl:ObjectProperty;
+							rdfs:label	"";
+							rdfs:domain iasis:CNV;
+			     			rdfs:range iasis:Gene;
+							rdfs:comment	"";
                  			dce:creator iasis:samaneh.
+
 iasis:cgi_isLocatedIn_tumor	rdf:type owl:ObjectProperty;
+							rdfs:label	"";
+							rdfs:domain iasis:CGI;
+				 			rdfs:range iasis:Tumor;
+							rdfs:comment	"";
                  			dce:creator iasis:samaneh.
+
 iasis:cnv_isLocatedIn_sample	rdf:type owl:ObjectProperty;
+								rdfs:label	"";
+								rdfs:domain iasis:CNV;
+				  				rdfs:range iasis:Sample;
+								rdfs:comment	"";
                  				dce:creator iasis:samaneh.
+
 iasis:cnv_isLocatedIn_tumor	rdf:type owl:ObjectProperty;
+							rdfs:label	"";
+							rdfs:domain iasis:CNV;
+				  			rdfs:range iasis:Tumor;	
+							dce:comment	"";
                  			dce:creator iasis:samaneh.
+
 iasis:mutation_isLocatedIn_gene	rdf:type owl:ObjectProperty;
+								rdfs:label	"MutationIsLocatedInGene";
+								rdfs:domain iasis:Mutation;
+				  				rdfs:range iasis:Gene;
 								rdfs:comment	"The Gene in which the mutation occurs";
-								rdfs:label	"The Mutation is located in Gene";
                  				dce:creator iasis:samaneh.
+
 iasis:mutation_isLocatedIn_tumor	rdf:type owl:ObjectProperty;
+									rdfs:label	"";
+									rdfs:domain iasis:Mutation;
+				  					rdfs:range iasis:Tumor;
+									rdfs:comment	"";
                  					dce:creator iasis:samaneh.
+
 iasis:mutation_isLocatedIn_sample	rdf:type owl:ObjectProperty;
+									rdfs:label	"";
+									rdfs:domain iasis:Mutation;
+				  					rdfs:range iasis:Sample;
+									rdfs:comment	"";
                  					dce:creator iasis:samaneh.
+
+iasis:mutation_isLocatedIn_transcript	rdf:type	owl:ObjectPeroperty;	
+										rdfs:label	"";
+										rdfs:domain iasis:Mutation;
+				  						rdfs:range iasis:Transcript;
+										rdfs:comment	"";
+                  						dce:creator iasis:samaneh.
+
 iasis:sample_isTakenFrom_tumor	rdf:type owl:ObjectProperty;
+								rdfs:label	"";
+								rdfs:domain iasis:Sample;
+								rdfs:range iasis:Tumor;
+								rdfs:commnet	"";
                     			dce:creator iasis:samaneh.
+
 iasis:mutation_isClassifiedAs_mutationType	rdf:type owl:ObjectProperty;
+											rdfs:label	"";
+											rdfs:domain iasis:Mutation;
+											rdfs:range iasis:MutationType;
+											rdfs:comment	"";
                     						dce:creator iasis:samaneh.  
+
 iasis:cnv_isClassifiedAs_mutationType	rdf:type owl:ObjectProperty;
+										rdfs:label	"";
+										rdfs:domain iasis:CNV;
+										rdfs:range iasis:MutationType;
+										rdfs:comment	"";
 										dce:creator iasis:samaneh.
+
 iasis:sampleSource	rdf:type	owl:DatatypeProperty;
+					rdfs:label	"";
+					rdfs:domain	iasis:Sample;
+					rdfs:range	rdfs:Literal;
 					rdfs:comment "Appears in resistanceMutation dataset";
 					dce:creator	iasis:samaneh.
+
 iasis:gene_isTranscribedAs_transcription	rdf:type	owl:ObjectProperty;
+											rdfs:label	"";
+											rdfs:domain	iasis:Gene;	
+											rdfs:range	iasis:Transcription;
 											rdfs:comment "As connection between Gene and Transcription Relation.";
 											dce:creator	iasis:samaneh.
+
 iasis:mutation_isResistantTo_drug	rdf:type	owl:ObjectProperty;
+									rdfs:label	"";
+									rdfs:domain	iasis:Mutation;
+									rdfs:range	iasis:Drug;
+									rdfs:comment	"";
 									dce:creator	iasis:samaneh.
-iasis:mutation_isLocatedIn_sample	rdf:type owl:ObjectProperty;
-                  					dce:creator iasis:samaneh.
+
 
 #### WP3 requirements:
 
@@ -666,6 +790,8 @@ iasis:ecogList	rdf:type	owl:DatatypeProperty;
 ###########Domains And Ranges
 
 
+
+
 #### WP4 requirements:
 
 iasis:semanticTypes	rdfs:domain	iasis:Annotation;
@@ -699,83 +825,6 @@ iasis:annotates rdfs:domain	iasis:Relation;
 
 #### COSMIC requirements:
 
-
-iasis:total_cn rdfs:domain iasis:CNV;
-			   rdfs:range rdfs:Literal;
-               dce:creator iasis:samaneh.
-iasis:minor_allele rdfs:domain iasis:CNV;
-				   rdfs:range rdfs:Literal;
-                   dce:creator iasis:samaneh.
-iasis:methylation	rdfs:domain	iasis:CGI;
-					rdfs:range	rdfs:Literal;
-                  	dce:creator iasis:samaneh.
-iasis:zygosity	rdfs:domain	iasis:Mutation;
-				rdfs:range	rdfs:Literal;
-                dce:creator iasis:samaneh.
-iasis:loh	rdfs:domain	iasis:Mutation;
-			rdfs:range	rdfs:Literal;
-			dce:creator iasis:samaneh.
-iasis:snp	rdfs:domain	iasis:Mutation;
-			rdfs:range	rdfs:Literal;
-			dce:creator iasis:samaneh.
-iasis:regulation	rdfs:domain	iasis:GExp;
-					rdfs:range	rdfs:Literal;
-					dce:creator iasis:samaneh.
-iasis:mutationDescription	rdfs:domain	iasis:Mutation;
-            				dce:creator iasis:samaneh.
-iasis:mutationType	rdfs:domain	iasis:CNV;
-            		dce:creator iasis:samaneh.
-iasis:gene_isRelatedTo_sample	rdfs:domain	iasis:Gene;
-								rdfs:range	iasis:Sample;
-								dce:creator	iasis:samaneh.
-iasis:cgi_isLocatedIn_gene	rdfs:domain iasis:CGI;
-				 			rdfs:range iasis:Gene;
-                 			dce:creator iasis:samaneh.
-iasis:cgi_isLocatedIn_sample	rdfs:domain iasis:CGI;
-					 			rdfs:range iasis:Sample;
-                 				dce:creator iasis:samaneh.
-iasis:cnv_isLocatedIn_gene	rdfs:domain iasis:CNV;
-			     			rdfs:range iasis:Gene;
-                 			dce:creator iasis:samaneh.
-iasis:cgi_isLocatedIn_tumor	rdfs:domain iasis:CGI;
-				 			rdfs:range iasis:Tumor;
-                 			dce:creator iasis:samaneh. 
-iasis:cnv_isLocatedIn_sample	rdfs:domain iasis:CNV;
-				  				rdfs:range iasis:Sample;
-                  				dce:creator iasis:samaneh.
-iasis:cnv_isLocatedIn_tumor	rdfs:domain iasis:CNV;
-				  			rdfs:range iasis:Tumor;
-                  			dce:creator iasis:samaneh.
-iasis:mutation_isLocatedIn_gene	rdfs:domain iasis:Mutation;
-				  				rdfs:range iasis:Gene;
-                  				dce:creator iasis:samaneh.
-iasis:mutation_isLocatedIn_tumor	rdfs:domain iasis:Mutation;
-				  					rdfs:range iasis:Tumor;
-                  					dce:creator iasis:samaneh.
-iasis:mutation_isLocatedIn_sample	rdfs:domain iasis:Mutation;
-				  					rdfs:range iasis:Sample;
-                  					dce:creator iasis:samaneh.
-iasis:mutation_isLocatedIn_transcript	rdfs:domain iasis:Mutation;
-				  						rdfs:range iasis:Transcript;
-                  						dce:creator iasis:samaneh.
-iasis:sample_isTakenFrom_tumor	rdfs:domain iasis:Sample;
-								rdfs:range iasis:Tumor;
-                    			dce:creator iasis:samaneh.
-iasis:mutation_isClassifiedAs_mutationType	rdfs:domain iasis:Mutation;
-											rdfs:range iasis:MutationType;
-                    						dce:creator iasis:samaneh.
-iasis:cnv_isClassifiedAs_mutationType	rdfs:domain iasis:CNV;
-										rdfs:range iasis:MutationType;
-                    					dce:creator iasis:samaneh.
-iasis:sampleSource	rdfs:domain	iasis:Sample;
-					rdfs:range	rdfs:Literal;
-					dce:creator	iasis:samaneh.
-iasis:gene_isTranscribedAs_transcription	rdfs:domain	iasis:Gene;	
-											rdfs:range	iasis:Transcription;
-											dce:creator	iasis:samaneh.
-iasis:mutation_isResistantTo_drug	rdfs:domain	iasis:Mutation;
-									rdfs:range	iasis:Drug;
-									dce:creator	iasis:samaneh.
 
 ##### WP3 requirements:
 
