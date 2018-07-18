@@ -60,15 +60,15 @@ iasis:Test 	rdf:type owl:Class;
 #### WP4 requirements: 
 
 iasis:Publication	rdf:type	owl:Class;
-					rdfs:label	"";
+					rdfs:label	"Publication";
 					rdfs:subClassOf	iasis:Concept;
-					rdfs:comment "";
+					rdfs:comment "Scientific publications.";
 					dce:creator	iasis:farah.
 
 iasis:Relation 	rdf:type	owl:Class;
-				rdfs:label	"";
+				rdfs:label	"Relation";
 				rdfs:subClassOf	iasis:Concept;
-				rdfs:comment "";
+				rdfs:comment "Describes the connection between two entities.";
 				dce:creator	iasis:farah.
 
 #### UMLS predictions:
@@ -222,39 +222,45 @@ iasis:Enzyme	rdf:type owl:Class;
 iasis:Patient rdf:type owl:Class;
 					rdfs:label	"Patient";
 					rdfs:subClassOf	iasis:Concept;
-					rdf:comment "";
+					rdf:comment "A person who is receiving medical care.";
 					dce:creator	iasis:samaneh.
 
 iasis:LCPatient	rdf:type owl:Class;
-				rdfs:label	"";
+				rdfs:label	"LungCancerPatient";
 				rdfs:subClassOf	iasis:Patient;
-				rdf:comment "";
+				rdf:comment "A patient who is diagnosed with Lung Cancer.";
 				dce:creator	iasis:samaneh.
 	
 iasis:LiquidBiopsy 	rdf:type owl:Class;
-					rdfs:label	"";
+					rdfs:label	"LiquidBiopsy";
 					rdfs:subClassOf	iasis:Test;
-					rdfs:comment	"";
+					rdfs:comment	"A test done on a sample of blood to look for cancer cells from a tumor that are circulating in the blood or for pieces of DNA from tumor cells that are in the blood.";
 					dce:creator	iasis:samaneh.
 
 iasis:TumorStage	rdf:type owl:Class;
-					rdfs:label	"";
+					rdfs:label	"TumorStage";
 					rdfs:comment "Represents the assessment of the stage of tumor in a particular date.";
 					dce:creator	iasis:samaneh.
 
 iasis:Ecog	rdf:type	owl:Class;
-			rdfs:label	"";
+			rdfs:label	"Ecog";
 			rdfs:comment "ECOG Performance Status describes a patient's level of functioning in terms of her/his ability for caring her/himself, daily activities and phyical abilities.";
 			dce:creator	iasis:samaneh.
 
+iasis:Observation	rdf:type	owl:Class;
+					rdfs:label	"Observation";
+					rdfs:subClassOf	iasis:Concept;
+					rdfs:comment	"Active acquisition of data from patient.";
+					dce:creator	iasis:samaneh.
+
 iasis:TumorStageObservation	rdf:type	owl:Class;
-							rdfs:label	"";
+							rdfs:label	"TumorStageObservation";
 							rdfs:subClassOf	iasis:Observation;
-							rdfs:comment "";
+							rdfs:comment "Each tumor stage assessment will be recorded as a separate observation.";
 							dce:creator	iasis:samaneh.
 
 iasis:EcogObservation	rdf:type	owl:Class;
-						rdfs:label	"";
+						rdfs:label	"EcogObservation";
 						rdfs:subClassOf	iasis:Observation;
 						rdfs:comment "Each time patient visits the hospital, the ecog is assessed as a new ecogObservation.";
 						dce:creator	iasis:samaneh.
@@ -266,7 +272,7 @@ iasis:LiquidBiopsyObservation	rdf:type	owl:Class;
 								dce:creator	iasis:samaneh.
 
 iasis:DiagnosisAgeGroup	rdf:type	owl:Class;
-						rdfs:label	"";
+						rdfs:label	"DiagnosisAgeGroup";
 						rdfs:comment "Shows the age range group in which the patient was diagnosed with Cancer.";
 						dce:creator	iasis:samaneh.
 
@@ -956,28 +962,10 @@ iasis:ageStart	rdf:type	owl:DatatypeProperty;
 				dce:creator	iasis:samaneh.
 
 iasis:identifier	rdf:type	owl:ObjectProperty;
-					rdfs:label	"";
-					rdfs:domain	iasis:LCPatient;
+					rdfs:label	"ObservationID";
+					rdfs:domain	iasis:Observation;
 					rdfs:range	iasis:VocTerm;
-					rdfs:comment	"";
-					dce:creator	iasis:samaneh.
-
-iasis:identifier	rdfs:label	"";
-					rdfs:domain	iasis:BiopsyObservation;
-					rdfs:range	iasis:VocTerm;
-					rdfs:comment	"";
-					dce:creator	iasis:samaneh.
-
-iasis:identifier	rdfs:label	"";
-					rdfs:domain	iasis:EcogObservation;
-					rdfs:range	iasis:VocTerm;
-					rdfs:comment	"";
-					dce:creator	iasis:samaneh.
-
-iasis:identifier	rdfs:label	"";
-					rdfs:domain	iasis:TumorStageObservation;	
-					rdfs:range	iasis:VocTerm;
-					rdfs:comment	"";
+					rdfs:comment	"The identifier of each patient observation.";
 					dce:creator	iasis:samaneh.
 
 iasis:toxicHabit	rdf:type	owl:DatatypeProperty;
