@@ -112,61 +112,61 @@ iasis:USES rdf:type owl:Class.
 #### COSMIC requirements:
 
 iasis:Gene 	rdf:type owl:Class;
-			rdfs:label	"";
+			rdfs:label	"Gene";
 			rdfs:subClassOf	iasis:Concept;
-			rdfs:comment "";
+			rdfs:comment "Genes, which are made up of DNA, are the basic physical and functional unit of heredity.";
 			dce:creator	iasis:samaneh.
 
 iasis:Tumor rdf:type owl:Class;
-			rdfs:label	"";
+			rdfs:label	"Tumor";
 			rdfs:subClassOf	iasis:Concept;
-			rdfs:comment "";
+			rdfs:comment "Tumor is an abnormal mass of tisuue that results when cells didive more than they should or do not die when they should.";
 			dce:creator	iasis:samaneh.
 
 iasis:Sample 	rdf:type owl:Class;
-				rdfs:label	"";
+				rdfs:label	"Sample";
 				rdfs:subClassOf	iasis:Concept;
-				rdfs:comment "";
+				rdfs:comment "A specimen of a whole entity.";
 				dce:creator	iasis:samaneh.
 
 iasis:Mutation 	rdf:type owl:Class;
-				rdfs:label	"";
+				rdfs:label	"Mutation";
 				rdfs:subClassOf	iasis:Concept;
-				rdfs:comment "";
+				rdfs:comment "A permanent alteration in the DNA sequence that makes up a gene, such that the sequence differs from what is found in most people.";
 				dce:creator	iasis:samaneh.
 
 iasis:CNV 	rdf:type owl:Class;
-			rdfs:label	"";
+			rdfs:label	"CopyNumberVariation";
 			rdfs:subClassOf	iasis:Concept;
-			rdfs:comment "";
+			rdfs:comment "The genetic trait involving the variation of the number of copies of a particular gene present in the genome between individuals. ";
 			dce:creator	iasis:samaneh.
 
 iasis:CGI 	rdf:type owl:Class;
-			rdfs:label	"";
+			rdfs:label	"CpG_island";
 			rdfs:subClassOf	iasis:Concept;
-			rdfs:comment "";
+			rdfs:comment "CGIs are regions of the genome that contain a large number of CpG dinucleotide repeats. Although most CGIs linked to promoters are non-methylated, majority of CGIs may be completely methylated in normal cells.";
 			dce:creator	iasis:samaneh.
 
 iasis:GExp 	rdf:type owl:Class;
-			rdfs:label	"";
+			rdfs:label	"GeneExpression";
 			rdfs:subClassOf	iasis:Concept;
-			rdfs:comment "";
+			rdfs:comment "The phenotypic manifestation of a gene or genes by the processes of genetic transcription and genetic translation.";
 			dce:creator	iasis:samaneh.
 
 iasis:Transcript	rdf:type owl:Class;
-					rdfs:label	"";
+					rdfs:label	"Transcript";
 					rdfs:subClassOf	iasis:Concept;
-					rdfs:comment "";
+					rdfs:comment "Single-stranded RNA product synthesized by transcription of DNA.";
 					dce:creator	iasis:samaneh.
 
 iasis:ResistanceMutation	rdf:type	owl:Class;
-							rdfs:label	"";
+							rdfs:label	"ResistanceMutation";
 							rdfs:subClassOf	iasis:Mutation;
 							rdfs:comment "Mutations identified in the literature as resistance mutations, including those conferring acquired resistance (after treatment) and intrinsic resistance (before treatment)";
 							dce:creator	iasis:samaneh.
 
 iasis:CancerGeneCensus	rdf:type	owl:Class;
-						rdfs:label	"";
+						rdfs:label	"CancerGeneCensus";
 						rdfs:subClassOf	iasis:Gene;
 						rdf:comment "The Cancer Gene Census is a list of genes known to be involved in cancer.";
 						dce:creator	iasis:samaneh.
@@ -174,13 +174,13 @@ iasis:CancerGeneCensus	rdf:type	owl:Class;
 #### WP3 requirements:
 
 iasis:Protein 	rdf:type owl:Class;
-				rdfs:label	"";
+				rdfs:label	"Protein";
 				rdfs:subClassOf	iasis:Concept;
-				rdf:comment "";
+				rdf:comment "Large and complex molecules that play many critical roles in the body. They are required for the structure, function and regulation of the body's tissues and organs.";
 				dce:creator	iasis:samaneh.
 
 iasis:Transcription rdf:type owl:Class;
-					rdfs:label	"";
+					rdfs:label	"Transcription";
 					rdfs:subClassOf	iasis:Relation;
 					rdf:comment "";
 					dce:creator	iasis:samaneh.
@@ -1150,7 +1150,6 @@ iasis:ecogList	rdf:type	owl:DatatypeProperty;
 
 
 
-
 #### WP4 requirements:
 
 iasis:semanticTypes	rdfs:domain	iasis:Annotation;
@@ -1182,22 +1181,8 @@ iasis:annotates rdfs:domain	iasis:Relation;
 				rdfs:range	rdfs:Publication;	
 				dce:creator	iasis:samaneh. 
 
-#### COSMIC requirements:
-
-
-##### WP3 requirements:
-
-
-#### Drug requirements:
-
-
-#### WP2 requirements:
-
 
 ###############Subclasses
-
-
-#### WP4 requirements: 
 
 
 #### UMLS requirements:
@@ -1237,21 +1222,3 @@ iasis:PRODUCES rdfs:subClassOf iasis:UMLS_Relation.
 iasis:STIMULATES rdfs:subClassOf iasis:UMLS_Relation.
 iasis:TREATS rdfs:subClassOf iasis:UMLS_Relation.
 iasis:USES rdfs:subClassOf iasis:UMLS_Relation.
-
-#### COSMIC requirements:
-
-
-#### WP3 requirements:
-
-
-
-
-#### Drug requirements:
-
-
-
-#### WP2 requirements:
-
-
-
-###############PartOf
