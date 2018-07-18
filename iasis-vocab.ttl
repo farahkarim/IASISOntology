@@ -65,17 +65,17 @@ iasis:Publication	rdf:type	owl:Class;
 					rdfs:comment "Scientific publications.";
 					dce:creator	iasis:farah.
 
-iasis:Relation 	rdf:type	owl:Class;
-				rdfs:label	"Relation";
-				rdfs:subClassOf	iasis:Concept;
-				rdfs:comment "Describes the connection between two entities.";
-				dce:creator	iasis:farah.
+#iasis:AnnPubRelation 	rdf:type	owl:Class;
+#						rdfs:label	"AnnotationPublicationRelation";
+#						rdfs:subClassOf	iasis:Concept;
+#						rdfs:comment "Describes the existance of CUI terms in publications.";
+#						dce:creator	iasis:farah.
 
 #### UMLS predictions:
 
 iasis:UMLS_Relation rdf:type owl:Class.
 iasis:Has_Risk_Of rdf:type owl:Class.
-iasis:Mentioned_In rdf:type owl:Class.
+#iasis:Mentioned_In rdf:type owl:Class.
 iasis:Has_MESH	rdf:type owl:Class.
 iasis:AFFECTS rdf:type owl:Class.
 iasis:AFFECT__SPEC_ rdf:type owl:Class.
@@ -333,23 +333,45 @@ iasis:isRelatedTo	rdf:type	owl:ObjectProperty;
 #### WP4 requirements:
 
 iasis:semanticTypes	rdf:type	owl:ObjectProperty;
-						dce:creator	iasis:samaneh.
+					rdfs:label	"";
+					rdfs:domain	iasis:Annotation;
+					rdfs:range	iasis:Vocabulary;
+					rdfs:comment	"";
+					dce:creator	iasis:samaneh.
+
 iasis:year	rdf:type	owl:DatatypeProperty;
+			rdfs:label	"";
+			rdfs:domain	iasis:Publication;
+			rdfs:range	rdfs:Lirteral;
+			rdfs:comment	"";
 			dce:creator	iasis:samaneh.
+
 iasis:authors	rdf:type	owl:DatatypeProperty;
+				rdfs:label	"";
+				rdfs:domain	iasis:Publication;
+				rdfs:range	rdfs:Literal;
+				rdfs:comment	"";
 				dce:creator	iasis:samaneh.
-iasis:year	rdf:type	owl:DatatypeProperty;
-				dce:creator	iasis:samaneh.
+
 iasis:journal	rdf:type	owl:DatatypeProperty;
+				rdfs:label	"";
+				rdfs:domain	iasis:Publication;
+				rdfs:range	rdfs:Literal;
+				rdfs:comment	"";
 				dce:creator	iasis:samaneh.
-iasis:precTool	rdf:type	owl:ObjectProperty;
-				dce:creator	iasis:samaneh.
-iasis:confidence 	rdf:type	owl:DatatypeProperty;
-					dce:creator	iasis:samaneh.
-iasis:hasAnnotation rdf:type	owl:ObjectProperty;
-					dce:creator	iasis:samaneh.
-iasis:annotates rdf:type	owl:ObjectProperty;
-				dce:creator	iasis:samaneh. 
+
+iasis:cui_mentionedIn_publication	rdf:type	owl:ObjectProperty;
+									rdfs:label	"";
+									rdfs:domain	iasis:Annotation;
+									rdfs:range	iasis:Publication;	
+									rdfs:comment	"";
+									dce:creator	iasis:samaneh.
+iasis:publication_hasTopic_cui	rdf:type	owl:ObjectProperty;
+								rdfs:label	"";
+								rdfs:domain	iasis:Publication;
+								rdfs:range	iasis:Annotation;
+								rdfs:comment	"";
+								dce:creator	iasis:samaneh. 
 
 #### COSMIC requirements:
 
@@ -1135,42 +1157,6 @@ iasis:ecogList	rdf:type	owl:DatatypeProperty;
 				rdfs:comment "Not included in the original data from WP2, but is calulated as part of in-house preprocessing.";
 				dce:creator	iasis:samaneh.
 
-###########Domains And Ranges
-
-
-
-#### WP4 requirements:
-
-iasis:semanticTypes	rdfs:domain	iasis:Annotation;
-					rdfs:range	iasis:Vocabulary;	
-					dce:creator	iasis:samaneh.
-iasis:year	rdfs:domain	iasis:Publication;
-			rdfs:range	rdfs:Lirteral;	
-			dce:creator	iasis:samaneh.
-iasis:authors	rdfs:domain	iasis:Publication;
-				rdfs:range	rdfs:Literal;	
-				dce:creator	iasis:samaneh.
-iasis:year	rdfs:domain	iasis:Publication;
-			rdfs:range	rdfs:Literal;	
-			dce:creator	iasis:samaneh.
-iasis:journal	rdfs:domain	iasis:Publication;
-				rdfs:range	rdfs:Literal;	
-				dce:creator	iasis:samaneh.
-iasis:precTool	rdfs:domain	iasis:Relation;
-				rdfs:range	iasis:Vocabulary;	
-				rdfs:comment "At the moment in the mapping the range belongs to precTool whih should be modified.";
-				dce:creator	iasis:samaneh.
-iasis:confidence 	rdfs:domain	iasis:Relation;
-					rdfs:range	rdfs:Literal;	
-					dce:creator	iasis:samaneh.
-iasis:hasAnnotation rdfs:domain	iasis:Relation;
-					rdfs:range	rdfs:Annotation;	
-					dce:creator	iasis:samaneh.
-iasis:annotates rdfs:domain	iasis:Relation;
-				rdfs:range	rdfs:Publication;	
-				dce:creator	iasis:samaneh. 
-
-
 ###############Subclasses
 
 
@@ -1178,7 +1164,7 @@ iasis:annotates rdfs:domain	iasis:Relation;
 
 iasis:UMLS_Relation rdfs:subClassOf iasis:Relation.
 iasis:Has_Risk_Of rdfs:subClassOf iasis:Relation.
-iasis:Mentioned_In rdfs:subClassOf iasis:Relation.
+#iasis:Mentioned_In rdfs:subClassOf iasis:Relation.
 iasis:Has_MESH	rdfs:subClassOf iasis:Relation.
 iasis:AFFECTS rdfs:subClassOf iasis:UMLS_Relation.
 iasis:AFFECT__SPEC__ rdfs:subClassOf iasis:UMLS_Relation.
