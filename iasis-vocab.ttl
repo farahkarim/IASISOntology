@@ -330,35 +330,39 @@ iasis:isRelatedTo	rdf:type	owl:ObjectProperty;
 					rdfs:comment "relation between superclasses Concept and Relation classes";
 					dce:creator	iasis:farah.
 
-#iasis:cUITerm	rdf:type owl:DatatypeProperty;
-#iasis:cUITerm rdfs:domain iasis:Annotation;
-#				rdfs:range	rdfs:Literal.
 
 #### WP4 requirements:
 
 iasis:semanticTypes	rdf:type	owl:ObjectProperty;
-					rdfs:label	"";
+					rdfs:label	"semanticType";
 					rdfs:domain	iasis:Annotation;
 					rdfs:range	iasis:Vocabulary;
 					rdfs:comment	"";
 					dce:creator	iasis:samaneh.
 
+iasis:title	rdf:type	owl:DatatypeProperty;
+			rdfs:label	"titleOfPublication";
+			rdfs:domain	iasis:Publication;
+			rdfs:range	rdfs:Lirteral;
+			rdfs:comment	"";
+			dce:creator	iasis:samaneh.
+
 iasis:year	rdf:type	owl:DatatypeProperty;
-			rdfs:label	"";
+			rdfs:label	"yearOfPublication";
 			rdfs:domain	iasis:Publication;
 			rdfs:range	rdfs:Lirteral;
 			rdfs:comment	"";
 			dce:creator	iasis:samaneh.
 
 iasis:authors	rdf:type	owl:DatatypeProperty;
-				rdfs:label	"";
+				rdfs:label	"authorsOfPublication";
 				rdfs:domain	iasis:Publication;
 				rdfs:range	rdfs:Literal;
 				rdfs:comment	"";
 				dce:creator	iasis:samaneh.
 
 iasis:journal	rdf:type	owl:DatatypeProperty;
-				rdfs:label	"";
+				rdfs:label	"journalOfPublication";
 				rdfs:domain	iasis:Publication;
 				rdfs:range	rdfs:Literal;
 				rdfs:comment	"";
