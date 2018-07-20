@@ -195,6 +195,18 @@ iasis:RBP_RNA_PhysicalInteraction	rdf:type	owl:Class;
 									rdf:comment "Interaction between RNA binding protein (the mediator factor) and RNA. ";
 									dce:creator	iasis:samaneh.
 
+iasis:EQTL	rdf:type owl:Class;
+			rdfs:label	"eQTL";
+			rdfs:subClassOf	iasis:Concept;
+			rdf:comment "An eQTL is a locus that explains a fraction of the genetic variance of a gene expression phenotype.";
+			dce:creator	iasis:samaneh.
+
+iasis:Dbsnp	rdf:type owl:Class;
+			rdfs:label	"dbsnp";
+			rdfs:subClassOf	iasis:Concept;
+			rdf:comment "";
+			dce:creator	iasis:samaneh.
+
 #### Drug requirements:
 
 iasis:Drug	rdf:type owl:Class;
@@ -892,7 +904,51 @@ iasis:omixcore 	rdf:type owl:DatatypeProperty;
 				rdfs:domain iasis:RBP_RNA_PhysicalInteraction;
                	rdfs:range iasis:Literal;
 				rdfs:comment	"";
-               	dce:creatoe iasis:samaneh.
+               	dce:creator iasis:samaneh.
+
+iasis:tissue 	rdf:type owl:DatatypeProperty;
+				rdfs:label	"";
+				rdfs:domain iasis:EQTL;
+               	rdfs:range iasis:Literal;
+				rdfs:comment	"";
+               	dce:creator iasis:samaneh.
+
+iasis:variation_isLocatedIn_gene 	rdf:type owl:ObjectProperty;
+									rdfs:label	"UpstreamGene";
+									rdfs:domain iasis:EQTL;
+               						rdfs:range iasis:Gene;
+									rdfs:comment	"The gene on which the variation is located.";
+               						dce:creator iasis:samaneh.
+
+iasis:gexpChanges_occuredIn_gene 	rdf:type owl:ObjectProperty;
+									rdfs:label	"DownstreamGene";
+									rdfs:domain iasis:EQTL;
+               						rdfs:range iasis:Gene;
+									rdfs:comment	"The gene where the GE level is changed.";
+               						dce:creator iasis:samaneh.
+
+iasis:type 	rdf:type owl:DatatypeProperty;
+			rdfs:label	"eQTLtype";
+			rdfs:domain iasis:EQTL;
+			rdfs:range iasis:Literal;
+			rdfs:comment	"";
+			dce:creator iasis:samaneh.
+
+iasis:qvalue 	rdf:type owl:DatatypeProperty;
+				rdfs:label	"q-value";
+				rdfs:domain iasis:EQTL;
+               	rdfs:range iasis:Literal;
+				rdfs:comment	"log10q";
+               	dce:creator iasis:samaneh.
+
+iasis:dbsnp 	rdf:type owl:ObjectProperty;
+				rdfs:label	"dbsnpID";
+				rdfs:domain iasis:EQTL;
+				rdfs:range iasis:Dbsnp;
+				rdfs:comment	"The varriation ID in dbsnp database";
+				dce:creator iasis:samaneh.
+
+
 
 #### Drug requirements:
 
