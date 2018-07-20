@@ -287,11 +287,6 @@ iasis:LiquidBiopsyObservation	rdf:type	owl:Class;
 								rdfs:comment "Each LiquidBiopsy on a patient would be documented as a separate observation.";
 								dce:creator	iasis:samaneh.
 
-iasis:DiagnosisAgeGroup	rdf:type	owl:Class;
-						rdfs:label	"DiagnosisAgeGroup";
-						rdfs:comment "Shows the age range group in which the patient was diagnosed with Cancer.";
-						dce:creator	iasis:samaneh.
-
 
 ##########################################################################################
 ################ Properties ##############################################################
