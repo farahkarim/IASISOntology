@@ -948,6 +948,19 @@ iasis:dbsnp 	rdf:type owl:ObjectProperty;
 				rdfs:comment	"The varriation ID in dbsnp database";
 				dce:creator iasis:samaneh.
 
+iasis:eqtl_chromosome 	rdf:type owl:DatatypeProperty;
+						rdfs:label	"eqtlChromosome";
+						rdfs:domain iasis:EQTL;
+               			rdfs:range iasis:Literal;
+						rdfs:comment	"The chromosome position of eQTL.";
+						dce:creator iasis:samaneh.
+
+iasis:eqtl_position 	rdf:type owl:DatatypeProperty;
+						rdfs:label	"eqtlPosition";
+						rdfs:domain iasis:EQTL;
+               			rdfs:range iasis:Literal;
+						rdfs:comment	"The genomic position of eQTL.";
+						dce:creator iasis:samaneh.
 
 
 #### Drug requirements:
