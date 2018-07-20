@@ -280,7 +280,11 @@ iasis:DiagnosisAgeGroup	rdf:type	owl:Class;
 						rdfs:comment "Shows the age range group in which the patient was diagnosed with Cancer.";
 						dce:creator	iasis:samaneh.
 
-#########Properties
+
+##########################################################################################
+################ Properties ##############################################################
+##########################################################################################
+
 
 iasis:id	rdf:type	owl:ObjectProperty;
 			rdfs:label	"AnnotationID";
@@ -367,6 +371,20 @@ iasis:journal	rdf:type	owl:DatatypeProperty;
 				rdfs:range	rdfs:Literal;
 				rdfs:comment	"";
 				dce:creator	iasis:samaneh.
+
+iasis:relation_isRelatedTo_cui	rdf:type	owl:ObjectProperty;
+								rdfs:label	"";
+								rdfs:domain	iasis:Relation;
+								rdfs:range	iasis:Annotation;	
+								rdfs:comment	"";
+								dce:creator	iasis:samaneh.
+
+iasis:cui_hasTopic_publication	rdf:type	owl:ObjectProperty;
+								rdfs:label	"";
+								rdfs:domain	iasis:Annotation;
+								rdfs:range	iasis:Publication;	
+								rdfs:comment	"";
+								dce:creator	iasis:samaneh.
 
 iasis:cui_mentionedIn_publication	rdf:type	owl:ObjectProperty;
 									rdfs:label	"";
