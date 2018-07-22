@@ -66,51 +66,51 @@ iasis:Publication	rdf:type	owl:Class;
 					dce:creator	iasis:farah.
 
 iasis:MentionedIn	rdf:type owl:Class;
-					rdfs:label	"";
+					rdfs:label	"MentionedIn";
 					rdfs:subClassOf iasis:Relation;
-					rdfs:comment	"";
+					rdfs:comment	"A relation that shows in which publication each specific CUI term has been appeared.";
 					dce:creator	iasis:farah.
 
 iasis:HasTopic	rdf:type owl:Class;
-				rdfs:label	"";
+				rdfs:label	"HasTopic";
 				rdfs:subClassOf iasis:Relation;
-				rdfs:comment	"";
+				rdfs:comment	"A relation that shows which CUI has been appeared in each specific publication.";
 				dce:creator	iasis:samaneh.
 
 iasis:AssociatedWith	rdf:type owl:Class;
-						rdfs:label	"";
+						rdfs:label	"AssociatedWith";
 						rdfs:subClassOf iasis:Relation;
-						rdfs:comment	"";
+						rdfs:comment	"A UMLS Annotation.";
 						dce:creator	iasis:farah.
 
 iasis:Causes	rdf:type owl:Class;
-				rdfs:label	"";
+				rdfs:label	"Causes";
 				rdfs:subClassOf iasis:Relation;
-				rdfs:comment	"";
+				rdfs:comment	"A UMLS Annotation.";
 				dce:creator	iasis:farah.
 
 iasis:Inhibits	rdf:type owl:Class;
-				rdfs:label	"";
+				rdfs:label	"Inhibits";
 				rdfs:subClassOf iasis:Relation;
-				rdfs:comment	"";
+				rdfs:comment	"A UMLS Annotation.";
 				dce:creator	iasis:farah.
 
 iasis:InteractsWith rdf:type owl:Class;
-					rdfs:label	"";
+					rdfs:label	"InteractsWith";
 					rdfs:subClassOf iasis:Relation;
-					rdfs:comment	"";
+					rdfs:comment	"A UMLS Annotation.";
 					dce:creator	iasis:farah.
 
 iasis:Predisposes 	rdf:type owl:Class;
-					rdfs:label	"";
+					rdfs:label	"Predisposes";
 					rdfs:subClassOf iasis:Relation;
-					rdfs:comment	"";
+					rdfs:comment	"A UMLS Annotation.";
 					dce:creator	iasis:farah.
 
 iasis:Stimulates 	rdf:type owl:Class;
-					rdfs:label	"";
+					rdfs:label	"Stimulates";
 					rdfs:subClassOf iasis:Relation;
-					rdfs:comment	"";
+					rdfs:comment	"A UMLS Annotation.";
 					dce:creator	iasis:farah.
 
 #### COSMIC requirements:
