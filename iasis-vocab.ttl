@@ -18,43 +18,43 @@ iasis:Annotation	rdf:type	owl:Class;
 					dce:creator	iasis:farah.
 
 iasis:Vocabulary	rdf:type	owl:Class;
-					rdfs:label	"";
+					rdfs:label	"Vocabulary";
 					rdfs:comment "";
 					dce:creator	iasis:farah.
 
 iasis:VocTerm	rdf:type	owl:Class;
-				rdfs:label	"";
+				rdfs:label	"VocTerm";
 				rdfs:comment "";
 				dce:creator	iasis:farah.
 
 iasis:CUITerm	rdf:type	owl:Thing;
-				rdfs:label	"";
+				rdfs:label	"CUITerm";
 				rdfs:comment "";
 				dce:creator	iasis:farah.
 
 iasis:SourceName	rdf:type	owl:Class;
-					rdfs:label	"";
-					rdfs:comment "";
+					rdfs:label	"SourceName";
+					rdfs:comment "Data source from which this instance has been taken.";
 					dce:creator	iasis:farah.
 
 iasis:ClinicalRecord 	rdf:type owl:Class;
 						rdfs:label	"Clinical Record";
 						rdfs:subClassOf	iasis:Concept;
-						rdfs:comment "";
+						rdfs:comment "systematic documentation of a single patient's medical history and care across time within one particular health care provider's jurisdiction.";
 						dce:creator	iasis:maria-esther.
 
 iasis:Image rdf:type owl:Class;
-			rdfs:label	"";
+			rdfs:label	"MedicalImage";
 			rdfs:subClassOf	iasis:Concept;
 			iasis:partOf iasis:ClinicalRecord;
-			rdfs:comment "";
+			rdfs:comment "Patient's medical images.";
 			dce:creator	iasis:maria-esther.
 
 iasis:Test 	rdf:type owl:Class;
-			rdfs:label	"";
+			rdfs:label	"MedicalTest";
 			rdfs:subClassOf	iasis:Concept;
 			iasis:partOf iasis:ClinicalRecord;
-			rdfs:comment "";
+			rdfs:comment "Medical procedure performed to detect, diagnose, or monitor diseases, disease processes, susceptibility, and determine a course of treatment.";
 			dce:creator	iasis:maria-esther.
 
 #### WP4 requirements: 
