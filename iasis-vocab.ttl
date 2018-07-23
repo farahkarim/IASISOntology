@@ -1140,118 +1140,118 @@ iasis:hasTumorStage	rdf:type	owl:ObjectProperty;
 					dce:creator	iasis:samaneh.
 
 iasis:hasObservation	rdf:type	owl:ObjectProperty;
-						rdfs:label	"hasObservation";
+						rdfs:label	"hasBiopsyObservation";
 						rdfs:domain	iasis:LiquidBiopsy;
 						rdfs:range	iasis:LiquidBiopsyObservation;
-						rdfs:comment	"";
+						rdfs:comment	"Active acquisition of biopsy data from patient.";
 						dce:creator	iasis:samaneh.
 
-iasis:hasObservation	rdfs:label	"";
+iasis:hasObservation	rdfs:label	"hasEcogObservation";
 						rdfs:domain	iasis:Ecog;
 						rdfs:range	iasis:EcogObservation;
-						rdfs:comment	"";
+						rdfs:comment	"Active acquisition of ecog data from patient.";
 						dce:creator	iasis:samaneh.
 
-iasis:hasObservation	rdfs:label	"";
+iasis:hasObservation	rdfs:label	"hasTumorStageObservation";
 						rdfs:domain	iasis:TumorStage;
 						rdfs:range	iasis:TumorStageObservation;
-						rdfs:comment	"";
+						rdfs:comment	"Active acquisition of tumor stage data from patient.";
 						dce:creator	iasis:samaneh.
 
 iasis:ecogDate	rdf:type	owl:DatatypeProperty;
-				rdfs:label	"";
+				rdfs:label	"ecogDate";
 				rdfs:domain	iasis:EcogObservation;
 				rdfs:range	xsd:date;
-				rdfs:comment	"";
+				rdfs:comment	"The date on which specific ecog has been recorded.";
 				dce:creator	iasis:samaneh.
 
 iasis:tumorStageDate	rdf:type	owl:DatatypeProperty;
-						rdfs:label	"";
+						rdfs:label	"tumorStageDate";
 						rdfs:domain	iasis:TumorStageObservation;
 						rdfs:range	xsd:date;
-						rdfs:comment	"";
+						rdfs:comment	"The date on which specific tumor stage has been recorded.";
 						dce:creator	iasis:samaneh.
 
 iasis:ecogValue	rdf:type	owl:DatatypeProperty;
-				rdfs:label	"";
+				rdfs:label	"ecogValue";
 				rdfs:domain	iasis:EcogObservation;
 				rdfs:range	rdfs:Literal;
-				rdfs:comment "Range: [0 as fully active - 5 as Dead]";
+				rdfs:comment "Range: [0 as fully active - 5 as Dead].";
 				dce:creator	iasis:samaneh.
 
 iasis:tumorStage	rdf:type	owl:DatatypeProperty;
-					rdfs:label	"";
+					rdfs:label	"tumorStage";
 					rdfs:domain	iasis:TumorStageObservation;
 					rdfs:range	rdfs:Literal;
-					rdfs:comment "Range: ['I','II','III','IV']";
+					rdfs:comment "Range: ['I','II','III','IV'].";
 					dce:creator	iasis:samaneh.
 
 iasis:sampleDate	rdf:type	owl:DatatypeProperty;
-					rdfs:label	"";
+					rdfs:label	"sampleDate";
 					rdfs:domain	iasis:LiquidBiopsyObservation;
 					rdfs:range	xsd:date;
-					rdfs:comment "Date of the biopsy sample";
+					rdfs:comment "Date on which the biopsy sample has been taken.";
 					dce:creator	iasis:samaneh.
 
 iasis:resultDate	rdf:type	owl:DatatypeProperty;
-					rdfs:label	"";
+					rdfs:label	"resultDate";
 					rdfs:domain	iasis:LiquidBiopsyObservation;
 					rdfs:range	xsd:date;
-					rdfs:comment "Date of the biopsy result";
+					rdfs:comment "Date on which the biopsy result has been provided.";
 					dce:creator	iasis:samaneh.
 
 iasis:mutationName	rdf:type	owl:DatatypeProperty;
-					rdfs:label	"";
+					rdfs:label	"mutationName";
 					rdfs:domain	iasis:LiquidBiopsyObservation;
 					rdfs:range	rdfs:Literal;
 					rdfs:comment "Name of the mutation that is being studied";
 					dce:creator	iasis:samaneh.
 
 iasis:targetTotal	rdf:type	owl:DatatypeProperty;
-					rdfs:label	"";
+					rdfs:label	"targetTotal";
 					rdfs:domain	iasis:LiquidBiopsyObservation;
 					rdfs:range	rdfs:Literal;
 					rdfs:comment "The percentage of circulating tumor DNA in the blood";
 					dce:creator	iasis:samaneh.
 
 iasis:copiesMicroliterFam	rdf:type	owl:DatatypeProperty;
-							rdfs:label	"";
+							rdfs:label	"copiesMicroliterFam";
 							rdfs:domain	iasis:LiquidBiopsyObservation;
 							rdfs:range	rdfs:Literal;
 							rdfs:comment "Number of mutated copies per microliter of blood";
 							dce:creator	iasis:samaneh.
 
 iasis:copiesMicroliterVic	rdf:type	owl:DatatypeProperty;
-							rdfs:label	"";
+							rdfs:label	"copiesMicroliterVic";
 							rdfs:domain	iasis:LiquidBiopsyObservation;
 							rdfs:range	rdfs:Literal;
 							rdfs:comment "Number of non-mutated copies per microliter of blood";
 							dce:creator	iasis:samaneh.
 
 iasis:monthsInTreatment	rdf:type	owl:DatatypeProperty;
-						rdfs:label	"";
+						rdfs:label	"monthsInTreatment";
 						rdfs:domain	iasis:LCPatient;
 						rdfs:range	rdfs:Literals;
-						rdfs:comment "Not included in the original data from WP2, but is calulated as part of in-house preprocessing.";
+						rdfs:comment "Represents the number of months patient has been under treatment. Not included in the original data from WP2, but is calulated as part of in-house preprocessing.";
 						dce:creator	iasis:samaneh.
 
 iasis:weeksInTreatment	rdf:type	owl:DatatypeProperty;
-						rdfs:label	"";
+						rdfs:label	"weeksInTreatment";
 						rdfs:domain	iasis:LCPatient;
 						rdfs:range	rdfs:Literals;
-						rdfs:comment "Not included in the original data from WP2, but is calulated as part of in-house preprocessing.";
+						rdfs:comment "Represents the number of weeks patient has been under treatment. Not included in the original data from WP2, but is calulated as part of in-house preprocessing.";
 						dce:cretaor	iasis:samaneh.
 
 iasis:biopsyList	rdf:type	owl:DatatypeProperty;
-					rdfs:label	"";
+					rdfs:label	"biopsyList";
 					rdfs:domain	iasis:LiquidBiopsy;
 					rdfs:range	rdfs:Literal;
-					rdfs:comment "Not included in the original data from WP2, but is calulated as part of in-house preprocessing.";
+					rdfs:comment "Represents the list of liquid biopsy test that have been taken from patient. Not included in the original data from WP2, but is calulated as part of in-house preprocessing.";
 					dce:creator	iasis:samaneh.
 
 iasis:ecogList	rdf:type	owl:DatatypeProperty;
-				rdfs:label	"";
+				rdfs:label	"ecogList";
 				rdfs:domain	iasis:TumorStage;
 				rdfs:range	rdfs:Literal;
-				rdfs:comment "Not included in the original data from WP2, but is calulated as part of in-house preprocessing.";
+				rdfs:comment "Represents the list of ecogs that have been recorded from patient. Not included in the original data from WP2, but is calulated as part of in-house preprocessing.";
 				dce:creator	iasis:samaneh.
