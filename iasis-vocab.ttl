@@ -14,7 +14,7 @@ iasis:Concept 	rdf:type	owl:Class;
 
 iasis:Annotation	rdf:type	owl:Class;
 					rdfs:label	"Annotation";
-					rdfs:comment "Explanation of a concept inclduing label, id and the source of concept.";
+					rdfs:comment "Explanation of a concept inclduing label, id source of concept.";
 					dce:creator	iasis:farah.
 
 iasis:Vocabulary	rdf:type	owl:Class;
@@ -167,7 +167,7 @@ iasis:ResistanceMutation	rdf:type	owl:Class;
 iasis:CancerGeneCensus	rdf:type	owl:Class;
 						rdfs:label	"CancerGeneCensus";
 						rdfs:subClassOf	iasis:Gene;
-						rdf:comment "The Cancer Gene Census is a list of genes known to be involved in cancer.";
+						rdf:comment "Cancer Gene Census is a list of genes known to be involved in cancer.";
 						dce:creator	iasis:samaneh.
 
 #### WP3 requirements:
@@ -1057,13 +1057,6 @@ iasis:gender	rdf:type	owl:DatatypeProperty;
 				rdfs:comment	"Gender of the patient.";
 				dce:creator	iasis:samaneh.
 
-iasis:hasBiopsy	rdf:type	owl:ObjectProperty;
-				rdfs:label	"hasBiopsy";
-				rdfs:domain	iasis:LCPatient;
-				rdfs:range	iasis:LiquidBiopsy;
-				rdfs:comment	"Connection between patient and biopsy records.";
-				dce:creator	iasis:samaneh.
-
 iasis:birthDate	rdf:type	owl:DatatypeProperty;
 				rdfs:label	"birthDate";
 				rdfs:domain	iasis:LCPatient;
@@ -1120,6 +1113,13 @@ iasis:egfrMutation	rdf:type	owl:DatatypeProperty;
 					rdfs:comment	"Represents if EGFR has been mutated or not.";
 					dce:creator	iasis:samaneh.
 
+iasis:hasBiopsy	rdf:type	owl:ObjectProperty;
+				rdfs:label	"hasBiopsy";
+				rdfs:domain	iasis:LCPatient;
+				rdfs:range	iasis:LiquidBiopsy;
+				rdfs:comment	"Connection between patient and biopsy records.";
+				dce:creator	iasis:samaneh.
+
 iasis:hasEcog	rdf:type	owl:ObjectProperty;
 				rdfs:label	"hasEcog";
 				rdfs:domain	iasis:LCPatient;
@@ -1138,19 +1138,19 @@ iasis:hasObservation	rdf:type	owl:ObjectProperty;
 						rdfs:label	"hasBiopsyObservation";
 						rdfs:domain	iasis:LiquidBiopsy;
 						rdfs:range	iasis:LiquidBiopsyObservation;
-						rdfs:comment	"Active acquisition of biopsy data from patient.";
+						rdfs:comment	"Connection between LiquidBiopsy and LiquidBiopsyObservation ";
 						dce:creator	iasis:samaneh.
 
 iasis:hasObservation	rdfs:label	"hasEcogObservation";
 						rdfs:domain	iasis:Ecog;
 						rdfs:range	iasis:EcogObservation;
-						rdfs:comment	"Active acquisition of ecog data from patient.";
+						rdfs:comment	"Connection between Ecog and EcogObservation.";
 						dce:creator	iasis:samaneh.
 
 iasis:hasObservation	rdfs:label	"hasTumorStageObservation";
 						rdfs:domain	iasis:TumorStage;
 						rdfs:range	iasis:TumorStageObservation;
-						rdfs:comment	"Active acquisition of tumor stage data from patient.";
+						rdfs:comment	"Connection between TumorStage and TumorStageObservation.";
 						dce:creator	iasis:samaneh.
 
 iasis:ecogDate	rdf:type	owl:DatatypeProperty;
