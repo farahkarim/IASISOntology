@@ -624,98 +624,98 @@ iasis:fathmm_score 	rdf:type owl:DatatypeProperty;
 					rdfs:label	"fathmmScore";
 					rdfs:domain iasis:Mutation;
 				   	rdfs:range rdfs:Literal;
-					rdfs:comment	"";
+					rdfs:comment	"A single p-value, ranging from 0 to 1. Scores above 0.5 are deleterious, but in order to highlight the most significant data in COSMIC, only scores ≥ 0.7 are classified as 'Pathogenic'. Mutations are classed as 'Neutral' if the score is ≤ 0.5.";
                    	dce:creator iasis:samaneh.
 
 iasis:mutation_somatic_status 	rdf:type owl:DatatypeProperty;
 								rdfs:label	"mutation_somatic_status";
 								rdfs:domain iasis:Mutation;
 							  	rdfs:range rdfs:Literal;
-								rdfs:comment	"";
+								rdfs:comment	"Information on whether the sample was reported to be Confirmed Somatic, Previously Reported or Variant of unknown origin.";
                               	dce:creator iasis:samaneh.
 
 iasis:tumor_origin 	rdf:type owl:DatatypeProperty;
-					rdfs:label	"";
+					rdfs:label	"tumorOrigin";
 					rdfs:domain iasis:Mutation;
 				   	rdfs:range rdfs:Literal;
-					rdfs:comment	"";
+					rdfs:comment	"Describes where the sample has originated from including the tumour type";
                    	dce:creator iasis:samaneh.
 
 iasis:z_score 	rdf:type owl:DatatypeProperty;
-				rdfs:label	"";
+				rdfs:label	"z-score";
 				rdfs:domain iasis:GExp;
 			  	rdfs:range rdfs:Literal;
-				rdfs:comment	"";
+				rdfs:comment	"An indicative score taken from the gen_expression from different platforms.";
               	dce:creator iasis:samaneh.
 
 iasis:beta_value	rdf:type owl:DatatypeProperty;
-					rdfs:label	"";
+					rdfs:label	"beta-value";
 					rdfs:domain iasis:CGI;
 				 	rdfs:range rdfs:Literal;
-					rdfs:comment	"";
+					rdfs:comment	"The beta-value for the probe in the tumour sample. Only values > 0.8 (High) or < 0.2 (Low) are included.";
                  	dce:creator iasis:samaneh.
 
 iasis:avg_beta_value 	rdf:type owl:DatatypeProperty;
-						rdfs:label	"";
+						rdfs:label	"averageBeta-value";
 						rdfs:domain iasis:CGI;
 					 	rdfs:range rdfs:Literal;
-						rdfs:comment	"";
+						rdfs:comment	"The average beta-value across the normal population.";
                      	dce:creator iasis:samaneh.
 
 iasis:two_sided_p-value rdf:type owl:DatatypeProperty;
-						rdfs:label	"";
+						rdfs:label	"twoSidedP-value";
 						rdfs:domain iasis:CGI;
 						rdfs:range rdfs:Literal;
-						rdfs:comment	"";
+						rdfs:comment	"Combining two statistical tests in a two-part model.";
                         dce:creator iasis:samaneh.
 
 iasis:total_cn 	rdf:type owl:DatatypeProperty;
-				rdfs:label	"";
+				rdfs:label	"totalCopyNumber";
 				rdfs:domain iasis:CNV;
 			   	rdfs:range rdfs:Literal;
-				rdfs:comment	"";
+				rdfs:comment	"The sum of the major and minor allele counts.";
                	dce:creator iasis:samaneh.    
 
 iasis:minor_allele 	rdf:type owl:DatatypeProperty;
-					rdfs:label	"";
+					rdfs:label	"minorAllele";
 					rdfs:domain iasis:CNV;
 				   	rdfs:range rdfs:Literal;
-					rdfs:comment	"";
+					rdfs:comment	"The number of copies of the least frequent allele.";
                   	dce:creator iasis:samaneh.
 
 iasis:methylation 	rdf:type owl:DatatypeProperty;
-					rdfs:label	"";
+					rdfs:label	"methylation";
 					rdfs:domain	iasis:CGI;
 					rdfs:range	rdfs:Literal;
-					rdfs:comment	"";
+					rdfs:comment	"The methylation level: H (High) : beta-value > 0.8, L (Low) : beta-value < 0.2 ";
                   	dce:creator iasis:samaneh.
 		
 iasis:zygosity	rdf:type owl:DatatypeProperty;
-				rdfs:label	"";
+				rdfs:label	"Zygosity";
 				rdfs:domain	iasis:Mutation;
 				rdfs:range	rdfs:Literal;	
-				rdfs:comment	"";
+				rdfs:comment	"Information on whether the mutation was reported to be homozygous or heterozygous within the sample.";
                	dce:creator iasis:samaneh.
 
 iasis:loh	rdf:type owl:DatatypeProperty;
-			rdfs:label	"";
+			rdfs:label	"LOH";
 			rdfs:domain	iasis:Mutation;
 			rdfs:range	rdfs:Literal;
-			rdfs:comment	"";
+			rdfs:comment	"LOH information on whether the gene was reported to have Loss of heterozygosity (a common genetic event in cancer development) in the sample. ";
 			dce:creator iasis:samaneh.
 
 iasis:snp	rdf:type owl:DatatypeProperty;
-			rdfs:label	"";
+			rdfs:label	"SNP";
 			rdfs:domain	iasis:Mutation;
 			rdfs:range	rdfs:Literal;
-			rdfs:comment	"";
+			rdfs:comment	"All the known SNPs are flagged as: is SNP.";
             dce:creator iasis:samaneh.
 
 iasis:regulation	rdf:type owl:DatatypeProperty;
-					rdfs:label	"";
+					rdfs:label	"Regulation";
 					rdfs:domain	iasis:GExp;
 					rdfs:range	rdfs:Literal;
-					rdfs:comment	"";
+					rdfs:comment	"It could be over or under depending on the scores from different platforms if they are above or below the threshold.";
             		dce:creator iasis:samaneh.
 
 iasis:mutationDescription	rdf:type owl:DatatypeProperty;
