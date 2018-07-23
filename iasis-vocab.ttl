@@ -17,19 +17,9 @@ iasis:Annotation	rdf:type	owl:Class;
 					rdfs:comment "Explanation of a concept inclduing label, id source of concept.";
 					dce:creator	iasis:farah.
 
-iasis:Vocabulary	rdf:type	owl:Class;
-					rdfs:label	"Vocabulary";
-					rdfs:comment "(UMLS) related vocabularies.";
-					dce:creator	iasis:farah.
-
-iasis:CUITerm	rdf:type	owl:Thing;
-				rdfs:label	"CUITerm";
-				rdfs:comment "CUI terms.";
-				dce:creator	iasis:farah.
-
 iasis:SourceName	rdf:type	owl:Class;
 					rdfs:label	"SourceName";
-					rdfs:comment "Data source from which this instance has been taken.";
+					rdfs:comment "Source name.";
 					dce:creator	iasis:farah.
 
 iasis:ClinicalRecord 	rdf:type owl:Class;
@@ -315,19 +305,12 @@ iasis:label	rdf:type	owl:DatatypeProperty;
 			rdfs:comment	"Label of instances of Concept class";
 			dce:creator	iasis:samaneh.
 
-iasis:annSource	rdf:type	owl:ObjectProperty;
-				rdfs:label	"AnnotationSource";
-				rdfs:domain iasis:Annotation;
-				rdfs:range	iasis:SourceName;
-				rdfs:comment	"The name of the source from which the annotation is extracted or derived";
-				dce:creator	iasis:farah.
-
-iasis:source	rdf:type	owl:ObjectProperty;
-				rdfs:label	"ConceptSource";
-				rdfs:domain iasis:Concept;
-				rdfs:range	iasis:SourceName;
-				rdfs:comment	"The name of the source from which the concept is extracted or derived";
-				dce:creator	iasis:farah.
+iasis:provenance	rdf:type	owl:ObjectProperty;
+					rdfs:label	"provenance";
+					rdfs:domain iasis:Concept;
+					rdfs:range	iasis:SourceName;
+					rdfs:comment	"The name of the source from which the concept is extracted or derived";
+					dce:creator	iasis:farah.
 
 iasis:isRelatedTo	rdf:type	owl:ObjectProperty;
 					rdfs:label	"AnnotationOfConcept";
