@@ -9,12 +9,12 @@
 #########Classes
 iasis:Concept 	rdf:type	owl:Class;
 				rdfs:label	"Concept";
-				rdfs:comment "";
+				rdfs:comment "Represent constituents of thoughts, real world entities or a science.";
 				dce:creator	iasis:farah.
 
 iasis:Annotation	rdf:type	owl:Class;
 					rdfs:label	"Annotation";
-					rdfs:comment "";
+					rdfs:comment "Explanation of a concept inclduing label, id and the source of concept.";
 					dce:creator	iasis:farah.
 
 iasis:Vocabulary	rdf:type	owl:Class;
