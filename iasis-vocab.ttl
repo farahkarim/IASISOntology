@@ -281,13 +281,13 @@ iasis:LiquidBiopsyObservation	rdf:type	owl:Class;
 iasis:id	rdf:type	owl:ObjectProperty;
 			rdfs:label	"AnnotationID";
 			rdfs:domain iasis:Annotation;
-			rdfs:range	iasis:VocTerm;
+			rdfs:range	iasis:Literal;
 			rdfs:comment	"Identification of insances of Annotation class";	
 			dce:creator	iasis:farah.
 
 iasis:id	rdfs:label	"ConceptID";
 			rdfs:domain iasis:Concept;
-			rdfs:range	iasis:VocTerm;
+			rdfs:range	iasis:Literal;
 			rdfs:comment	"Identification of insances of Concept class";
 			dce:creator	iasis:farah.
 
@@ -325,7 +325,7 @@ iasis:isRelatedTo	rdf:type	owl:ObjectProperty;
 iasis:semanticTypes	rdf:type	owl:ObjectProperty;
 					rdfs:label	"semanticType";
 					rdfs:domain	iasis:Annotation;
-					rdfs:range	iasis:Vocabulary;
+					rdfs:range	iasis:SourceName;
 					rdfs:comment	"A list with the allowed semantic_types for this Annotation in the UMLS. ";
 					dce:creator	iasis:samaneh.
 
@@ -552,28 +552,28 @@ iasis:genomic_position	rdf:type owl:DatatypeProperty;
 iasis:cnv_study_id	rdf:type owl:ObjectProperty;
 					rdfs:label	"cnvStudyID";
 					rdfs:domain iasis:CNV;
-			   		rdfs:range iasis:VocTerm;
+			   		rdfs:range iasis:Literal;
 					rdfs:comment	"The ID of the study in which the CNV is mentioned";
                		dce:creator iasis:samaneh.
 
 iasis:mutation_study_id	rdf:type owl:ObjectProperty;
 						rdfs:label	"mutationStudyID";
 						rdfs:domain iasis:Mutation;
-			   			rdfs:range iasis:VocTerm;
+			   			rdfs:range iasis:Literal;
 						rdfs:comment	"The ID of the study in which the mutation is mentioned";
                			dce:creator iasis:samaneh.
 
 iasis:cgi_study_id	rdf:type owl:ObjectProperty;
 					rdfs:label	"CpGislandStudyID";
 					rdfs:domain iasis:CGI;
-			   		rdfs:range iasis:VocTerm;
+			   		rdfs:range iasis:Literal;
 					rdfs:comment	"The ID of the study in which the CGI is mentioned";
                		dce:creator iasis:samaneh.
 
 iasis:gexp_study_id	rdf:type owl:ObjectProperty;
 					rdfs:label	"gexpStudyID";
 					rdfs:domain iasis:GExp;
-			   		rdfs:range iasis:VocTerm;
+			   		rdfs:range iasis:Literal;
 					rdfs:comment	"The ID of the srudy in which the geneExpression is mentioned";
                		dce:creator iasis:samaneh.
 
@@ -1057,7 +1057,7 @@ iasis:ageStart	rdf:type	owl:DatatypeProperty;
 iasis:identifier	rdf:type	owl:ObjectProperty;
 					rdfs:label	"ObservationID";
 					rdfs:domain	iasis:Observation;
-					rdfs:range	iasis:VocTerm;
+					rdfs:range	iasis:Literal;
 					rdfs:comment	"The identifier of each patient observation.";
 					dce:creator	iasis:samaneh.
 
