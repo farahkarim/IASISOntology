@@ -904,17 +904,17 @@ iasis:globalscore 	rdf:type owl:DatatypeProperty;
                   	dce:creatoe iasis:samaneh.
 
 iasis:omixcore 	rdf:type owl:DatatypeProperty;
-				rdfs:label	"";
+				rdfs:label	"omixcore";
 				rdfs:domain iasis:RBP_RNA_PhysicalInteraction;
                	rdfs:range iasis:Literal;
 				rdfs:comment	"OmiXcore is an algorithm as part of catRAPID integrates the information coming from protein and >14,000 lincRNA fragments into an overall binding propensity value. It is based on a non-linear algorithm trained on the interaction propensities of protein fragments for RNA regions to predict binding affinities (i.e. read counts normalized by expression levels).";
                	dce:creator iasis:samaneh.
 
 iasis:tissue 	rdf:type owl:DatatypeProperty;
-				rdfs:label	"";
+				rdfs:label	"tissue";
 				rdfs:domain iasis:EQTL;
                	rdfs:range iasis:Literal;
-				rdfs:comment	"";
+				rdfs:comment	"The tissue in which variation has been observed.";
                	dce:creator iasis:samaneh.
 
 iasis:variation_isLocatedIn_gene 	rdf:type owl:ObjectProperty;
@@ -935,7 +935,7 @@ iasis:type 	rdf:type owl:DatatypeProperty;
 			rdfs:label	"eQTLtype";
 			rdfs:domain iasis:EQTL;
 			rdfs:range iasis:Literal;
-			rdfs:comment	"";
+			rdfs:comment	"Regulatory variants are characterized as either cis or trans acting, reflecting the predicted nature of interactions and of course depending on the physical distance from the gene they regulate.";
 			dce:creator iasis:samaneh.
 
 iasis:qvalue 	rdf:type owl:DatatypeProperty;
@@ -970,49 +970,49 @@ iasis:eqtl_position 	rdf:type owl:DatatypeProperty;
 #### Drug requirements:
 
 iasis:mentioned_in	rdf:type	owl:ObjectProperty;
-					rdfs:label	"";
+					rdfs:label	"mentioned_in";
 					rdfs:domain	iasis:Drug;
 					rdfs:range	iasis:Publication;
-					rdfs:comment	"";
+					rdfs:comment	"Relation that represents what drug has been mentioned in what publication.";
 					dce:creator	iasis:samaneh.
 
 iasis:drug_interactsWith_protein	rdf:type	owl:ObjectProperty;
-									rdfs:label	"";
+									rdfs:label	"drug_interactsWith_protein";
 									rdfs:domain	iasis:Drug;
 									rdfs:range	iasis:Protein;
-									rdfs:comment	"";
+									rdfs:comment	"Represents drug-protein (as target) interactions.";
 									dce:creator iasis:samaneh.
 
 iasis:drug_interactsWith_enzyme	rdf:type	owl:ObjectProperty;
-								rdfs:label	"";
+								rdfs:label	"drug_interactsWith_enzyme";
 								rdfs:domain	iasis:Drug;
 								rdfs:range	iasis:Enzyme;
-								rdfs:comment	"";
+								rdfs:comment	"Represents drug-enzyme (as target) interactions.";
 								dce:creator iasis:samaneh.
 
 iasis:drug_isPredictedToInteractWith_enzyme	rdf:type	owl:ObjectProperty;
-											rdfs:label	"";
+											rdfs:label	"drug_isPredictedToInteractWith_enzyme";
 											rdfs:domain	iasis:Drug;
 											rdfs:range	iasis:Enzyme;
-											rdfs:comment	"";
+											rdfs:comment	"Predicts drug-enzyme interactions using semEP.";
 											dce:creator	iasis:samaneh.
 
 iasis:drug_interactsWith_drug	rdf:type	owl:ObjectProperty;
-								rdfs:label	"";
+								rdfs:label	"drug_interactsWith_drug";
 								rdfs:domain	iasis:Drug;
 								rdfs:range	iasis:Drug;
-								rdfs:comment	"";
+								rdfs:comment	"Represents drug-drug interactions.";
 								dce:creator iasis:samaneh.
 
 iasis:drug_isPredictedToInteractWith_drug	rdf:type	owl:ObjectProperty;
-											rdfs:label	"";
+											rdfs:label	"drug_isPredictedToInteractWith_drug";
 											rdfs:domain	iasis:Drug;
 											rdfs:range	iasis:Drug;
-											rdfs:comment	"";
+											rdfs:comment	"Predicts drug-drug interactions using semEP.";
 											dce:creator iasis:samaneh.
 
 iasis:drug_isPredictedToHave_sideEffect	rdf:type	owl:ObjectProperty;
-										rdfs:label	"";
+										rdfs:label	"drug_isPredictedToHave_sideEffect";
 										rdfs:domain	iasis:Drug;
 										rdfs:range	iasis:SideEffect;
 										rdfs:comment	"";
