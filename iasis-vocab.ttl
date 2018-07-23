@@ -9,7 +9,7 @@
 #########Classes
 iasis:Concept 	rdf:type	owl:Class;
 				rdfs:label	"Concept";
-				rdfs:comment "Constituents of thoughts, real world entities or a science.";
+				rdfs:comment "Constituents of thoughts or real world entities.";
 				dce:creator	iasis:farah.
 
 iasis:Annotation	rdf:type	owl:Class;
