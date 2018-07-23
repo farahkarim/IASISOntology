@@ -1015,72 +1015,72 @@ iasis:drug_isPredictedToHave_sideEffect	rdf:type	owl:ObjectProperty;
 										rdfs:label	"drug_isPredictedToHave_sideEffect";
 										rdfs:domain	iasis:Drug;
 										rdfs:range	iasis:SideEffect;
-										rdfs:comment	"";
+										rdfs:comment	"Predicts drug-sideEffect relations using semEP.";
 										dce:creator iasis:samaneh.
 
 iasis:hasSideEffect	rdf:type	owl:ObjectProperty;
-					rdfs:label	"";
+					rdfs:label	"hasSideEffect";
 					rdfs:domain	iasis:Drug;
 					rdfs:range	iasis:HPO;
-					rdfs:comment	"";
+					rdfs:comment	"Represents the side effect each drug may have.";
 					dce:creator iasis:samaneh.
 
 iasis:dse_AvgFrequency	rdf:type	owl:dataTypeProperty;
-						rdfs:label	"";
+						rdfs:label	"dse_AvgFrequency";
 						rdfs:domain	iasis:DrugSideEffect;
 						rdfs:range	iasis:Literal;
-						rdfs:comment	"";
+						rdfs:comment	"Represents the average frequecy of particular drug having specific side effect.";
 						dce:creator iasis:samaneh.
 
 iasis:dse_StandardDeviation	rdf:type	owl:dataTypeProperty;
-							rdfs:label	"";
+							rdfs:label	"dse_StandardDeviation";
 							rdfs:domain	iasis:DrugSideEffect;
 							rdfs:range	iasis:Literal;
-							rdfs:commnet	"";
+							rdfs:commnet	"Represents the standard deviation from average frequecy of particular drug having specific side effect.";
 							dce:creator iasis:samaneh.
 
 iasis:drug_isRelatedTo_dse	rdf:type	owl:ObjectProperty;
-							rdfs:label	"";
+							rdfs:label	"drug_isRelatedTo_dse";
 							rdfs:domain	iasis:Drug;
 							rdfs:range	iasis:DrugSideEffect;
-							rdfs:comment	"";
+							rdfs:comment	"Connection between drug and drug-sideEffect relation.";
 							dce:creator iasis:samaneh.
 
 iasis:sideEffect_isRelatedTo_dse	rdf:type	owl:ObjectProperty;
-									rdfs:label	"";
+									rdfs:label	"sideEffect_isRelatedTo_dse";
 									rdfs:domain	iasis:SideEffect;
 									rdfs:range	iasis:DrugSideEffect;
-									rdfs:comment	"";
+									rdfs:comment	"Connection between sideEffect and drug-sideEffect relation.";
 									dce:creator	iasis:samaneh.
 
 #### WP2 requirements:
 
 iasis:gender	rdf:type	owl:DatatypeProperty;
-				rdfs:label	"";
+				rdfs:label	"gender";
 				rdfs:domain iasis:LCPatient;
 				rdfs:range	rdfs:Literal;
-				rdfs:comment	"";
+				rdfs:comment	"Gender of the patient.";
 				dce:creator	iasis:samaneh.
 
 iasis:hasBiopsy	rdf:type	owl:ObjectProperty;
-				rdfs:label	"";
+				rdfs:label	"hasBiopsy";
 				rdfs:domain	iasis:LCPatient;
 				rdfs:range	iasis:LiquidBiopsy;
-				rdfs:comment	"";
+				rdfs:comment	"Connection between patient and biopsy records.";
 				dce:creator	iasis:samaneh.
 
 iasis:birthDate	rdf:type	owl:DatatypeProperty;
-				rdfs:label	"";
+				rdfs:label	"birthDate";
 				rdfs:domain	iasis:LCPatient;
 				rdfs:range	xsd:date;
-				rdfs:comment	"";
+				rdfs:comment	"Birth date of the patient.";
 				dce:creator	iasis:samaneh.
 
 iasis:ageStart	rdf:type	owl:DatatypeProperty;
-				rdfs:label	"";
+				rdfs:label	"ageStart";
 				rdfs:domain	iasis:LCPatient;
 				rdfs:range	rdfs:Literal;
-				rdfs:comment	"";
+				rdfs:comment	"Age of patient.";
 				dce:creator	iasis:samaneh.
 
 iasis:identifier	rdf:type	owl:ObjectProperty;
@@ -1091,56 +1091,56 @@ iasis:identifier	rdf:type	owl:ObjectProperty;
 					dce:creator	iasis:samaneh.
 
 iasis:toxicHabit	rdf:type	owl:DatatypeProperty;
-					rdfs:label	"";
+					rdfs:label	"toxicHabit";
 					rdfs:domain	iasis:LCPatient;
 					rdfs:range	rdfs:Literal;
-					rdfs:comment	"";
+					rdfs:comment	"Represents if the patient is smoker or not.";
 					dce:creator	iasis:samaneh.
 
 iasis:diagnosisAge	rdf:type	owl:DatatypeProperty;
-					rdfs:label	"";
+					rdfs:label	"diagnosisAge";
 					rdfs:domain	iasis:LCPatient;
 					rdfs:range	rdfs:Literal;
 					rdfs:comment "The age on which the patient was diagnosed with Cancer.";
 					dce:creator	iasis:samaneh.
 
 iasis:diagnosisAgeGroup	rdf:type	owl:DatatypeProperty;
-						rdfs:label	"";
+						rdfs:label	"diagnosisAgeGroup";
 						rdfs:domain	iasis:LCPatient;
 						rdfs:range	rdfs:Literal;
 						rdfs:comment "The age group on which the patient was diagnosed with Cancer.";
 						dce:creator	iasis:samaneh.
 
 iasis:diagnosisDate	rdf:type	owl:DatatypeProperty;
-					rdfs:label	"";
+					rdfs:label	"diagnosisDate";
 					rdfs:domain	iasis:LCPatient;
 					rdfs:range	xsd:date;
 					rdfs:comment "The date on which the patient was diagnosed with Cancer.";
 					dce:creator	iasis:samaneh.
 
 iasis:egfrMutation	rdf:type	owl:DatatypeProperty;
-					rdfs:label	"";
+					rdfs:label	"egfrMutation";
 					rdfs:domain	iasis:LCPatient;
 					rdfs:range	rdfs:Literal;
-					rdfs:comment	"";
+					rdfs:comment	"Represents if EGFR has been mutated or not.";
 					dce:creator	iasis:samaneh.
 
 iasis:hasEcog	rdf:type	owl:ObjectProperty;
-				rdfs:label	"";
+				rdfs:label	"hasEcog";
 				rdfs:domain	iasis:LCPatient;
 				rdfs:range	iasis:Ecog;
-				rdfs:comment	"";
+				rdfs:comment	"Connection between patient and ecog records.";
 				dce:creator	iasis:samaneh.
 
 iasis:hasTumorStage	rdf:type	owl:ObjectProperty;
-					rdfs:label	"";
+					rdfs:label	"hasTumorStage";
 					rdfs:domain	iasis:LCPatient;	
 					rdfs:range	iasis:TumorStage;
-					rdfs:comment	"";
+					rdfs:comment	"Connection between patient and tumor stage records.";
 					dce:creator	iasis:samaneh.
 
 iasis:hasObservation	rdf:type	owl:ObjectProperty;
-						rdfs:label	"";
+						rdfs:label	"hasObservation";
 						rdfs:domain	iasis:LiquidBiopsy;
 						rdfs:range	iasis:LiquidBiopsyObservation;
 						rdfs:comment	"";
