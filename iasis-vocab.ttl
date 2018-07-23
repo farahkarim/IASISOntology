@@ -9,7 +9,7 @@
 #########Classes
 iasis:Concept 	rdf:type	owl:Class;
 				rdfs:label	"Concept";
-				rdfs:comment "Represent constituents of thoughts, real world entities or a science.";
+				rdfs:comment "Constituents of thoughts, real world entities or a science.";
 				dce:creator	iasis:farah.
 
 iasis:Annotation	rdf:type	owl:Class;
@@ -40,7 +40,7 @@ iasis:SourceName	rdf:type	owl:Class;
 iasis:ClinicalRecord 	rdf:type owl:Class;
 						rdfs:label	"Clinical Record";
 						rdfs:subClassOf	iasis:Concept;
-						rdfs:comment "systematic documentation of a single patient's medical history and care across time within one particular health care provider's jurisdiction.";
+						rdfs:comment "Systematic documentation of a single patient's medical history and care across time within one particular health care provider's jurisdiction.";
 						dce:creator	iasis:maria-esther.
 
 iasis:Image rdf:type owl:Class;
@@ -289,7 +289,7 @@ iasis:LiquidBiopsyObservation	rdf:type	owl:Class;
 
 
 ##########################################################################################
-################ Properties ##############################################################
+########################### Properties ###################################################
 ##########################################################################################
 
 
@@ -338,7 +338,7 @@ iasis:isRelatedTo	rdf:type	owl:ObjectProperty;
 					rdfs:label	"AnnotationOfConcept";
 					rdfs:domain iasis:Concept;
 					rdfs:range iasis:Relation;
-					rdfs:comment "relation between superclasses Concept and Relation classes";
+					rdfs:comment "Relation between superclasses Concept and Relation classes";
 					dce:creator	iasis:farah.
 
 
@@ -404,14 +404,14 @@ iasis:hasAnnotation	rdf:type	owl:ObjectProperty;
 								rdfs:label	"hasAnnotation";
 								rdfs:domain	iasis:Publication;
 								rdfs:range	iasis:Annotation;
-								rdfs:comment	"The connection between mentionedIn or HasTopic relation with CUI.";
+								rdfs:comment	"Connection between mentionedIn or HasTopic relation with CUI.";
 								dce:creator	iasis:samaneh. 
 
 iasis:annotates	rdf:type	owl:ObjectProperty;
 							rdfs:label	"annotates";
 							rdfs:domain	iasis:Publication;
 							rdfs:range	iasis:Annotation;
-							rdfs:comment	"The connection between mentionedIn or HasTopic relation with CUI.";
+							rdfs:comment	"Connection between mentionedIn or HasTopic relation with CUI.";
 							dce:creator	iasis:samaneh. 
 
 
@@ -421,7 +421,7 @@ iasis:description	rdf:type owl:DatatypeProperty;
 					rdfs:label	"Description";
 					rdfs:domain iasis:Annotation;
 				  	rdfs:range rdfs:Literal;
-                  	rdfs:comment "a property of Annotation Class";
+                  	rdfs:comment "A property of Annotation Class";
 				  	dce:creator iasis:samaneh.
 
 iasis:cds_length 	rdf:type owl:DatatypeProperty;
@@ -442,7 +442,7 @@ iasis:primaryTissue	rdf:type owl:DatatypeProperty;
 					rdfs:label	"PrimaryTissue";
 					rdfs:domain iasis:Sample;
 					rdfs:range	rdfs:Literal;
-					rdfs:comment	"The primary tissue/cancer from which the sample originated.";
+					rdfs:comment	"Primary tissue/cancer from which the sample originated.";
                    	dce:creator iasis:samaneh.
 
 iasis:tissueSubtype1	rdf:type owl:DatatypeProperty;
@@ -463,7 +463,7 @@ iasis:primaryHistology	rdf:type owl:DatatypeProperty;
 						rdfs:label	"PrimaryHistology";
 						rdfs:domain iasis:Sample;
 						rdfs:range	rdfs:Literal;
-						rdfs:comment	"The histological classification of sample.";
+						rdfs:comment	"Histological classification of sample.";
                         dce:creator iasis:samaneh.
 
 iasis:histologySubtype1	rdf:type owl:DatatypeProperty;
@@ -540,35 +540,35 @@ iasis:cnv_start	rdf:type owl:DatatypeProperty;
 				rdfs:label	"cnvStartPosition";
 				rdfs:domain iasis:CNV;
 				rdfs:range rdfs:Literal;
-				rdfs:comment	"The starting point of CNV";
+				rdfs:comment	"Starting point of CNV";
             	dce:creator iasis:samaneh.
 
 iasis:mutation_start	rdf:type owl:DatatypeProperty;
 						rdfs:label	"mutationStartPosition";
 						rdfs:domain iasis:Mutation;
 						rdfs:range rdfs:Literal;
-						rdfs:comment	"The starting point of the mutation";
+						rdfs:comment	"Starting point of the mutation";
             			dce:creator iasis:samaneh.
 
 iasis:cnv_end	rdf:type owl:DatatypeProperty;
 				rdfs:label	"cnvEndPosition";
 				rdfs:domain iasis:CNV;
 		  		rdfs:range rdfs:Literal;
-				rdfs:comment	"The ending point of CNV";
+				rdfs:comment	"Ending point of CNV";
           		dce:creator iasis:samaneh.
 
 iasis:mutation_end	rdf:type owl:DatatypeProperty;
 					rdfs:label	"mutationEndPosition";
 					rdfs:domain iasis:Mutation;
 		  			rdfs:range rdfs:Literal;
-					rdfs:comment	"The ending point of the mutation";
+					rdfs:comment	"Ending point of the mutation";
           			dce:creator iasis:samaneh.
 
 iasis:genomic_position	rdf:type owl:DatatypeProperty;
 						rdfs:label	"CpGislandGenomicPosition";
 						rdfs:domain iasis:CGI;
 					   	rdfs:range rdfs:Literal;	
-						rdfs:comment	"The genomic position";
+						rdfs:comment	"Genomic position";
                        	dce:creator iasis:samaneh.
 
 iasis:cnv_study_id	rdf:type owl:ObjectProperty;
@@ -603,14 +603,14 @@ iasis:mutation_cds 	rdf:type owl:DatatypeProperty;
 					rdfs:label	"mutationCDS";
 					rdfs:domain iasis:Mutation;
 				   	rdfs:range rdfs:Literal;
-					rdfs:comment	"The nucleotide sequence of the mutation";
+					rdfs:comment	"Nucleotide sequence of the mutation";
                    	dce:creator iasis:samaneh.
 
 iasis:mutation_aa 	rdf:type owl:DatatypeProperty;
 					rdfs:label	"mutationAA";
 					rdfs:domain iasis:Mutation;
 				  	rdfs:range rdfs:Literal;
-					rdfs:comment	"The peptide sequence of the mutation";
+					rdfs:comment	"Peptide sequence of the mutation";
                   	dce:creator iasis:samaneh. 
 
 iasis:fathmm_prediction rdf:type owl:DatatypeProperty;
@@ -652,14 +652,14 @@ iasis:beta_value	rdf:type owl:DatatypeProperty;
 					rdfs:label	"beta-value";
 					rdfs:domain iasis:CGI;
 				 	rdfs:range rdfs:Literal;
-					rdfs:comment	"The beta-value for the probe in the tumour sample. Only values > 0.8 (High) or < 0.2 (Low) are included.";
+					rdfs:comment	"Beta-value for the probe in the tumour sample. Only values > 0.8 (High) or < 0.2 (Low) are included.";
                  	dce:creator iasis:samaneh.
 
 iasis:avg_beta_value 	rdf:type owl:DatatypeProperty;
 						rdfs:label	"averageBeta-value";
 						rdfs:domain iasis:CGI;
 					 	rdfs:range rdfs:Literal;
-						rdfs:comment	"The average beta-value across the normal population.";
+						rdfs:comment	"Average beta-value across the normal population.";
                      	dce:creator iasis:samaneh.
 
 iasis:two_sided_p-value rdf:type owl:DatatypeProperty;
@@ -673,21 +673,21 @@ iasis:total_cn 	rdf:type owl:DatatypeProperty;
 				rdfs:label	"totalCopyNumber";
 				rdfs:domain iasis:CNV;
 			   	rdfs:range rdfs:Literal;
-				rdfs:comment	"The sum of the major and minor allele counts.";
+				rdfs:comment	"Sum of the major and minor allele counts.";
                	dce:creator iasis:samaneh.    
 
 iasis:minor_allele 	rdf:type owl:DatatypeProperty;
 					rdfs:label	"minorAllele";
 					rdfs:domain iasis:CNV;
 				   	rdfs:range rdfs:Literal;
-					rdfs:comment	"The number of copies of the least frequent allele.";
+					rdfs:comment	"Number of copies of the least frequent allele.";
                   	dce:creator iasis:samaneh.
 
 iasis:methylation 	rdf:type owl:DatatypeProperty;
 					rdfs:label	"methylation";
 					rdfs:domain	iasis:CGI;
 					rdfs:range	rdfs:Literal;
-					rdfs:comment	"The methylation level: H (High) : beta-value > 0.8, L (Low) : beta-value < 0.2 ";
+					rdfs:comment	"Methylation level: H (High) : beta-value > 0.8, L (Low) : beta-value < 0.2 ";
                   	dce:creator iasis:samaneh.
 		
 iasis:zygosity	rdf:type owl:DatatypeProperty;
@@ -949,21 +949,21 @@ iasis:dbsnp 	rdf:type owl:ObjectProperty;
 				rdfs:label	"dbsnpID";
 				rdfs:domain iasis:EQTL;
 				rdfs:range iasis:Dbsnp;
-				rdfs:comment	"The varriation ID in dbsnp database";
+				rdfs:comment	"Varriation ID in dbsnp database";
 				dce:creator iasis:samaneh.
 
 iasis:eqtl_chromosome 	rdf:type owl:DatatypeProperty;
 						rdfs:label	"eqtlChromosome";
 						rdfs:domain iasis:EQTL;
                			rdfs:range iasis:Literal;
-						rdfs:comment	"The chromosome position of eQTL.";
+						rdfs:comment	"Chromosome position of eQTL.";
 						dce:creator iasis:samaneh.
 
 iasis:eqtl_position 	rdf:type owl:DatatypeProperty;
 						rdfs:label	"eqtlPosition";
 						rdfs:domain iasis:EQTL;
                			rdfs:range iasis:Literal;
-						rdfs:comment	"The genomic position of eQTL.";
+						rdfs:comment	"Genomic position of eQTL.";
 						dce:creator iasis:samaneh.
 
 
@@ -1036,7 +1036,7 @@ iasis:dse_StandardDeviation	rdf:type	owl:dataTypeProperty;
 							rdfs:label	"dse_StandardDeviation";
 							rdfs:domain	iasis:DrugSideEffect;
 							rdfs:range	iasis:Literal;
-							rdfs:commnet	"Represents the standard deviation from average frequecy of particular drug having specific side effect.";
+							rdfs:commnet	"Represents standard deviation from average frequecy of particular drug having specific side effect.";
 							dce:creator iasis:samaneh.
 
 iasis:drug_isRelatedTo_dse	rdf:type	owl:ObjectProperty;
