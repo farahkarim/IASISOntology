@@ -77,40 +77,40 @@ iasis:HasTopic	rdf:type owl:Class;
 				rdfs:comment	"A relation that shows which CUI has been appeared in each specific publication.";
 				dce:creator	iasis:samaneh.
 
-iasis:AssociatedWith	rdf:type owl:Class;
+iasis:ASSOCIATED_WITH	rdf:type owl:Class;
 						rdfs:label	"AssociatedWith";
 						rdfs:subClassOf iasis:Relation;
-						rdfs:comment	"A UMLS Annotation.";
+						rdfs:comment	"UMLS Annotation.";
 						dce:creator	iasis:farah.
 
-iasis:Causes	rdf:type owl:Class;
+iasis:CAUSES	rdf:type owl:Class;
 				rdfs:label	"Causes";
 				rdfs:subClassOf iasis:Relation;
-				rdfs:comment	"A UMLS Annotation.";
+				rdfs:comment	"UMLS Annotation.";
 				dce:creator	iasis:farah.
 
-iasis:Inhibits	rdf:type owl:Class;
+iasis:INHIBITS	rdf:type owl:Class;
 				rdfs:label	"Inhibits";
 				rdfs:subClassOf iasis:Relation;
-				rdfs:comment	"A UMLS Annotation.";
+				rdfs:comment	"UMLS Annotation.";
 				dce:creator	iasis:farah.
 
-iasis:InteractsWith rdf:type owl:Class;
+iasis:INITERACTS_WITH rdf:type owl:Class;
 					rdfs:label	"InteractsWith";
 					rdfs:subClassOf iasis:Relation;
-					rdfs:comment	"A UMLS Annotation.";
+					rdfs:comment	"UMLS Annotation.";
 					dce:creator	iasis:farah.
 
-iasis:Predisposes 	rdf:type owl:Class;
+iasis:PREDISPOSES 	rdf:type owl:Class;
 					rdfs:label	"Predisposes";
 					rdfs:subClassOf iasis:Relation;
-					rdfs:comment	"A UMLS Annotation.";
+					rdfs:comment	"UMLS Annotation.";
 					dce:creator	iasis:farah.
 
-iasis:Stimulates 	rdf:type owl:Class;
+iasis:STIMULATES 	rdf:type owl:Class;
 					rdfs:label	"Stimulates";
 					rdfs:subClassOf iasis:Relation;
-					rdfs:comment	"A UMLS Annotation.";
+					rdfs:comment	"UMLS Annotation.";
 					dce:creator	iasis:farah.
 
 #### COSMIC requirements:
@@ -204,7 +204,7 @@ iasis:EQTL	rdf:type owl:Class;
 iasis:Dbsnp	rdf:type owl:Class;
 			rdfs:label	"dbsnp";
 			rdfs:subClassOf	iasis:Concept;
-			rdf:comment "";
+			rdf:comment "Database of single nucleotide polymorphisms (SNPs) and multiple small-scale variations that include insertions/deletions, microsatellites, and non-polymorphic variants.";
 			dce:creator	iasis:samaneh.
 
 #### Drug requirements:
@@ -282,7 +282,7 @@ iasis:EcogObservation	rdf:type	owl:Class;
 						dce:creator	iasis:samaneh.
 
 iasis:LiquidBiopsyObservation	rdf:type	owl:Class;
-								rdfs:label	"";
+								rdfs:label	"LiquidBiopsyObservation";
 								rdfs:subClassOf	iasis:Observation;
 								rdfs:comment "Each LiquidBiopsy on a patient would be documented as a separate observation.";
 								dce:creator	iasis:samaneh.
@@ -352,59 +352,68 @@ iasis:semanticTypes	rdf:type	owl:ObjectProperty;
 					dce:creator	iasis:samaneh.
 
 iasis:title	rdf:type	owl:DatatypeProperty;
-			rdfs:label	"titleOfPublication";
+			rdfs:label	"title";
 			rdfs:domain	iasis:Publication;
 			rdfs:range	rdfs:Lirteral;
-			rdfs:comment	"";
+			rdfs:comment	"Title of publication.";
 			dce:creator	iasis:samaneh.
 
 iasis:year	rdf:type	owl:DatatypeProperty;
-			rdfs:label	"yearOfPublication";
+			rdfs:label	"year";
 			rdfs:domain	iasis:Publication;
 			rdfs:range	rdfs:Lirteral;
-			rdfs:comment	"";
+			rdfs:comment	"Year of Publication";
 			dce:creator	iasis:samaneh.
 
 iasis:authors	rdf:type	owl:DatatypeProperty;
-				rdfs:label	"authorsOfPublication";
+				rdfs:label	"authors";
 				rdfs:domain	iasis:Publication;
 				rdfs:range	rdfs:Literal;
-				rdfs:comment	"";
+				rdfs:comment	"Authors of publication";
 				dce:creator	iasis:samaneh.
 
 iasis:journal	rdf:type	owl:DatatypeProperty;
-				rdfs:label	"journalOfPublication";
+				rdfs:label	"journal";
 				rdfs:domain	iasis:Publication;
 				rdfs:range	rdfs:Literal;
-				rdfs:comment	"";
+				rdfs:comment	"Journal of publication";
 				dce:creator	iasis:samaneh.
 
 iasis:relation_isRelatedTo_cui	rdf:type	owl:ObjectProperty;
-								rdfs:label	"";
+								rdfs:label	"relation_isRelatedTo_cui";
 								rdfs:domain	iasis:Relation;
 								rdfs:range	iasis:Annotation;	
-								rdfs:comment	"";
-								dce:creator	iasis:samaneh.
-
-iasis:cui_hasTopic_publication	rdf:type	owl:ObjectProperty;
-								rdfs:label	"";
-								rdfs:domain	iasis:Annotation;
-								rdfs:range	iasis:Publication;	
-								rdfs:comment	"";
+								rdfs:comment	"The connection between UMLS relation and CUI.";
 								dce:creator	iasis:samaneh.
 
 iasis:cui_mentionedIn_publication	rdf:type	owl:ObjectProperty;
-									rdfs:label	"";
+									rdfs:label	"cui_mentionedIn_publication";
 									rdfs:domain	iasis:Annotation;
 									rdfs:range	iasis:Publication;	
-									rdfs:comment	"";
+									rdfs:comment	"Direct connection that represents in which publication each CUI has been appeared. ";
 									dce:creator	iasis:samaneh.
+
 iasis:publication_hasTopic_cui	rdf:type	owl:ObjectProperty;
-								rdfs:label	"";
+								rdfs:label	"publication_hasTopic_cui";
 								rdfs:domain	iasis:Publication;
 								rdfs:range	iasis:Annotation;
-								rdfs:comment	"";
+								rdfs:comment	"Direct connection that represents the topic of publication using CUI.";
 								dce:creator	iasis:samaneh. 
+
+iasis:hasAnnotation	rdf:type	owl:ObjectProperty;
+								rdfs:label	"hasAnnotation";
+								rdfs:domain	iasis:Publication;
+								rdfs:range	iasis:Annotation;
+								rdfs:comment	"Direct connection that represents the topic of publication using CUI.";
+								dce:creator	iasis:samaneh. 
+
+iasis:annotates	rdf:type	owl:ObjectProperty;
+							rdfs:label	"annotates";
+							rdfs:domain	iasis:Publication;
+							rdfs:range	iasis:Annotation;
+							rdfs:comment	"Direct connection that represents the topic of publication using CUI.";
+							dce:creator	iasis:samaneh. 
+
 
 #### COSMIC requirements:
 
