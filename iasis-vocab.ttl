@@ -719,136 +719,136 @@ iasis:regulation	rdf:type owl:DatatypeProperty;
             		dce:creator iasis:samaneh.
 
 iasis:mutationDescription	rdf:type owl:DatatypeProperty;
-							rdfs:label	"";
+							rdfs:label	"mutationDescription";
 							rdfs:domain	iasis:Mutation;
 							rdfs:range	iasis:Literal;
-							rdfs:comment "Is extracted from mutation dataset";
+							rdfs:comment "Is extracted from mutation dataset. ";
             				dce:creator iasis:samaneh.
 
 iasis:mutationType	rdf:type owl:DatatypeProperty;
-					rdfs:label	"";
+					rdfs:label	"MutationType";
 					rdfs:domain	iasis:CNV;
 					rdfs:range	iasis:Literal;
 					rdfs:comment "Is extracted from CNV dataset";
             		dce:creator iasis:samaneh.
 
 iasis:gene_isRelatedTo_sample	rdf:type	owl:ObjectProperty;
-								rdfs:label	"";
+								rdfs:label	"gene_isRelatedTo_sample";
 								rdfs:domain	iasis:Gene;
 								rdfs:range	iasis:Sample;
-								rdfs:comment "relation between Gene and Sample classes";
+								rdfs:comment "Relation between Gene and Sample classes.";
 								dce:creator	iasis:samaneh.
 
 iasis:cgi_isLocatedIn_gene	rdf:type owl:ObjectProperty;
-							rdfs:label	"";
+							rdfs:label	"cgi_isLocatedIn_gene";
 							rdfs:domain iasis:CGI;
 				 			rdfs:range iasis:Gene;
-							rdfs:comment	"";
+							rdfs:comment	"Relation between CGI and Gene classes.";
                  			dce:creator iasis:samaneh.
 
 iasis:cgi_isLocatedIn_sample	rdf:type owl:ObjectProperty;
-								rdfs:label	"";
+								rdfs:label	"cgi_isLocatedIn_sample";
 								rdfs:domain iasis:CGI;
 					 			rdfs:range iasis:Sample;
-								rdfs:comment	"";
+								rdfs:comment	"Relation between CGI and Sample classes.";
                  				dce:creator iasis:samaneh.
 
 iasis:cnv_isLocatedIn_gene	rdf:type owl:ObjectProperty;
-							rdfs:label	"";
+							rdfs:label	"cnv_isLocatedIn_gene";
 							rdfs:domain iasis:CNV;
 			     			rdfs:range iasis:Gene;
-							rdfs:comment	"";
+							rdfs:comment	"Relation between CNV and Gene classes.";
                  			dce:creator iasis:samaneh.
 
 iasis:cgi_isLocatedIn_tumor	rdf:type owl:ObjectProperty;
-							rdfs:label	"";
+							rdfs:label	"cgi_isLocatedIn_tumor";
 							rdfs:domain iasis:CGI;
 				 			rdfs:range iasis:Tumor;
-							rdfs:comment	"";
+							rdfs:comment	"Relation between CGI and Tumor classes.";
                  			dce:creator iasis:samaneh.
 
 iasis:cnv_isLocatedIn_sample	rdf:type owl:ObjectProperty;
-								rdfs:label	"";
+								rdfs:label	"cnv_isLocatedIn_sample";
 								rdfs:domain iasis:CNV;
 				  				rdfs:range iasis:Sample;
-								rdfs:comment	"";
+								rdfs:comment	"Relation between CNV and Sample classes.";
                  				dce:creator iasis:samaneh.
 
 iasis:cnv_isLocatedIn_tumor	rdf:type owl:ObjectProperty;
-							rdfs:label	"";
+							rdfs:label	"cnv_isLocatedIn_tumor";
 							rdfs:domain iasis:CNV;
 				  			rdfs:range iasis:Tumor;	
-							dce:comment	"";
+							dce:comment	"Relation between CNV and Tumor classes.";
                  			dce:creator iasis:samaneh.
 
 iasis:mutation_isLocatedIn_gene	rdf:type owl:ObjectProperty;
 								rdfs:label	"MutationIsLocatedInGene";
 								rdfs:domain iasis:Mutation;
 				  				rdfs:range iasis:Gene;
-								rdfs:comment	"The Gene in which the mutation occurs";
+								rdfs:comment	"The gene in which the mutation occurs.";
                  				dce:creator iasis:samaneh.
 
 iasis:mutation_isLocatedIn_tumor	rdf:type owl:ObjectProperty;
-									rdfs:label	"";
+									rdfs:label	"mutation_isLocatedIn_tumor";
 									rdfs:domain iasis:Mutation;
 				  					rdfs:range iasis:Tumor;
-									rdfs:comment	"";
+									rdfs:comment	"The tumor in which the mutation occurs.";
                  					dce:creator iasis:samaneh.
 
 iasis:mutation_isLocatedIn_sample	rdf:type owl:ObjectProperty;
-									rdfs:label	"";
+									rdfs:label	"mutation_isLocatedIn_sample";
 									rdfs:domain iasis:Mutation;
 				  					rdfs:range iasis:Sample;
-									rdfs:comment	"";
+									rdfs:comment	"The sample in which the mutation occurs.";
                  					dce:creator iasis:samaneh.
 
 iasis:mutation_isLocatedIn_transcript	rdf:type	owl:ObjectPeroperty;	
-										rdfs:label	"";
+										rdfs:label	"mutation_isLocatedIn_transcript";
 										rdfs:domain iasis:Mutation;
 				  						rdfs:range iasis:Transcript;
-										rdfs:comment	"";
+										rdfs:comment	"The transcript in which the mutation occurs.";
                   						dce:creator iasis:samaneh.
 
 iasis:sample_isTakenFrom_tumor	rdf:type owl:ObjectProperty;
-								rdfs:label	"";
+								rdfs:label	"sample_isTakenFrom_tumor";
 								rdfs:domain iasis:Sample;
 								rdfs:range iasis:Tumor;
-								rdfs:commnet	"";
+								rdfs:commnet	"The tumor from which the sample is taken.";
                     			dce:creator iasis:samaneh.
 
 iasis:mutation_isClassifiedAs_mutationType	rdf:type owl:ObjectProperty;
-											rdfs:label	"";
+											rdfs:label	"mutation_isClassifiedAs_mutationType";
 											rdfs:domain iasis:Mutation;
 											rdfs:range iasis:MutationType;
-											rdfs:comment	"";
+											rdfs:comment	"The mutation type according to mutation data.";
                     						dce:creator iasis:samaneh.  
 
 iasis:cnv_isClassifiedAs_mutationType	rdf:type owl:ObjectProperty;
-										rdfs:label	"";
+										rdfs:label	"cnv_isClassifiedAs_mutationType";
 										rdfs:domain iasis:CNV;
 										rdfs:range iasis:MutationType;
-										rdfs:comment	"";
+										rdfs:comment	"The mutation type according to CNV data.";
 										dce:creator iasis:samaneh.
 
 iasis:sampleSource	rdf:type	owl:DatatypeProperty;
-					rdfs:label	"";
+					rdfs:label	"sampleSource";
 					rdfs:domain	iasis:Sample;
 					rdfs:range	rdfs:Literal;
 					rdfs:comment "Appears in resistanceMutation dataset";
 					dce:creator	iasis:samaneh.
 
 iasis:gene_isTranscribedAs_transcription	rdf:type	owl:ObjectProperty;
-											rdfs:label	"";
+											rdfs:label	"gene_isTranscribedAs_transcription";
 											rdfs:domain	iasis:Gene;	
 											rdfs:range	iasis:Transcription;
 											rdfs:comment "As connection between Gene and Transcription Relation.";
 											dce:creator	iasis:samaneh.
 
 iasis:mutation_isResistantTo_drug	rdf:type	owl:ObjectProperty;
-									rdfs:label	"";
+									rdfs:label	"mutation_isResistantTo_drug";
 									rdfs:domain	iasis:Mutation;
 									rdfs:range	iasis:Drug;
-									rdfs:comment	"";
+									rdfs:comment	" Yes: if reported mutation confers drug resistance. -: means resistance data is unknown; there is no evidence for resistance or it is a known primary mutation.";
 									dce:creator	iasis:samaneh.
 
 
