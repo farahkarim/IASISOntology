@@ -348,7 +348,7 @@ iasis:semanticTypes	rdf:type	owl:ObjectProperty;
 					rdfs:label	"semanticType";
 					rdfs:domain	iasis:Annotation;
 					rdfs:range	iasis:Vocabulary;
-					rdfs:comment	"";
+					rdfs:comment	"A list with the allowed semantic_types for this Annotation in the UMLS. ";
 					dce:creator	iasis:samaneh.
 
 iasis:title	rdf:type	owl:DatatypeProperty;
@@ -404,14 +404,14 @@ iasis:hasAnnotation	rdf:type	owl:ObjectProperty;
 								rdfs:label	"hasAnnotation";
 								rdfs:domain	iasis:Publication;
 								rdfs:range	iasis:Annotation;
-								rdfs:comment	"Direct connection that represents the topic of publication using CUI.";
+								rdfs:comment	"The connection between mentionedIn or HasTopic relation with CUI.";
 								dce:creator	iasis:samaneh. 
 
 iasis:annotates	rdf:type	owl:ObjectProperty;
 							rdfs:label	"annotates";
 							rdfs:domain	iasis:Publication;
 							rdfs:range	iasis:Annotation;
-							rdfs:comment	"Direct connection that represents the topic of publication using CUI.";
+							rdfs:comment	"The connection between mentionedIn or HasTopic relation with CUI.";
 							dce:creator	iasis:samaneh. 
 
 
@@ -432,10 +432,10 @@ iasis:cds_length 	rdf:type owl:DatatypeProperty;
                  	dce:creator iasis:samaneh.
 
 iasis:age	rdf:type owl:DatatypeProperty;
-			rdfs:comment	"Information about the information of sample";
 			rdfs:label	"AgeOfSample";
 			rdfs:domain iasis:Sample;          
 		  	rdfs:range rdfs:Literal;
+			rdfs:comment	"Information about the information of sample";
           	dce:creator iasis:samaneh.
 
 iasis:primaryTissue	rdf:type owl:DatatypeProperty;
@@ -474,10 +474,10 @@ iasis:histologySubtype1	rdf:type owl:DatatypeProperty;
                         dce:creator iasis:samaneh.
 
 iasis:histologySubtype2	rdf:type owl:DatatypeProperty;
+						rdfs:label	"PrimaryHistology_2ndLevelSubclassification";
 						rdfs:domain iasis:Sample;
 						rdfs:range	rdfs:Literal;
 						rdfs:comment	"Histological classification (level 2) of the sample.";
-						rdfs:label	"PrimaryHistology_2ndLevelSubclassification";
                         dce:creator iasis:samaneh.
 
 iasis:mutation_mentionedIn_publication	rdf:type owl:ObjectProperty;
@@ -491,7 +491,7 @@ iasis:mutation_pepSeq	rdf:type	owl:DatatypeProperty;
 						rdfs:label	"MutationPeptideSequece";
 						rdfs:domain	iasis:Mutation;
 						rdfs:range rdfs:Literal;
-						rdfs:comment "The new column produced from Mutation AA column, excluding p. in mutation dataset";
+						rdfs:comment "A new column produced from Mutation AA column, excluding p. in mutation dataset";
 						dce:creator	iasis:samaneh.
 
 iasis:resistance_mutation_pepSeq	rdf:type	owl:DatatypeProperty;
@@ -614,21 +614,21 @@ iasis:mutation_aa 	rdf:type owl:DatatypeProperty;
                   	dce:creator iasis:samaneh. 
 
 iasis:fathmm_prediction rdf:type owl:DatatypeProperty;
-						rdfs:label	"";
+						rdfs:label	"fathmm";
 						rdfs:domain iasis:Mutation;
 						rdfs:range rdfs:Literal;
-						rdfs:comment	"";
+						rdfs:comment	"Functional Analysis through Hidden Markov Models: predicts the functional consequences of both coding variants, i.e. non-synonymous single nucleotide variants (nsSNVs), and non-coding variants.";
                         dce:creator iasis:samaneh.
 
 iasis:fathmm_score 	rdf:type owl:DatatypeProperty;
-					rdfs:label	"";
+					rdfs:label	"fathmmScore";
 					rdfs:domain iasis:Mutation;
 				   	rdfs:range rdfs:Literal;
 					rdfs:comment	"";
                    	dce:creator iasis:samaneh.
 
 iasis:mutation_somatic_status 	rdf:type owl:DatatypeProperty;
-								rdfs:label	"";
+								rdfs:label	"mutation_somatic_status";
 								rdfs:domain iasis:Mutation;
 							  	rdfs:range rdfs:Literal;
 								rdfs:comment	"";
