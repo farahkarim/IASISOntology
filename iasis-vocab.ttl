@@ -855,59 +855,59 @@ iasis:mutation_isResistantTo_drug	rdf:type	owl:ObjectProperty;
 #### WP3 requirements:
 
 iasis:variant_affects_transcript	rdf:type owl:ObjectProperty;
-									rdfs:label	"";
+									rdfs:label	"variant_affects_transcript";
 									rdfs:domain iasis:SNP;
                  					rdfs:range iasis:Transcript;
                  					rdfs:comment "It's trans-eQTL: trans-acting expression quantitative trait loci, i.e. genomic variants that affect the expression of distant (trans) genes) from three sources: GTEx, Joehanes et al. and a Dutch group (Lude Franke)";
 									dce:creator iasis:samaneh.
 
 iasis:transcript_isRelatedTo_transcription	rdf:type owl:ObjectProperty;
-											rdfs:label	"";
+											rdfs:label	"transcript_isRelatedTo_transcription";
 											rdfs:domain iasis:Transcript;
 			        						rdfs:range iasis:Transcription;
-											rdfs:comment	"";
+											rdfs:comment	"Connection between transcription and corresponding transcript.";
                  							dce:creator iasis:samaneh.
 
 iasis:transcription_isExpressedAs_gexp	rdf:type owl:ObjectProperty;
-										rdfs:label	"";
+										rdfs:label	"transcription_isExpressedAs_gexp";
 										rdfs:domain iasis:Transcription;
 			        					rdfs:range iasis:GExp;
-										rdfs:comment	"";
+										rdfs:comment	"Connection between transcription and gene expression.";
                  						dce:creator iasis:samaneh.
 
 iasis:protein_isRelatedTo_physicalInteraction	rdf:type owl:ObjectProperty;
-												rdfs:label	"";
+												rdfs:label	"protein_isRelatedTo_physicalInteraction";
 												rdfs:domain iasis:Protein;
 			        							rdfs:range iasis:RBP_RNA_PhysicalInteraction;
-												rdfs:comment	"";
+												rdfs:comment	"Connection between protein and RBP-RNA physical interaction relation. ";
                  								dce:creator iasis:samaneh.
 	
 iasis:transcript_isRelatedTo_physicalInteraction	rdf:type owl:ObjectProperty;
-													rdfs:label	"";
+													rdfs:label	"transcript_isRelatedTo_physicalInteraction";
 													rdfs:domain iasis:Transcript;
 			        								rdfs:range iasis:RBP_RNA_PhysicalInteraction;
-													rdfs:comment	"";
+													rdfs:comment	"Connection between transcript and RBP-RNA physical interaction relation.";
                 	 								dce:creator iasis:samaneh.
 
 iasis:translates_as rdf:type owl:ObjectProperty;
-					rdfs:label	"";
+					rdfs:label	"translates_as";
 					rdfs:domain iasis:Transcript;
                     rdfs:range iasis:Protein;
-					rdfs:comment	"";
+					rdfs:comment	"connection between protein and the transcript from which it has been translated.";
                     dce:creatoe iasis:samaneh.
 
 iasis:globalscore 	rdf:type owl:DatatypeProperty;
-					rdfs:label	"";
+					rdfs:label	"globalscore";
 					rdfs:domain iasis:RBP_RNA_PhysicalInteraction;
                   	rdfs:range iasis:Literal;
-					rdfs:comment	"";
+					rdfs:comment	"Global Score is an algorithm as part of catRAPID that integrates the information coming from protein and RNA fragments into an overall binding propensity value. The distribution of the interaction propensities is used as input of a non-linear algorithm that predicts interacting / non-interacting protein-RNA pairs.";
                   	dce:creatoe iasis:samaneh.
 
 iasis:omixcore 	rdf:type owl:DatatypeProperty;
 				rdfs:label	"";
 				rdfs:domain iasis:RBP_RNA_PhysicalInteraction;
                	rdfs:range iasis:Literal;
-				rdfs:comment	"";
+				rdfs:comment	"OmiXcore is an algorithm as part of catRAPID integrates the information coming from protein and >14,000 lincRNA fragments into an overall binding propensity value. It is based on a non-linear algorithm trained on the interaction propensities of protein fragments for RNA regions to predict binding affinities (i.e. read counts normalized by expression levels).";
                	dce:creator iasis:samaneh.
 
 iasis:tissue 	rdf:type owl:DatatypeProperty;
