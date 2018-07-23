@@ -19,17 +19,12 @@ iasis:Annotation	rdf:type	owl:Class;
 
 iasis:Vocabulary	rdf:type	owl:Class;
 					rdfs:label	"Vocabulary";
-					rdfs:comment "";
+					rdfs:comment "(UMLS) related vocabularies.";
 					dce:creator	iasis:farah.
-
-iasis:VocTerm	rdf:type	owl:Class;
-				rdfs:label	"VocTerm";
-				rdfs:comment "";
-				dce:creator	iasis:farah.
 
 iasis:CUITerm	rdf:type	owl:Thing;
 				rdfs:label	"CUITerm";
-				rdfs:comment "";
+				rdfs:comment "CUI terms.";
 				dce:creator	iasis:farah.
 
 iasis:SourceName	rdf:type	owl:Class;
