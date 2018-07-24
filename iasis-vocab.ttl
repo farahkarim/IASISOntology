@@ -5,6 +5,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix ssn: <http://www.w3.org/ns/ssn/> .
 @prefix dce: <http://purl.org/dc/elements/1.1/>.
+@prefix dcterms: <http://purl.org/dc/terms/> .
 
 #########Classes
 iasis:Concept 	rdf:type	owl:Class;
@@ -142,6 +143,12 @@ iasis:GExp 	rdf:type owl:Class;
 			rdfs:comment "The phenotypic manifestation of a gene or genes by the processes of genetic transcription and genetic translation.";
 			dce:creator	iasis:samaneh.
 
+iasis:Transcript	rdf:type	owl:Class;
+					rdfs:label	"Transcript";
+					rdfs:subClassOf	iasis:Concept;
+					rdfs:comment "Single-stranded RNA product synthesized by transcription of DNA.";
+					dcterms:modified "2017-07-24"^^xsd:date;
+					dcterms:creator <https://www.l3s.de/de/user/jozashoori>.
 
 iasis:ResistanceMutation	rdf:type	owl:Class;
 							rdfs:label	"ResistanceMutation";
