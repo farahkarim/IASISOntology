@@ -142,11 +142,6 @@ iasis:GExp 	rdf:type owl:Class;
 			rdfs:comment "The phenotypic manifestation of a gene or genes by the processes of genetic transcription and genetic translation.";
 			dce:creator	iasis:samaneh.
 
-iasis:Transcript	rdf:type owl:Class;
-					rdfs:label	"Transcript";
-					rdfs:subClassOf	iasis:Concept;
-					rdfs:comment "Single-stranded RNA product synthesized by transcription of DNA.";
-					dce:creator	iasis:samaneh.
 
 iasis:ResistanceMutation	rdf:type	owl:Class;
 							rdfs:label	"ResistanceMutation";
