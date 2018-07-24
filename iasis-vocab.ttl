@@ -281,13 +281,13 @@ iasis:LiquidBiopsyObservation	rdf:type	owl:Class;
 iasis:id	rdf:type	owl:ObjectProperty;
 			rdfs:label	"AnnotationID";
 			rdfs:domain iasis:Annotation;
-			rdfs:range	iasis:Literal;
+			rdfs:range	rdfs:Literal;
 			rdfs:comment	"Identification of insances of Annotation class";	
 			dce:creator	iasis:farah.
 
 iasis:id	rdfs:label	"ConceptID";
 			rdfs:domain iasis:Concept;
-			rdfs:range	iasis:Literal;
+			rdfs:range	rdfs:Literal;
 			rdfs:comment	"Identification of insances of Concept class";
 			dce:creator	iasis:farah.
 
@@ -552,28 +552,28 @@ iasis:genomic_position	rdf:type owl:DatatypeProperty;
 iasis:cnv_study_id	rdf:type owl:ObjectProperty;
 					rdfs:label	"cnvStudyID";
 					rdfs:domain iasis:CNV;
-			   		rdfs:range iasis:Literal;
+			   		rdfs:range rdfs:Literal;
 					rdfs:comment	"The ID of the study in which the CNV is mentioned";
                		dce:creator iasis:samaneh.
 
 iasis:mutation_study_id	rdf:type owl:ObjectProperty;
 						rdfs:label	"mutationStudyID";
 						rdfs:domain iasis:Mutation;
-			   			rdfs:range iasis:Literal;
+			   			rdfs:range rdfs:Literal;
 						rdfs:comment	"The ID of the study in which the mutation is mentioned";
                			dce:creator iasis:samaneh.
 
 iasis:cgi_study_id	rdf:type owl:ObjectProperty;
 					rdfs:label	"CpGislandStudyID";
 					rdfs:domain iasis:CGI;
-			   		rdfs:range iasis:Literal;
+			   		rdfs:range rdfs:Literal;
 					rdfs:comment	"The ID of the study in which the CGI is mentioned";
                		dce:creator iasis:samaneh.
 
 iasis:gexp_study_id	rdf:type owl:ObjectProperty;
 					rdfs:label	"gexpStudyID";
 					rdfs:domain iasis:GExp;
-			   		rdfs:range iasis:Literal;
+			   		rdfs:range rdfs:Literal;
 					rdfs:comment	"The ID of the srudy in which the geneExpression is mentioned";
                		dce:creator iasis:samaneh.
 
@@ -699,14 +699,14 @@ iasis:regulation	rdf:type owl:DatatypeProperty;
 iasis:mutationDescription	rdf:type owl:DatatypeProperty;
 							rdfs:label	"mutationDescription";
 							rdfs:domain	iasis:Mutation;
-							rdfs:range	iasis:Literal;
+							rdfs:range	rdfs:Literal;
 							rdfs:comment "Is extracted from mutation dataset. ";
             				dce:creator iasis:samaneh.
 
 iasis:mutationType	rdf:type owl:DatatypeProperty;
 					rdfs:label	"MutationType";
 					rdfs:domain	iasis:CNV;
-					rdfs:range	iasis:Literal;
+					rdfs:range	rdfs:Literal;
 					rdfs:comment "Is extracted from CNV dataset";
             		dce:creator iasis:samaneh.
 
@@ -877,21 +877,21 @@ iasis:translates_as rdf:type owl:ObjectProperty;
 iasis:globalscore 	rdf:type owl:DatatypeProperty;
 					rdfs:label	"globalscore";
 					rdfs:domain iasis:RBP_RNA_PhysicalInteraction;
-                  	rdfs:range iasis:Literal;
+                  	rdfs:range rdfs:Literal;
 					rdfs:comment	"Global Score is an algorithm as part of catRAPID that integrates the information coming from protein and RNA fragments into an overall binding propensity value. The distribution of the interaction propensities is used as input of a non-linear algorithm that predicts interacting / non-interacting protein-RNA pairs.";
                   	dce:creatoe iasis:samaneh.
 
 iasis:omixcore 	rdf:type owl:DatatypeProperty;
 				rdfs:label	"omixcore";
 				rdfs:domain iasis:RBP_RNA_PhysicalInteraction;
-               	rdfs:range iasis:Literal;
+               	rdfs:range rdfs:Literal;
 				rdfs:comment	"OmiXcore is an algorithm as part of catRAPID integrates the information coming from protein and >14,000 lincRNA fragments into an overall binding propensity value. It is based on a non-linear algorithm trained on the interaction propensities of protein fragments for RNA regions to predict binding affinities (i.e. read counts normalized by expression levels).";
                	dce:creator iasis:samaneh.
 
 iasis:tissue 	rdf:type owl:DatatypeProperty;
 				rdfs:label	"tissue";
 				rdfs:domain iasis:EQTL;
-               	rdfs:range iasis:Literal;
+               	rdfs:range rdfs:Literal;
 				rdfs:comment	"The tissue in which variation has been observed.";
                	dce:creator iasis:samaneh.
 
@@ -912,14 +912,14 @@ iasis:gexpChanges_occuredIn_gene 	rdf:type owl:ObjectProperty;
 iasis:type 	rdf:type owl:DatatypeProperty;
 			rdfs:label	"eQTLtype";
 			rdfs:domain iasis:EQTL;
-			rdfs:range iasis:Literal;
+			rdfs:range rdfs:Literal;
 			rdfs:comment	"Regulatory variants are characterized as either cis or trans acting, reflecting the predicted nature of interactions and of course depending on the physical distance from the gene they regulate.";
 			dce:creator iasis:samaneh.
 
 iasis:qvalue 	rdf:type owl:DatatypeProperty;
 				rdfs:label	"q-value";
 				rdfs:domain iasis:EQTL;
-               	rdfs:range iasis:Literal;
+               	rdfs:range rdfs:Literal;
 				rdfs:comment	"log10q";
                	dce:creator iasis:samaneh.
 
@@ -933,14 +933,14 @@ iasis:dbsnp 	rdf:type owl:ObjectProperty;
 iasis:eqtl_chromosome 	rdf:type owl:DatatypeProperty;
 						rdfs:label	"eqtlChromosome";
 						rdfs:domain iasis:EQTL;
-               			rdfs:range iasis:Literal;
+               			rdfs:range rdfs:Literal;
 						rdfs:comment	"Chromosome position of eQTL.";
 						dce:creator iasis:samaneh.
 
 iasis:eqtl_position 	rdf:type owl:DatatypeProperty;
 						rdfs:label	"eqtlPosition";
 						rdfs:domain iasis:EQTL;
-               			rdfs:range iasis:Literal;
+               			rdfs:range rdfs:Literal;
 						rdfs:comment	"Genomic position of eQTL.";
 						dce:creator iasis:samaneh.
 
@@ -1006,14 +1006,14 @@ iasis:hasSideEffect	rdf:type	owl:ObjectProperty;
 iasis:dse_AvgFrequency	rdf:type	owl:dataTypeProperty;
 						rdfs:label	"dse_AvgFrequency";
 						rdfs:domain	iasis:DrugSideEffect;
-						rdfs:range	iasis:Literal;
+						rdfs:range	rdfs:Literal;
 						rdfs:comment	"Represents the average frequecy of particular drug having specific side effect.";
 						dce:creator iasis:samaneh.
 
 iasis:dse_StandardDeviation	rdf:type	owl:dataTypeProperty;
 							rdfs:label	"dse_StandardDeviation";
 							rdfs:domain	iasis:DrugSideEffect;
-							rdfs:range	iasis:Literal;
+							rdfs:range	rdfs:Literal;
 							rdfs:commnet	"Represents standard deviation from average frequecy of particular drug having specific side effect.";
 							dce:creator iasis:samaneh.
 
@@ -1209,14 +1209,14 @@ iasis:copiesMicroliterVic	rdf:type	owl:DatatypeProperty;
 iasis:monthsInTreatment	rdf:type	owl:DatatypeProperty;
 						rdfs:label	"monthsInTreatment";
 						rdfs:domain	iasis:LCPatient;
-						rdfs:range	rdfs:Literals;
+						rdfs:range	rdfs:Literal;
 						rdfs:comment "Represents the number of months patient has been under treatment. Not included in the original data from WP2, but is calulated as part of in-house preprocessing.";
 						dce:creator	iasis:samaneh.
 
 iasis:weeksInTreatment	rdf:type	owl:DatatypeProperty;
 						rdfs:label	"weeksInTreatment";
 						rdfs:domain	iasis:LCPatient;
-						rdfs:range	rdfs:Literals;
+						rdfs:range	rdfs:Literal;
 						rdfs:comment "Represents the number of weeks patient has been under treatment. Not included in the original data from WP2, but is calulated as part of in-house preprocessing.";
 						dce:cretaor	iasis:samaneh.
 
